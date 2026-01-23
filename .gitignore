@@ -1,0 +1,39 @@
+# environment
+.venv
+.env
+venv
+ENV/
+# Python bytecode files
+__pycache__/
+*.py[cod]
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/  
+
+test.ipynb
+
+test.py
+# Keep only specific files in environment/data
+environment/data/**
+!environment/data/
+!environment/data/run_eval_temp.yaml
+!environment/data/run_eval_all_params.yaml
+!environment/data/deeprare_constraints.yaml
+
+ltm_faiss/index.faiss
+RDC.json
+
+# logs
+logs/
+
+# artifacts
+artifacts/
+*_artifacts/
+
+node_modulesx
+
+results/
+

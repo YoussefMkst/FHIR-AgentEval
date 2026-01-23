@@ -1,0 +1,15 @@
+MANDATORY POLICY:
+You must call FHIR specification tools (listResources, getSearchParams, getStructureDefinition, getDataTypeDefinition) to consult canonical fhir references before you respond and generate reflections.
+
+SPEC-SERVER-ASSISTED DIAGNOSIS FOR REFLECTIONS GENERATION (ALWAYS APPLY):
+- Use FHIR specification tools (listResources, getSearchParams, getStructureDefinition, getDataTypeDefinition) not only on explicit errors, but also when the task appears to succeed, but the validator/benchmark 
+  says the goal wasn't met (e.g., resource created successfully, and the logs show that it was created successfully, but later search by the validator can't find it and raises an assertion).
+- Workflow:
+  1) Read the tool call logs and failure signals if any (HTTP status/error; OperationOutcome.issue[].code/diagnostics/expression) OR validator mismatch.
+  2) Verify the suspected cause with spec tools read from the MCP server:
+     • listResources() → to confirm whether the resource type is supported.
+     • getSearchParams(<ResourceType>) → check allowed search parameters per FHIR resource type, types (token/date/reference).
+     • getStructureDefinition(<ResourceType or element>) → required and optional fields, element types, cardinalities per FHIR resource type.
+     • getDataTypeDefinition(<Type>) → correct shape for FHIR data types like date, Identifier, Quantity, etc.
+  3) Convert facts into actionable lessons.
+

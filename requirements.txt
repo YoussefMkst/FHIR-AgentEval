@@ -1,0 +1,25 @@
+beautifulsoup4==4.13.4
+datasets==3.6.0
+numpy<2 # faiss requires numpy<2
+# faiss_cpu==1.11.0 does not work with Python 3.11 in arm64
+faiss-cpu==1.8.0
+fastapi==0.116.1
+fastmcp==2.11.2
+httpx==0.28.1
+langchain==0.3.27
+langchain_anthropic==0.3.8
+langchain_community==0.3.27
+langchain_core==0.3.74
+langchain_mcp_adapters==0.1.9
+langchain_openai==0.3.29
+langgraph==0.6.4
+openai==1.99.7
+pydantic==2.11.7
+python-dotenv==1.1.1
+PyYAML==6.0.2
+rank_bm25==0.2.2
+Requests==2.32.4
+sentence_transformers==5.0.0
+torch==2.7.1
+transformers==4.53.1
+uvicorn==0.35.0
