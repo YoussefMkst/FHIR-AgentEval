@@ -1,5 +1,10 @@
 # FHIR-AgentEval
 
+## Overview
+FHIR-AgentEval is a modular sandbox for evaluating LLM agents on end-to-end HL7 FHIR workflows. It includes a curated benchmark of 43 reusable clinical tasks spanning appointment management and genetic testing scenarios, where each task combines a prompt template, deterministic validation, and task-specific environment seeding against a resettable HAPI FHIR server. Agents interact with the server through a lightweight MCP layer that exposes only core FHIR CRUD tools, which keeps the setup model- and framework-agnostic.
+On top of this core sandbox, we include optional add-ons that can be enabled, most notably an on-demand FHIR R4 specifications server for runtime lookups and a Reflexion-inspired long-term memory server distilled offline, with or without spec grounding. The sandbox produces detailed execution logs and structured outcome reports, enabling reproducible comparisons of agent architectures and fine-grained analysis of reliability, prompt robustness, token usage, and generalization across tasks.
+
+
 ## Project Structure
 
 ```
