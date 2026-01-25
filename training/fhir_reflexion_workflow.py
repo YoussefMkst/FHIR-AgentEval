@@ -1,7 +1,5 @@
 # reflexion_workflow.py — Reflexion loop over YAML tasks (Actor=Local ReAct Agent, Evaluator LLM, Self-Reflection LLM)
-# Deps:
-#   pip install -U python-dotenv pyyaml langchain-openai langchain-mcp-adapters langgraph "langchain[openai]"
-#   (plus your existing task modules, memory_store.py)
+
 
 import os, json, time, uuid, argparse, logging, yaml, asyncio
 from typing import Any, Dict, List, Optional, Tuple
@@ -66,6 +64,20 @@ try:
 except Exception:
     pass
 init_store(LTM_DIR)
+
+# Reading system prompts
+PROMPTS_DIR = Path(__file__).resolve().parents[1] / "prompts" / "reflexion_prompts"
+
+def _load_prompt(filename: str) -> str:
+    """Load a prompt from the reflexion_prompts directory."""
+    filepath = PROMPTS_DIR / filename
+    with open(filepath, "r", encoding="utf-8") as f:
+        return f.read()
+
+EVALUATOR_SYSTEM = _load_prompt("evaluator_system.txt")
+REFLECTOR_SYSTEM = _load_prompt("reflector_system.txt")
+REFLECTOR_SPEC_SYSTEM = _load_prompt("reflector_spec_system.txt")
+
 
 # --------------------------------------------------------------------
 # MCP tools and agent setup
@@ -395,22 +407,6 @@ async def call_local_agent(prompt: str, tools) -> Tuple[str, str, Dict[str, Any]
 def make_evaluator_llm() -> ChatOpenAI:
     # Advisory evaluator (does NOT decide pass/fail; your task.validate_response() does)
     return ChatOpenAI(model=EVAL_MODEL, temperature=0)
-
-# --------------------------------------------------------------------
-# Prompt loading from external files
-# --------------------------------------------------------------------
-PROMPTS_DIR = Path(__file__).resolve().parent / "reflexion_prompts"
-
-def _load_prompt(filename: str) -> str:
-    """Load a prompt from the reflexion_prompts directory."""
-    filepath = PROMPTS_DIR / filename
-    with open(filepath, "r", encoding="utf-8") as f:
-        return f.read()
-
-EVALUATOR_SYSTEM = _load_prompt("evaluator_system.txt")
-REFLECTOR_SYSTEM = _load_prompt("reflector_system.txt")
-REFLECTOR_SPEC_SYSTEM = _load_prompt("reflector_spec_system.txt")
-
 
 
 async def make_reflector_tools_agent(model_id: str, specs_url: Optional[str] = None, use_specs: bool = False) -> Optional[AgentExecutor]:
