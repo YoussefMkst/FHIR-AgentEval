@@ -90,8 +90,8 @@
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/agenda.git
-   cd agenda
+   git clone https://github.com/YoussefMkst/FHIR-AgentEval.git
+   cd FHIR-AgentEval
    ```
 
 2. **Install dependencies**
