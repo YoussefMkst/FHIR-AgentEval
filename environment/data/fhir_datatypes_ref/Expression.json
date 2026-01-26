@@ -1,0 +1,139 @@
+{
+  "dataType": "Expression",
+  "typeKind": "complex-type",
+  "fhir_version": "4.0.1",
+  "source_urls": {
+    "structureDefinition": "http://hl7.org/fhir/StructureDefinition/Expression"
+  },
+  "elements": [
+    {
+      "path": "Expression",
+      "min": 0,
+      "max": "*",
+      "type": [],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "An expression that can be used to generate a value",
+      "definition": "A expression that is evaluated in a specified context and returns a value. The context of use of the expression must specify the context in which the expression is evaluated, and how the result of the expression is used.",
+      "binding": null
+    },
+    {
+      "path": "Expression.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String",
+          "fhirType": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "Expression.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "Expression.description",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Natural language description of the condition",
+      "definition": "A brief, natural language description of the condition that effectively communicates the intended semantics.",
+      "binding": null
+    },
+    {
+      "path": "Expression.name",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "id"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Short name assigned to expression for reuse",
+      "definition": "A short name assigned to the expression to allow for multiple reuse of the expression in the context where it is defined.",
+      "binding": null
+    },
+    {
+      "path": "Expression.language",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "text/cql | text/fhirpath | application/x-fhir-query | etc.",
+      "definition": "The media type of the language for the expression.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/expression-language",
+        "strength": "extensible",
+        "description": "The media type of the expression language."
+      }
+    },
+    {
+      "path": "Expression.expression",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Expression in specified language",
+      "definition": "An expression in the specified language that returns a value.",
+      "binding": null
+    },
+    {
+      "path": "Expression.reference",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "uri"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Where the expression is found",
+      "definition": "A URI that defines where the expression is found.",
+      "binding": null
+    }
+  ]
+}

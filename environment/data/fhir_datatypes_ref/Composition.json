@@ -1,0 +1,9 @@
+{
+  "dataType": "Composition",
+  "typeKind": "complex-type",
+  "fhir_version": null,
+  "source_urls": {
+    "structureDefinition": "http://hl7.org/fhir/StructureDefinition/example-composition"
+  },
+  "elements": []
+}

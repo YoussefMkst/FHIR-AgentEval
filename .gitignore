@@ -17,6 +17,10 @@ downloads/
 
 # Keep only specific files in environment/data
 environment/data/**
+!environment/data/fhir_res_ref_all/
+!environment/data/fhir_res_ref_all/**
+!environment/data/fhir_datatypes_ref/
+!environment/data/fhir_datatypes_ref/**
 !environment/data/exp_1_task_variation_updated.yaml
 !environment/data/exp_3_task_variations_updated.yaml
 !environment/data/exp_7_task_variations_updated.yaml

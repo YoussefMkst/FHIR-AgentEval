@@ -1,0 +1,2049 @@
+{
+  "dataType": "ElementDefinition",
+  "typeKind": "complex-type",
+  "fhir_version": "4.0.1",
+  "source_urls": {
+    "structureDefinition": "http://hl7.org/fhir/StructureDefinition/ElementDefinition"
+  },
+  "elements": [
+    {
+      "path": "ElementDefinition",
+      "min": 0,
+      "max": "*",
+      "type": [],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Definition of an element in a resource or extension",
+      "definition": "Captures constraints on each element within the resource, profile, or extension.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String",
+          "fhirType": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.path",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Path of the element in the hierarchy of elements",
+      "definition": "The path identifies the element and is expressed as a \".\"-separated list of ancestor elements, beginning with the name of the resource or extension.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.representation",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "xmlAttr | xmlText | typeAttr | cdaText | xhtml",
+      "definition": "Codes that define how this element is represented in instances, when the deviation varies from the normal case.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/property-representation|4.0.1",
+        "strength": "required",
+        "description": "How a property is represented when serialized."
+      }
+    },
+    {
+      "path": "ElementDefinition.sliceName",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Name for this particular element (in a set of slices)",
+      "definition": "The name of this element definition slice, when slicing is working. The name must be a token with no dots or spaces. This is a unique name referring to a specific set of constraints applied to this element, used to provide a name to different slices of the same element.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.sliceIsConstraining",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "boolean"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "If this slice definition constrains an inherited slice definition (or not)",
+      "definition": "If true, indicates that this slice definition is constraining a slice definition with the same name in an inherited profile. If false, the slice is not overriding any slice in an inherited profile. If missing, the slice might or might not be overriding a slice in an inherited profile, depending on the sliceName.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.label",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Name for element to display with or prompt for element",
+      "definition": "A single preferred label which is the text to display beside the element indicating its meaning or to use to prompt for the element in a user display or form.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.code",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Coding"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Corresponding codes in terminologies",
+      "definition": "A code that has the same meaning as the element in a particular terminology.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/observation-codes",
+        "strength": "example",
+        "description": "Codes that indicate the meaning of a data element."
+      }
+    },
+    {
+      "path": "ElementDefinition.slicing",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Element"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "This element is sliced - slices follow",
+      "definition": "Indicates that the element is sliced into a set of alternative definitions (i.e. in a structure definition, there are multiple different constraints on a single element in the base resource). Slicing can be used in any resource that has cardinality ..* on the base resource, or any resource with a choice of types. The set of slices is any elements that come after this in the element sequence that have the same path, until a shorter path occurs (the shorter path terminates the set).",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.slicing.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String",
+          "fhirType": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.slicing.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.slicing.discriminator",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Element"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Element values that are used to distinguish the slices",
+      "definition": "Designates which child elements are used to discriminate between the slices when processing an instance. If one or more discriminators are provided, the value of the child elements in the instance data SHALL completely distinguish which slice the element in the resource matches based on the allowed values for those elements in each of the slices.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.slicing.discriminator.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String",
+          "fhirType": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.slicing.discriminator.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.slicing.discriminator.type",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "value | exists | pattern | type | profile",
+      "definition": "How the element value is interpreted when discrimination is evaluated.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/discriminator-type|4.0.1",
+        "strength": "required",
+        "description": "How an element value is interpreted when discrimination is evaluated."
+      }
+    },
+    {
+      "path": "ElementDefinition.slicing.discriminator.path",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Path to element value",
+      "definition": "A FHIRPath expression, using [the simple subset of FHIRPath](fhirpath.html#simple), that is used to identify the element on which discrimination is based.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.slicing.description",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Text description of how slicing works (or not)",
+      "definition": "A human-readable text description of how the slicing works. If there is no discriminator, this is required to be present to provide whatever information is possible about how the slices can be differentiated.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.slicing.ordered",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "boolean"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "If elements must be in same order as slices",
+      "definition": "If the matching elements have to occur in the same order as defined in the profile.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.slicing.rules",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "closed | open | openAtEnd",
+      "definition": "Whether additional slices are allowed or not. When the slices are ordered, profile authors can also say that additional slices are only allowed at the end.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/resource-slicing-rules|4.0.1",
+        "strength": "required",
+        "description": "How slices are interpreted when evaluating an instance."
+      }
+    },
+    {
+      "path": "ElementDefinition.short",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Concise definition for space-constrained presentation",
+      "definition": "A concise description of what this element means (e.g. for use in autogenerated summaries).",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.definition",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "markdown"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Full formal definition as narrative text",
+      "definition": "Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.comment",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "markdown"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Comments about the use of this element",
+      "definition": "Explanatory notes and implementation guidance about the data element, including notes about how to use the data properly, exceptions to proper use, etc. (Note: The text you are reading is specified in ElementDefinition.comment).",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.requirements",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "markdown"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Why this resource has been created",
+      "definition": "This element is for traceability of why the element was created and why the constraints exist as they do. This may be used to point to source materials or specifications that drove the structure of this element.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.alias",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Other names",
+      "definition": "Identifies additional names by which this element might also be known.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.min",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "unsignedInt"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Minimum Cardinality",
+      "definition": "The minimum number of times this element SHALL appear in the instance.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.max",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Maximum Cardinality (a number or *)",
+      "definition": "The maximum number of times this element is permitted to appear in the instance.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.base",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Element"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Base definition information for tools",
+      "definition": "Information about the base definition of the element, provided to make it unnecessary for tools to trace the deviation of the element through the derived and related profiles. When the element definition is not the original definition of an element - i.g. either in a constraint on another type, or for elements from a super type in a snap shot - then the information in provided in the element definition may be different to the base definition. On the original definition of the element, it will be same.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.base.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String",
+          "fhirType": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.base.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.base.path",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Path that identifies the base element",
+      "definition": "The Path that identifies the base element - this matches the ElementDefinition.path for that element. Across FHIR, there is only one base definition of any element - that is, an element definition on a [StructureDefinition](structuredefinition.html#) without a StructureDefinition.base.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.base.min",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "unsignedInt"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Min cardinality of the base element",
+      "definition": "Minimum cardinality of the base element identified by the path.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.base.max",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Max cardinality of the base element",
+      "definition": "Maximum cardinality of the base element identified by the path.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.contentReference",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "uri"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Reference to definition of content for the element",
+      "definition": "Identifies an element defined elsewhere in the definition whose content rules should be applied to the current element. ContentReferences bring across all the rules that are in the ElementDefinition for the element, including definitions, cardinality constraints, bindings, invariants etc.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.type",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Element"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Data type and Profile for this element",
+      "definition": "The data type or resource that the value of this element is permitted to be.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.type.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String",
+          "fhirType": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.type.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.type.code",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "uri"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Data type or Resource (reference to definition)",
+      "definition": "URL of Data type or Resource that is a(or the) type used for this element. References are URLs that are relative to http://hl7.org/fhir/StructureDefinition e.g. \"string\" is a reference to http://hl7.org/fhir/StructureDefinition/string. Absolute URLs are only allowed in logical models.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/defined-types",
+        "strength": "extensible",
+        "description": "Either a resource or a data type, including logical model types."
+      }
+    },
+    {
+      "path": "ElementDefinition.type.profile",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "canonical",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/StructureDefinition",
+            "http://hl7.org/fhir/StructureDefinition/ImplementationGuide"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Profiles (StructureDefinition or IG) - one must apply",
+      "definition": "Identifies a profile structure or implementation Guide that applies to the datatype this element refers to. If any profiles are specified, then the content must conform to at least one of them. The URL can be a local reference - to a contained StructureDefinition, or a reference to another StructureDefinition or Implementation Guide by a canonical URL. When an implementation guide is specified, the type SHALL conform to at least one profile defined in the implementation guide.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.type.targetProfile",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "canonical",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/StructureDefinition",
+            "http://hl7.org/fhir/StructureDefinition/ImplementationGuide"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Profile (StructureDefinition or IG) on the Reference/canonical target - one must apply",
+      "definition": "Used when the type is \"Reference\" or \"canonical\", and identifies a profile structure or implementation Guide that applies to the target of the reference this element refers to. If any profiles are specified, then the content must conform to at least one of them. The URL can be a local reference - to a contained StructureDefinition, or a reference to another StructureDefinition or Implementation Guide by a canonical URL. When an implementation guide is specified, the target resource SHALL conform to at least one profile defined in the implementation guide.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.type.aggregation",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "contained | referenced | bundled - how aggregated",
+      "definition": "If the type is a reference to another resource, how the resource is or can be aggregated - is it a contained resource, or a reference, and if the context is a bundle, is it included in the bundle.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/resource-aggregation-mode|4.0.1",
+        "strength": "required",
+        "description": "How resource references can be aggregated."
+      }
+    },
+    {
+      "path": "ElementDefinition.type.versioning",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "either | independent | specific",
+      "definition": "Whether this reference needs to be version specific or version independent, or whether either can be used.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/reference-version-rules|4.0.1",
+        "strength": "required",
+        "description": "Whether a reference needs to be version specific or version independent, or whether either can be used."
+      }
+    },
+    {
+      "path": "ElementDefinition.defaultValue[x]",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "base64Binary"
+        },
+        {
+          "code": "boolean"
+        },
+        {
+          "code": "canonical"
+        },
+        {
+          "code": "code"
+        },
+        {
+          "code": "date"
+        },
+        {
+          "code": "dateTime"
+        },
+        {
+          "code": "decimal"
+        },
+        {
+          "code": "id"
+        },
+        {
+          "code": "instant"
+        },
+        {
+          "code": "integer"
+        },
+        {
+          "code": "markdown"
+        },
+        {
+          "code": "oid"
+        },
+        {
+          "code": "positiveInt"
+        },
+        {
+          "code": "string"
+        },
+        {
+          "code": "time"
+        },
+        {
+          "code": "unsignedInt"
+        },
+        {
+          "code": "uri"
+        },
+        {
+          "code": "url"
+        },
+        {
+          "code": "uuid"
+        },
+        {
+          "code": "Address"
+        },
+        {
+          "code": "Age"
+        },
+        {
+          "code": "Annotation"
+        },
+        {
+          "code": "Attachment"
+        },
+        {
+          "code": "CodeableConcept"
+        },
+        {
+          "code": "Coding"
+        },
+        {
+          "code": "ContactPoint"
+        },
+        {
+          "code": "Count"
+        },
+        {
+          "code": "Distance"
+        },
+        {
+          "code": "Duration"
+        },
+        {
+          "code": "HumanName"
+        },
+        {
+          "code": "Identifier"
+        },
+        {
+          "code": "Money"
+        },
+        {
+          "code": "Period"
+        },
+        {
+          "code": "Quantity"
+        },
+        {
+          "code": "Range"
+        },
+        {
+          "code": "Ratio"
+        },
+        {
+          "code": "Reference"
+        },
+        {
+          "code": "SampledData"
+        },
+        {
+          "code": "Signature"
+        },
+        {
+          "code": "Timing"
+        },
+        {
+          "code": "ContactDetail"
+        },
+        {
+          "code": "Contributor"
+        },
+        {
+          "code": "DataRequirement"
+        },
+        {
+          "code": "Expression"
+        },
+        {
+          "code": "ParameterDefinition"
+        },
+        {
+          "code": "RelatedArtifact"
+        },
+        {
+          "code": "TriggerDefinition"
+        },
+        {
+          "code": "UsageContext"
+        },
+        {
+          "code": "Dosage"
+        },
+        {
+          "code": "Meta"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Specified value if missing from instance",
+      "definition": "The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.meaningWhenMissing",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "markdown"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Implicit meaning when this element is missing",
+      "definition": "The Implicit meaning that is to be understood when this element is missing (e.g. 'when this element is missing, the period is ongoing').",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.orderMeaning",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "What the order of the elements means",
+      "definition": "If present, indicates that the order of the repeating element has meaning and describes what that meaning is.  If absent, it means that the order of the element has no meaning.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.fixed[x]",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "base64Binary"
+        },
+        {
+          "code": "boolean"
+        },
+        {
+          "code": "canonical"
+        },
+        {
+          "code": "code"
+        },
+        {
+          "code": "date"
+        },
+        {
+          "code": "dateTime"
+        },
+        {
+          "code": "decimal"
+        },
+        {
+          "code": "id"
+        },
+        {
+          "code": "instant"
+        },
+        {
+          "code": "integer"
+        },
+        {
+          "code": "markdown"
+        },
+        {
+          "code": "oid"
+        },
+        {
+          "code": "positiveInt"
+        },
+        {
+          "code": "string"
+        },
+        {
+          "code": "time"
+        },
+        {
+          "code": "unsignedInt"
+        },
+        {
+          "code": "uri"
+        },
+        {
+          "code": "url"
+        },
+        {
+          "code": "uuid"
+        },
+        {
+          "code": "Address"
+        },
+        {
+          "code": "Age"
+        },
+        {
+          "code": "Annotation"
+        },
+        {
+          "code": "Attachment"
+        },
+        {
+          "code": "CodeableConcept"
+        },
+        {
+          "code": "Coding"
+        },
+        {
+          "code": "ContactPoint"
+        },
+        {
+          "code": "Count"
+        },
+        {
+          "code": "Distance"
+        },
+        {
+          "code": "Duration"
+        },
+        {
+          "code": "HumanName"
+        },
+        {
+          "code": "Identifier"
+        },
+        {
+          "code": "Money"
+        },
+        {
+          "code": "Period"
+        },
+        {
+          "code": "Quantity"
+        },
+        {
+          "code": "Range"
+        },
+        {
+          "code": "Ratio"
+        },
+        {
+          "code": "Reference"
+        },
+        {
+          "code": "SampledData"
+        },
+        {
+          "code": "Signature"
+        },
+        {
+          "code": "Timing"
+        },
+        {
+          "code": "ContactDetail"
+        },
+        {
+          "code": "Contributor"
+        },
+        {
+          "code": "DataRequirement"
+        },
+        {
+          "code": "Expression"
+        },
+        {
+          "code": "ParameterDefinition"
+        },
+        {
+          "code": "RelatedArtifact"
+        },
+        {
+          "code": "TriggerDefinition"
+        },
+        {
+          "code": "UsageContext"
+        },
+        {
+          "code": "Dosage"
+        },
+        {
+          "code": "Meta"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Value must be exactly this",
+      "definition": "Specifies a value that SHALL be exactly the value  for this element in the instance. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.pattern[x]",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "base64Binary"
+        },
+        {
+          "code": "boolean"
+        },
+        {
+          "code": "canonical"
+        },
+        {
+          "code": "code"
+        },
+        {
+          "code": "date"
+        },
+        {
+          "code": "dateTime"
+        },
+        {
+          "code": "decimal"
+        },
+        {
+          "code": "id"
+        },
+        {
+          "code": "instant"
+        },
+        {
+          "code": "integer"
+        },
+        {
+          "code": "markdown"
+        },
+        {
+          "code": "oid"
+        },
+        {
+          "code": "positiveInt"
+        },
+        {
+          "code": "string"
+        },
+        {
+          "code": "time"
+        },
+        {
+          "code": "unsignedInt"
+        },
+        {
+          "code": "uri"
+        },
+        {
+          "code": "url"
+        },
+        {
+          "code": "uuid"
+        },
+        {
+          "code": "Address"
+        },
+        {
+          "code": "Age"
+        },
+        {
+          "code": "Annotation"
+        },
+        {
+          "code": "Attachment"
+        },
+        {
+          "code": "CodeableConcept"
+        },
+        {
+          "code": "Coding"
+        },
+        {
+          "code": "ContactPoint"
+        },
+        {
+          "code": "Count"
+        },
+        {
+          "code": "Distance"
+        },
+        {
+          "code": "Duration"
+        },
+        {
+          "code": "HumanName"
+        },
+        {
+          "code": "Identifier"
+        },
+        {
+          "code": "Money"
+        },
+        {
+          "code": "Period"
+        },
+        {
+          "code": "Quantity"
+        },
+        {
+          "code": "Range"
+        },
+        {
+          "code": "Ratio"
+        },
+        {
+          "code": "Reference"
+        },
+        {
+          "code": "SampledData"
+        },
+        {
+          "code": "Signature"
+        },
+        {
+          "code": "Timing"
+        },
+        {
+          "code": "ContactDetail"
+        },
+        {
+          "code": "Contributor"
+        },
+        {
+          "code": "DataRequirement"
+        },
+        {
+          "code": "Expression"
+        },
+        {
+          "code": "ParameterDefinition"
+        },
+        {
+          "code": "RelatedArtifact"
+        },
+        {
+          "code": "TriggerDefinition"
+        },
+        {
+          "code": "UsageContext"
+        },
+        {
+          "code": "Dosage"
+        },
+        {
+          "code": "Meta"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Value must have at least these property values",
+      "definition": "Specifies a value that the value in the instance SHALL follow - that is, any value in the pattern must be found in the instance. Other additional values may be found too. This is effectively constraint by example.  \n\nWhen pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.\n\nWhen pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] array must (recursively) match at least one element from the instance array.\n\nWhen pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,\n\n1. If primitive: it must match exactly the pattern value\n2. If a complex object: it must match (recursively) the pattern value\n3. If an array: it must match (recursively) the pattern value.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.example",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Element"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Example value (as defined for type)",
+      "definition": "A sample value for this element demonstrating the type of information that would typically be found in the element.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.example.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String",
+          "fhirType": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.example.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.example.label",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Describes the purpose of this example",
+      "definition": "Describes the purpose of this example amoung the set of examples.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.example.value[x]",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "base64Binary"
+        },
+        {
+          "code": "boolean"
+        },
+        {
+          "code": "canonical"
+        },
+        {
+          "code": "code"
+        },
+        {
+          "code": "date"
+        },
+        {
+          "code": "dateTime"
+        },
+        {
+          "code": "decimal"
+        },
+        {
+          "code": "id"
+        },
+        {
+          "code": "instant"
+        },
+        {
+          "code": "integer"
+        },
+        {
+          "code": "markdown"
+        },
+        {
+          "code": "oid"
+        },
+        {
+          "code": "positiveInt"
+        },
+        {
+          "code": "string"
+        },
+        {
+          "code": "time"
+        },
+        {
+          "code": "unsignedInt"
+        },
+        {
+          "code": "uri"
+        },
+        {
+          "code": "url"
+        },
+        {
+          "code": "uuid"
+        },
+        {
+          "code": "Address"
+        },
+        {
+          "code": "Age"
+        },
+        {
+          "code": "Annotation"
+        },
+        {
+          "code": "Attachment"
+        },
+        {
+          "code": "CodeableConcept"
+        },
+        {
+          "code": "Coding"
+        },
+        {
+          "code": "ContactPoint"
+        },
+        {
+          "code": "Count"
+        },
+        {
+          "code": "Distance"
+        },
+        {
+          "code": "Duration"
+        },
+        {
+          "code": "HumanName"
+        },
+        {
+          "code": "Identifier"
+        },
+        {
+          "code": "Money"
+        },
+        {
+          "code": "Period"
+        },
+        {
+          "code": "Quantity"
+        },
+        {
+          "code": "Range"
+        },
+        {
+          "code": "Ratio"
+        },
+        {
+          "code": "Reference"
+        },
+        {
+          "code": "SampledData"
+        },
+        {
+          "code": "Signature"
+        },
+        {
+          "code": "Timing"
+        },
+        {
+          "code": "ContactDetail"
+        },
+        {
+          "code": "Contributor"
+        },
+        {
+          "code": "DataRequirement"
+        },
+        {
+          "code": "Expression"
+        },
+        {
+          "code": "ParameterDefinition"
+        },
+        {
+          "code": "RelatedArtifact"
+        },
+        {
+          "code": "TriggerDefinition"
+        },
+        {
+          "code": "UsageContext"
+        },
+        {
+          "code": "Dosage"
+        },
+        {
+          "code": "Meta"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Value of Example (one of allowed types)",
+      "definition": "The actual value for the element, which must be one of the types allowed for this element.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.minValue[x]",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "date"
+        },
+        {
+          "code": "dateTime"
+        },
+        {
+          "code": "instant"
+        },
+        {
+          "code": "time"
+        },
+        {
+          "code": "decimal"
+        },
+        {
+          "code": "integer"
+        },
+        {
+          "code": "positiveInt"
+        },
+        {
+          "code": "unsignedInt"
+        },
+        {
+          "code": "Quantity"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Minimum Allowed Value (for some types)",
+      "definition": "The minimum allowed value for the element. The value is inclusive. This is allowed for the types date, dateTime, instant, time, decimal, integer, and Quantity.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.maxValue[x]",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "date"
+        },
+        {
+          "code": "dateTime"
+        },
+        {
+          "code": "instant"
+        },
+        {
+          "code": "time"
+        },
+        {
+          "code": "decimal"
+        },
+        {
+          "code": "integer"
+        },
+        {
+          "code": "positiveInt"
+        },
+        {
+          "code": "unsignedInt"
+        },
+        {
+          "code": "Quantity"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Maximum Allowed Value (for some types)",
+      "definition": "The maximum allowed value for the element. The value is inclusive. This is allowed for the types date, dateTime, instant, time, decimal, integer, and Quantity.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.maxLength",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "integer"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Max length for strings",
+      "definition": "Indicates the maximum length in characters that is permitted to be present in conformant instances and which is expected to be supported by conformant consumers that support the element.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.condition",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "id"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Reference to invariant about presence",
+      "definition": "A reference to an invariant that may make additional statements about the cardinality or value in the instance.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.constraint",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Element"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Condition that must evaluate to true",
+      "definition": "Formal constraints such as co-occurrence and other constraints that can be computationally evaluated within the context of the instance.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.constraint.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String",
+          "fhirType": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.constraint.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.constraint.key",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "id"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Target of 'condition' reference above",
+      "definition": "Allows identification of which elements have their cardinalities impacted by the constraint.  Will not be referenced for constraints that do not affect cardinality.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.constraint.requirements",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Why this constraint is necessary or appropriate",
+      "definition": "Description of why this constraint is necessary or appropriate.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.constraint.severity",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "error | warning",
+      "definition": "Identifies the impact constraint violation has on the conformance of the instance.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/constraint-severity|4.0.1",
+        "strength": "required",
+        "description": "SHALL applications comply with this constraint?"
+      }
+    },
+    {
+      "path": "ElementDefinition.constraint.human",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Human description of constraint",
+      "definition": "Text that can be used to describe the constraint in messages identifying that the constraint has been violated.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.constraint.expression",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "FHIRPath expression of constraint",
+      "definition": "A [FHIRPath](fhirpath.html) expression of constraint that can be executed to see if this constraint is met.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.constraint.xpath",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "XPath expression of constraint",
+      "definition": "An XPath expression of constraint that can be executed to see if this constraint is met.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.constraint.source",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "canonical",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/StructureDefinition"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Reference to original source of constraint",
+      "definition": "A reference to the original source of the constraint, for traceability purposes.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.mustSupport",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "boolean"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "If the element must be supported",
+      "definition": "If true, implementations that produce or consume resources SHALL provide \"support\" for the element in some meaningful way.  If false, the element may be ignored and not supported. If false, whether to populate or use the data element in any way is at the discretion of the implementation.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.isModifier",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "boolean"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "If this modifies the meaning of other elements",
+      "definition": "If true, the value of this element affects the interpretation of the element or resource that contains it, and the value of the element cannot be ignored. Typically, this is used for status, negation and qualification codes. The effect of this is that the element cannot be ignored by systems: they SHALL either recognize the element and process it, and/or a pre-determination has been made that it is not relevant to their particular system.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.isModifierReason",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Reason that this element is marked as a modifier",
+      "definition": "Explains how that element affects the interpretation of the resource or element that contains it.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.isSummary",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "boolean"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Include when _summary = true?",
+      "definition": "Whether the element should be included if a client requests a search with the parameter _summary=true.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.binding",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Element"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "ValueSet details if this is coded",
+      "definition": "Binds to a value set if this element is coded (code, Coding, CodeableConcept, Quantity), or the data types (string, uri).",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.binding.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String",
+          "fhirType": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.binding.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.binding.strength",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "required | extensible | preferred | example",
+      "definition": "Indicates the degree of conformance expectations associated with this binding - that is, the degree to which the provided value set must be adhered to in the instances.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/binding-strength|4.0.1",
+        "strength": "required",
+        "description": "Indication of the degree of conformance expectations associated with a binding."
+      }
+    },
+    {
+      "path": "ElementDefinition.binding.description",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Human explanation of the value set",
+      "definition": "Describes the intended use of this particular set of codes.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.binding.valueSet",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "canonical",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/ValueSet"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Source of value set",
+      "definition": "Refers to the value set that identifies the set of codes the binding refers to.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.mapping",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Element"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Map element to another set of definitions",
+      "definition": "Identifies a concept from an external specification that roughly corresponds to this element.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.mapping.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String",
+          "fhirType": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.mapping.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.mapping.identity",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "id"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Reference to mapping declaration",
+      "definition": "An internal reference to the definition of a mapping.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.mapping.language",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Computable language of mapping",
+      "definition": "Identifies the computable language in which mapping.map is expressed.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/mimetypes|4.0.1",
+        "strength": "required",
+        "description": "The mime type of an attachment. Any valid mime type is allowed."
+      }
+    },
+    {
+      "path": "ElementDefinition.mapping.map",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Details of the mapping",
+      "definition": "Expresses what part of the target specification corresponds to this element.",
+      "binding": null
+    },
+    {
+      "path": "ElementDefinition.mapping.comment",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Comments about the mapping or its use",
+      "definition": "Comments that provide information about the mapping or its use.",
+      "binding": null
+    }
+  ]
+}

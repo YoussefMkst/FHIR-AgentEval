@@ -1,0 +1,919 @@
+{
+  "resourceType": "PaymentReconciliation",
+  "fhir_version": "4.0.1",
+  "source_urls": {
+    "structureDefinition": "http://hl7.org/fhir/StructureDefinition/PaymentReconciliation"
+  },
+  "elements": [
+    {
+      "path": "PaymentReconciliation",
+      "min": 0,
+      "max": "*",
+      "type": [],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "PaymentReconciliation resource",
+      "definition": "This resource provides the details including amount of a payment and allocates the payment items being paid.",
+      "binding": null
+    },
+    {
+      "path": "PaymentReconciliation.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Logical id of this artifact",
+      "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
+      "binding": null
+    },
+    {
+      "path": "PaymentReconciliation.meta",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Meta"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Metadata about the resource",
+      "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.",
+      "binding": null
+    },
+    {
+      "path": "PaymentReconciliation.implicitRules",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "uri"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "This element is labeled as a modifier because the implicit rules may provide additional knowledge about the resource that modifies it's meaning or interpretation",
+      "mustSupport": null,
+      "short": "A set of rules under which this content was created",
+      "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.",
+      "binding": null
+    },
+    {
+      "path": "PaymentReconciliation.language",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Language of the resource content",
+      "definition": "The base language in which the resource is written.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/languages",
+        "strength": "preferred",
+        "description": "A human language."
+      }
+    },
+    {
+      "path": "PaymentReconciliation.text",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Narrative"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Text summary of the resource, for human interpretation",
+      "definition": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
+      "binding": null
+    },
+    {
+      "path": "PaymentReconciliation.contained",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Resource"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Contained, inline Resources",
+      "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
+      "binding": null
+    },
+    {
+      "path": "PaymentReconciliation.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "PaymentReconciliation.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the resource that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "PaymentReconciliation.identifier",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Identifier"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Business Identifier for a payment reconciliation",
+      "definition": "A unique identifier assigned to this payment reconciliation.",
+      "binding": null
+    },
+    {
+      "path": "PaymentReconciliation.status",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "This element is labelled as a modifier because it is a status element that contains status entered-in-error which means that the resource should not be treated as valid",
+      "mustSupport": null,
+      "short": "active | cancelled | draft | entered-in-error",
+      "definition": "The status of the resource instance.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/fm-status|4.0.1",
+        "strength": "required",
+        "description": "A code specifying the state of the resource instance."
+      }
+    },
+    {
+      "path": "PaymentReconciliation.period",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Period"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Period covered",
+      "definition": "The period of time for which payments have been gathered into this bulk payment for settlement.",
+      "binding": null
+    },
+    {
+      "path": "PaymentReconciliation.created",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "dateTime"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Creation date",
+      "definition": "The date when the resource was created.",
+      "binding": null
+    },
+    {
+      "path": "PaymentReconciliation.paymentIssuer",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Organization"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Party generating payment",
+      "definition": "The party who generated the payment.",
+      "binding": null
+    },
+    {
+      "path": "PaymentReconciliation.request",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Task"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Reference to requesting resource",
+      "definition": "Original request resource reference.",
+      "binding": null
+    },
+    {
+      "path": "PaymentReconciliation.requestor",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Practitioner",
+            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+            "http://hl7.org/fhir/StructureDefinition/Organization"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Responsible practitioner",
+      "definition": "The practitioner who is responsible for the services rendered to the patient.",
+      "binding": null
+    },
+    {
+      "path": "PaymentReconciliation.outcome",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "queued | complete | error | partial",
+      "definition": "The outcome of a request for a reconciliation.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/remittance-outcome|4.0.1",
+        "strength": "required",
+        "description": "The outcome of the processing."
+      }
+    },
+    {
+      "path": "PaymentReconciliation.disposition",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Disposition message",
+      "definition": "A human readable description of the status of the request for the reconciliation.",
+      "binding": null
+    },
+    {
+      "path": "PaymentReconciliation.paymentDate",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "date"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "When payment issued",
+      "definition": "The date of payment as indicated on the financial instrument.",
+      "binding": null
+    },
+    {
+      "path": "PaymentReconciliation.paymentAmount",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "Money"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Total amount of Payment",
+      "definition": "Total payment amount as indicated on the financial instrument.",
+      "binding": null
+    },
+    {
+      "path": "PaymentReconciliation.paymentIdentifier",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Identifier"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Business identifier for the payment",
+      "definition": "Issuer's unique identifier for the payment instrument.",
+      "binding": null
+    },
+    {
+      "path": "PaymentReconciliation.detail",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Settlement particulars",
+      "definition": "Distribution of the payment amount for a previously acknowledged payable.",
+      "binding": null
+    },
+    {
+      "path": "PaymentReconciliation.detail.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "PaymentReconciliation.detail.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "PaymentReconciliation.detail.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "PaymentReconciliation.detail.identifier",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Identifier"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Business identifier of the payment detail",
+      "definition": "Unique identifier for the current payment item for the referenced payable.",
+      "binding": null
+    },
+    {
+      "path": "PaymentReconciliation.detail.predecessor",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Identifier"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Business identifier of the prior payment detail",
+      "definition": "Unique identifier for the prior payment item for the referenced payable.",
+      "binding": null
+    },
+    {
+      "path": "PaymentReconciliation.detail.type",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Category of payment",
+      "definition": "Code to indicate the nature of the payment.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/payment-type",
+        "strength": "example",
+        "description": "The reason for the amount: payment, adjustment, advance."
+      }
+    },
+    {
+      "path": "PaymentReconciliation.detail.request",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Resource"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Request giving rise to the payment",
+      "definition": "A resource, such as a Claim, the evaluation of which could lead to payment.",
+      "binding": null
+    },
+    {
+      "path": "PaymentReconciliation.detail.submitter",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Practitioner",
+            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+            "http://hl7.org/fhir/StructureDefinition/Organization"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Submitter of the request",
+      "definition": "The party which submitted the claim or financial transaction.",
+      "binding": null
+    },
+    {
+      "path": "PaymentReconciliation.detail.response",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Resource"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Response committing to a payment",
+      "definition": "A resource, such as a ClaimResponse, which contains a commitment to payment.",
+      "binding": null
+    },
+    {
+      "path": "PaymentReconciliation.detail.date",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "date"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Date of commitment to pay",
+      "definition": "The date from the response resource containing a commitment to pay.",
+      "binding": null
+    },
+    {
+      "path": "PaymentReconciliation.detail.responsible",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Contact for the response",
+      "definition": "A reference to the individual who is responsible for inquiries regarding the response and its payment.",
+      "binding": null
+    },
+    {
+      "path": "PaymentReconciliation.detail.payee",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Practitioner",
+            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+            "http://hl7.org/fhir/StructureDefinition/Organization"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Recipient of the payment",
+      "definition": "The party which is receiving the payment.",
+      "binding": null
+    },
+    {
+      "path": "PaymentReconciliation.detail.amount",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Money"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Amount allocated to this payable",
+      "definition": "The monetary amount allocated from the total payment to the payable.",
+      "binding": null
+    },
+    {
+      "path": "PaymentReconciliation.formCode",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Printed form identifier",
+      "definition": "A code for the form to be used for printing the content.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/forms",
+        "strength": "example",
+        "description": "The forms codes."
+      }
+    },
+    {
+      "path": "PaymentReconciliation.processNote",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Note concerning processing",
+      "definition": "A note that describes or explains the processing in a human readable form.",
+      "binding": null
+    },
+    {
+      "path": "PaymentReconciliation.processNote.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "PaymentReconciliation.processNote.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "PaymentReconciliation.processNote.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "PaymentReconciliation.processNote.type",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "display | print | printoper",
+      "definition": "The business purpose of the note text.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/note-type|4.0.1",
+        "strength": "required",
+        "description": "The presentation types of notes."
+      }
+    },
+    {
+      "path": "PaymentReconciliation.processNote.text",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Note explanatory text",
+      "definition": "The explanation or description associated with the processing.",
+      "binding": null
+    }
+  ],
+  "search": [
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/PaymentReconciliation-created",
+      "version": "4.0.1",
+      "name": "created",
+      "code": "created",
+      "type": "date",
+      "description": "The creation date",
+      "expression": "PaymentReconciliation.created",
+      "xpath": "f:PaymentReconciliation/f:created",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [
+        "eq",
+        "ne",
+        "gt",
+        "ge",
+        "lt",
+        "le",
+        "sa",
+        "eb",
+        "ap"
+      ],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "PaymentReconciliation"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/PaymentReconciliation-disposition",
+      "version": "4.0.1",
+      "name": "disposition",
+      "code": "disposition",
+      "type": "string",
+      "description": "The contents of the disposition message",
+      "expression": "PaymentReconciliation.disposition",
+      "xpath": "f:PaymentReconciliation/f:disposition",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "PaymentReconciliation"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/PaymentReconciliation-identifier",
+      "version": "4.0.1",
+      "name": "identifier",
+      "code": "identifier",
+      "type": "token",
+      "description": "The business identifier of the ExplanationOfBenefit",
+      "expression": "PaymentReconciliation.identifier",
+      "xpath": "f:PaymentReconciliation/f:identifier",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "PaymentReconciliation"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/PaymentReconciliation-outcome",
+      "version": "4.0.1",
+      "name": "outcome",
+      "code": "outcome",
+      "type": "token",
+      "description": "The processing outcome",
+      "expression": "PaymentReconciliation.outcome",
+      "xpath": "f:PaymentReconciliation/f:outcome",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "PaymentReconciliation"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/PaymentReconciliation-payment-issuer",
+      "version": "4.0.1",
+      "name": "payment-issuer",
+      "code": "payment-issuer",
+      "type": "reference",
+      "description": "The organization which generated this resource",
+      "expression": "PaymentReconciliation.paymentIssuer",
+      "xpath": "f:PaymentReconciliation/f:paymentIssuer",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Organization"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "PaymentReconciliation"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/PaymentReconciliation-request",
+      "version": "4.0.1",
+      "name": "request",
+      "code": "request",
+      "type": "reference",
+      "description": "The reference to the claim",
+      "expression": "PaymentReconciliation.request",
+      "xpath": "f:PaymentReconciliation/f:request",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Task"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "PaymentReconciliation"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/PaymentReconciliation-requestor",
+      "version": "4.0.1",
+      "name": "requestor",
+      "code": "requestor",
+      "type": "reference",
+      "description": "The reference to the provider who submitted the claim",
+      "expression": "PaymentReconciliation.requestor",
+      "xpath": "f:PaymentReconciliation/f:requestor",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Practitioner",
+        "Organization",
+        "PractitionerRole"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "PaymentReconciliation"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/PaymentReconciliation-status",
+      "version": "4.0.1",
+      "name": "status",
+      "code": "status",
+      "type": "token",
+      "description": "The status of the payment reconciliation",
+      "expression": "PaymentReconciliation.status",
+      "xpath": "f:PaymentReconciliation/f:status",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "PaymentReconciliation"
+      ]
+    }
+  ]
+}

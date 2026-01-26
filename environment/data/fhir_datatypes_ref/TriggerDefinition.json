@@ -1,0 +1,151 @@
+{
+  "dataType": "TriggerDefinition",
+  "typeKind": "complex-type",
+  "fhir_version": "4.0.1",
+  "source_urls": {
+    "structureDefinition": "http://hl7.org/fhir/StructureDefinition/TriggerDefinition"
+  },
+  "elements": [
+    {
+      "path": "TriggerDefinition",
+      "min": 0,
+      "max": "*",
+      "type": [],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Defines an expected trigger for a module",
+      "definition": "A description of a triggering event. Triggering events can be named events, data events, or periodic, as determined by the type element.",
+      "binding": null
+    },
+    {
+      "path": "TriggerDefinition.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String",
+          "fhirType": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "TriggerDefinition.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "TriggerDefinition.type",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "named-event | periodic | data-changed | data-added | data-modified | data-removed | data-accessed | data-access-ended",
+      "definition": "The type of triggering event.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/trigger-type|4.0.1",
+        "strength": "required",
+        "description": "The type of trigger."
+      }
+    },
+    {
+      "path": "TriggerDefinition.name",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Name or URI that identifies the event",
+      "definition": "A formal name for the event. This may be an absolute URI that identifies the event formally (e.g. from a trigger registry), or a simple relative URI that identifies the event in a local context.",
+      "binding": null
+    },
+    {
+      "path": "TriggerDefinition.timing[x]",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Timing"
+        },
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Schedule"
+          ]
+        },
+        {
+          "code": "date"
+        },
+        {
+          "code": "dateTime"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Timing of the event",
+      "definition": "The timing of the event (if this is a periodic trigger).",
+      "binding": null
+    },
+    {
+      "path": "TriggerDefinition.data",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "DataRequirement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Triggering data of the event (multiple = 'and')",
+      "definition": "The triggering data of the event (if this is a data trigger). If more than one data is requirement is specified, then all the data requirements must be true.",
+      "binding": null
+    },
+    {
+      "path": "TriggerDefinition.condition",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Expression"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Whether the event triggers (boolean expression)",
+      "definition": "A boolean-valued expression that is evaluated in the context of the container of the trigger definition and returns whether or not the trigger fires.",
+      "binding": null
+    }
+  ]
+}

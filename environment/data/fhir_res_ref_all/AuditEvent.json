@@ -1,0 +1,1638 @@
+{
+  "resourceType": "AuditEvent",
+  "fhir_version": "4.0.1",
+  "source_urls": {
+    "structureDefinition": "http://hl7.org/fhir/StructureDefinition/AuditEvent"
+  },
+  "elements": [
+    {
+      "path": "AuditEvent",
+      "min": 0,
+      "max": "*",
+      "type": [],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Event record kept for security purposes",
+      "definition": "A record of an event made for purposes of maintaining a security log. Typical uses include detection of intrusion attempts and monitoring for inappropriate usage.",
+      "binding": null
+    },
+    {
+      "path": "AuditEvent.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Logical id of this artifact",
+      "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
+      "binding": null
+    },
+    {
+      "path": "AuditEvent.meta",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Meta"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Metadata about the resource",
+      "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.",
+      "binding": null
+    },
+    {
+      "path": "AuditEvent.implicitRules",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "uri"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "This element is labeled as a modifier because the implicit rules may provide additional knowledge about the resource that modifies it's meaning or interpretation",
+      "mustSupport": null,
+      "short": "A set of rules under which this content was created",
+      "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.",
+      "binding": null
+    },
+    {
+      "path": "AuditEvent.language",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Language of the resource content",
+      "definition": "The base language in which the resource is written.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/languages",
+        "strength": "preferred",
+        "description": "A human language."
+      }
+    },
+    {
+      "path": "AuditEvent.text",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Narrative"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Text summary of the resource, for human interpretation",
+      "definition": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
+      "binding": null
+    },
+    {
+      "path": "AuditEvent.contained",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Resource"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Contained, inline Resources",
+      "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
+      "binding": null
+    },
+    {
+      "path": "AuditEvent.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "AuditEvent.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the resource that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "AuditEvent.type",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "Coding"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Type/identifier of event",
+      "definition": "Identifier for a family of the event.  For example, a menu item, program, rule, policy, function code, application name or URL. It identifies the performed function.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/audit-event-type",
+        "strength": "extensible",
+        "description": "Type of event."
+      }
+    },
+    {
+      "path": "AuditEvent.subtype",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Coding"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "More specific type/id for the event",
+      "definition": "Identifier for the category of event.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/audit-event-sub-type",
+        "strength": "extensible",
+        "description": "Sub-type of event."
+      }
+    },
+    {
+      "path": "AuditEvent.action",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Type of action performed during the event",
+      "definition": "Indicator for type of action performed during the event that generated the audit.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/audit-event-action|4.0.1",
+        "strength": "required",
+        "description": "Indicator for type of action performed during the event that generated the event."
+      }
+    },
+    {
+      "path": "AuditEvent.period",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Period"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "When the activity occurred",
+      "definition": "The period during which the activity occurred.",
+      "binding": null
+    },
+    {
+      "path": "AuditEvent.recorded",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "instant"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Time when the event was recorded",
+      "definition": "The time when the event was recorded.",
+      "binding": null
+    },
+    {
+      "path": "AuditEvent.outcome",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Whether the event succeeded or failed",
+      "definition": "Indicates whether the event succeeded or failed.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/audit-event-outcome|4.0.1",
+        "strength": "required",
+        "description": "Indicates whether the event succeeded or failed."
+      }
+    },
+    {
+      "path": "AuditEvent.outcomeDesc",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Description of the event outcome",
+      "definition": "A free text description of the outcome of the event.",
+      "binding": null
+    },
+    {
+      "path": "AuditEvent.purposeOfEvent",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The purposeOfUse of the event",
+      "definition": "The purposeOfUse (reason) that was used during the event being recorded.",
+      "binding": {
+        "valueSet": "http://terminology.hl7.org/ValueSet/v3-PurposeOfUse",
+        "strength": "extensible",
+        "description": "The reason the activity took place."
+      }
+    },
+    {
+      "path": "AuditEvent.agent",
+      "min": 1,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Actor involved in the event",
+      "definition": "An actor taking an active role in the event or activity that is logged.",
+      "binding": null
+    },
+    {
+      "path": "AuditEvent.agent.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "AuditEvent.agent.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "AuditEvent.agent.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "AuditEvent.agent.type",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "How agent participated",
+      "definition": "Specification of the participation type the user plays when performing the event.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/participation-role-type",
+        "strength": "extensible",
+        "description": "The Participation type of the agent to the event."
+      }
+    },
+    {
+      "path": "AuditEvent.agent.role",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Agent role in the event",
+      "definition": "The security role that the user was acting under, that come from local codes defined by the access control security system (e.g. RBAC, ABAC) used in the local context.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/security-role-type",
+        "strength": "example",
+        "description": "What security role enabled the agent to participate in the event."
+      }
+    },
+    {
+      "path": "AuditEvent.agent.who",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+            "http://hl7.org/fhir/StructureDefinition/Practitioner",
+            "http://hl7.org/fhir/StructureDefinition/Organization",
+            "http://hl7.org/fhir/StructureDefinition/Device",
+            "http://hl7.org/fhir/StructureDefinition/Patient",
+            "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Identifier of who",
+      "definition": "Reference to who this agent is that was involved in the event.",
+      "binding": null
+    },
+    {
+      "path": "AuditEvent.agent.altId",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Alternative User identity",
+      "definition": "Alternative agent Identifier. For a human, this should be a user identifier text string from authentication system. This identifier would be one known to a common authentication system (e.g. single sign-on), if available.",
+      "binding": null
+    },
+    {
+      "path": "AuditEvent.agent.name",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Human friendly name for the agent",
+      "definition": "Human-meaningful name for the agent.",
+      "binding": null
+    },
+    {
+      "path": "AuditEvent.agent.requestor",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "boolean"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Whether user is initiator",
+      "definition": "Indicator that the user is or is not the requestor, or initiator, for the event being audited.",
+      "binding": null
+    },
+    {
+      "path": "AuditEvent.agent.location",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Location"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Where",
+      "definition": "Where the event occurred.",
+      "binding": null
+    },
+    {
+      "path": "AuditEvent.agent.policy",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "uri"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Policy that authorized event",
+      "definition": "The policy or plan that authorized the activity being recorded. Typically, a single activity may have multiple applicable policies, such as patient consent, guarantor funding, etc. The policy would also indicate the security token used.",
+      "binding": null
+    },
+    {
+      "path": "AuditEvent.agent.media",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Coding"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Type of media",
+      "definition": "Type of media involved. Used when the event is about exporting/importing onto media.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/dicm-405-mediatype",
+        "strength": "extensible",
+        "description": "Used when the event is about exporting/importing onto media."
+      }
+    },
+    {
+      "path": "AuditEvent.agent.network",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Logical network location for application activity",
+      "definition": "Logical network location for application activity, if the activity has a network location.",
+      "binding": null
+    },
+    {
+      "path": "AuditEvent.agent.network.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "AuditEvent.agent.network.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "AuditEvent.agent.network.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "AuditEvent.agent.network.address",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Identifier for the network access point of the user device",
+      "definition": "An identifier for the network access point of the user device for the audit event.",
+      "binding": null
+    },
+    {
+      "path": "AuditEvent.agent.network.type",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The type of network access point",
+      "definition": "An identifier for the type of network access point that originated the audit event.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/network-type|4.0.1",
+        "strength": "required",
+        "description": "The type of network access point of this agent in the audit event."
+      }
+    },
+    {
+      "path": "AuditEvent.agent.purposeOfUse",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Reason given for this user",
+      "definition": "The reason (purpose of use), specific to this agent, that was used during the event being recorded.",
+      "binding": {
+        "valueSet": "http://terminology.hl7.org/ValueSet/v3-PurposeOfUse",
+        "strength": "extensible",
+        "description": "The reason the activity took place."
+      }
+    },
+    {
+      "path": "AuditEvent.source",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Audit Event Reporter",
+      "definition": "The system that is reporting the event.",
+      "binding": null
+    },
+    {
+      "path": "AuditEvent.source.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "AuditEvent.source.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "AuditEvent.source.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "AuditEvent.source.site",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Logical source location within the enterprise",
+      "definition": "Logical source location within the healthcare enterprise network.  For example, a hospital or other provider location within a multi-entity provider group.",
+      "binding": null
+    },
+    {
+      "path": "AuditEvent.source.observer",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+            "http://hl7.org/fhir/StructureDefinition/Practitioner",
+            "http://hl7.org/fhir/StructureDefinition/Organization",
+            "http://hl7.org/fhir/StructureDefinition/Device",
+            "http://hl7.org/fhir/StructureDefinition/Patient",
+            "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The identity of source detecting the event",
+      "definition": "Identifier of the source where the event was detected.",
+      "binding": null
+    },
+    {
+      "path": "AuditEvent.source.type",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Coding"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The type of source where event originated",
+      "definition": "Code specifying the type of source where event originated.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/audit-source-type",
+        "strength": "extensible",
+        "description": "Code specifying the type of system that detected and recorded the event."
+      }
+    },
+    {
+      "path": "AuditEvent.entity",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Data or objects used",
+      "definition": "Specific instances of data or objects that have been accessed.",
+      "binding": null
+    },
+    {
+      "path": "AuditEvent.entity.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "AuditEvent.entity.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "AuditEvent.entity.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "AuditEvent.entity.what",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Resource"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Specific instance of resource",
+      "definition": "Identifies a specific instance of the entity. The reference should be version specific.",
+      "binding": null
+    },
+    {
+      "path": "AuditEvent.entity.type",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Coding"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Type of entity involved",
+      "definition": "The type of the object that was involved in this audit event.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/audit-entity-type",
+        "strength": "extensible",
+        "description": "Code for the entity type involved in the audit event."
+      }
+    },
+    {
+      "path": "AuditEvent.entity.role",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Coding"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "What role the entity played",
+      "definition": "Code representing the role the entity played in the event being audited.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/object-role",
+        "strength": "extensible",
+        "description": "Code representing the role the entity played in the audit event."
+      }
+    },
+    {
+      "path": "AuditEvent.entity.lifecycle",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Coding"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Life-cycle stage for the entity",
+      "definition": "Identifier for the data life-cycle stage for the entity.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/object-lifecycle-events",
+        "strength": "extensible",
+        "description": "Identifier for the data life-cycle stage for the entity."
+      }
+    },
+    {
+      "path": "AuditEvent.entity.securityLabel",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Coding"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Security labels on the entity",
+      "definition": "Security labels for the identified entity.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/security-labels",
+        "strength": "extensible",
+        "description": "Security Labels from the Healthcare Privacy and Security Classification System."
+      }
+    },
+    {
+      "path": "AuditEvent.entity.name",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Descriptor for entity",
+      "definition": "A name of the entity in the audit event.",
+      "binding": null
+    },
+    {
+      "path": "AuditEvent.entity.description",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Descriptive text",
+      "definition": "Text that describes the entity in more detail.",
+      "binding": null
+    },
+    {
+      "path": "AuditEvent.entity.query",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "base64Binary"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Query parameters",
+      "definition": "The query parameters for a query-type entities.",
+      "binding": null
+    },
+    {
+      "path": "AuditEvent.entity.detail",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional Information about the entity",
+      "definition": "Tagged value pairs for conveying additional information about the entity.",
+      "binding": null
+    },
+    {
+      "path": "AuditEvent.entity.detail.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "AuditEvent.entity.detail.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "AuditEvent.entity.detail.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "AuditEvent.entity.detail.type",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Name of the property",
+      "definition": "The type of extra detail provided in the value.",
+      "binding": null
+    },
+    {
+      "path": "AuditEvent.entity.detail.value[x]",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        },
+        {
+          "code": "base64Binary"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Property value",
+      "definition": "The  value of the extra detail.",
+      "binding": null
+    }
+  ],
+  "search": [
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/AuditEvent-action",
+      "version": "4.0.1",
+      "name": "action",
+      "code": "action",
+      "type": "token",
+      "description": "Type of action performed during the event",
+      "expression": "AuditEvent.action",
+      "xpath": "f:AuditEvent/f:action",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "AuditEvent"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/AuditEvent-address",
+      "version": "4.0.1",
+      "name": "address",
+      "code": "address",
+      "type": "string",
+      "description": "Identifier for the network access point of the user device",
+      "expression": "AuditEvent.agent.network.address",
+      "xpath": "f:AuditEvent/f:agent/f:network/f:address",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "AuditEvent"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/AuditEvent-agent",
+      "version": "4.0.1",
+      "name": "agent",
+      "code": "agent",
+      "type": "reference",
+      "description": "Identifier of who",
+      "expression": "AuditEvent.agent.who",
+      "xpath": "f:AuditEvent/f:agent/f:who",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Practitioner",
+        "Organization",
+        "Device",
+        "Patient",
+        "PractitionerRole",
+        "RelatedPerson"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "AuditEvent"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/AuditEvent-agent-name",
+      "version": "4.0.1",
+      "name": "agent-name",
+      "code": "agent-name",
+      "type": "string",
+      "description": "Human friendly name for the agent",
+      "expression": "AuditEvent.agent.name",
+      "xpath": "f:AuditEvent/f:agent/f:name",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "AuditEvent"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/AuditEvent-agent-role",
+      "version": "4.0.1",
+      "name": "agent-role",
+      "code": "agent-role",
+      "type": "token",
+      "description": "Agent role in the event",
+      "expression": "AuditEvent.agent.role",
+      "xpath": "f:AuditEvent/f:agent/f:role",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "AuditEvent"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/AuditEvent-altid",
+      "version": "4.0.1",
+      "name": "altid",
+      "code": "altid",
+      "type": "token",
+      "description": "Alternative User identity",
+      "expression": "AuditEvent.agent.altId",
+      "xpath": "f:AuditEvent/f:agent/f:altId",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "AuditEvent"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/AuditEvent-date",
+      "version": "4.0.1",
+      "name": "date",
+      "code": "date",
+      "type": "date",
+      "description": "Time when the event was recorded",
+      "expression": "AuditEvent.recorded",
+      "xpath": "f:AuditEvent/f:recorded",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [
+        "eq",
+        "ne",
+        "gt",
+        "ge",
+        "lt",
+        "le",
+        "sa",
+        "eb",
+        "ap"
+      ],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "AuditEvent"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/AuditEvent-entity",
+      "version": "4.0.1",
+      "name": "entity",
+      "code": "entity",
+      "type": "reference",
+      "description": "Specific instance of resource",
+      "expression": "AuditEvent.entity.what",
+      "xpath": "f:AuditEvent/f:entity/f:what",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Account",
+        "ActivityDefinition",
+        "AdverseEvent",
+        "AllergyIntolerance",
+        "Appointment",
+        "AppointmentResponse",
+        "AuditEvent",
+        "Basic",
+        "Binary",
+        "BiologicallyDerivedProduct",
+        "BodyStructure",
+        "Bundle",
+        "CapabilityStatement",
+        "CarePlan",
+        "CareTeam",
+        "CatalogEntry",
+        "ChargeItem",
+        "ChargeItemDefinition",
+        "Claim",
+        "ClaimResponse",
+        "ClinicalImpression",
+        "CodeSystem",
+        "Communication",
+        "CommunicationRequest",
+        "CompartmentDefinition",
+        "Composition",
+        "ConceptMap",
+        "Condition",
+        "Consent",
+        "Contract",
+        "Coverage",
+        "CoverageEligibilityRequest",
+        "CoverageEligibilityResponse",
+        "DetectedIssue",
+        "Device",
+        "DeviceDefinition",
+        "DeviceMetric",
+        "DeviceRequest",
+        "DeviceUseStatement",
+        "DiagnosticReport",
+        "DocumentManifest",
+        "DocumentReference",
+        "EffectEvidenceSynthesis",
+        "Encounter",
+        "Endpoint",
+        "EnrollmentRequest",
+        "EnrollmentResponse",
+        "EpisodeOfCare",
+        "EventDefinition",
+        "Evidence",
+        "EvidenceVariable",
+        "ExampleScenario",
+        "ExplanationOfBenefit",
+        "FamilyMemberHistory",
+        "Flag",
+        "Goal",
+        "GraphDefinition",
+        "Group",
+        "GuidanceResponse",
+        "HealthcareService",
+        "ImagingStudy",
+        "Immunization",
+        "ImmunizationEvaluation",
+        "ImmunizationRecommendation",
+        "ImplementationGuide",
+        "InsurancePlan",
+        "Invoice",
+        "Library",
+        "Linkage",
+        "List",
+        "Location",
+        "Measure",
+        "MeasureReport",
+        "Media",
+        "Medication",
+        "MedicationAdministration",
+        "MedicationDispense",
+        "MedicationKnowledge",
+        "MedicationRequest",
+        "MedicationStatement",
+        "MedicinalProduct",
+        "MedicinalProductAuthorization",
+        "MedicinalProductContraindication",
+        "MedicinalProductIndication",
+        "MedicinalProductIngredient",
+        "MedicinalProductInteraction",
+        "MedicinalProductManufactured",
+        "MedicinalProductPackaged",
+        "MedicinalProductPharmaceutical",
+        "MedicinalProductUndesirableEffect",
+        "MessageDefinition",
+        "MessageHeader",
+        "MolecularSequence",
+        "NamingSystem",
+        "NutritionOrder",
+        "Observation",
+        "ObservationDefinition",
+        "OperationDefinition",
+        "OperationOutcome",
+        "Organization",
+        "OrganizationAffiliation",
+        "Patient",
+        "PaymentNotice",
+        "PaymentReconciliation",
+        "Person",
+        "PlanDefinition",
+        "Practitioner",
+        "PractitionerRole",
+        "Procedure",
+        "Provenance",
+        "Questionnaire",
+        "QuestionnaireResponse",
+        "RelatedPerson",
+        "RequestGroup",
+        "ResearchDefinition",
+        "ResearchElementDefinition",
+        "ResearchStudy",
+        "ResearchSubject",
+        "RiskAssessment",
+        "RiskEvidenceSynthesis",
+        "Schedule",
+        "SearchParameter",
+        "ServiceRequest",
+        "Slot",
+        "Specimen",
+        "SpecimenDefinition",
+        "StructureDefinition",
+        "StructureMap",
+        "Subscription",
+        "Substance",
+        "SubstanceNucleicAcid",
+        "SubstancePolymer",
+        "SubstanceProtein",
+        "SubstanceReferenceInformation",
+        "SubstanceSourceMaterial",
+        "SubstanceSpecification",
+        "SupplyDelivery",
+        "SupplyRequest",
+        "Task",
+        "TerminologyCapabilities",
+        "TestReport",
+        "TestScript",
+        "ValueSet",
+        "VerificationResult",
+        "VisionPrescription"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "AuditEvent"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/AuditEvent-entity-name",
+      "version": "4.0.1",
+      "name": "entity-name",
+      "code": "entity-name",
+      "type": "string",
+      "description": "Descriptor for entity",
+      "expression": "AuditEvent.entity.name",
+      "xpath": "f:AuditEvent/f:entity/f:name",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "AuditEvent"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/AuditEvent-entity-role",
+      "version": "4.0.1",
+      "name": "entity-role",
+      "code": "entity-role",
+      "type": "token",
+      "description": "What role the entity played",
+      "expression": "AuditEvent.entity.role",
+      "xpath": "f:AuditEvent/f:entity/f:role",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "AuditEvent"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/AuditEvent-entity-type",
+      "version": "4.0.1",
+      "name": "entity-type",
+      "code": "entity-type",
+      "type": "token",
+      "description": "Type of entity involved",
+      "expression": "AuditEvent.entity.type",
+      "xpath": "f:AuditEvent/f:entity/f:type",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "AuditEvent"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/AuditEvent-outcome",
+      "version": "4.0.1",
+      "name": "outcome",
+      "code": "outcome",
+      "type": "token",
+      "description": "Whether the event succeeded or failed",
+      "expression": "AuditEvent.outcome",
+      "xpath": "f:AuditEvent/f:outcome",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "AuditEvent"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/AuditEvent-patient",
+      "version": "4.0.1",
+      "name": "patient",
+      "code": "patient",
+      "type": "reference",
+      "description": "Identifier of who",
+      "expression": "AuditEvent.agent.who.where(resolve() is Patient) | AuditEvent.entity.what.where(resolve() is Patient)",
+      "xpath": "f:AuditEvent/f:agent/f:who | f:AuditEvent/f:entity/f:what",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Patient"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "AuditEvent"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/AuditEvent-policy",
+      "version": "4.0.1",
+      "name": "policy",
+      "code": "policy",
+      "type": "uri",
+      "description": "Policy that authorized event",
+      "expression": "AuditEvent.agent.policy",
+      "xpath": "f:AuditEvent/f:agent/f:policy",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "AuditEvent"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/AuditEvent-site",
+      "version": "4.0.1",
+      "name": "site",
+      "code": "site",
+      "type": "token",
+      "description": "Logical source location within the enterprise",
+      "expression": "AuditEvent.source.site",
+      "xpath": "f:AuditEvent/f:source/f:site",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "AuditEvent"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/AuditEvent-source",
+      "version": "4.0.1",
+      "name": "source",
+      "code": "source",
+      "type": "reference",
+      "description": "The identity of source detecting the event",
+      "expression": "AuditEvent.source.observer",
+      "xpath": "f:AuditEvent/f:source/f:observer",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Practitioner",
+        "Organization",
+        "Device",
+        "Patient",
+        "PractitionerRole",
+        "RelatedPerson"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "AuditEvent"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/AuditEvent-subtype",
+      "version": "4.0.1",
+      "name": "subtype",
+      "code": "subtype",
+      "type": "token",
+      "description": "More specific type/id for the event",
+      "expression": "AuditEvent.subtype",
+      "xpath": "f:AuditEvent/f:subtype",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "AuditEvent"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/AuditEvent-type",
+      "version": "4.0.1",
+      "name": "type",
+      "code": "type",
+      "type": "token",
+      "description": "Type/identifier of event",
+      "expression": "AuditEvent.type",
+      "xpath": "f:AuditEvent/f:type",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "AuditEvent"
+      ]
+    }
+  ]
+}
