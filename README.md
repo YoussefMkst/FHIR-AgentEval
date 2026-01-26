@@ -45,15 +45,11 @@ On top of this core sandbox, we include optional add-ons that can be enabled, mo
 ├── experiments/                              # Experiment runners
 │   ├── run_experiment_fhir.py               # Main experiment harness
 │   ├── verify_modular_tasks.py              # Task verification script
-│   ├── README.md                            # Experiment documentation
-│   └── outputs/                             # Experiment results (gitignored)
+│   ├── start_servers.sh                     # Helper to start MCP servers
+│   └── README.md                            # Experiment documentation
 │
 ├── training/                                 # Learning & optimization
-│   ├── fhir_reflexion_workflow.py           # Reflexion-based learning
-│   └── reflexion_prompts/                   # Reflexion system prompts
-│       ├── evaluator_system.txt
-│       ├── reflector_system.txt
-│       └── reflector_spec_system.txt
+│   └── fhir_reflexion_workflow.py           # Reflexion-based learning
 │
 ├── prompts/                                 # System prompts
 │   ├── fhir/                                # FHIR agent prompts
@@ -62,6 +58,10 @@ On top of this core sandbox, we include optional add-ons that can be enabled, mo
 │   │   ├── fhir_planner_default_system_prompt.txt
 │   │   ├── fhir_planner_system_prompt_with_mem.txt
 │   │   └── fhir_planner_system_prompt_no_mem.txt
+│   ├── reflexion_prompts/                   # Reflexion system prompts
+│   │   ├── evaluator_system.txt
+│   │   ├── reflector_system.txt
+│   │   └── reflector_spec_system.txt
 │   └── soft_validator_system_prompt.txt     # Soft validator prompt
 │
 ├── utils/                                   # Shared utilities

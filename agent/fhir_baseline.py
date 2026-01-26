@@ -95,9 +95,6 @@ def extract_text_from_agent_result(result: Any) -> str:
         return str(result)
 
 
-# build_task now provided by utils.task_loader (supports modular & legacy)
-
-
 class FHIRBaselineAgent(FHIRAgentInterface):
     """Baseline FHIR agent: single-model, tool-augmented, no fancy planning."""
 
