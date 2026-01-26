@@ -97,7 +97,7 @@ python run_experiment_fhir.py \
 
 | Argument | Default | Description |
 |----------|---------|-------------|
-| `--variations-yaml` | `exp_1_task_variations_updated.yaml` | Path to task variations YAML |
+| `--variations-yaml` | `exp_1_task_variation_updated.yaml` | Path to task variations YAML |
 | `--output-dir` | (required) | Directory to write results |
 | `--model` | `openai:gpt-4.1-mini` | OpenAI model to use |
 | `--fhir-sse-url` | `http://localhost:8000/fhir_mcp` | FHIR MCP endpoint |

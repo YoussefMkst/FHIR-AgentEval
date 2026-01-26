@@ -598,7 +598,7 @@ def main() -> None:
     )
     parser.add_argument(
         "--variations-yaml",
-        default=str(ROOT_DIR / "environment" / "data" / "exp_1_task_variations_updated.yaml"),
+        default=str(ROOT_DIR / "environment" / "data" / "exp_1_task_variation_updated.yaml"),
         help="Path to variations YAML.",
     )
     parser.add_argument(
