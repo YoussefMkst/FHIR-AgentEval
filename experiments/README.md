@@ -89,8 +89,8 @@ Once prerequisites are ready:
 
 ```bash
 python run_experiment_fhir.py \
-    --variations-yaml ../environment/data/exp_1_task_variation_updated.yaml \
-    --output-dir ../results/my_experiment
+    --variations-yaml environment/data/exp_1_task_variation_updated.yaml \
+    --output-dir results/my_experiment
 ```
 
 ### CLI Arguments
@@ -138,8 +138,8 @@ chmod +x start_servers.sh
 
 # 3. Run experiment (in a new terminal, from experiments/)
 python run_experiment_fhir.py \
-    --variations-yaml ../environment/data/exp_1_task_variation_updated.yaml \
-    --output-dir ../results/my_run
+    --variations-yaml environment/data/exp_1_task_variation_updated.yaml \
+    --output-dir results/my_run
 ```
 
 ---
