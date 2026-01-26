@@ -116,7 +116,7 @@ On top of this core sandbox, we include optional add-ons that can be enabled, mo
    docker-compose up -d
    ```
 
-5. **Start MCP servers** (in separate terminals)
+5. **Start MCP servers** (from project root, in separate terminals)
    ```bash
    # FHIR operations server
    python environment/mcp/baseline_server/fhir_mcp_server.py --port 8000
@@ -136,7 +136,7 @@ python agent/fhir_baseline.py --variations-yaml exp_1_task_variation_updated.yam
 ```bash
 python experiments/run_experiment_fhir.py \
   --output-dir results/my_experiment \
-  --variations-yaml exp_1_task_variation_updated.yaml \
+  --variations-yaml environment/data/exp_1_task_variation_updated.yaml \
   --paraphrase
 ```
 

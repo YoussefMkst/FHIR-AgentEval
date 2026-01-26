@@ -97,9 +97,9 @@ python run_experiment_fhir.py \
 
 | Argument | Default | Description |
 |----------|---------|-------------|
-| `--variations-yaml` | (required) | Path to task variations YAML |
+| `--variations-yaml` | `exp_1_task_variations_updated.yaml` | Path to task variations YAML |
 | `--output-dir` | (required) | Directory to write results |
-| `--model-id` | `gpt-4o` | OpenAI model to use |
+| `--model` | `openai:gpt-4.1-mini` | OpenAI model to use |
 | `--fhir-sse-url` | `http://localhost:8000/fhir_mcp` | FHIR MCP endpoint |
 | `--paraphrase` | `False` | Enable prompt paraphrasing |
 
@@ -128,15 +128,15 @@ Results are written to `--output-dir` with:
 ## Quick Start Summary
 
 ```bash
-# 1. Start FHIR server
-cd environment/hapi-fhir && docker-compose up -d
+# 1. Start FHIR server (from project root)
+cd environment/hapi-fhir && docker-compose up -d && cd ../..
 
-# 2. Start MCP servers
+# 2. Start MCP servers (from project root)
 cd experiments
 chmod +x start_servers.sh
 ./start_servers.sh
 
-# 3. Run experiment
+# 3. Run experiment (in a new terminal, from experiments/)
 python run_experiment_fhir.py \
     --variations-yaml ../environment/data/exp_1_task_variation_updated.yaml \
     --output-dir ../results/my_run

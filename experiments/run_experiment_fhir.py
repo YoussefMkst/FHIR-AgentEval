@@ -598,9 +598,7 @@ def main() -> None:
     )
     parser.add_argument(
         "--variations-yaml",
-        default=str(ROOT_DIR / "environment" / "data" / "exp_3_task_variations_updated.yaml"),
-        #default=str(ROOT_DIR / "environment" / "data" / "exp_21_tasks_5_task_variations_cont.yaml"),
-        #default=str(ROOT_DIR / "environment" / "data" / "run_eval_temp_task05.yaml"),
+        default=str(ROOT_DIR / "environment" / "data" / "exp_1_task_variations_updated.yaml"),
         help="Path to variations YAML.",
     )
     parser.add_argument(
@@ -625,8 +623,8 @@ def main() -> None:
         help="LLM model id (e.g., openai:gpt-4.1-mini).",
     )
     parser.add_argument(
-        "--out-dir",
-        #default=str(ROOT_DIR / "results" / "exp_fig_3_debug_ru"),
+        "--output-dir",
+        required=True,
         help="Output directory for per-run JSON traces and the CSV summary",
     )
     parser.add_argument(
@@ -643,32 +641,27 @@ def main() -> None:
     if not ypath.is_absolute():
         ypath = ROOT_DIR / ypath
 
-    #out_dir = Path(args.out_dir)
+    out_dir = Path(args.output_dir)
+    if not out_dir.is_absolute():
+        out_dir = ROOT_DIR / out_dir
 
+    logger.info(
+        "Starting 5-config experiment | yaml=%s | endpoint=%s | model=%s | out=%s",
+        ypath, args.fhir_sse_url, args.model, out_dir
+    )
 
-    # RUNNING THE EXPERIMENT 1 TIMES.
-    for i in range(4, 6):
-        #out_dir_str = str(ROOT_DIR / "results" / f"exp_fig_3_debug_run_{i}_after_light_validator")
-        out_dir_str = str(ROOT_DIR / "results" / f"exp_test_run_{i}")
-        out_dir = Path(out_dir_str)
-
-        logger.info(
-            "Starting 5-config experiment | yaml=%s | endpoint=%s | model=%s | out=%s",
-            ypath, args.fhir_sse_url, args.model, out_dir
+    asyncio.run(
+        run_experiment(
+            variations_yaml=str(ypath),
+            fhir_sse_url=args.fhir_sse_url,
+            model_id=args.model,
+            out_dir=out_dir,
+            logger=logger,
+            memory_endpoints=args.memory_endpoints,
+            planner_prompt_path=args.planexec_planner_prompt_path,
+            paraphrase=args.paraphrase,
         )
-
-        asyncio.run(
-            run_experiment(
-                variations_yaml=str(ypath),
-                fhir_sse_url=args.fhir_sse_url,
-                model_id=args.model,
-                out_dir=out_dir,
-                logger=logger,
-                memory_endpoints=args.memory_endpoints,
-                planner_prompt_path=args.planexec_planner_prompt_path,
-                paraphrase=args.paraphrase,
-            )
-        )
+    )
 
 
 if __name__ == "__main__":
