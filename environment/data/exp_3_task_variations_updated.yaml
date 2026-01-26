@@ -1,0 +1,2283 @@
+variations:
+  - module: task_01_enter_new_patient
+    class: EnterNewPatientTask
+    template_params:
+      patient_family: "Williams"
+      patient_given: "David"
+      birth_date: "1992-11-08"
+      phone: "555-333-4444"
+      address_line: "42 Pine Rd"
+      city: "Chicago"
+      state: "IL"
+    required_tool_call_sets:
+      - sequence: ['createResource']
+      - sequence: ['getResourceById', 'updateResource']
+      - sequence: ['searchResources', 'createResource']
+      - sequence: ['searchResources', 'createResource']
+    required_resource_types: ['Patient']
+    prohibited_tools: ['deleteResource']
+    difficulty_level: 1
+
+  - module: task_01_enter_new_patient
+    class: EnterNewPatientTask
+    template_params:
+      patient_family: "Brown"
+      patient_given: "Emily"
+      birth_date: "1987-05-22"
+      phone: "555-444-5555"
+      address_line: "18 Elm St"
+      city: "Los Angeles"
+      state: "CA"
+    required_tool_call_sets:
+      - sequence: ['createResource']
+      - sequence: ['getResourceById', 'updateResource']
+      - sequence: ['searchResources', 'createResource']
+      - sequence: ['searchResources', 'createResource']
+    required_resource_types: ['Patient']
+    prohibited_tools: ['deleteResource']
+    difficulty_level: 1
+
+  - module: task_01_enter_new_patient
+    class: EnterNewPatientTask
+    template_params:
+      patient_family: "Jones"
+      patient_given: "James"
+      birth_date: "1990-09-17"
+      phone: "555-555-6666"
+      address_line: "30 Maple Dr"
+      city: "Houston"
+      state: "TX"
+    required_tool_call_sets:
+      - sequence: ['createResource']
+      - sequence: ['getResourceById', 'updateResource']
+      - sequence: ['searchResources', 'createResource']
+      - sequence: ['searchResources', 'createResource']
+    required_resource_types: ['Patient']
+    prohibited_tools: ['deleteResource']
+    difficulty_level: 1
+
+  - module: task_02a_search_existing_patient
+    class: SearchExistingPatientTask
+    template_params:
+      patient_family: "Williams"
+      patient_given: "David"
+      birth_date: "1992-11-08"
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+    required_resource_types: ['Patient']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 1
+
+  - module: task_02a_search_existing_patient
+    class: SearchExistingPatientTask
+    template_params:
+      patient_family: "Brown"
+      patient_given: "Emily"
+      birth_date: "1987-05-22"
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+    required_resource_types: ['Patient']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 1
+
+  - module: task_02a_search_existing_patient
+    class: SearchExistingPatientTask
+    template_params:
+      patient_family: "Jones"
+      patient_given: "James"
+      birth_date: "1990-09-17"
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+    required_resource_types: ['Patient']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 1
+
+  - module: task_02b_search_nonexistent_patient
+    class: SearchNonexistentPatientTask
+    template_params:
+      patient_family: "Williams"
+      patient_given: "Serena"
+      birth_date: "1997-03-03"
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+    required_resource_types: ['Patient']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 1
+
+  - module: task_02b_search_nonexistent_patient
+    class: SearchNonexistentPatientTask
+    template_params:
+      patient_family: "Brown"
+      patient_given: "Robert"
+      birth_date: "1998-04-04"
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+    required_resource_types: ['Patient']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 1
+
+  - module: task_02b_search_nonexistent_patient
+    class: SearchNonexistentPatientTask
+    template_params:
+      patient_family: "Jones"
+      patient_given: "Adam"
+      birth_date: "1999-05-05"
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+    required_resource_types: ['Patient']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 1
+
+  - module: task_03_enter_medical_history
+    class: EnterMedicalHistoryTask
+    template_params:
+      patient_id: "PAT003"
+      condition_code: "44054006"
+      condition_display: "Type 2 diabetes mellitus"
+      patient_family: "Williams"
+      patient_given: "David"
+      patient_birth_date: "1992-11-08"
+      clinical_status: "active"
+    required_tool_call_sets:
+      - sequence: ['createResource']
+      - sequence: ['getResourceById', 'updateResource']
+      - sequence: ['searchResources', 'updateResource']
+    required_resource_types: ['Condition']
+    prohibited_tools: ['deleteResource']
+    difficulty_level: 2
+
+  - module: task_03_enter_medical_history
+    class: EnterMedicalHistoryTask
+    template_params:
+      patient_id: "PAT004"
+      condition_code: "13645005"
+      condition_display: "COPD"
+      patient_family: "Brown"
+      patient_given: "Emily"
+      patient_birth_date: "1987-05-22"
+      clinical_status: "active"
+    required_tool_call_sets:
+      - sequence: ['createResource']
+      - sequence: ['getResourceById', 'updateResource']
+      - sequence: ['searchResources', 'updateResource']
+    required_resource_types: ['Condition']
+    prohibited_tools: ['deleteResource']
+    difficulty_level: 2
+
+  - module: task_03_enter_medical_history
+    class: EnterMedicalHistoryTask
+    template_params:
+      patient_id: "PAT005"
+      condition_code: "15777000"
+      condition_display: "Prediabetes"
+      patient_family: "Jones"
+      patient_given: "James"
+      patient_birth_date: "1990-09-17"
+      clinical_status: "active"
+    required_tool_call_sets:
+      - sequence: ['createResource']
+      - sequence: ['getResourceById', 'updateResource']
+      - sequence: ['searchResources', 'updateResource']
+    required_resource_types: ['Condition']
+    prohibited_tools: ['deleteResource']
+    difficulty_level: 2
+
+  - module: task_04a_search_nonempty_medical_history
+    class: SearchNonemptyMedicalHistoryTask
+    template_params:
+      patient_id: "PAT003"
+      patient_family: "Williams"
+      patient_given: "David"
+      patient_birth_date: "1992-11-08"
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+      - sequence: ['getResourceById']
+    required_resource_types: ['Condition']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 1
+
+  - module: task_04a_search_nonempty_medical_history
+    class: SearchNonemptyMedicalHistoryTask
+    template_params:
+      patient_id: "PAT004"
+      patient_family: "Brown"
+      patient_given: "Emily"
+      patient_birth_date: "1987-05-22"
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+      - sequence: ['getResourceById']
+    required_resource_types: ['Condition']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 1
+
+  - module: task_04a_search_nonempty_medical_history
+    class: SearchNonemptyMedicalHistoryTask
+    template_params:
+      patient_id: "PAT005"
+      patient_family: "Jones"
+      patient_given: "James"
+      patient_birth_date: "1990-09-17"
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+      - sequence: ['getResourceById']
+    required_resource_types: ['Condition']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 1
+
+  - module: task_04b_search_empty_medical_history
+    class: SearchEmptyMedicalHistoryTask
+    template_params:
+      patient_id: "PAT103"
+      patient_family: "Williams"
+      patient_given: "Serena"
+      birth_date: "1997-03-03"
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+    required_resource_types: ['Condition']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 1
+
+  - module: task_04b_search_empty_medical_history
+    class: SearchEmptyMedicalHistoryTask
+    template_params:
+      patient_id: "PAT104"
+      patient_family: "Brown"
+      patient_given: "Robert"
+      birth_date: "1998-04-04"
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+    required_resource_types: ['Condition']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 1
+
+  - module: task_04b_search_empty_medical_history
+    class: SearchEmptyMedicalHistoryTask
+    template_params:
+      patient_id: "PAT105"
+      patient_family: "Jones"
+      patient_given: "Adam"
+      birth_date: "1999-05-05"
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+    required_resource_types: ['Condition']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 1
+
+  - module: task_05_enter_surgery_plan
+    class: EnterSurgeryPlanTask
+    template_params:
+      patient_id: "PAT003"
+      procedure_display: "Minor surgery"
+      procedure_code: "175898006"
+      surgery_date: "2025-06-01"
+      patient_family: "Williams"
+      patient_given: "David"
+      patient_birth_date: "1992-11-08"
+    required_tool_call_sets:
+      - sequence: ['createResource']
+      - sequence: ['getResourceById', 'updateResource']
+      - sequence: ['searchResources', 'createResource']
+    required_resource_types: ['ServiceRequest']
+    prohibited_tools: ['deleteResource']
+    difficulty_level: 2
+
+  - module: task_05_enter_surgery_plan
+    class: EnterSurgeryPlanTask
+    template_params:
+      patient_id: "PAT004"
+      procedure_display: "Repair of hernia"
+      procedure_code: "265323004"
+      surgery_date: "2025-06-15"
+      patient_family: "Brown"
+      patient_given: "Emily"
+      patient_birth_date: "1987-05-22"
+    required_tool_call_sets:
+      - sequence: ['createResource']
+      - sequence: ['getResourceById', 'updateResource']
+      - sequence: ['searchResources', 'createResource']
+    required_resource_types: ['ServiceRequest']
+    prohibited_tools: ['deleteResource']
+    difficulty_level: 2
+
+  - module: task_05_enter_surgery_plan
+    class: EnterSurgeryPlanTask
+    template_params:
+      patient_id: "PAT005"
+      procedure_display: "Arthroscopy"
+      procedure_code: "21470007"
+      surgery_date: "2025-07-01"
+      patient_family: "Jones"
+      patient_given: "James"
+      patient_birth_date: "1990-09-17"
+    required_tool_call_sets:
+      - sequence: ['createResource']
+      - sequence: ['getResourceById', 'updateResource']
+      - sequence: ['searchResources', 'createResource']
+    required_resource_types: ['ServiceRequest']
+    prohibited_tools: ['deleteResource']
+    difficulty_level: 2
+
+  - module: task_06a_search_existing_surgery_plan
+    class: SearchExistingSurgeryPlanTask
+    template_params:
+      patient_id: "PAT003"
+      search_days_ahead: 14
+      days_ahead: 7
+      procedure_code: "175898006"
+      procedure_display: "Minor surgery"
+      patient_family: "Williams"
+      patient_given: "David"
+      birth_date: "1992-11-08"
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+    required_resource_types: ['ServiceRequest']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 2
+
+  - module: task_06a_search_existing_surgery_plan
+    class: SearchExistingSurgeryPlanTask
+    template_params:
+      patient_id: "PAT004"
+      search_days_ahead: 14
+      days_ahead: 7
+      procedure_code: "265323004"
+      procedure_display: "Repair of hernia"
+      patient_family: "Brown"
+      patient_given: "Emily"
+      birth_date: "1987-05-22"
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+    required_resource_types: ['ServiceRequest']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 2
+
+  - module: task_06a_search_existing_surgery_plan
+    class: SearchExistingSurgeryPlanTask
+    template_params:
+      patient_id: "PAT005"
+      search_days_ahead: 14
+      days_ahead: 7
+      procedure_code: "21470007"
+      procedure_display: "Arthroscopy"
+      patient_family: "Jones"
+      patient_given: "James"
+      birth_date: "1990-09-17"
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+    required_resource_types: ['ServiceRequest']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 2
+
+  - module: task_06b_search_nonexistent_surgery_plan
+    class: SearchNonexistentSurgeryPlanTask
+    template_params:
+      patient_id: "PAT103"
+      search_days_ahead: 14
+      days_ahead: 21
+      procedure_code: "175898006"
+      procedure_display: "Minor surgery"
+      patient_family: "Williams"
+      patient_given: "Serena"
+      birth_date: "1997-03-03"
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+    required_resource_types: ['ServiceRequest']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 2
+
+  - module: task_06b_search_nonexistent_surgery_plan
+    class: SearchNonexistentSurgeryPlanTask
+    template_params:
+      patient_id: "PAT104"
+      search_days_ahead: 14
+      days_ahead: 21
+      procedure_code: "265323004"
+      procedure_display: "Repair of hernia"
+      patient_family: "Brown"
+      patient_given: "Robert"
+      birth_date: "1998-04-04"
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+    required_resource_types: ['ServiceRequest']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 2
+
+  - module: task_06b_search_nonexistent_surgery_plan
+    class: SearchNonexistentSurgeryPlanTask
+    template_params:
+      patient_id: "PAT105"
+      search_days_ahead: 14
+      days_ahead: 21
+      procedure_code: "21470007"
+      procedure_display: "Arthroscopy"
+      patient_family: "Jones"
+      patient_given: "Adam"
+      birth_date: "1999-05-05"
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+    required_resource_types: ['ServiceRequest']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 2
+
+  - module: task_07_enter_insurance
+    class: EnterInsuranceTask
+    template_params:
+      patient_id: "PAT003"
+      insurance_provider: "United Healthcare"
+      policy_start_date: "2024-03-01"
+      policy_end_date: "2025-12-31"
+      group_id: "Group-22222"
+      plan_id: "BRONZE789"
+      relationship_type: "FATHER"
+      patient_family: "Williams"
+      patient_given: "David"
+      patient_birth_date: "1992-11-08"
+    required_tool_call_sets:
+      - sequence: ['createResource', 'createResource']
+      - sequence: ['getResourceById', 'updateResource', 'createResource']
+      - sequence: ['searchResources', 'deleteResource', 'createResource', 'createResource']
+    required_resource_types: ['RelatedPerson', 'Coverage']
+    prohibited_tools: []
+    difficulty_level: 2
+
+  - module: task_07_enter_insurance
+    class: EnterInsuranceTask
+    template_params:
+      patient_id: "PAT004"
+      insurance_provider: "Aetna"
+      policy_start_date: "2024-04-01"
+      policy_end_date: "2025-12-31"
+      group_id: "Group-33333"
+      plan_id: "PLATINUM012"
+      relationship_type: "MOTHER"
+      patient_family: "Brown"
+      patient_given: "Emily"
+      patient_birth_date: "1987-05-22"
+    required_tool_call_sets:
+      - sequence: ['createResource', 'createResource']
+      - sequence: ['getResourceById', 'updateResource', 'createResource']
+      - sequence: ['searchResources', 'deleteResource', 'createResource', 'createResource']
+    required_resource_types: ['RelatedPerson', 'Coverage']
+    prohibited_tools: []
+    difficulty_level: 2
+
+  - module: task_07_enter_insurance
+    class: EnterInsuranceTask
+    template_params:
+      patient_id: "PAT005"
+      insurance_provider: "Cigna"
+      policy_start_date: "2024-05-01"
+      policy_end_date: "2025-12-31"
+      group_id: "Group-44444"
+      plan_id: "GOLD345"
+      relationship_type: "FATHER"
+      patient_family: "Jones"
+      patient_given: "James"
+      patient_birth_date: "1990-09-17"
+    required_tool_call_sets:
+      - sequence: ['createResource', 'createResource']
+      - sequence: ['getResourceById', 'updateResource', 'createResource']
+      - sequence: ['searchResources', 'deleteResource', 'createResource', 'createResource']
+    required_resource_types: ['RelatedPerson', 'Coverage']
+    prohibited_tools: []
+    difficulty_level: 2
+
+  - module: task_08a_search_existing_insurance
+    class: SearchExistingInsuranceTask
+    template_params:
+      patient_id: "PAT003"
+      patient_family: "Williams"
+      patient_given: "David"
+      birth_date: "1992-11-08"
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+    required_resource_types: ['Coverage']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 1
+
+  - module: task_08a_search_existing_insurance
+    class: SearchExistingInsuranceTask
+    template_params:
+      patient_id: "PAT004"
+      patient_family: "Brown"
+      patient_given: "Emily"
+      birth_date: "1987-05-22"
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+    required_resource_types: ['Coverage']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 1
+
+  - module: task_08a_search_existing_insurance
+    class: SearchExistingInsuranceTask
+    template_params:
+      patient_id: "PAT005"
+      patient_family: "Jones"
+      patient_given: "James"
+      birth_date: "1990-09-17"
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+    required_resource_types: ['Coverage']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 1
+
+  - module: task_08b_search_nonexistent_insurance
+    class: SearchNonexistentInsuranceTask
+    template_params:
+      patient_id: "PAT103"
+      patient_family: "Williams"
+      patient_given: "Serena"
+      birth_date: "1997-03-03"
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+    required_resource_types: ['Coverage']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 1
+
+  - module: task_08b_search_nonexistent_insurance
+    class: SearchNonexistentInsuranceTask
+    template_params:
+      patient_id: "PAT104"
+      patient_family: "Brown"
+      patient_given: "Robert"
+      birth_date: "1998-04-04"
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+    required_resource_types: ['Coverage']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 1
+
+  - module: task_08b_search_nonexistent_insurance
+    class: SearchNonexistentInsuranceTask
+    template_params:
+      patient_id: "PAT105"
+      patient_family: "Jones"
+      patient_given: "Adam"
+      birth_date: "1999-05-05"
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+    required_resource_types: ['Coverage']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 1
+
+  - module: task_09a_create_related_person
+    class: CreateRelatedPersonTask
+    template_params:
+      patient_id: "PAT003"
+      related_person_family: "Brown"
+      related_person_given: "Mary"
+      related_person_birth_date: "1958-11-20"
+      relationship_code: "SPS"
+      relationship_text: "Spouse"
+      patient_family: "Williams"
+      patient_given: "David"
+      patient_birth_date: "1992-11-08"
+    required_tool_call_sets:
+      - sequence: ['createResource']
+      - sequence: ['searchResources', 'createResource']
+      - sequence: ['searchResources', 'updateResource']
+      - sequence: ['getResourceById', 'updateResource']
+      - sequence: ['getResourceById', 'createResource']
+    required_resource_types: ['RelatedPerson']
+    prohibited_tools: ['deleteResource']
+    difficulty_level: 1
+
+  - module: task_09a_create_related_person
+    class: CreateRelatedPersonTask
+    template_params:
+      patient_id: "PAT004"
+      related_person_family: "Jones"
+      related_person_given: "John"
+      related_person_birth_date: "1965-02-10"
+      relationship_code: "SPS"
+      relationship_text: "Spouse"
+      patient_family: "Brown"
+      patient_given: "Emily"
+      patient_birth_date: "1987-05-22"
+    required_tool_call_sets:
+      - sequence: ['createResource']
+      - sequence: ['searchResources', 'createResource']
+      - sequence: ['searchResources', 'updateResource']
+      - sequence: ['getResourceById', 'updateResource']
+      - sequence: ['getResourceById', 'createResource']
+    required_resource_types: ['RelatedPerson']
+    prohibited_tools: ['deleteResource']
+    difficulty_level: 1
+
+  - module: task_09a_create_related_person
+    class: CreateRelatedPersonTask
+    template_params:
+      patient_id: "PAT005"
+      related_person_family: "Garcia"
+      related_person_given: "Maria"
+      related_person_birth_date: "1963-09-05"
+      relationship_code: "SPS"
+      relationship_text: "Spouse"
+      patient_family: "Jones"
+      patient_given: "James"
+      patient_birth_date: "1990-09-17"
+    required_tool_call_sets:
+      - sequence: ['createResource']
+      - sequence: ['searchResources', 'createResource']
+      - sequence: ['searchResources', 'updateResource']
+      - sequence: ['getResourceById', 'updateResource']
+      - sequence: ['getResourceById', 'createResource']
+    required_resource_types: ['RelatedPerson']
+    prohibited_tools: ['deleteResource']
+    difficulty_level: 1
+
+  - module: task_09b_create_account
+    class: CreateAccountTask
+    template_params:
+      patient_id: "PAT003"
+      account_name: "Williams Family Account"
+      account_type_code: "PBILL"
+      account_type_display: "Patient Billing"
+      patient_family: "Williams"
+      patient_given: "David"
+      patient_birth_date: "1992-11-08"
+    required_tool_call_sets:
+      - sequence: ['createResource']
+      - sequence: ['getResourceById', 'updateResource']
+      - sequence: ['searchResources', 'createResource']
+      - sequence: ['getResourceById', 'createResource']
+    required_resource_types: ['Account']
+    prohibited_tools: ['deleteResource']
+    difficulty_level: 1
+
+  - module: task_09b_create_account
+    class: CreateAccountTask
+    template_params:
+      patient_id: "PAT004"
+      account_name: "Brown Family Account"
+      account_type_code: "PBILL"
+      account_type_display: "Patient Billing"
+      patient_family: "Brown"
+      patient_given: "Emily"
+      patient_birth_date: "1987-05-22"
+    required_tool_call_sets:
+      - sequence: ['createResource']
+      - sequence: ['getResourceById', 'updateResource']
+      - sequence: ['searchResources', 'createResource']
+      - sequence: ['getResourceById', 'createResource']
+    required_resource_types: ['Account']
+    prohibited_tools: ['deleteResource']
+    difficulty_level: 1
+
+  - module: task_09b_create_account
+    class: CreateAccountTask
+    template_params:
+      patient_id: "PAT005"
+      account_name: "Jones Family Account"
+      account_type_code: "PBILL"
+      account_type_display: "Patient Billing"
+      patient_family: "Jones"
+      patient_given: "James"
+      patient_birth_date: "1990-09-17"
+    required_tool_call_sets:
+      - sequence: ['createResource']
+      - sequence: ['getResourceById', 'updateResource']
+      - sequence: ['searchResources', 'createResource']
+      - sequence: ['getResourceById', 'createResource']
+    required_resource_types: ['Account']
+    prohibited_tools: ['deleteResource']
+    difficulty_level: 1
+
+  - module: task_09c_add_guarantor
+    class: AddGuarantorTask
+    template_params:
+      account_id: "ACC003"
+      patient_id: "PAT003"
+      relationship_text: "mother"
+      relationship_code: "MOTHER"
+      related_person_id: "REL003"
+      guarantor_family: "Thomas"
+      guarantor_given: "Barbara"
+      guarantor_phone: "555-333-5555"
+      guarantor_address_line: "42 Pine Rd"
+      guarantor_city: "Chicago"
+      guarantor_state: "IL"
+    required_tool_call_sets:
+      - sequence: ['updateResource']
+      - sequence: ['getResourceById', 'updateResource']
+      - sequence: ['searchResources', 'updateResource']
+    required_resource_types: ['Account']
+    prohibited_tools: ['deleteResource']
+    difficulty_level: 2
+
+  - module: task_09c_add_guarantor
+    class: AddGuarantorTask
+    template_params:
+      account_id: "ACC004"
+      patient_id: "PAT004"
+      relationship_text: "father"
+      relationship_code: "FATHER"
+      related_person_id: "REL004"
+      guarantor_family: "Moore"
+      guarantor_given: "William"
+      guarantor_phone: "555-444-6666"
+      guarantor_address_line: "18 Elm St"
+      guarantor_city: "Los Angeles"
+      guarantor_state: "CA"
+    required_tool_call_sets:
+      - sequence: ['updateResource']
+      - sequence: ['getResourceById', 'updateResource']
+      - sequence: ['searchResources', 'updateResource']
+    required_resource_types: ['Account']
+    prohibited_tools: ['deleteResource']
+    difficulty_level: 2
+
+  - module: task_09c_add_guarantor
+    class: AddGuarantorTask
+    template_params:
+      account_id: "ACC005"
+      patient_id: "PAT005"
+      relationship_text: "mother"
+      relationship_code: "MOTHER"
+      related_person_id: "REL005"
+      guarantor_family: "Jackson"
+      guarantor_given: "Susan"
+      guarantor_phone: "555-555-7777"
+      guarantor_address_line: "30 Maple Dr"
+      guarantor_city: "Houston"
+      guarantor_state: "TX"
+    required_tool_call_sets:
+      - sequence: ['updateResource']
+      - sequence: ['getResourceById', 'updateResource']
+      - sequence: ['searchResources', 'updateResource']
+    required_resource_types: ['Account']
+    prohibited_tools: ['deleteResource']
+    difficulty_level: 2
+
+  - module: task_09d_create_an_existing_account
+    class: CreateExistingAccountTask
+    template_params:
+      patient_id: "PAT003"
+      account_name: "Williams Family Account"
+      account_type_code: "PBILL"
+      account_type_display: "Patient Billing"
+      patient_family: "Williams"
+      patient_given: "David"
+      patient_birth_date: "1992-11-08"
+    required_tool_call_sets:
+      - sequence: ['getResourceById']
+      - sequence: ['getResourceById', 'updateResource']
+      - sequence: ['searchResources', 'updateResource']
+      - sequence: ['createResource']
+    required_resource_types: ['Account']
+    prohibited_tools: []
+    difficulty_level: 1
+
+  - module: task_09d_create_an_existing_account
+    class: CreateExistingAccountTask
+    template_params:
+      patient_id: "PAT004"
+      account_name: "Brown Family Account"
+      account_type_code: "PBILL"
+      account_type_display: "Patient Billing"
+      patient_family: "Brown"
+      patient_given: "Emily"
+      patient_birth_date: "1987-05-22"
+    required_tool_call_sets:
+      - sequence: ['getResourceById']
+      - sequence: ['getResourceById', 'updateResource']
+      - sequence: ['searchResources', 'updateResource']
+      - sequence: ['createResource']
+    required_resource_types: ['Account']
+    prohibited_tools: []
+    difficulty_level: 1
+
+  - module: task_09d_create_an_existing_account
+    class: CreateExistingAccountTask
+    template_params:
+      patient_id: "PAT005"
+      account_name: "Jones Family Account"
+      account_type_code: "PBILL"
+      account_type_display: "Patient Billing"
+      patient_family: "Jones"
+      patient_given: "James"
+      patient_birth_date: "1990-09-17"
+    required_tool_call_sets:
+      - sequence: ['getResourceById']
+      - sequence: ['getResourceById', 'updateResource']
+      - sequence: ['searchResources', 'updateResource']
+      - sequence: ['createResource']
+    required_resource_types: ['Account']
+    prohibited_tools: []
+    difficulty_level: 1
+
+  - module: task_10a_search_existing_guarantor
+    class: SearchExistingGuarantorTask
+    template_params:
+      patient_id: "PAT003"
+      patient_family: "Williams"
+      patient_given: "David"
+      birth_date: "1992-11-08"
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+      - sequence: ['getResourceById']
+    required_resource_types: ['Account']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 2
+
+  - module: task_10a_search_existing_guarantor
+    class: SearchExistingGuarantorTask
+    template_params:
+      patient_id: "PAT004"
+      patient_family: "Brown"
+      patient_given: "Emily"
+      birth_date: "1987-05-22"
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+      - sequence: ['getResourceById']
+    required_resource_types: ['Account']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 2
+
+  - module: task_10a_search_existing_guarantor
+    class: SearchExistingGuarantorTask
+    template_params:
+      patient_id: "PAT005"
+      patient_family: "Jones"
+      patient_given: "James"
+      birth_date: "1990-09-17"
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+      - sequence: ['getResourceById']
+    required_resource_types: ['Account']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 2
+
+  - module: task_10b_search_nonexistent_guarantor
+    class: SearchNonexistentGuarantorTask
+    template_params:
+      patient_id: "PAT103"
+      patient_family: "Williams"
+      patient_given: "Serena"
+      patient_birth_date: "1997-03-03"
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+      - sequence: ['getResourceById']
+    required_resource_types: ['Account']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 1
+
+  - module: task_10b_search_nonexistent_guarantor
+    class: SearchNonexistentGuarantorTask
+    template_params:
+      patient_id: "PAT104"
+      patient_family: "Brown"
+      patient_given: "Robert"
+      patient_birth_date: "1998-04-04"
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+      - sequence: ['getResourceById']
+    required_resource_types: ['Account']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 1
+
+  - module: task_10b_search_nonexistent_guarantor
+    class: SearchNonexistentGuarantorTask
+    template_params:
+      patient_id: "PAT105"
+      patient_family: "Jones"
+      patient_given: "Adam"
+      patient_birth_date: "1999-05-05"
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+      - sequence: ['getResourceById']
+    required_resource_types: ['Account']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 1
+
+  - module: task_11a_search_most_recent_slots
+    class: FindAvailableSlotsTask
+    template_params:
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+    required_resource_types: ['Slot']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 2
+
+  - module: task_11a_search_most_recent_slots
+    class: FindAvailableSlotsTask
+    template_params:
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+    required_resource_types: ['Slot']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 2
+
+  - module: task_11a_search_most_recent_slots
+    class: FindAvailableSlotsTask
+    template_params:
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+    required_resource_types: ['Slot']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 2
+
+  - module: task_11b_search_most_recent_slots_by_language
+    class: FindAvailableSlotsTask
+    template_params:
+      required_language: "zh"
+      required_gender: "female"
+      required_city: "Chicago"
+    required_tool_call_sets:
+      - sequence: ['searchResources', 'searchResources']
+      - sequence: ['searchResources']
+      - sequence: ['searchResources', 'getResourceById', 'searchResources']
+    required_resource_types: ['Slot']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 3
+
+  - module: task_11b_search_most_recent_slots_by_language
+    class: FindAvailableSlotsTask
+    template_params:
+      required_language: "fr"
+      required_gender: "male"
+      required_city: "Los Angeles"
+    required_tool_call_sets:
+      - sequence: ['searchResources', 'searchResources']
+      - sequence: ['searchResources']
+      - sequence: ['searchResources', 'getResourceById', 'searchResources']
+    required_resource_types: ['Slot']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 3
+
+  - module: task_11b_search_most_recent_slots_by_language
+    class: FindAvailableSlotsTask
+    template_params:
+      required_language: "de"
+      required_gender: "female"
+      required_city: "Houston"
+    required_tool_call_sets:
+      - sequence: ['searchResources', 'searchResources']
+      - sequence: ['searchResources']
+      - sequence: ['searchResources', 'getResourceById', 'searchResources']
+    required_resource_types: ['Slot']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 3
+
+  - module: task_11c_search_most_recent_slots_by_service
+    class: FindSlotsByServiceTask
+    template_params:
+      service_name: "orthopedics"
+    required_tool_call_sets:
+      - sequence: ['searchResources', 'searchResources']
+      - sequence: ['searchResources', 'getResourceById', 'searchResources']
+    required_resource_types: ['Slot']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 3
+
+  - module: task_11c_search_most_recent_slots_by_service
+    class: FindSlotsByServiceTask
+    template_params:
+      service_name: "pediatrics"
+    required_tool_call_sets:
+      - sequence: ['searchResources', 'searchResources']
+      - sequence: ['searchResources', 'getResourceById', 'searchResources']
+    required_resource_types: ['Slot']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 3
+
+  - module: task_11c_search_most_recent_slots_by_service
+    class: FindSlotsByServiceTask
+    template_params:
+      service_name: "oncology"
+    required_tool_call_sets:
+      - sequence: ['searchResources', 'searchResources']
+      - sequence: ['searchResources', 'getResourceById', 'searchResources']
+    required_resource_types: ['Slot']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 3
+
+  - module: task_11d_search_most_recent_slots_by_provider
+    class: FindSlotsByProviderTask
+    template_params:
+      provider_family: "Thomas"
+      provider_given: "Michelle"
+      provider_gender: "female"
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+      - sequence: ['searchResources', 'getResourceById']
+    required_resource_types: ['Slot']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 3
+
+  - module: task_11d_search_most_recent_slots_by_provider
+    class: FindSlotsByProviderTask
+    template_params:
+      provider_family: "Moore"
+      provider_given: "Daniel"
+      provider_gender: "male"
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+      - sequence: ['searchResources', 'getResourceById']
+    required_resource_types: ['Slot']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 3
+
+  - module: task_11d_search_most_recent_slots_by_provider
+    class: FindSlotsByProviderTask
+    template_params:
+      provider_family: "Jackson"
+      provider_given: "Jessica"
+      provider_gender: "female"
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+      - sequence: ['searchResources', 'getResourceById']
+    required_resource_types: ['Slot']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 3
+
+  - module: task_12a_search_urgent_slots
+    class: SearchUrgentSlotsTask
+    template_params:
+      urgency_days: 2
+      urgency_end_hour: 17
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+    required_resource_types: ['Slot']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 2
+
+  - module: task_12a_search_urgent_slots
+    class: SearchUrgentSlotsTask
+    template_params:
+      urgency_days: 2
+      urgency_end_hour: 16
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+    required_resource_types: ['Slot']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 2
+
+  - module: task_12a_search_urgent_slots
+    class: SearchUrgentSlotsTask
+    template_params:
+      urgency_days: 3
+      urgency_end_hour: 17
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+    required_resource_types: ['Slot']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 2
+
+  - module: task_12b_search_next_friday_slots
+    class: SearchNextFridaySlotsTask
+    template_params:
+      target_day: "Tuesday"
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+    required_resource_types: ['Slot']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 2
+
+  - module: task_12b_search_next_friday_slots
+    class: SearchNextFridaySlotsTask
+    template_params:
+      target_day: "Wednesday"
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+    required_resource_types: ['Slot']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 2
+
+  - module: task_12b_search_next_friday_slots
+    class: SearchNextFridaySlotsTask
+    template_params:
+      target_day: "Thursday"
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+    required_resource_types: ['Slot']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 2
+
+  - module: task_12c_search_followup_slots
+    class: SearchFollowupSlotsTask
+    template_params:
+      followup_days: 21
+      followup_duration_days: 1
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+    required_resource_types: ['Slot']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 2
+
+  - module: task_12c_search_followup_slots
+    class: SearchFollowupSlotsTask
+    template_params:
+      followup_days: 30
+      followup_duration_days: 2
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+    required_resource_types: ['Slot']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 2
+
+  - module: task_12c_search_followup_slots
+    class: SearchFollowupSlotsTask
+    template_params:
+      followup_days: 45
+      followup_duration_days: 1
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+    required_resource_types: ['Slot']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 2
+
+  - module: task_12d_search_wednesday_morning_slots
+    class: SearchWednesdayMorningSlotsTask
+    template_params:
+      target_day: "Tuesday"
+      time_end_hour: 11
+      search_days_ahead: 14
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+    required_resource_types: ['Slot']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 3
+
+  - module: task_12d_search_wednesday_morning_slots
+    class: SearchWednesdayMorningSlotsTask
+    template_params:
+      target_day: "Thursday"
+      time_end_hour: 12
+      search_days_ahead: 30
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+    required_resource_types: ['Slot']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 3
+
+  - module: task_12d_search_wednesday_morning_slots
+    class: SearchWednesdayMorningSlotsTask
+    template_params:
+      target_day: "Friday"
+      time_end_hour: 11
+      search_days_ahead: 21
+    required_tool_call_sets:
+      - sequence: ['searchResources']
+    required_resource_types: ['Slot']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 3
+
+  - module: task_13a_find_patient_from_slot_1
+    class: FindPatientFromSlotTask
+    template_params:
+      practitioner_family: "Williams"
+      practitioner_given: "David"
+      target_day: "Wednesday"
+      target_hour: 9
+    required_tool_call_sets:
+      - sequence: ['getResourceById', 'searchResources']
+    required_resource_types: ['Slot', 'Appointment', 'Patient']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 2
+
+  - module: task_13a_find_patient_from_slot_1
+    class: FindPatientFromSlotTask
+    template_params:
+      practitioner_family: "Brown"
+      practitioner_given: "Emily"
+      target_day: "Thursday"
+      target_hour: 11
+    required_tool_call_sets:
+      - sequence: ['getResourceById', 'searchResources']
+    required_resource_types: ['Slot', 'Appointment', 'Patient']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 2
+
+  - module: task_13a_find_patient_from_slot_1
+    class: FindPatientFromSlotTask
+    template_params:
+      practitioner_family: "Jones"
+      practitioner_given: "James"
+      target_day: "Friday"
+      target_hour: 9
+    required_tool_call_sets:
+      - sequence: ['getResourceById', 'searchResources']
+    required_resource_types: ['Slot', 'Appointment', 'Patient']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 2
+
+  - module: task_13b_find_patient_from_slot_2
+    class: FindPatientFromSlotTask
+    template_params:
+      practitioner_family: "Thomas"
+      practitioner_given: "Michelle"
+      target_day: "Wednesday"
+      target_hour: 9
+    required_tool_call_sets:
+      - sequence: ['getResourceById', 'searchResources']
+    required_resource_types: ['Slot', 'Appointment', 'Patient']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 2
+
+  - module: task_13b_find_patient_from_slot_2
+    class: FindPatientFromSlotTask
+    template_params:
+      practitioner_family: "Moore"
+      practitioner_given: "Daniel"
+      target_day: "Thursday"
+      target_hour: 11
+    required_tool_call_sets:
+      - sequence: ['getResourceById', 'searchResources']
+    required_resource_types: ['Slot', 'Appointment', 'Patient']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 2
+
+  - module: task_13b_find_patient_from_slot_2
+    class: FindPatientFromSlotTask
+    template_params:
+      practitioner_family: "Jackson"
+      practitioner_given: "Jessica"
+      target_day: "Friday"
+      target_hour: 9
+    required_tool_call_sets:
+      - sequence: ['getResourceById', 'searchResources']
+    required_resource_types: ['Slot', 'Appointment', 'Patient']
+    prohibited_tools: ['createResource', 'updateResource', 'deleteResource']
+    difficulty_level: 2
+
+  - module: task_14a_make_appointment_1
+    class: MakeAppointmentTask
+    template_params:
+      patient_family: "Williams"
+      patient_given: "David"
+      practitioner_family: "Williams"
+      practitioner_given: "David"
+      target_day: "Wednesday"
+      target_hour: 9
+    required_tool_call_sets:
+      - sequence: ['getResourceById', 'updateResource', 'updateResource']
+      - sequence: ['updateResource', 'updateResource']
+    required_resource_types: ['Slot', 'Appointment']
+    prohibited_tools: ['createResource', 'searchResources', 'deleteResource']
+    difficulty_level: 2
+
+  - module: task_14a_make_appointment_1
+    class: MakeAppointmentTask
+    template_params:
+      patient_family: "Brown"
+      patient_given: "Emily"
+      practitioner_family: "Brown"
+      practitioner_given: "Emily"
+      target_day: "Thursday"
+      target_hour: 11
+    required_tool_call_sets:
+      - sequence: ['getResourceById', 'updateResource', 'updateResource']
+      - sequence: ['updateResource', 'updateResource']
+    required_resource_types: ['Slot', 'Appointment']
+    prohibited_tools: ['createResource', 'searchResources', 'deleteResource']
+    difficulty_level: 2
+
+  - module: task_14a_make_appointment_1
+    class: MakeAppointmentTask
+    template_params:
+      patient_family: "Jones"
+      patient_given: "James"
+      practitioner_family: "Jones"
+      practitioner_given: "James"
+      target_day: "Friday"
+      target_hour: 9
+    required_tool_call_sets:
+      - sequence: ['getResourceById', 'updateResource', 'updateResource']
+      - sequence: ['updateResource', 'updateResource']
+    required_resource_types: ['Slot', 'Appointment']
+    prohibited_tools: ['createResource', 'searchResources', 'deleteResource']
+    difficulty_level: 2
+
+  - module: task_14b_make_appointment_2
+    class: MakeAppointmentTask
+    template_params:
+      patient_family: "Williams"
+      patient_given: "David"
+      practitioner_family: "Williams"
+      practitioner_given: "David"
+      target_day: "Wednesday"
+      target_hour: 9
+    required_tool_call_sets:
+      - sequence: ['getResourceById', 'updateResource', 'updateResource']
+      - sequence: ['updateResource', 'updateResource']
+      - sequence: ['createResource', 'updateResource']
+    required_resource_types: ['Appointment', 'Slot']
+    prohibited_tools: ['deleteResource']
+    difficulty_level: 2
+
+  - module: task_14b_make_appointment_2
+    class: MakeAppointmentTask
+    template_params:
+      patient_family: "Brown"
+      patient_given: "Emily"
+      practitioner_family: "Brown"
+      practitioner_given: "Emily"
+      target_day: "Thursday"
+      target_hour: 11
+    required_tool_call_sets:
+      - sequence: ['getResourceById', 'updateResource', 'updateResource']
+      - sequence: ['updateResource', 'updateResource']
+      - sequence: ['createResource', 'updateResource']
+    required_resource_types: ['Appointment', 'Slot']
+    prohibited_tools: ['deleteResource']
+    difficulty_level: 2
+
+  - module: task_14b_make_appointment_2
+    class: MakeAppointmentTask
+    template_params:
+      patient_family: "Jones"
+      patient_given: "James"
+      practitioner_family: "Jones"
+      practitioner_given: "James"
+      target_day: "Friday"
+      target_hour: 9
+    required_tool_call_sets:
+      - sequence: ['getResourceById', 'updateResource', 'updateResource']
+      - sequence: ['updateResource', 'updateResource']
+      - sequence: ['createResource', 'updateResource']
+    required_resource_types: ['Appointment', 'Slot']
+    prohibited_tools: ['deleteResource']
+    difficulty_level: 2
+
+  - module: task_15a_cancel_appointment
+    class: CancelAppointmentTask
+    template_params:
+      patient_family: "Williams"
+      patient_given: ['David']
+      patient_birth_date: "1992-11-08"
+      patient_phone: "555-333-4444"
+      practitioner_family: "Williams"
+      practitioner_given: ['David']
+      practitioner_gender: "female"
+      first_appointment_day: "Wednesday"
+      first_appointment_hour: 9
+      second_appointment_day_offset: 2
+    required_tool_call_sets:
+      - sequence: ['searchResources', 'getResourceById', 'updateResource', 'updateResource']
+      - sequence: ['searchResources', 'updateResource', 'getResourceById', 'updateResource']
+      - sequence: ['searchResources', 'getResourceById', 'updateResource', 'getResourceById', 'updateResource']
+    required_resource_types: ['Appointment', 'Slot']
+    prohibited_tools: ['createResource', 'deleteResource']
+    difficulty_level: 3
+
+  - module: task_15a_cancel_appointment
+    class: CancelAppointmentTask
+    template_params:
+      patient_family: "Brown"
+      patient_given: ['Emily']
+      patient_birth_date: "1987-05-22"
+      patient_phone: "555-444-5555"
+      practitioner_family: "Brown"
+      practitioner_given: ['Emily']
+      practitioner_gender: "male"
+      first_appointment_day: "Thursday"
+      first_appointment_hour: 11
+      second_appointment_day_offset: 1
+    required_tool_call_sets:
+      - sequence: ['searchResources', 'getResourceById', 'updateResource', 'updateResource']
+      - sequence: ['searchResources', 'updateResource', 'getResourceById', 'updateResource']
+      - sequence: ['searchResources', 'getResourceById', 'updateResource', 'getResourceById', 'updateResource']
+    required_resource_types: ['Appointment', 'Slot']
+    prohibited_tools: ['createResource', 'deleteResource']
+    difficulty_level: 3
+
+  - module: task_15a_cancel_appointment
+    class: CancelAppointmentTask
+    template_params:
+      patient_family: "Jones"
+      patient_given: ['James']
+      patient_birth_date: "1990-09-17"
+      patient_phone: "555-555-6666"
+      practitioner_family: "Jones"
+      practitioner_given: ['James']
+      practitioner_gender: "female"
+      first_appointment_day: "Friday"
+      first_appointment_hour: 9
+      second_appointment_day_offset: 2
+    required_tool_call_sets:
+      - sequence: ['searchResources', 'getResourceById', 'updateResource', 'updateResource']
+      - sequence: ['searchResources', 'updateResource', 'getResourceById', 'updateResource']
+      - sequence: ['searchResources', 'getResourceById', 'updateResource', 'getResourceById', 'updateResource']
+    required_resource_types: ['Appointment', 'Slot']
+    prohibited_tools: ['createResource', 'deleteResource']
+    difficulty_level: 3
+
+  - module: task_15b_cancel_appointment_with_provider
+    class: CancelAppointmentWithProviderTask
+    template_params:
+      patient_family: "Williams"
+      patient_given: ['David']
+      patient_birth_date: "1992-11-08"
+      patient_phone: "555-333-4444"
+      practitioner_family: "Williams"
+      practitioner_given: ['David']
+      practitioner_gender: "female"
+      first_appointment_day: "Wednesday"
+      first_appointment_hour: 9
+      second_appointment_day_offset: 2
+    required_tool_call_sets:
+      - sequence: ['searchResources', 'getResourceById', 'updateResource', 'updateResource']
+      - sequence: ['searchResources', 'updateResource', 'getResourceById', 'updateResource']
+    required_resource_types: ['Appointment', 'Slot']
+    prohibited_tools: ['createResource', 'deleteResource']
+    difficulty_level: 3
+
+  - module: task_15b_cancel_appointment_with_provider
+    class: CancelAppointmentWithProviderTask
+    template_params:
+      patient_family: "Brown"
+      patient_given: ['Emily']
+      patient_birth_date: "1987-05-22"
+      patient_phone: "555-444-5555"
+      practitioner_family: "Brown"
+      practitioner_given: ['Emily']
+      practitioner_gender: "male"
+      first_appointment_day: "Thursday"
+      first_appointment_hour: 11
+      second_appointment_day_offset: 1
+    required_tool_call_sets:
+      - sequence: ['searchResources', 'getResourceById', 'updateResource', 'updateResource']
+      - sequence: ['searchResources', 'updateResource', 'getResourceById', 'updateResource']
+    required_resource_types: ['Appointment', 'Slot']
+    prohibited_tools: ['createResource', 'deleteResource']
+    difficulty_level: 3
+
+  - module: task_15b_cancel_appointment_with_provider
+    class: CancelAppointmentWithProviderTask
+    template_params:
+      patient_family: "Jones"
+      patient_given: ['James']
+      patient_birth_date: "1990-09-17"
+      patient_phone: "555-555-6666"
+      practitioner_family: "Jones"
+      practitioner_given: ['James']
+      practitioner_gender: "female"
+      first_appointment_day: "Friday"
+      first_appointment_hour: 9
+      second_appointment_day_offset: 2
+    required_tool_call_sets:
+      - sequence: ['searchResources', 'getResourceById', 'updateResource', 'updateResource']
+      - sequence: ['searchResources', 'updateResource', 'getResourceById', 'updateResource']
+    required_resource_types: ['Appointment', 'Slot']
+    prohibited_tools: ['createResource', 'deleteResource']
+    difficulty_level: 3
+
+  - module: task_15c_cancel_appointment_on_monday
+    class: CancelAppointmentOnMondayTask
+    template_params:
+      patient_family: "Williams"
+      patient_given: ['David']
+      patient_birth_date: "1992-11-08"
+      patient_phone: "555-333-4444"
+      practitioner_family: "Williams"
+      practitioner_given: ['David']
+      practitioner_gender: "female"
+      first_appointment_day: "Wednesday"
+      first_appointment_hour: 9
+      second_appointment_day_offset: 2
+    required_tool_call_sets:
+      - sequence: ['searchResources', 'searchResources', 'updateResource', 'getResourceById', 'updateResource']
+      - sequence: ['searchResources', 'updateResource', 'getResourceById', 'updateResource']
+      - sequence: ['searchResources', 'searchResources', 'getResourceById', 'updateResource', 'getResourceById', 'updateResource']
+      - sequence: ['searchResources', 'updateResource', 'updateResource']
+    required_resource_types: ['Appointment', 'Slot']
+    prohibited_tools: ['createResource', 'deleteResource']
+    difficulty_level: 3
+
+  - module: task_15c_cancel_appointment_on_monday
+    class: CancelAppointmentOnMondayTask
+    template_params:
+      patient_family: "Brown"
+      patient_given: ['Emily']
+      patient_birth_date: "1987-05-22"
+      patient_phone: "555-444-5555"
+      practitioner_family: "Brown"
+      practitioner_given: ['Emily']
+      practitioner_gender: "male"
+      first_appointment_day: "Thursday"
+      first_appointment_hour: 11
+      second_appointment_day_offset: 1
+    required_tool_call_sets:
+      - sequence: ['searchResources', 'searchResources', 'updateResource', 'getResourceById', 'updateResource']
+      - sequence: ['searchResources', 'updateResource', 'getResourceById', 'updateResource']
+      - sequence: ['searchResources', 'searchResources', 'getResourceById', 'updateResource', 'getResourceById', 'updateResource']
+      - sequence: ['searchResources', 'updateResource', 'updateResource']
+    required_resource_types: ['Appointment', 'Slot']
+    prohibited_tools: ['createResource', 'deleteResource']
+    difficulty_level: 3
+
+  - module: task_15c_cancel_appointment_on_monday
+    class: CancelAppointmentOnMondayTask
+    template_params:
+      patient_family: "Jones"
+      patient_given: ['James']
+      patient_birth_date: "1990-09-17"
+      patient_phone: "555-555-6666"
+      practitioner_family: "Jones"
+      practitioner_given: ['James']
+      practitioner_gender: "female"
+      first_appointment_day: "Friday"
+      first_appointment_hour: 9
+      second_appointment_day_offset: 2
+    required_tool_call_sets:
+      - sequence: ['searchResources', 'searchResources', 'updateResource', 'getResourceById', 'updateResource']
+      - sequence: ['searchResources', 'updateResource', 'getResourceById', 'updateResource']
+      - sequence: ['searchResources', 'searchResources', 'getResourceById', 'updateResource', 'getResourceById', 'updateResource']
+      - sequence: ['searchResources', 'updateResource', 'updateResource']
+    required_resource_types: ['Appointment', 'Slot']
+    prohibited_tools: ['createResource', 'deleteResource']
+    difficulty_level: 3
+
+  - module: task_16a_add_patient_to_waitlist
+    class: AddPatientToWaitlistTask
+    template_params:
+      patient_family: "Williams"
+      patient_given: "David"
+      practitioner_family: "Williams"
+      practitioner_given: "David"
+      patient_birth_date: "1992-11-08"
+      patient_phone: "555-333-4444"
+      waitlist_reason: "Scheduling conflict"
+      preferred_date: "2024-05-15"
+      preferred_time: "11:00"
+    required_tool_call_sets:
+      - sequence: ['createResource']
+      - sequence: ['updateResource']
+      - sequence: ['searchResources', 'createResource']
+    required_resource_types: ['Appointment']
+    prohibited_tools: ['deleteResource']
+    difficulty_level: 2
+
+  - module: task_16a_add_patient_to_waitlist
+    class: AddPatientToWaitlistTask
+    template_params:
+      patient_family: "Brown"
+      patient_given: "Emily"
+      practitioner_family: "Brown"
+      practitioner_given: "Emily"
+      patient_birth_date: "1987-05-22"
+      patient_phone: "555-444-5555"
+      waitlist_reason: "Provider unavailable"
+      preferred_date: "2024-06-20"
+      preferred_time: "14:00"
+    required_tool_call_sets:
+      - sequence: ['createResource']
+      - sequence: ['updateResource']
+      - sequence: ['searchResources', 'createResource']
+    required_resource_types: ['Appointment']
+    prohibited_tools: ['deleteResource']
+    difficulty_level: 2
+
+  - module: task_16a_add_patient_to_waitlist
+    class: AddPatientToWaitlistTask
+    template_params:
+      patient_family: "Jones"
+      patient_given: "James"
+      practitioner_family: "Jones"
+      practitioner_given: "James"
+      patient_birth_date: "1990-09-17"
+      patient_phone: "555-555-6666"
+      waitlist_reason: "Time preference"
+      preferred_date: "2024-07-05"
+      preferred_time: "15:00"
+    required_tool_call_sets:
+      - sequence: ['createResource']
+      - sequence: ['updateResource']
+      - sequence: ['searchResources', 'createResource']
+    required_resource_types: ['Appointment']
+    prohibited_tools: ['deleteResource']
+    difficulty_level: 2
+
+  - module: task_16b_move_patient_out_of_waitlist
+    class: MovePatientOutOfWaitlistTask
+    template_params:
+      patient_family: "Williams"
+      patient_given: ['David']
+      patient_birth_date: "1992-11-08"
+      patient_phone: "555-333-4444"
+      practitioner_family: "Williams"
+      practitioner_given: ['David']
+      practitioner_gender: "female"
+      first_appointment_day: "Wednesday"
+      first_appointment_hour: 9
+      second_appointment_day_offset: 2
+    required_tool_call_sets:
+      - sequence: ['searchResources', 'searchResources', 'getResourceById', 'updateResource', 'updateResource']
+      - sequence: ['searchResources', 'searchResources', 'updateResource', 'updateResource']
+      - sequence: ['searchResources', 'getResourceById', 'updateResource', 'updateResource']
+      - sequence: ['searchResources', 'getResourceById', 'updateResource', 'getResourceById', 'updateResource']
+      - sequence: ['searchResources', 'createResource', 'searchResources', 'updateResource', 'updateResource']
+    required_resource_types: ['Appointment', 'Slot']
+    prohibited_tools: ['deleteResource']
+    difficulty_level: 3
+
+  - module: task_16b_move_patient_out_of_waitlist
+    class: MovePatientOutOfWaitlistTask
+    template_params:
+      patient_family: "Brown"
+      patient_given: ['Emily']
+      patient_birth_date: "1987-05-22"
+      patient_phone: "555-444-5555"
+      practitioner_family: "Brown"
+      practitioner_given: ['Emily']
+      practitioner_gender: "male"
+      first_appointment_day: "Thursday"
+      first_appointment_hour: 11
+      second_appointment_day_offset: 1
+    required_tool_call_sets:
+      - sequence: ['searchResources', 'searchResources', 'getResourceById', 'updateResource', 'updateResource']
+      - sequence: ['searchResources', 'searchResources', 'updateResource', 'updateResource']
+      - sequence: ['searchResources', 'getResourceById', 'updateResource', 'updateResource']
+      - sequence: ['searchResources', 'getResourceById', 'updateResource', 'getResourceById', 'updateResource']
+      - sequence: ['searchResources', 'createResource', 'searchResources', 'updateResource', 'updateResource']
+    required_resource_types: ['Appointment', 'Slot']
+    prohibited_tools: ['deleteResource']
+    difficulty_level: 3
+
+  - module: task_16b_move_patient_out_of_waitlist
+    class: MovePatientOutOfWaitlistTask
+    template_params:
+      patient_family: "Jones"
+      patient_given: ['James']
+      patient_birth_date: "1990-09-17"
+      patient_phone: "555-555-6666"
+      practitioner_family: "Jones"
+      practitioner_given: ['James']
+      practitioner_gender: "female"
+      first_appointment_day: "Friday"
+      first_appointment_hour: 9
+      second_appointment_day_offset: 2
+    required_tool_call_sets:
+      - sequence: ['searchResources', 'searchResources', 'getResourceById', 'updateResource', 'updateResource']
+      - sequence: ['searchResources', 'searchResources', 'updateResource', 'updateResource']
+      - sequence: ['searchResources', 'getResourceById', 'updateResource', 'updateResource']
+      - sequence: ['searchResources', 'getResourceById', 'updateResource', 'getResourceById', 'updateResource']
+      - sequence: ['searchResources', 'createResource', 'searchResources', 'updateResource', 'updateResource']
+    required_resource_types: ['Appointment', 'Slot']
+    prohibited_tools: ['deleteResource']
+    difficulty_level: 3
+
+  - module: task_16c_remove_patient_from_waitlist
+    class: RemovePatientFromWaitlistTask
+    template_params:
+      patient_family: "Williams"
+      patient_given: "David"
+    required_tool_call_sets:
+      - sequence: ['searchResources', 'updateResource']
+      - sequence: ['getResourceById', 'updateResource']
+    required_resource_types: ['Appointment']
+    prohibited_tools: ['createResource', 'deleteResource']
+    difficulty_level: 2
+
+  - module: task_16c_remove_patient_from_waitlist
+    class: RemovePatientFromWaitlistTask
+    template_params:
+      patient_family: "Brown"
+      patient_given: "Emily"
+    required_tool_call_sets:
+      - sequence: ['searchResources', 'updateResource']
+      - sequence: ['getResourceById', 'updateResource']
+    required_resource_types: ['Appointment']
+    prohibited_tools: ['createResource', 'deleteResource']
+    difficulty_level: 2
+
+  - module: task_16c_remove_patient_from_waitlist
+    class: RemovePatientFromWaitlistTask
+    template_params:
+      patient_family: "Jones"
+      patient_given: "James"
+    required_tool_call_sets:
+      - sequence: ['searchResources', 'updateResource']
+      - sequence: ['getResourceById', 'updateResource']
+    required_resource_types: ['Appointment']
+    prohibited_tools: ['createResource', 'deleteResource']
+    difficulty_level: 2
+
+  - module: task_17a_reschedule_to_next_monday
+    class: RescheduleToNextMondayTask
+    template_params:
+      patient_family: "Williams"
+      patient_given: ['David']
+      patient_birth_date: "1992-11-08"
+      patient_phone: "555-333-4444"
+      practitioner_family: "Williams"
+      practitioner_given: ['David']
+      practitioner_gender: "female"
+      target_day: "Wednesday"
+      target_hour: 11
+    required_tool_call_sets:
+      - sequence: ['searchResources', 'searchResources', 'getResourceById', 'updateResource', 'updateResource', 'updateResource']
+      - sequence: ['searchResources', 'searchResources', 'updateResource', 'updateResource', 'updateResource']
+      - sequence: ['searchResources', 'getResourceById', 'searchResources', 'updateResource', 'updateResource', 'updateResource']
+      - sequence: ['searchResources', 'getResourceById', 'getResourceById', 'updateResource', 'updateResource', 'updateResource']
+      - sequence: ['searchResources', 'searchResources', 'getResourceById', 'updateResource', 'getResourceById', 'updateResource', 'updateResource']
+    required_resource_types: ['Appointment', 'Slot']
+    prohibited_tools: ['createResource', 'deleteResource']
+    difficulty_level: 3
+
+  - module: task_17a_reschedule_to_next_monday
+    class: RescheduleToNextMondayTask
+    template_params:
+      patient_family: "Brown"
+      patient_given: ['Emily']
+      patient_birth_date: "1987-05-22"
+      patient_phone: "555-444-5555"
+      practitioner_family: "Brown"
+      practitioner_given: ['Emily']
+      practitioner_gender: "male"
+      target_day: "Thursday"
+      target_hour: 9
+    required_tool_call_sets:
+      - sequence: ['searchResources', 'searchResources', 'getResourceById', 'updateResource', 'updateResource', 'updateResource']
+      - sequence: ['searchResources', 'searchResources', 'updateResource', 'updateResource', 'updateResource']
+      - sequence: ['searchResources', 'getResourceById', 'searchResources', 'updateResource', 'updateResource', 'updateResource']
+      - sequence: ['searchResources', 'getResourceById', 'getResourceById', 'updateResource', 'updateResource', 'updateResource']
+      - sequence: ['searchResources', 'searchResources', 'getResourceById', 'updateResource', 'getResourceById', 'updateResource', 'updateResource']
+    required_resource_types: ['Appointment', 'Slot']
+    prohibited_tools: ['createResource', 'deleteResource']
+    difficulty_level: 3
+
+  - module: task_17a_reschedule_to_next_monday
+    class: RescheduleToNextMondayTask
+    template_params:
+      patient_family: "Jones"
+      patient_given: ['James']
+      patient_birth_date: "1990-09-17"
+      patient_phone: "555-555-6666"
+      practitioner_family: "Jones"
+      practitioner_given: ['James']
+      practitioner_gender: "female"
+      target_day: "Friday"
+      target_hour: 10
+    required_tool_call_sets:
+      - sequence: ['searchResources', 'searchResources', 'getResourceById', 'updateResource', 'updateResource', 'updateResource']
+      - sequence: ['searchResources', 'searchResources', 'updateResource', 'updateResource', 'updateResource']
+      - sequence: ['searchResources', 'getResourceById', 'searchResources', 'updateResource', 'updateResource', 'updateResource']
+      - sequence: ['searchResources', 'getResourceById', 'getResourceById', 'updateResource', 'updateResource', 'updateResource']
+      - sequence: ['searchResources', 'searchResources', 'getResourceById', 'updateResource', 'getResourceById', 'updateResource', 'updateResource']
+    required_resource_types: ['Appointment', 'Slot']
+    prohibited_tools: ['createResource', 'deleteResource']
+    difficulty_level: 3
+
+  - module: task_17b_reschedule_with_another_provider
+    class: RescheduleWithAnotherProviderTask
+    template_params:
+      patient_family: "Williams"
+      patient_given: ['David']
+      patient_birth_date: "1992-11-08"
+      patient_phone: "555-333-4444"
+      current_practitioner_family: "Williams"
+      current_practitioner_given: ['David']
+      new_practitioner_family: "Brown"
+      new_practitioner_given: ['Emily']
+      new_practitioner_gender: "female"
+      target_day: "Wednesday"
+      target_hour: 11
+    required_tool_call_sets:
+      - sequence: ['searchResources', 'searchResources', 'updateResource', 'updateResource', 'updateResource']
+      - sequence: ['searchResources', 'searchResources', 'searchResources', 'getResourceById', 'updateResource', 'updateResource', 'updateResource']
+      - sequence: ['searchResources', 'searchResources', 'searchResources', 'updateResource', 'updateResource', 'updateResource']
+      - sequence: ['searchResources', 'searchResources', 'getResourceById', 'updateResource', 'searchResources', 'updateResource', 'updateResource']
+      - sequence: ['searchResources', 'getResourceById', 'searchResources', 'getResourceById', 'updateResource', 'updateResource', 'updateResource']
+      - sequence: ['searchResources', 'searchResources', 'searchResources', 'getResourceById', 'updateResource', 'getResourceById', 'updateResource', 'updateResource']
+    required_resource_types: ['Slot', 'Appointment']
+    prohibited_tools: ['createResource', 'deleteResource']
+    difficulty_level: 3
+
+  - module: task_17b_reschedule_with_another_provider
+    class: RescheduleWithAnotherProviderTask
+    template_params:
+      patient_family: "Brown"
+      patient_given: ['Emily']
+      patient_birth_date: "1987-05-22"
+      patient_phone: "555-444-5555"
+      current_practitioner_family: "Brown"
+      current_practitioner_given: ['Emily']
+      new_practitioner_family: "Jones"
+      new_practitioner_given: ['James']
+      new_practitioner_gender: "male"
+      target_day: "Thursday"
+      target_hour: 9
+    required_tool_call_sets:
+      - sequence: ['searchResources', 'searchResources', 'updateResource', 'updateResource', 'updateResource']
+      - sequence: ['searchResources', 'searchResources', 'searchResources', 'getResourceById', 'updateResource', 'updateResource', 'updateResource']
+      - sequence: ['searchResources', 'searchResources', 'searchResources', 'updateResource', 'updateResource', 'updateResource']
+      - sequence: ['searchResources', 'searchResources', 'getResourceById', 'updateResource', 'searchResources', 'updateResource', 'updateResource']
+      - sequence: ['searchResources', 'getResourceById', 'searchResources', 'getResourceById', 'updateResource', 'updateResource', 'updateResource']
+      - sequence: ['searchResources', 'searchResources', 'searchResources', 'getResourceById', 'updateResource', 'getResourceById', 'updateResource', 'updateResource']
+    required_resource_types: ['Slot', 'Appointment']
+    prohibited_tools: ['createResource', 'deleteResource']
+    difficulty_level: 3
+
+  - module: task_17b_reschedule_with_another_provider
+    class: RescheduleWithAnotherProviderTask
+    template_params:
+      patient_family: "Jones"
+      patient_given: ['James']
+      patient_birth_date: "1990-09-17"
+      patient_phone: "555-555-6666"
+      current_practitioner_family: "Jones"
+      current_practitioner_given: ['James']
+      new_practitioner_family: "Garcia"
+      new_practitioner_given: ['Lisa']
+      new_practitioner_gender: "female"
+      target_day: "Friday"
+      target_hour: 10
+    required_tool_call_sets:
+      - sequence: ['searchResources', 'searchResources', 'updateResource', 'updateResource', 'updateResource']
+      - sequence: ['searchResources', 'searchResources', 'searchResources', 'getResourceById', 'updateResource', 'updateResource', 'updateResource']
+      - sequence: ['searchResources', 'searchResources', 'searchResources', 'updateResource', 'updateResource', 'updateResource']
+      - sequence: ['searchResources', 'searchResources', 'getResourceById', 'updateResource', 'searchResources', 'updateResource', 'updateResource']
+      - sequence: ['searchResources', 'getResourceById', 'searchResources', 'getResourceById', 'updateResource', 'updateResource', 'updateResource']
+      - sequence: ['searchResources', 'searchResources', 'searchResources', 'getResourceById', 'updateResource', 'getResourceById', 'updateResource', 'updateResource']
+    required_resource_types: ['Slot', 'Appointment']
+    prohibited_tools: ['createResource', 'deleteResource']
+    difficulty_level: 3
+
+  - module: task_18a_out_of_scope_request
+    class: OutOfScopeRequestTask
+    template_params:
+      request_type: "lab_results"
+      request_description: "Patient requesting lab test results"
+      patient_family: "Williams"
+      patient_given: "David"
+      patient_birth_date: "1992-11-08"
+      contact_method: "phone"
+      contact_details: "555-333-4444"
+    required_tool_call_sets:
+    required_resource_types: []
+    prohibited_tools: ['createResource', 'searchResources', 'getResourceById', 'updateResource', 'deleteResource']
+    difficulty_level: 1
+
+  - module: task_18a_out_of_scope_request
+    class: OutOfScopeRequestTask
+    template_params:
+      request_type: "specialist_referral"
+      request_description: "Patient needs referral to specialist"
+      patient_family: "Brown"
+      patient_given: "Emily"
+      patient_birth_date: "1987-05-22"
+      contact_method: "email"
+      contact_details: "david.williams@email.com"
+    required_tool_call_sets:
+    required_resource_types: []
+    prohibited_tools: ['createResource', 'searchResources', 'getResourceById', 'updateResource', 'deleteResource']
+    difficulty_level: 1
+
+  - module: task_18a_out_of_scope_request
+    class: OutOfScopeRequestTask
+    template_params:
+      request_type: "medical_records"
+      request_description: "Patient requesting medical record copies"
+      patient_family: "Jones"
+      patient_given: "James"
+      patient_birth_date: "1990-09-17"
+      contact_method: "phone"
+      contact_details: "555-555-6666"
+    required_tool_call_sets:
+    required_resource_types: []
+    prohibited_tools: ['createResource', 'searchResources', 'getResourceById', 'updateResource', 'deleteResource']
+    difficulty_level: 1
+
+  - module: task_19a_other_agents_needed_education
+    class: OtherAgentsNeededTask
+    template_params:
+      education_topic: "asthma_care"
+      education_type: "preventive_care"
+      patient_family: "Williams"
+      patient_given: "David"
+      patient_birth_date: "1992-11-08"
+      preferred_language: "Chinese"
+      education_level: "high_school"
+      contact_method: "phone"
+      contact_details: "555-333-4444"
+    required_tool_call_sets:
+    required_resource_types: []
+    prohibited_tools: ['createResource', 'searchResources', 'getResourceById', 'updateResource', 'deleteResource']
+    difficulty_level: 1
+
+  - module: task_19a_other_agents_needed_education
+    class: OtherAgentsNeededTask
+    template_params:
+      education_topic: "heart_health"
+      education_type: "chronic_condition"
+      patient_family: "Brown"
+      patient_given: "Emily"
+      patient_birth_date: "1987-05-22"
+      preferred_language: "French"
+      education_level: "college"
+      contact_method: "email"
+      contact_details: "david.williams@email.com"
+    required_tool_call_sets:
+    required_resource_types: []
+    prohibited_tools: ['createResource', 'searchResources', 'getResourceById', 'updateResource', 'deleteResource']
+    difficulty_level: 1
+
+  - module: task_19a_other_agents_needed_education
+    class: OtherAgentsNeededTask
+    template_params:
+      education_topic: "nutrition_planning"
+      education_type: "lifestyle_coaching"
+      patient_family: "Jones"
+      patient_given: "James"
+      patient_birth_date: "1990-09-17"
+      preferred_language: "German"
+      education_level: "high_school"
+      contact_method: "phone"
+      contact_details: "555-555-6666"
+    required_tool_call_sets:
+    required_resource_types: []
+    prohibited_tools: ['createResource', 'searchResources', 'getResourceById', 'updateResource', 'deleteResource']
+    difficulty_level: 1
+
+  - module: task_19b_other_agents_needed_insurance
+    class: OtherAgentsNeededTask
+    template_params:
+      insurance_issue: "prior_authorization"
+      issue_description: "Need prior authorization for treatment"
+      patient_family: "Williams"
+      patient_given: "David"
+      patient_birth_date: "1992-11-08"
+      insurance_provider: "United Healthcare"
+      policy_number: "POL345678"
+      contact_method: "phone"
+      contact_details: "555-333-4444"
+    required_tool_call_sets:
+    required_resource_types: []
+    prohibited_tools: ['createResource', 'searchResources', 'getResourceById', 'updateResource', 'deleteResource']
+    difficulty_level: 1
+
+  - module: task_19b_other_agents_needed_insurance
+    class: OtherAgentsNeededTask
+    template_params:
+      insurance_issue: "out_of_network"
+      issue_description: "Provider is out of network"
+      patient_family: "Brown"
+      patient_given: "Emily"
+      patient_birth_date: "1987-05-22"
+      insurance_provider: "Aetna"
+      policy_number: "POL456789"
+      contact_method: "email"
+      contact_details: "david.williams@email.com"
+    required_tool_call_sets:
+    required_resource_types: []
+    prohibited_tools: ['createResource', 'searchResources', 'getResourceById', 'updateResource', 'deleteResource']
+    difficulty_level: 1
+
+  - module: task_19b_other_agents_needed_insurance
+    class: OtherAgentsNeededTask
+    template_params:
+      insurance_issue: "copay_question"
+      issue_description: "Question about copayment amount"
+      patient_family: "Jones"
+      patient_given: "James"
+      patient_birth_date: "1990-09-17"
+      insurance_provider: "Cigna"
+      policy_number: "POL567890"
+      contact_method: "phone"
+      contact_details: "555-555-6666"
+    required_tool_call_sets:
+    required_resource_types: []
+    prohibited_tools: ['createResource', 'searchResources', 'getResourceById', 'updateResource', 'deleteResource']
+    difficulty_level: 1
+
+  - module: task_19c_other_agents_needed_lab
+    class: OtherAgentsNeededTask
+    template_params:
+      lab_issue: "specimen_issue"
+      issue_description: "Issue with lab specimen collection"
+      patient_family: "Williams"
+      patient_given: "David"
+      patient_birth_date: "1992-11-08"
+      lab_test_type: "imaging"
+      test_date: "2024-05-05"
+      contact_method: "phone"
+      contact_details: "555-333-4444"
+    required_tool_call_sets:
+    required_resource_types: []
+    prohibited_tools: ['createResource', 'searchResources', 'getResourceById', 'updateResource', 'deleteResource']
+    difficulty_level: 1
+
+  - module: task_19c_other_agents_needed_lab
+    class: OtherAgentsNeededTask
+    template_params:
+      lab_issue: "results_delayed"
+      issue_description: "Lab results are delayed"
+      patient_family: "Brown"
+      patient_given: "Emily"
+      patient_birth_date: "1987-05-22"
+      lab_test_type: "biopsy"
+      test_date: "2024-06-12"
+      contact_method: "email"
+      contact_details: "david.williams@email.com"
+    required_tool_call_sets:
+    required_resource_types: []
+    prohibited_tools: ['createResource', 'searchResources', 'getResourceById', 'updateResource', 'deleteResource']
+    difficulty_level: 1
+
+  - module: task_19c_other_agents_needed_lab
+    class: OtherAgentsNeededTask
+    template_params:
+      lab_issue: "test_not_ordered"
+      issue_description: "Lab test was not ordered"
+      patient_family: "Jones"
+      patient_given: "James"
+      patient_birth_date: "1990-09-17"
+      lab_test_type: "culture"
+      test_date: "2024-07-20"
+      contact_method: "phone"
+      contact_details: "555-555-6666"
+    required_tool_call_sets:
+    required_resource_types: []
+    prohibited_tools: ['createResource', 'searchResources', 'getResourceById', 'updateResource', 'deleteResource']
+    difficulty_level: 1
+
+  - module: task_19d_other_agents_needed_manager
+    class: OtherAgentsNeededTask
+    template_params:
+      management_issue: "access_issue"
+      issue_description: "Patient cannot access medical records"
+      patient_family: "Williams"
+      patient_given: "David"
+      patient_birth_date: "1992-11-08"
+      issue_severity: "high"
+      amount_in_dispute: 3000.0
+      contact_method: "phone"
+      contact_details: "555-333-4444"
+    required_tool_call_sets:
+    required_resource_types: []
+    prohibited_tools: ['createResource', 'searchResources', 'getResourceById', 'updateResource', 'deleteResource']
+    difficulty_level: 1
+
+  - module: task_19d_other_agents_needed_manager
+    class: OtherAgentsNeededTask
+    template_params:
+      management_issue: "quality_concern"
+      issue_description: "Patient has quality of care concerns"
+      patient_family: "Brown"
+      patient_given: "Emily"
+      patient_birth_date: "1987-05-22"
+      issue_severity: "medium"
+      amount_in_dispute: 1200.0
+      contact_method: "email"
+      contact_details: "david.williams@email.com"
+    required_tool_call_sets:
+    required_resource_types: []
+    prohibited_tools: ['createResource', 'searchResources', 'getResourceById', 'updateResource', 'deleteResource']
+    difficulty_level: 1
+
+  - module: task_19d_other_agents_needed_manager
+    class: OtherAgentsNeededTask
+    template_params:
+      management_issue: "wait_time"
+      issue_description: "Patient complaint about long wait times"
+      patient_family: "Jones"
+      patient_given: "James"
+      patient_birth_date: "1990-09-17"
+      issue_severity: "low"
+      amount_in_dispute: 800.0
+      contact_method: "phone"
+      contact_details: "555-555-6666"
+    required_tool_call_sets:
+    required_resource_types: []
+    prohibited_tools: ['createResource', 'searchResources', 'getResourceById', 'updateResource', 'deleteResource']
+    difficulty_level: 1
+
+  - module: task_20_placing_test_order
+    class: PlaceTestOrderTaskModular
+    template_params:
+      patient_family: "Williams"
+      patient_given: "David"
+      practitioner_family: "Thomas"
+      practitioner_given: "Michelle"
+    required_tool_call_sets:
+      - sequence: ['searchResources', 'searchResources', 'createResource']
+      - sequence: ['searchResources', 'searchResources', 'updateResource']
+    required_resource_types: ['Patient', 'Practitioner', 'ServiceRequest']
+    prohibited_tools: ['deleteResource']
+    difficulty_level: 3
+
+  - module: task_20_placing_test_order
+    class: PlaceTestOrderTaskModular
+    template_params:
+      patient_family: "Brown"
+      patient_given: "Emily"
+      practitioner_family: "Moore"
+      practitioner_given: "Daniel"
+    required_tool_call_sets:
+      - sequence: ['searchResources', 'searchResources', 'createResource']
+      - sequence: ['searchResources', 'searchResources', 'updateResource']
+    required_resource_types: ['Patient', 'Practitioner', 'ServiceRequest']
+    prohibited_tools: ['deleteResource']
+    difficulty_level: 3
+
+  - module: task_20_placing_test_order
+    class: PlaceTestOrderTaskModular
+    template_params:
+      patient_family: "Jones"
+      patient_given: "James"
+      practitioner_family: "Jackson"
+      practitioner_given: "Jessica"
+    required_tool_call_sets:
+      - sequence: ['searchResources', 'searchResources', 'createResource']
+      - sequence: ['searchResources', 'searchResources', 'updateResource']
+    required_resource_types: ['Patient', 'Practitioner', 'ServiceRequest']
+    prohibited_tools: ['deleteResource']
+    difficulty_level: 3
+
+  - module: task_21a_add_supporting_info
+    class: AddSupportingInfoTaskModular
+    template_params:
+      patient_family: "Williams"
+      patient_given: "David"
+    required_tool_call_sets:
+      - sequence: ['searchResources', 'searchResources', 'searchResources', 'updateResource']
+    required_resource_types: ['Patient', 'DiagnosticReport', 'ServiceRequest']
+    prohibited_tools: ['deleteResource']
+    difficulty_level: 4
+
+  - module: task_21a_add_supporting_info
+    class: AddSupportingInfoTaskModular
+    template_params:
+      patient_family: "Brown"
+      patient_given: "Emily"
+    required_tool_call_sets:
+      - sequence: ['searchResources', 'searchResources', 'searchResources', 'updateResource']
+    required_resource_types: ['Patient', 'DiagnosticReport', 'ServiceRequest']
+    prohibited_tools: ['deleteResource']
+    difficulty_level: 4
+
+  - module: task_21a_add_supporting_info
+    class: AddSupportingInfoTaskModular
+    template_params:
+      patient_family: "Jones"
+      patient_given: "James"
+    required_tool_call_sets:
+      - sequence: ['searchResources', 'searchResources', 'searchResources', 'updateResource']
+    required_resource_types: ['Patient', 'DiagnosticReport', 'ServiceRequest']
+    prohibited_tools: ['deleteResource']
+    difficulty_level: 4
+
+  - module: task_21b_filter_relevant_diagnostic_reports
+    class: FilterRelevantDiagnosticReportsTaskModular
+    template_params:
+      patient_family: "Williams"
+      patient_given: "David"
+    required_tool_call_sets:
+      - sequence: ['searchResources', 'searchResources', 'searchResources', 'updateResource']
+    required_resource_types: ['Patient', 'DiagnosticReport', 'ServiceRequest']
+    prohibited_tools: ['deleteResource']
+    difficulty_level: 5
+
+  - module: task_21b_filter_relevant_diagnostic_reports
+    class: FilterRelevantDiagnosticReportsTaskModular
+    template_params:
+      patient_family: "Brown"
+      patient_given: "Emily"
+    required_tool_call_sets:
+      - sequence: ['searchResources', 'searchResources', 'searchResources', 'updateResource']
+    required_resource_types: ['Patient', 'DiagnosticReport', 'ServiceRequest']
+    prohibited_tools: ['deleteResource']
+    difficulty_level: 5
+
+  - module: task_21b_filter_relevant_diagnostic_reports
+    class: FilterRelevantDiagnosticReportsTaskModular
+    template_params:
+      patient_family: "Jones"
+      patient_given: "James"
+    required_tool_call_sets:
+      - sequence: ['searchResources', 'searchResources', 'searchResources', 'updateResource']
+    required_resource_types: ['Patient', 'DiagnosticReport', 'ServiceRequest']
+    prohibited_tools: ['deleteResource']
+    difficulty_level: 5
+
+  - module: task_21c_add_family_history_to_request
+    class: AddFamilyHistoryToRequestTaskModular
+    template_params:
+      patient_family: "Williams"
+      patient_given: "David"
+      relative_relationship: "sister"
+      relationship_code: "SIS"
+      condition_name: "ovarian cancer"
+      condition_age: 42
+    required_tool_call_sets:
+      - sequence: ['searchResources', 'createResource', 'searchResources', 'updateResource']
+    required_resource_types: ['Patient', 'FamilyMemberHistory', 'ServiceRequest']
+    prohibited_tools: ['deleteResource']
+    difficulty_level: 6
+
+  - module: task_21c_add_family_history_to_request
+    class: AddFamilyHistoryToRequestTaskModular
+    template_params:
+      patient_family: "Brown"
+      patient_given: "Emily"
+      relative_relationship: "brother"
+      relationship_code: "BRO"
+      condition_name: "prostate cancer"
+      condition_age: 60
+    required_tool_call_sets:
+      - sequence: ['searchResources', 'createResource', 'searchResources', 'updateResource']
+    required_resource_types: ['Patient', 'FamilyMemberHistory', 'ServiceRequest']
+    prohibited_tools: ['deleteResource']
+    difficulty_level: 6
+
+  - module: task_21c_add_family_history_to_request
+    class: AddFamilyHistoryToRequestTaskModular
+    template_params:
+      patient_family: "Jones"
+      patient_given: "James"
+      relative_relationship: "mother"
+      relationship_code: "MTH"
+      condition_name: "lung cancer"
+      condition_age: 67
+    required_tool_call_sets:
+      - sequence: ['searchResources', 'createResource', 'searchResources', 'updateResource']
+    required_resource_types: ['Patient', 'FamilyMemberHistory', 'ServiceRequest']
+    prohibited_tools: ['deleteResource']
+    difficulty_level: 6
+
+  - module: task_22_add_family_member_history
+    class: AddFamilyMemberHistoryTaskModular
+    template_params:
+      patient_family: "Williams"
+      patient_given: "David"
+      relative_relationship: "brother"
+      relationship_code: "BRO"
+      condition_name: "leukemia"
+      condition_age: 35
+    required_tool_call_sets:
+      - sequence: ['searchResources', 'createResource']
+    required_resource_types: ['Patient', 'FamilyMemberHistory']
+    prohibited_tools: ['deleteResource']
+    difficulty_level: 4
+
+  - module: task_22_add_family_member_history
+    class: AddFamilyMemberHistoryTaskModular
+    template_params:
+      patient_family: "Brown"
+      patient_given: "Emily"
+      relative_relationship: "sister"
+      relationship_code: "SIS"
+      condition_name: "thyroid cancer"
+      condition_age: 40
+    required_tool_call_sets:
+      - sequence: ['searchResources', 'createResource']
+    required_resource_types: ['Patient', 'FamilyMemberHistory']
+    prohibited_tools: ['deleteResource']
+    difficulty_level: 4
+
+  - module: task_22_add_family_member_history
+    class: AddFamilyMemberHistoryTaskModular
+    template_params:
+      patient_family: "Jones"
+      patient_given: "James"
+      relative_relationship: "father"
+      relationship_code: "FTH"
+      condition_name: "stomach cancer"
+      condition_age: 63
+    required_tool_call_sets:
+      - sequence: ['searchResources', 'createResource']
+    required_resource_types: ['Patient', 'FamilyMemberHistory']
+    prohibited_tools: ['deleteResource']
+    difficulty_level: 4

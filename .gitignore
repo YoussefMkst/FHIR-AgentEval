@@ -3,6 +3,7 @@
 .env
 venv
 ENV/
+
 # Python bytecode files
 __pycache__/
 *.py[cod]
@@ -13,15 +14,12 @@ develop-eggs/
 dist/
 downloads/  
 
-test.ipynb
 
-test.py
 # Keep only specific files in environment/data
 environment/data/**
-!environment/data/
-!environment/data/run_eval_temp.yaml
-!environment/data/run_eval_all_params.yaml
-!environment/data/deeprare_constraints.yaml
+!environment/data/exp_1_task_variation_updated.yaml
+!environment/data/exp_3_task_variations_updated.yaml
+!environment/data/exp_7_task_variations_updated.yaml
 
 ltm_faiss/index.faiss
 RDC.json
