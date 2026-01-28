@@ -574,8 +574,6 @@ async def run_task(task_entry: Dict[str, Any], max_trials: int, use_specs: bool 
         det_exec = ExecutionResult(
             execution_success=True,
             response_msg=final_msg,
-            execution_id=exec_id,
-            workflow_name=exec_log.get("workflow_name"),
             token_total=exec_log.get("token_total"),
             input_query=exec_log.get("input_query"),
             total_exec_ms=exec_log.get("total_exec_ms"),
