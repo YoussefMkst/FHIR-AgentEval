@@ -1,0 +1,752 @@
+{
+  "resourceType": "MedicinalProductPharmaceutical",
+  "fhir_version": "4.0.1",
+  "source_urls": {
+    "structureDefinition": "http://hl7.org/fhir/StructureDefinition/MedicinalProductPharmaceutical"
+  },
+  "elements": [
+    {
+      "path": "MedicinalProductPharmaceutical",
+      "min": 0,
+      "max": "*",
+      "type": [],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "A pharmaceutical product described in terms of its composition and dose form",
+      "definition": "A pharmaceutical product described in terms of its composition and dose form.",
+      "binding": null
+    },
+    {
+      "path": "MedicinalProductPharmaceutical.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Logical id of this artifact",
+      "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
+      "binding": null
+    },
+    {
+      "path": "MedicinalProductPharmaceutical.meta",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Meta"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Metadata about the resource",
+      "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.",
+      "binding": null
+    },
+    {
+      "path": "MedicinalProductPharmaceutical.implicitRules",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "uri"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "This element is labeled as a modifier because the implicit rules may provide additional knowledge about the resource that modifies it's meaning or interpretation",
+      "mustSupport": null,
+      "short": "A set of rules under which this content was created",
+      "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.",
+      "binding": null
+    },
+    {
+      "path": "MedicinalProductPharmaceutical.language",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Language of the resource content",
+      "definition": "The base language in which the resource is written.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/languages",
+        "strength": "preferred",
+        "description": "A human language."
+      }
+    },
+    {
+      "path": "MedicinalProductPharmaceutical.text",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Narrative"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Text summary of the resource, for human interpretation",
+      "definition": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
+      "binding": null
+    },
+    {
+      "path": "MedicinalProductPharmaceutical.contained",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Resource"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Contained, inline Resources",
+      "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
+      "binding": null
+    },
+    {
+      "path": "MedicinalProductPharmaceutical.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "MedicinalProductPharmaceutical.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the resource that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "MedicinalProductPharmaceutical.identifier",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Identifier"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "An identifier for the pharmaceutical medicinal product",
+      "definition": "An identifier for the pharmaceutical medicinal product.",
+      "binding": null
+    },
+    {
+      "path": "MedicinalProductPharmaceutical.administrableDoseForm",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The administrable dose form, after necessary reconstitution",
+      "definition": "The administrable dose form, after necessary reconstitution.",
+      "binding": null
+    },
+    {
+      "path": "MedicinalProductPharmaceutical.unitOfPresentation",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Todo",
+      "definition": "Todo.",
+      "binding": null
+    },
+    {
+      "path": "MedicinalProductPharmaceutical.ingredient",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/MedicinalProductIngredient"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Ingredient",
+      "definition": "Ingredient.",
+      "binding": null
+    },
+    {
+      "path": "MedicinalProductPharmaceutical.device",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/DeviceDefinition"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Accompanying device",
+      "definition": "Accompanying device.",
+      "binding": null
+    },
+    {
+      "path": "MedicinalProductPharmaceutical.characteristics",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Characteristics e.g. a products onset of action",
+      "definition": "Characteristics e.g. a products onset of action.",
+      "binding": null
+    },
+    {
+      "path": "MedicinalProductPharmaceutical.characteristics.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "MedicinalProductPharmaceutical.characteristics.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "MedicinalProductPharmaceutical.characteristics.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "MedicinalProductPharmaceutical.characteristics.code",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "A coded characteristic",
+      "definition": "A coded characteristic.",
+      "binding": null
+    },
+    {
+      "path": "MedicinalProductPharmaceutical.characteristics.status",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The status of characteristic e.g. assigned or pending",
+      "definition": "The status of characteristic e.g. assigned or pending.",
+      "binding": null
+    },
+    {
+      "path": "MedicinalProductPharmaceutical.routeOfAdministration",
+      "min": 1,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The path by which the pharmaceutical product is taken into or makes contact with the body",
+      "definition": "The path by which the pharmaceutical product is taken into or makes contact with the body.",
+      "binding": null
+    },
+    {
+      "path": "MedicinalProductPharmaceutical.routeOfAdministration.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "MedicinalProductPharmaceutical.routeOfAdministration.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "MedicinalProductPharmaceutical.routeOfAdministration.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "MedicinalProductPharmaceutical.routeOfAdministration.code",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Coded expression for the route",
+      "definition": "Coded expression for the route.",
+      "binding": null
+    },
+    {
+      "path": "MedicinalProductPharmaceutical.routeOfAdministration.firstDose",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Quantity"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The first dose (dose quantity) administered in humans can be specified, for a product under investigation, using a numerical value and its unit of measurement",
+      "definition": "The first dose (dose quantity) administered in humans can be specified, for a product under investigation, using a numerical value and its unit of measurement.",
+      "binding": null
+    },
+    {
+      "path": "MedicinalProductPharmaceutical.routeOfAdministration.maxSingleDose",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Quantity"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The maximum single dose that can be administered as per the protocol of a clinical trial can be specified using a numerical value and its unit of measurement",
+      "definition": "The maximum single dose that can be administered as per the protocol of a clinical trial can be specified using a numerical value and its unit of measurement.",
+      "binding": null
+    },
+    {
+      "path": "MedicinalProductPharmaceutical.routeOfAdministration.maxDosePerDay",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Quantity"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The maximum dose per day (maximum dose quantity to be administered in any one 24-h period) that can be administered as per the protocol referenced in the clinical trial authorisation",
+      "definition": "The maximum dose per day (maximum dose quantity to be administered in any one 24-h period) that can be administered as per the protocol referenced in the clinical trial authorisation.",
+      "binding": null
+    },
+    {
+      "path": "MedicinalProductPharmaceutical.routeOfAdministration.maxDosePerTreatmentPeriod",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Ratio"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The maximum dose per treatment period that can be administered as per the protocol referenced in the clinical trial authorisation",
+      "definition": "The maximum dose per treatment period that can be administered as per the protocol referenced in the clinical trial authorisation.",
+      "binding": null
+    },
+    {
+      "path": "MedicinalProductPharmaceutical.routeOfAdministration.maxTreatmentPeriod",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Duration"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The maximum treatment period during which an Investigational Medicinal Product can be administered as per the protocol referenced in the clinical trial authorisation",
+      "definition": "The maximum treatment period during which an Investigational Medicinal Product can be administered as per the protocol referenced in the clinical trial authorisation.",
+      "binding": null
+    },
+    {
+      "path": "MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "A species for which this route applies",
+      "definition": "A species for which this route applies.",
+      "binding": null
+    },
+    {
+      "path": "MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.code",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Coded expression for the species",
+      "definition": "Coded expression for the species.",
+      "binding": null
+    },
+    {
+      "path": "MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "A species specific time during which consumption of animal product is not appropriate",
+      "definition": "A species specific time during which consumption of animal product is not appropriate.",
+      "binding": null
+    },
+    {
+      "path": "MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.tissue",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Coded expression for the type of tissue for which the withdrawal period applues, e.g. meat, milk",
+      "definition": "Coded expression for the type of tissue for which the withdrawal period applues, e.g. meat, milk.",
+      "binding": null
+    },
+    {
+      "path": "MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.value",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "Quantity"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "A value for the time",
+      "definition": "A value for the time.",
+      "binding": null
+    },
+    {
+      "path": "MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.supportingInformation",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Extra information about the withdrawal period",
+      "definition": "Extra information about the withdrawal period.",
+      "binding": null
+    }
+  ],
+  "search": [
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/MedicinalProductPharmaceutical-identifier",
+      "version": "4.0.1",
+      "name": "identifier",
+      "code": "identifier",
+      "type": "token",
+      "description": "An identifier for the pharmaceutical medicinal product",
+      "expression": "MedicinalProductPharmaceutical.identifier",
+      "xpath": "f:MedicinalProductPharmaceutical/f:identifier",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "MedicinalProductPharmaceutical"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/MedicinalProductPharmaceutical-route",
+      "version": "4.0.1",
+      "name": "route",
+      "code": "route",
+      "type": "token",
+      "description": "Coded expression for the route",
+      "expression": "MedicinalProductPharmaceutical.routeOfAdministration.code",
+      "xpath": "f:MedicinalProductPharmaceutical/f:routeOfAdministration/f:code",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "MedicinalProductPharmaceutical"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/MedicinalProductPharmaceutical-target-species",
+      "version": "4.0.1",
+      "name": "target-species",
+      "code": "target-species",
+      "type": "token",
+      "description": "Coded expression for the species",
+      "expression": "MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.code",
+      "xpath": "f:MedicinalProductPharmaceutical/f:routeOfAdministration/f:targetSpecies/f:code",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "MedicinalProductPharmaceutical"
+      ]
+    }
+  ]
+}

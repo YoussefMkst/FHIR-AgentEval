@@ -1,0 +1,1123 @@
+{
+  "resourceType": "HealthcareService",
+  "fhir_version": "4.0.1",
+  "source_urls": {
+    "structureDefinition": "http://hl7.org/fhir/StructureDefinition/HealthcareService"
+  },
+  "elements": [
+    {
+      "path": "HealthcareService",
+      "min": 0,
+      "max": "*",
+      "type": [],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The details of a healthcare service available at a location",
+      "definition": "The details of a healthcare service available at a location.",
+      "binding": null
+    },
+    {
+      "path": "HealthcareService.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Logical id of this artifact",
+      "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
+      "binding": null
+    },
+    {
+      "path": "HealthcareService.meta",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Meta"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Metadata about the resource",
+      "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.",
+      "binding": null
+    },
+    {
+      "path": "HealthcareService.implicitRules",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "uri"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "This element is labeled as a modifier because the implicit rules may provide additional knowledge about the resource that modifies it's meaning or interpretation",
+      "mustSupport": null,
+      "short": "A set of rules under which this content was created",
+      "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.",
+      "binding": null
+    },
+    {
+      "path": "HealthcareService.language",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Language of the resource content",
+      "definition": "The base language in which the resource is written.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/languages",
+        "strength": "preferred",
+        "description": "A human language."
+      }
+    },
+    {
+      "path": "HealthcareService.text",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Narrative"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Text summary of the resource, for human interpretation",
+      "definition": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
+      "binding": null
+    },
+    {
+      "path": "HealthcareService.contained",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Resource"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Contained, inline Resources",
+      "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
+      "binding": null
+    },
+    {
+      "path": "HealthcareService.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "HealthcareService.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the resource that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "HealthcareService.identifier",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Identifier"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "External identifiers for this item",
+      "definition": "External identifiers for this item.",
+      "binding": null
+    },
+    {
+      "path": "HealthcareService.active",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "boolean"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "This element is labelled as a modifier because it is a status element that can indicate that a record should not be treated as valid",
+      "mustSupport": null,
+      "short": "Whether this HealthcareService record is in active use",
+      "definition": "This flag is used to mark the record to not be used. This is not used when a center is closed for maintenance, or for holidays, the notAvailable period is to be used for this.",
+      "binding": null
+    },
+    {
+      "path": "HealthcareService.providedBy",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Organization"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Organization that provides this service",
+      "definition": "The organization that provides this healthcare service.",
+      "binding": null
+    },
+    {
+      "path": "HealthcareService.category",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Broad category of service being performed or delivered",
+      "definition": "Identifies the broad category of service being performed or delivered.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/service-category",
+        "strength": "example",
+        "description": "A category of the service(s) that could be provided."
+      }
+    },
+    {
+      "path": "HealthcareService.type",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Type of service that may be delivered or performed",
+      "definition": "The specific type of service that may be delivered or performed.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/service-type",
+        "strength": "example",
+        "description": "Additional details about where the content was created (e.g. clinical specialty)."
+      }
+    },
+    {
+      "path": "HealthcareService.specialty",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Specialties handled by the HealthcareService",
+      "definition": "Collection of specialties handled by the service site. This is more of a medical term.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/c80-practice-codes",
+        "strength": "preferred",
+        "description": "A specialty that a healthcare service may provide."
+      }
+    },
+    {
+      "path": "HealthcareService.location",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Location"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Location(s) where service may be provided",
+      "definition": "The location(s) where this healthcare service may be provided.",
+      "binding": null
+    },
+    {
+      "path": "HealthcareService.name",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Description of service as presented to a consumer while searching",
+      "definition": "Further description of the service as it would be presented to a consumer while searching.",
+      "binding": null
+    },
+    {
+      "path": "HealthcareService.comment",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional description and/or any specific issues not covered elsewhere",
+      "definition": "Any additional description of the service and/or any specific issues not covered by the other attributes, which can be displayed as further detail under the serviceName.",
+      "binding": null
+    },
+    {
+      "path": "HealthcareService.extraDetails",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "markdown"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Extra details about the service that can't be placed in the other fields",
+      "definition": "Extra details about the service that can't be placed in the other fields.",
+      "binding": null
+    },
+    {
+      "path": "HealthcareService.photo",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Attachment"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Facilitates quick identification of the service",
+      "definition": "If there is a photo/symbol associated with this HealthcareService, it may be included here to facilitate quick identification of the service in a list.",
+      "binding": null
+    },
+    {
+      "path": "HealthcareService.telecom",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "ContactPoint"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Contacts related to the healthcare service",
+      "definition": "List of contacts related to this specific healthcare service.",
+      "binding": null
+    },
+    {
+      "path": "HealthcareService.coverageArea",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Location"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Location(s) service is intended for/available to",
+      "definition": "The location(s) that this service is available to (not where the service is provided).",
+      "binding": null
+    },
+    {
+      "path": "HealthcareService.serviceProvisionCode",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Conditions under which service is available/offered",
+      "definition": "The code(s) that detail the conditions under which the healthcare service is available/offered.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/service-provision-conditions",
+        "strength": "example",
+        "description": "The code(s) that detail the conditions under which the healthcare service is available/offered."
+      }
+    },
+    {
+      "path": "HealthcareService.eligibility",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Specific eligibility requirements required to use the service",
+      "definition": "Does this service have specific eligibility requirements that need to be met in order to use the service?",
+      "binding": null
+    },
+    {
+      "path": "HealthcareService.eligibility.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "HealthcareService.eligibility.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "HealthcareService.eligibility.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "HealthcareService.eligibility.code",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Coded value for the eligibility",
+      "definition": "Coded value for the eligibility.",
+      "binding": {
+        "valueSet": null,
+        "strength": "example",
+        "description": "Coded values underwhich a specific service is made available."
+      }
+    },
+    {
+      "path": "HealthcareService.eligibility.comment",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "markdown"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Describes the eligibility conditions for the service",
+      "definition": "Describes the eligibility conditions for the service.",
+      "binding": null
+    },
+    {
+      "path": "HealthcareService.program",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Programs that this service is applicable to",
+      "definition": "Programs that this service is applicable to.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/program",
+        "strength": "example",
+        "description": "Government or local programs that this service applies to."
+      }
+    },
+    {
+      "path": "HealthcareService.characteristic",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Collection of characteristics (attributes)",
+      "definition": "Collection of characteristics (attributes).",
+      "binding": {
+        "valueSet": null,
+        "strength": "example",
+        "description": "A custom attribute that could be provided at a service (e.g. Wheelchair accessibiliy)."
+      }
+    },
+    {
+      "path": "HealthcareService.communication",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The language that this service is offered in",
+      "definition": "Some services are specifically made available in multiple languages, this property permits a directory to declare the languages this is offered in. Typically this is only provided where a service operates in communities with mixed languages used.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/languages",
+        "strength": "preferred",
+        "description": "A human language."
+      }
+    },
+    {
+      "path": "HealthcareService.referralMethod",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Ways that the service accepts referrals",
+      "definition": "Ways that the service accepts referrals, if this is not provided then it is implied that no referral is required.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/service-referral-method",
+        "strength": "example",
+        "description": "The methods of referral can be used when referring to a specific HealthCareService resource."
+      }
+    },
+    {
+      "path": "HealthcareService.appointmentRequired",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "boolean"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "If an appointment is required for access to this service",
+      "definition": "Indicates whether or not a prospective consumer will require an appointment for a particular service at a site to be provided by the Organization. Indicates if an appointment is required for access to this service.",
+      "binding": null
+    },
+    {
+      "path": "HealthcareService.availableTime",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Times the Service Site is available",
+      "definition": "A collection of times that the Service Site is available.",
+      "binding": null
+    },
+    {
+      "path": "HealthcareService.availableTime.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "HealthcareService.availableTime.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "HealthcareService.availableTime.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "HealthcareService.availableTime.daysOfWeek",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "mon | tue | wed | thu | fri | sat | sun",
+      "definition": "Indicates which days of the week are available between the start and end Times.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/days-of-week|4.0.1",
+        "strength": "required",
+        "description": "The days of the week."
+      }
+    },
+    {
+      "path": "HealthcareService.availableTime.allDay",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "boolean"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Always available? e.g. 24 hour service",
+      "definition": "Is this always available? (hence times are irrelevant) e.g. 24 hour service.",
+      "binding": null
+    },
+    {
+      "path": "HealthcareService.availableTime.availableStartTime",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "time"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Opening time of day (ignored if allDay = true)",
+      "definition": "The opening time of day. Note: If the AllDay flag is set, then this time is ignored.",
+      "binding": null
+    },
+    {
+      "path": "HealthcareService.availableTime.availableEndTime",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "time"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Closing time of day (ignored if allDay = true)",
+      "definition": "The closing time of day. Note: If the AllDay flag is set, then this time is ignored.",
+      "binding": null
+    },
+    {
+      "path": "HealthcareService.notAvailable",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Not available during this time due to provided reason",
+      "definition": "The HealthcareService is not available during this period of time due to the provided reason.",
+      "binding": null
+    },
+    {
+      "path": "HealthcareService.notAvailable.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "HealthcareService.notAvailable.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "HealthcareService.notAvailable.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "HealthcareService.notAvailable.description",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Reason presented to the user explaining why time not available",
+      "definition": "The reason that can be presented to the user as to why this time is not available.",
+      "binding": null
+    },
+    {
+      "path": "HealthcareService.notAvailable.during",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Period"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Service not available from this date",
+      "definition": "Service is not available (seasonally or for a public holiday) from this date.",
+      "binding": null
+    },
+    {
+      "path": "HealthcareService.availabilityExceptions",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Description of availability exceptions",
+      "definition": "A description of site availability exceptions, e.g. public holiday availability. Succinctly describing all possible exceptions to normal site availability as details in the available Times and not available Times.",
+      "binding": null
+    },
+    {
+      "path": "HealthcareService.endpoint",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Endpoint"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Technical endpoints providing access to electronic services operated for the healthcare service",
+      "definition": "Technical endpoints providing access to services operated for the specific healthcare services defined at this resource.",
+      "binding": null
+    }
+  ],
+  "search": [
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/HealthcareService-active",
+      "version": "4.0.1",
+      "name": "active",
+      "code": "active",
+      "type": "token",
+      "description": "The Healthcare Service is currently marked as active",
+      "expression": "HealthcareService.active",
+      "xpath": "f:HealthcareService/f:active",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "HealthcareService"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/HealthcareService-characteristic",
+      "version": "4.0.1",
+      "name": "characteristic",
+      "code": "characteristic",
+      "type": "token",
+      "description": "One of the HealthcareService's characteristics",
+      "expression": "HealthcareService.characteristic",
+      "xpath": "f:HealthcareService/f:characteristic",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "HealthcareService"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/HealthcareService-coverage-area",
+      "version": "4.0.1",
+      "name": "coverage-area",
+      "code": "coverage-area",
+      "type": "reference",
+      "description": "Location(s) service is intended for/available to",
+      "expression": "HealthcareService.coverageArea",
+      "xpath": "f:HealthcareService/f:coverageArea",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Location"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "HealthcareService"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/HealthcareService-endpoint",
+      "version": "4.0.1",
+      "name": "endpoint",
+      "code": "endpoint",
+      "type": "reference",
+      "description": "Technical endpoints providing access to electronic services operated for the healthcare service",
+      "expression": "HealthcareService.endpoint",
+      "xpath": "f:HealthcareService/f:endpoint",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Endpoint"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "HealthcareService"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/HealthcareService-identifier",
+      "version": "4.0.1",
+      "name": "identifier",
+      "code": "identifier",
+      "type": "token",
+      "description": "External identifiers for this item",
+      "expression": "HealthcareService.identifier",
+      "xpath": "f:HealthcareService/f:identifier",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "HealthcareService"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/HealthcareService-location",
+      "version": "4.0.1",
+      "name": "location",
+      "code": "location",
+      "type": "reference",
+      "description": "The location of the Healthcare Service",
+      "expression": "HealthcareService.location",
+      "xpath": "f:HealthcareService/f:location",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Location"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "HealthcareService"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/HealthcareService-name",
+      "version": "4.0.1",
+      "name": "name",
+      "code": "name",
+      "type": "string",
+      "description": "A portion of the Healthcare service name",
+      "expression": "HealthcareService.name",
+      "xpath": "f:HealthcareService/f:name",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "HealthcareService"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/HealthcareService-organization",
+      "version": "4.0.1",
+      "name": "organization",
+      "code": "organization",
+      "type": "reference",
+      "description": "The organization that provides this Healthcare Service",
+      "expression": "HealthcareService.providedBy",
+      "xpath": "f:HealthcareService/f:providedBy",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Organization"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "HealthcareService"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/HealthcareService-program",
+      "version": "4.0.1",
+      "name": "program",
+      "code": "program",
+      "type": "token",
+      "description": "One of the Programs supported by this HealthcareService",
+      "expression": "HealthcareService.program",
+      "xpath": "f:HealthcareService/f:program",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "HealthcareService"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/HealthcareService-service-category",
+      "version": "4.0.1",
+      "name": "service-category",
+      "code": "service-category",
+      "type": "token",
+      "description": "Service Category of the Healthcare Service",
+      "expression": "HealthcareService.category",
+      "xpath": "f:HealthcareService/f:category",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "HealthcareService"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/HealthcareService-service-type",
+      "version": "4.0.1",
+      "name": "service-type",
+      "code": "service-type",
+      "type": "token",
+      "description": "The type of service provided by this healthcare service",
+      "expression": "HealthcareService.type",
+      "xpath": "f:HealthcareService/f:type",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "HealthcareService"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/HealthcareService-specialty",
+      "version": "4.0.1",
+      "name": "specialty",
+      "code": "specialty",
+      "type": "token",
+      "description": "The specialty of the service provided by this healthcare service",
+      "expression": "HealthcareService.specialty",
+      "xpath": "f:HealthcareService/f:specialty",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "HealthcareService"
+      ]
+    }
+  ]
+}

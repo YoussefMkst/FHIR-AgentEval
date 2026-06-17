@@ -1,0 +1,408 @@
+{
+  "dataType": "Dosage",
+  "typeKind": "complex-type",
+  "fhir_version": "4.0.1",
+  "source_urls": {
+    "structureDefinition": "http://hl7.org/fhir/StructureDefinition/Dosage"
+  },
+  "elements": [
+    {
+      "path": "Dosage",
+      "min": 0,
+      "max": "*",
+      "type": [],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "How the medication is/was taken or should be taken",
+      "definition": "Indicates how the medication is/was taken or should be taken by the patient.",
+      "binding": null
+    },
+    {
+      "path": "Dosage.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String",
+          "fhirType": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "Dosage.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "Dosage.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "Dosage.sequence",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "integer"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The order of the dosage instructions",
+      "definition": "Indicates the order in which the dosage instructions should be applied or interpreted.",
+      "binding": null
+    },
+    {
+      "path": "Dosage.text",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Free text dosage instructions e.g. SIG",
+      "definition": "Free text dosage instructions e.g. SIG.",
+      "binding": null
+    },
+    {
+      "path": "Dosage.additionalInstruction",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Supplemental instruction or warnings to the patient - e.g. \"with meals\", \"may cause drowsiness\"",
+      "definition": "Supplemental instructions to the patient on how to take the medication  (e.g. \"with meals\" or\"take half to one hour before food\") or warnings for the patient about the medication (e.g. \"may cause drowsiness\" or \"avoid exposure of skin to direct sunlight or sunlamps\").",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/additional-instruction-codes",
+        "strength": "example",
+        "description": "A coded concept identifying additional instructions such as \"take with water\" or \"avoid operating heavy machinery\"."
+      }
+    },
+    {
+      "path": "Dosage.patientInstruction",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Patient or consumer oriented instructions",
+      "definition": "Instructions in terms that are understood by the patient or consumer.",
+      "binding": null
+    },
+    {
+      "path": "Dosage.timing",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Timing"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "When medication should be administered",
+      "definition": "When medication should be administered.",
+      "binding": null
+    },
+    {
+      "path": "Dosage.asNeeded[x]",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "boolean"
+        },
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Take \"as needed\" (for x)",
+      "definition": "Indicates whether the Medication is only taken when needed within a specific dosing schedule (Boolean option), or it indicates the precondition for taking the Medication (CodeableConcept).",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/medication-as-needed-reason",
+        "strength": "example",
+        "description": "A coded concept identifying the precondition that should be met or evaluated prior to consuming or administering a medication dose.  For example \"pain\", \"30 minutes prior to sexual intercourse\", \"on flare-up\" etc."
+      }
+    },
+    {
+      "path": "Dosage.site",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Body site to administer to",
+      "definition": "Body site to administer to.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/approach-site-codes",
+        "strength": "example",
+        "description": "A coded concept describing the site location the medicine enters into or onto the body."
+      }
+    },
+    {
+      "path": "Dosage.route",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "How drug should enter body",
+      "definition": "How drug should enter body.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/route-codes",
+        "strength": "example",
+        "description": "A coded concept describing the route or physiological path of administration of a therapeutic agent into or onto the body of a subject."
+      }
+    },
+    {
+      "path": "Dosage.method",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Technique for administering medication",
+      "definition": "Technique for administering medication.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/administration-method-codes",
+        "strength": "example",
+        "description": "A coded concept describing the technique by which the medicine is administered."
+      }
+    },
+    {
+      "path": "Dosage.doseAndRate",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Element"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Amount of medication administered",
+      "definition": "The amount of medication administered.",
+      "binding": null
+    },
+    {
+      "path": "Dosage.doseAndRate.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String",
+          "fhirType": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "Dosage.doseAndRate.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "Dosage.doseAndRate.type",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The kind of dose or rate specified",
+      "definition": "The kind of dose or rate specified, for example, ordered or calculated.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/dose-rate-type",
+        "strength": "example",
+        "description": "The kind of dose or rate specified."
+      }
+    },
+    {
+      "path": "Dosage.doseAndRate.dose[x]",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Range"
+        },
+        {
+          "code": "Quantity",
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/SimpleQuantity"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Amount of medication per dose",
+      "definition": "Amount of medication per dose.",
+      "binding": null
+    },
+    {
+      "path": "Dosage.doseAndRate.rate[x]",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Ratio"
+        },
+        {
+          "code": "Range"
+        },
+        {
+          "code": "Quantity",
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/SimpleQuantity"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Amount of medication per unit of time",
+      "definition": "Amount of medication per unit of time.",
+      "binding": null
+    },
+    {
+      "path": "Dosage.maxDosePerPeriod",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Ratio"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Upper limit on medication per unit of time",
+      "definition": "Upper limit on medication per unit of time.",
+      "binding": null
+    },
+    {
+      "path": "Dosage.maxDosePerAdministration",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Quantity",
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/SimpleQuantity"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Upper limit on medication per administration",
+      "definition": "Upper limit on medication per administration.",
+      "binding": null
+    },
+    {
+      "path": "Dosage.maxDosePerLifetime",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Quantity",
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/SimpleQuantity"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Upper limit on medication per lifetime of the patient",
+      "definition": "Upper limit on medication per lifetime of the patient.",
+      "binding": null
+    }
+  ]
+}

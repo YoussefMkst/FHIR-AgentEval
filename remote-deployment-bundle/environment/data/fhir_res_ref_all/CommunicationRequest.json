@@ -1,0 +1,1193 @@
+{
+  "resourceType": "CommunicationRequest",
+  "fhir_version": "4.0.1",
+  "source_urls": {
+    "structureDefinition": "http://hl7.org/fhir/StructureDefinition/CommunicationRequest"
+  },
+  "elements": [
+    {
+      "path": "CommunicationRequest",
+      "min": 0,
+      "max": "*",
+      "type": [],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "A request for information to be sent to a receiver",
+      "definition": "A request to convey information; e.g. the CDS system proposes that an alert be sent to a responsible provider, the CDS system proposes that the public health agency be notified about a reportable condition.",
+      "binding": null
+    },
+    {
+      "path": "CommunicationRequest.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Logical id of this artifact",
+      "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
+      "binding": null
+    },
+    {
+      "path": "CommunicationRequest.meta",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Meta"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Metadata about the resource",
+      "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.",
+      "binding": null
+    },
+    {
+      "path": "CommunicationRequest.implicitRules",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "uri"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "This element is labeled as a modifier because the implicit rules may provide additional knowledge about the resource that modifies it's meaning or interpretation",
+      "mustSupport": null,
+      "short": "A set of rules under which this content was created",
+      "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.",
+      "binding": null
+    },
+    {
+      "path": "CommunicationRequest.language",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Language of the resource content",
+      "definition": "The base language in which the resource is written.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/languages",
+        "strength": "preferred",
+        "description": "A human language."
+      }
+    },
+    {
+      "path": "CommunicationRequest.text",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Narrative"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Text summary of the resource, for human interpretation",
+      "definition": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
+      "binding": null
+    },
+    {
+      "path": "CommunicationRequest.contained",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Resource"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Contained, inline Resources",
+      "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
+      "binding": null
+    },
+    {
+      "path": "CommunicationRequest.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "CommunicationRequest.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the resource that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "CommunicationRequest.identifier",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Identifier"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique identifier",
+      "definition": "Business identifiers assigned to this communication request by the performer or other systems which remain constant as the resource is updated and propagates from server to server.",
+      "binding": null
+    },
+    {
+      "path": "CommunicationRequest.basedOn",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Resource"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Fulfills plan or proposal",
+      "definition": "A plan or proposal that is fulfilled in whole or in part by this request.",
+      "binding": null
+    },
+    {
+      "path": "CommunicationRequest.replaces",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/CommunicationRequest"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Request(s) replaced by this request",
+      "definition": "Completed or terminated request(s) whose function is taken by this new request.",
+      "binding": null
+    },
+    {
+      "path": "CommunicationRequest.groupIdentifier",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Identifier"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Composite request this is part of",
+      "definition": "A shared identifier common to all requests that were authorized more or less simultaneously by a single author, representing the identifier of the requisition, prescription or similar form.",
+      "binding": null
+    },
+    {
+      "path": "CommunicationRequest.status",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "This element is labelled as a modifier because it is a status element that contains status entered-in-error which means that the resource should not be treated as valid.",
+      "mustSupport": null,
+      "short": "draft | active | on-hold | revoked | completed | entered-in-error | unknown",
+      "definition": "The status of the proposal or order.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/request-status|4.0.1",
+        "strength": "required",
+        "description": "The status of the communication request."
+      }
+    },
+    {
+      "path": "CommunicationRequest.statusReason",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Reason for current status",
+      "definition": "Captures the reason for the current state of the CommunicationRequest.",
+      "binding": {
+        "valueSet": null,
+        "strength": "example",
+        "description": "Codes identifying the reason for the current state of a request."
+      }
+    },
+    {
+      "path": "CommunicationRequest.category",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Message category",
+      "definition": "The type of message to be sent such as alert, notification, reminder, instruction, etc.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/communication-category",
+        "strength": "example",
+        "description": "Codes for general categories of communications such as alerts, instruction, etc."
+      }
+    },
+    {
+      "path": "CommunicationRequest.priority",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "routine | urgent | asap | stat",
+      "definition": "Characterizes how quickly the proposed act must be initiated. Includes concepts such as stat, urgent, routine.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/request-priority|4.0.1",
+        "strength": "required",
+        "description": "Codes indicating the relative importance of a communication request."
+      }
+    },
+    {
+      "path": "CommunicationRequest.doNotPerform",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "boolean"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "If true this element negates the specified action. For Example,  instead of a request for a communication, it is a request for the communication to not occur.",
+      "mustSupport": null,
+      "short": "True if request is prohibiting action",
+      "definition": "If true indicates that the CommunicationRequest is asking for the specified action to *not* occur.",
+      "binding": null
+    },
+    {
+      "path": "CommunicationRequest.medium",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "A channel of communication",
+      "definition": "A channel that was used for this communication (e.g. email, fax).",
+      "binding": {
+        "valueSet": "http://terminology.hl7.org/ValueSet/v3-ParticipationMode",
+        "strength": "example",
+        "description": "Codes for communication mediums such as phone, fax, email, in person, etc."
+      }
+    },
+    {
+      "path": "CommunicationRequest.subject",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Patient",
+            "http://hl7.org/fhir/StructureDefinition/Group"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Focus of message",
+      "definition": "The patient or group that is the focus of this communication request.",
+      "binding": null
+    },
+    {
+      "path": "CommunicationRequest.about",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Resource"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Resources that pertain to this communication request",
+      "definition": "Other resources that pertain to this communication request and to which this communication request should be associated.",
+      "binding": null
+    },
+    {
+      "path": "CommunicationRequest.encounter",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Encounter"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Encounter created as part of",
+      "definition": "The Encounter during which this CommunicationRequest was created or to which the creation of this record is tightly associated.",
+      "binding": null
+    },
+    {
+      "path": "CommunicationRequest.payload",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Message payload",
+      "definition": "Text, attachment(s), or resource(s) to be communicated to the recipient.",
+      "binding": null
+    },
+    {
+      "path": "CommunicationRequest.payload.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "CommunicationRequest.payload.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "CommunicationRequest.payload.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "CommunicationRequest.payload.content[x]",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        },
+        {
+          "code": "Attachment"
+        },
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Resource"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Message part content",
+      "definition": "The communicated content (or for multi-part communications, one portion of the communication).",
+      "binding": null
+    },
+    {
+      "path": "CommunicationRequest.occurrence[x]",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "dateTime"
+        },
+        {
+          "code": "Period"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "When scheduled",
+      "definition": "The time when this communication is to occur.",
+      "binding": null
+    },
+    {
+      "path": "CommunicationRequest.authoredOn",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "dateTime"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "When request transitioned to being actionable",
+      "definition": "For draft requests, indicates the date of initial creation.  For requests with other statuses, indicates the date of activation.",
+      "binding": null
+    },
+    {
+      "path": "CommunicationRequest.requester",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Practitioner",
+            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+            "http://hl7.org/fhir/StructureDefinition/Organization",
+            "http://hl7.org/fhir/StructureDefinition/Patient",
+            "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+            "http://hl7.org/fhir/StructureDefinition/Device"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Who/what is requesting service",
+      "definition": "The device, individual, or organization who initiated the request and has responsibility for its activation.",
+      "binding": null
+    },
+    {
+      "path": "CommunicationRequest.recipient",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Device",
+            "http://hl7.org/fhir/StructureDefinition/Organization",
+            "http://hl7.org/fhir/StructureDefinition/Patient",
+            "http://hl7.org/fhir/StructureDefinition/Practitioner",
+            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+            "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+            "http://hl7.org/fhir/StructureDefinition/Group",
+            "http://hl7.org/fhir/StructureDefinition/CareTeam",
+            "http://hl7.org/fhir/StructureDefinition/HealthcareService"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Message recipient",
+      "definition": "The entity (e.g. person, organization, clinical information system, device, group, or care team) which is the intended target of the communication.",
+      "binding": null
+    },
+    {
+      "path": "CommunicationRequest.sender",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Device",
+            "http://hl7.org/fhir/StructureDefinition/Organization",
+            "http://hl7.org/fhir/StructureDefinition/Patient",
+            "http://hl7.org/fhir/StructureDefinition/Practitioner",
+            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+            "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+            "http://hl7.org/fhir/StructureDefinition/HealthcareService"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Message sender",
+      "definition": "The entity (e.g. person, organization, clinical information system, or device) which is to be the source of the communication.",
+      "binding": null
+    },
+    {
+      "path": "CommunicationRequest.reasonCode",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Why is communication needed?",
+      "definition": "Describes why the request is being made in coded or textual form.",
+      "binding": {
+        "valueSet": "http://terminology.hl7.org/ValueSet/v3-ActReason",
+        "strength": "example",
+        "description": "Codes for describing reasons for the occurrence of a communication."
+      }
+    },
+    {
+      "path": "CommunicationRequest.reasonReference",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Condition",
+            "http://hl7.org/fhir/StructureDefinition/Observation",
+            "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
+            "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Why is communication needed?",
+      "definition": "Indicates another resource whose existence justifies this request.",
+      "binding": null
+    },
+    {
+      "path": "CommunicationRequest.note",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Annotation"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Comments made about communication request",
+      "definition": "Comments made about the request by the requester, sender, recipient, subject or other participants.",
+      "binding": null
+    }
+  ],
+  "search": [
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/CommunicationRequest-authored",
+      "version": "4.0.1",
+      "name": "authored",
+      "code": "authored",
+      "type": "date",
+      "description": "When request transitioned to being actionable",
+      "expression": "CommunicationRequest.authoredOn",
+      "xpath": "f:CommunicationRequest/f:authoredOn",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [
+        "eq",
+        "ne",
+        "gt",
+        "ge",
+        "lt",
+        "le",
+        "sa",
+        "eb",
+        "ap"
+      ],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "CommunicationRequest"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/CommunicationRequest-based-on",
+      "version": "4.0.1",
+      "name": "based-on",
+      "code": "based-on",
+      "type": "reference",
+      "description": "Fulfills plan or proposal",
+      "expression": "CommunicationRequest.basedOn",
+      "xpath": "f:CommunicationRequest/f:basedOn",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Account",
+        "ActivityDefinition",
+        "AdverseEvent",
+        "AllergyIntolerance",
+        "Appointment",
+        "AppointmentResponse",
+        "AuditEvent",
+        "Basic",
+        "Binary",
+        "BiologicallyDerivedProduct",
+        "BodyStructure",
+        "Bundle",
+        "CapabilityStatement",
+        "CarePlan",
+        "CareTeam",
+        "CatalogEntry",
+        "ChargeItem",
+        "ChargeItemDefinition",
+        "Claim",
+        "ClaimResponse",
+        "ClinicalImpression",
+        "CodeSystem",
+        "Communication",
+        "CommunicationRequest",
+        "CompartmentDefinition",
+        "Composition",
+        "ConceptMap",
+        "Condition",
+        "Consent",
+        "Contract",
+        "Coverage",
+        "CoverageEligibilityRequest",
+        "CoverageEligibilityResponse",
+        "DetectedIssue",
+        "Device",
+        "DeviceDefinition",
+        "DeviceMetric",
+        "DeviceRequest",
+        "DeviceUseStatement",
+        "DiagnosticReport",
+        "DocumentManifest",
+        "DocumentReference",
+        "EffectEvidenceSynthesis",
+        "Encounter",
+        "Endpoint",
+        "EnrollmentRequest",
+        "EnrollmentResponse",
+        "EpisodeOfCare",
+        "EventDefinition",
+        "Evidence",
+        "EvidenceVariable",
+        "ExampleScenario",
+        "ExplanationOfBenefit",
+        "FamilyMemberHistory",
+        "Flag",
+        "Goal",
+        "GraphDefinition",
+        "Group",
+        "GuidanceResponse",
+        "HealthcareService",
+        "ImagingStudy",
+        "Immunization",
+        "ImmunizationEvaluation",
+        "ImmunizationRecommendation",
+        "ImplementationGuide",
+        "InsurancePlan",
+        "Invoice",
+        "Library",
+        "Linkage",
+        "List",
+        "Location",
+        "Measure",
+        "MeasureReport",
+        "Media",
+        "Medication",
+        "MedicationAdministration",
+        "MedicationDispense",
+        "MedicationKnowledge",
+        "MedicationRequest",
+        "MedicationStatement",
+        "MedicinalProduct",
+        "MedicinalProductAuthorization",
+        "MedicinalProductContraindication",
+        "MedicinalProductIndication",
+        "MedicinalProductIngredient",
+        "MedicinalProductInteraction",
+        "MedicinalProductManufactured",
+        "MedicinalProductPackaged",
+        "MedicinalProductPharmaceutical",
+        "MedicinalProductUndesirableEffect",
+        "MessageDefinition",
+        "MessageHeader",
+        "MolecularSequence",
+        "NamingSystem",
+        "NutritionOrder",
+        "Observation",
+        "ObservationDefinition",
+        "OperationDefinition",
+        "OperationOutcome",
+        "Organization",
+        "OrganizationAffiliation",
+        "Patient",
+        "PaymentNotice",
+        "PaymentReconciliation",
+        "Person",
+        "PlanDefinition",
+        "Practitioner",
+        "PractitionerRole",
+        "Procedure",
+        "Provenance",
+        "Questionnaire",
+        "QuestionnaireResponse",
+        "RelatedPerson",
+        "RequestGroup",
+        "ResearchDefinition",
+        "ResearchElementDefinition",
+        "ResearchStudy",
+        "ResearchSubject",
+        "RiskAssessment",
+        "RiskEvidenceSynthesis",
+        "Schedule",
+        "SearchParameter",
+        "ServiceRequest",
+        "Slot",
+        "Specimen",
+        "SpecimenDefinition",
+        "StructureDefinition",
+        "StructureMap",
+        "Subscription",
+        "Substance",
+        "SubstanceNucleicAcid",
+        "SubstancePolymer",
+        "SubstanceProtein",
+        "SubstanceReferenceInformation",
+        "SubstanceSourceMaterial",
+        "SubstanceSpecification",
+        "SupplyDelivery",
+        "SupplyRequest",
+        "Task",
+        "TerminologyCapabilities",
+        "TestReport",
+        "TestScript",
+        "ValueSet",
+        "VerificationResult",
+        "VisionPrescription"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "CommunicationRequest"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/CommunicationRequest-category",
+      "version": "4.0.1",
+      "name": "category",
+      "code": "category",
+      "type": "token",
+      "description": "Message category",
+      "expression": "CommunicationRequest.category",
+      "xpath": "f:CommunicationRequest/f:category",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "CommunicationRequest"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/CommunicationRequest-encounter",
+      "version": "4.0.1",
+      "name": "encounter",
+      "code": "encounter",
+      "type": "reference",
+      "description": "Encounter created as part of",
+      "expression": "CommunicationRequest.encounter",
+      "xpath": "f:CommunicationRequest/f:encounter",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Encounter"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "CommunicationRequest"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/CommunicationRequest-group-identifier",
+      "version": "4.0.1",
+      "name": "group-identifier",
+      "code": "group-identifier",
+      "type": "token",
+      "description": "Composite request this is part of",
+      "expression": "CommunicationRequest.groupIdentifier",
+      "xpath": "f:CommunicationRequest/f:groupIdentifier",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "CommunicationRequest"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/CommunicationRequest-identifier",
+      "version": "4.0.1",
+      "name": "identifier",
+      "code": "identifier",
+      "type": "token",
+      "description": "Unique identifier",
+      "expression": "CommunicationRequest.identifier",
+      "xpath": "f:CommunicationRequest/f:identifier",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "CommunicationRequest"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/CommunicationRequest-medium",
+      "version": "4.0.1",
+      "name": "medium",
+      "code": "medium",
+      "type": "token",
+      "description": "A channel of communication",
+      "expression": "CommunicationRequest.medium",
+      "xpath": "f:CommunicationRequest/f:medium",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "CommunicationRequest"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/CommunicationRequest-occurrence",
+      "version": "4.0.1",
+      "name": "occurrence",
+      "code": "occurrence",
+      "type": "date",
+      "description": "When scheduled",
+      "expression": "(CommunicationRequest.occurrence as dateTime)",
+      "xpath": "f:CommunicationRequest/f:occurrenceDateTime",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [
+        "eq",
+        "ne",
+        "gt",
+        "ge",
+        "lt",
+        "le",
+        "sa",
+        "eb",
+        "ap"
+      ],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "CommunicationRequest"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/CommunicationRequest-patient",
+      "version": "4.0.1",
+      "name": "patient",
+      "code": "patient",
+      "type": "reference",
+      "description": "Focus of message",
+      "expression": "CommunicationRequest.subject.where(resolve() is Patient)",
+      "xpath": "f:CommunicationRequest/f:subject",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Patient"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "CommunicationRequest"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/CommunicationRequest-priority",
+      "version": "4.0.1",
+      "name": "priority",
+      "code": "priority",
+      "type": "token",
+      "description": "routine | urgent | asap | stat",
+      "expression": "CommunicationRequest.priority",
+      "xpath": "f:CommunicationRequest/f:priority",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "CommunicationRequest"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/CommunicationRequest-recipient",
+      "version": "4.0.1",
+      "name": "recipient",
+      "code": "recipient",
+      "type": "reference",
+      "description": "Message recipient",
+      "expression": "CommunicationRequest.recipient",
+      "xpath": "f:CommunicationRequest/f:recipient",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Practitioner",
+        "Group",
+        "Organization",
+        "CareTeam",
+        "Device",
+        "Patient",
+        "HealthcareService",
+        "PractitionerRole",
+        "RelatedPerson"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "CommunicationRequest"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/CommunicationRequest-replaces",
+      "version": "4.0.1",
+      "name": "replaces",
+      "code": "replaces",
+      "type": "reference",
+      "description": "Request(s) replaced by this request",
+      "expression": "CommunicationRequest.replaces",
+      "xpath": "f:CommunicationRequest/f:replaces",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "CommunicationRequest"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "CommunicationRequest"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/CommunicationRequest-requester",
+      "version": "4.0.1",
+      "name": "requester",
+      "code": "requester",
+      "type": "reference",
+      "description": "Who/what is requesting service",
+      "expression": "CommunicationRequest.requester",
+      "xpath": "f:CommunicationRequest/f:requester",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Practitioner",
+        "Organization",
+        "Device",
+        "Patient",
+        "PractitionerRole",
+        "RelatedPerson"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "CommunicationRequest"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/CommunicationRequest-sender",
+      "version": "4.0.1",
+      "name": "sender",
+      "code": "sender",
+      "type": "reference",
+      "description": "Message sender",
+      "expression": "CommunicationRequest.sender",
+      "xpath": "f:CommunicationRequest/f:sender",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Practitioner",
+        "Organization",
+        "Device",
+        "Patient",
+        "HealthcareService",
+        "PractitionerRole",
+        "RelatedPerson"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "CommunicationRequest"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/CommunicationRequest-status",
+      "version": "4.0.1",
+      "name": "status",
+      "code": "status",
+      "type": "token",
+      "description": "draft | active | on-hold | revoked | completed | entered-in-error | unknown",
+      "expression": "CommunicationRequest.status",
+      "xpath": "f:CommunicationRequest/f:status",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "CommunicationRequest"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/CommunicationRequest-subject",
+      "version": "4.0.1",
+      "name": "subject",
+      "code": "subject",
+      "type": "reference",
+      "description": "Focus of message",
+      "expression": "CommunicationRequest.subject",
+      "xpath": "f:CommunicationRequest/f:subject",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Group",
+        "Patient"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "CommunicationRequest"
+      ]
+    }
+  ]
+}

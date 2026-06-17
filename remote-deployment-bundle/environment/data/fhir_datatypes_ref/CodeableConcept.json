@@ -1,0 +1,87 @@
+{
+  "dataType": "CodeableConcept",
+  "typeKind": "complex-type",
+  "fhir_version": "4.0.1",
+  "source_urls": {
+    "structureDefinition": "http://hl7.org/fhir/StructureDefinition/CodeableConcept"
+  },
+  "elements": [
+    {
+      "path": "CodeableConcept",
+      "min": 0,
+      "max": "*",
+      "type": [],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Concept - reference to a terminology or just  text",
+      "definition": "A concept that may be defined by a formal reference to a terminology or ontology or may be provided by text.",
+      "binding": null
+    },
+    {
+      "path": "CodeableConcept.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String",
+          "fhirType": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "CodeableConcept.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "CodeableConcept.coding",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Coding"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Code defined by a terminology system",
+      "definition": "A reference to a code defined by a terminology system.",
+      "binding": null
+    },
+    {
+      "path": "CodeableConcept.text",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Plain text representation of the concept",
+      "definition": "A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.",
+      "binding": null
+    }
+  ]
+}

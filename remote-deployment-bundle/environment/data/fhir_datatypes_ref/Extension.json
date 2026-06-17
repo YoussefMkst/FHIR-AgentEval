@@ -1,0 +1,88 @@
+{
+  "dataType": "Extension",
+  "typeKind": "complex-type",
+  "fhir_version": "4.0.1",
+  "source_urls": {
+    "structureDefinition": "http://hl7.org/fhir/StructureDefinition/valueset-activityStatusDate"
+  },
+  "elements": [
+    {
+      "path": "Extension",
+      "min": 0,
+      "max": "1",
+      "type": [],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Date when the activity status is in effect",
+      "definition": "The date when the associated Value Set Definition Version activity status is in effect.",
+      "binding": null
+    },
+    {
+      "path": "Extension.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String",
+          "fhirType": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "Extension.extension",
+      "min": 0,
+      "max": "0",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Extension",
+      "definition": "An Extension",
+      "binding": null
+    },
+    {
+      "path": "Extension.url",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String",
+          "fhirType": "uri"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "identifies the meaning of the extension",
+      "definition": "Source of the definition for the extension code - a logical name or a URL.",
+      "binding": null
+    },
+    {
+      "path": "Extension.value[x]",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "date"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Value of extension",
+      "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/extensibility.html) for a list).",
+      "binding": null
+    }
+  ]
+}

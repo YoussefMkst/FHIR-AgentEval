@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "fhir": {
+      "type": "sse",
+      "url": "http://localhost:8000/fhir_mcp"
+    }
+  }
+}

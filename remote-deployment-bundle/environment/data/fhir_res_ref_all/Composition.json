@@ -1,0 +1,1673 @@
+{
+  "resourceType": "Composition",
+  "fhir_version": "4.0.1",
+  "source_urls": {
+    "structureDefinition": "http://hl7.org/fhir/StructureDefinition/Composition"
+  },
+  "elements": [
+    {
+      "path": "Composition",
+      "min": 0,
+      "max": "*",
+      "type": [],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "A set of resources composed into a single coherent clinical statement with clinical attestation",
+      "definition": "A set of healthcare-related information that is assembled together into a single logical package that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. A Composition defines the structure and narrative content necessary for a document. However, a Composition alone does not constitute a document. Rather, the Composition must be the first entry in a Bundle where Bundle.type=document, and any other resources referenced from Composition must be included as subsequent entries in the Bundle (for example Patient, Practitioner, Encounter, etc.).",
+      "binding": null
+    },
+    {
+      "path": "Composition.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Logical id of this artifact",
+      "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
+      "binding": null
+    },
+    {
+      "path": "Composition.meta",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Meta"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Metadata about the resource",
+      "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.",
+      "binding": null
+    },
+    {
+      "path": "Composition.implicitRules",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "uri"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "This element is labeled as a modifier because the implicit rules may provide additional knowledge about the resource that modifies it's meaning or interpretation",
+      "mustSupport": null,
+      "short": "A set of rules under which this content was created",
+      "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.",
+      "binding": null
+    },
+    {
+      "path": "Composition.language",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Language of the resource content",
+      "definition": "The base language in which the resource is written.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/languages",
+        "strength": "preferred",
+        "description": "A human language."
+      }
+    },
+    {
+      "path": "Composition.text",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Narrative"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Text summary of the resource, for human interpretation",
+      "definition": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
+      "binding": null
+    },
+    {
+      "path": "Composition.contained",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Resource"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Contained, inline Resources",
+      "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
+      "binding": null
+    },
+    {
+      "path": "Composition.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "Composition.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the resource that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "Composition.identifier",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Identifier"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Version-independent identifier for the Composition",
+      "definition": "A version-independent identifier for the Composition. This identifier stays constant as the composition is changed over time.",
+      "binding": null
+    },
+    {
+      "path": "Composition.status",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "This element is labelled as a modifier because it is a status element that contains status entered-in-error which means that the resource should not be treated as valid",
+      "mustSupport": null,
+      "short": "preliminary | final | amended | entered-in-error",
+      "definition": "The workflow/clinical status of this composition. The status is a marker for the clinical standing of the document.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/composition-status|4.0.1",
+        "strength": "required",
+        "description": "The workflow/clinical status of the composition."
+      }
+    },
+    {
+      "path": "Composition.type",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Kind of composition (LOINC if possible)",
+      "definition": "Specifies the particular kind of composition (e.g. History and Physical, Discharge Summary, Progress Note). This usually equates to the purpose of making the composition.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/doc-typecodes",
+        "strength": "preferred",
+        "description": "Type of a composition."
+      }
+    },
+    {
+      "path": "Composition.category",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Categorization of Composition",
+      "definition": "A categorization for the type of the composition - helps for indexing and searching. This may be implied by or derived from the code specified in the Composition Type.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/document-classcodes",
+        "strength": "example",
+        "description": "High-level kind of a clinical document at a macro level."
+      }
+    },
+    {
+      "path": "Composition.subject",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Resource"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Who and/or what the composition is about",
+      "definition": "Who or what the composition is about. The composition can be about a person, (patient or healthcare practitioner), a device (e.g. a machine) or even a group of subjects (such as a document about a herd of livestock, or a set of patients that share a common exposure).",
+      "binding": null
+    },
+    {
+      "path": "Composition.encounter",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Encounter"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Context of the Composition",
+      "definition": "Describes the clinical encounter or type of care this documentation is associated with.",
+      "binding": null
+    },
+    {
+      "path": "Composition.date",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "dateTime"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Composition editing time",
+      "definition": "The composition editing time, when the composition was last logically changed by the author.",
+      "binding": null
+    },
+    {
+      "path": "Composition.author",
+      "min": 1,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Practitioner",
+            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+            "http://hl7.org/fhir/StructureDefinition/Device",
+            "http://hl7.org/fhir/StructureDefinition/Patient",
+            "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+            "http://hl7.org/fhir/StructureDefinition/Organization"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Who and/or what authored the composition",
+      "definition": "Identifies who is responsible for the information in the composition, not necessarily who typed it in.",
+      "binding": null
+    },
+    {
+      "path": "Composition.title",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Human Readable name/title",
+      "definition": "Official human-readable label for the composition.",
+      "binding": null
+    },
+    {
+      "path": "Composition.confidentiality",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "As defined by affinity domain",
+      "definition": "The code specifying the level of confidentiality of the Composition.",
+      "binding": {
+        "valueSet": "http://terminology.hl7.org/ValueSet/v3-ConfidentialityClassification|2014-03-26",
+        "strength": "required",
+        "description": "Codes specifying the level of confidentiality of the composition."
+      }
+    },
+    {
+      "path": "Composition.attester",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Attests to accuracy of composition",
+      "definition": "A participant who has attested to the accuracy of the composition/document.",
+      "binding": null
+    },
+    {
+      "path": "Composition.attester.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "Composition.attester.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "Composition.attester.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "Composition.attester.mode",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "personal | professional | legal | official",
+      "definition": "The type of attestation the authenticator offers.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/composition-attestation-mode|4.0.1",
+        "strength": "required",
+        "description": "The way in which a person authenticated a composition."
+      }
+    },
+    {
+      "path": "Composition.attester.time",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "dateTime"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "When the composition was attested",
+      "definition": "When the composition was attested by the party.",
+      "binding": null
+    },
+    {
+      "path": "Composition.attester.party",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Patient",
+            "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+            "http://hl7.org/fhir/StructureDefinition/Practitioner",
+            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+            "http://hl7.org/fhir/StructureDefinition/Organization"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Who attested the composition",
+      "definition": "Who attested the composition in the specified way.",
+      "binding": null
+    },
+    {
+      "path": "Composition.custodian",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Organization"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Organization which maintains the composition",
+      "definition": "Identifies the organization or group who is responsible for ongoing maintenance of and access to the composition/document information.",
+      "binding": null
+    },
+    {
+      "path": "Composition.relatesTo",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Relationships to other compositions/documents",
+      "definition": "Relationships that this composition has with other compositions or documents that already exist.",
+      "binding": null
+    },
+    {
+      "path": "Composition.relatesTo.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "Composition.relatesTo.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "Composition.relatesTo.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "Composition.relatesTo.code",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "replaces | transforms | signs | appends",
+      "definition": "The type of relationship that this composition has with anther composition or document.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/document-relationship-type|4.0.1",
+        "strength": "required",
+        "description": "The type of relationship between documents."
+      }
+    },
+    {
+      "path": "Composition.relatesTo.target[x]",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "Identifier"
+        },
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Composition"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Target of the relationship",
+      "definition": "The target composition/document of this relationship.",
+      "binding": null
+    },
+    {
+      "path": "Composition.event",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The clinical service(s) being documented",
+      "definition": "The clinical service, such as a colonoscopy or an appendectomy, being documented.",
+      "binding": null
+    },
+    {
+      "path": "Composition.event.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "Composition.event.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "Composition.event.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "Composition.event.code",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Code(s) that apply to the event being documented",
+      "definition": "This list of codes represents the main clinical acts, such as a colonoscopy or an appendectomy, being documented. In some cases, the event is inherent in the typeCode, such as a \"History and Physical Report\" in which the procedure being documented is necessarily a \"History and Physical\" act.",
+      "binding": {
+        "valueSet": "http://terminology.hl7.org/ValueSet/v3-ActCode",
+        "strength": "example",
+        "description": "This list of codes represents the main clinical acts being documented."
+      }
+    },
+    {
+      "path": "Composition.event.period",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Period"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The period covered by the documentation",
+      "definition": "The period of time covered by the documentation. There is no assertion that the documentation is a complete representation for this period, only that it documents events during this time.",
+      "binding": null
+    },
+    {
+      "path": "Composition.event.detail",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Resource"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The event(s) being documented",
+      "definition": "The description and/or reference of the event(s) being documented. For example, this could be used to document such a colonoscopy or an appendectomy.",
+      "binding": null
+    },
+    {
+      "path": "Composition.section",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Composition is broken into sections",
+      "definition": "The root of the sections that make up the composition.",
+      "binding": null
+    },
+    {
+      "path": "Composition.section.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "Composition.section.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "Composition.section.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "Composition.section.title",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Label for section (e.g. for ToC)",
+      "definition": "The label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contents.",
+      "binding": null
+    },
+    {
+      "path": "Composition.section.code",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Classification of section (recommended)",
+      "definition": "A code identifying the kind of content contained within the section. This must be consistent with the section title.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/doc-section-codes",
+        "strength": "example",
+        "description": "Classification of a section of a composition/document."
+      }
+    },
+    {
+      "path": "Composition.section.author",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Practitioner",
+            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+            "http://hl7.org/fhir/StructureDefinition/Device",
+            "http://hl7.org/fhir/StructureDefinition/Patient",
+            "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+            "http://hl7.org/fhir/StructureDefinition/Organization"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Who and/or what authored the section",
+      "definition": "Identifies who is responsible for the information in this section, not necessarily who typed it in.",
+      "binding": null
+    },
+    {
+      "path": "Composition.section.focus",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Resource"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Who/what the section is about, when it is not about the subject of composition",
+      "definition": "The actual focus of the section when it is not the subject of the composition, but instead represents something or someone associated with the subject such as (for a patient subject) a spouse, parent, fetus, or donor. If not focus is specified, the focus is assumed to be focus of the parent section, or, for a section in the Composition itself, the subject of the composition. Sections with a focus SHALL only include resources where the logical subject (patient, subject, focus, etc.) matches the section focus, or the resources have no logical subject (few resources).",
+      "binding": null
+    },
+    {
+      "path": "Composition.section.text",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Narrative"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Text summary of the section, for human interpretation",
+      "definition": "A human-readable narrative that contains the attested content of the section, used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative.",
+      "binding": null
+    },
+    {
+      "path": "Composition.section.mode",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "working | snapshot | changes",
+      "definition": "How the entry list was prepared - whether it is a working list that is suitable for being maintained on an ongoing basis, or if it represents a snapshot of a list of items from another source, or whether it is a prepared list where items may be marked as added, modified or deleted.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/list-mode|4.0.1",
+        "strength": "required",
+        "description": "The processing mode that applies to this section."
+      }
+    },
+    {
+      "path": "Composition.section.orderedBy",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Order of section entries",
+      "definition": "Specifies the order applied to the items in the section entries.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/list-order",
+        "strength": "preferred",
+        "description": "What order applies to the items in the entry."
+      }
+    },
+    {
+      "path": "Composition.section.entry",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Resource"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "A reference to data that supports this section",
+      "definition": "A reference to the actual resource from which the narrative in the section is derived.",
+      "binding": null
+    },
+    {
+      "path": "Composition.section.emptyReason",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Why the section is empty",
+      "definition": "If the section is empty, why the list is empty. An empty section typically has some text explaining the empty reason.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/list-empty-reason",
+        "strength": "preferred",
+        "description": "If a section is empty, why it is empty."
+      }
+    },
+    {
+      "path": "Composition.section.section",
+      "min": 0,
+      "max": "*",
+      "type": [],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Nested Section",
+      "definition": "A nested sub-section within this section.",
+      "binding": null
+    }
+  ],
+  "search": [
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Composition-attester",
+      "version": "4.0.1",
+      "name": "attester",
+      "code": "attester",
+      "type": "reference",
+      "description": "Who attested the composition",
+      "expression": "Composition.attester.party",
+      "xpath": "f:Composition/f:attester/f:party",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Practitioner",
+        "Organization",
+        "Patient",
+        "PractitionerRole",
+        "RelatedPerson"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Composition"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Composition-author",
+      "version": "4.0.1",
+      "name": "author",
+      "code": "author",
+      "type": "reference",
+      "description": "Who and/or what authored the composition",
+      "expression": "Composition.author",
+      "xpath": "f:Composition/f:author",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Practitioner",
+        "Organization",
+        "Device",
+        "Patient",
+        "PractitionerRole",
+        "RelatedPerson"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Composition"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Composition-category",
+      "version": "4.0.1",
+      "name": "category",
+      "code": "category",
+      "type": "token",
+      "description": "Categorization of Composition",
+      "expression": "Composition.category",
+      "xpath": "f:Composition/f:category",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Composition"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Composition-confidentiality",
+      "version": "4.0.1",
+      "name": "confidentiality",
+      "code": "confidentiality",
+      "type": "token",
+      "description": "As defined by affinity domain",
+      "expression": "Composition.confidentiality",
+      "xpath": "f:Composition/f:confidentiality",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Composition"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Composition-context",
+      "version": "4.0.1",
+      "name": "context",
+      "code": "context",
+      "type": "token",
+      "description": "Code(s) that apply to the event being documented",
+      "expression": "Composition.event.code",
+      "xpath": "f:Composition/f:event/f:code",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Composition"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/clinical-date",
+      "version": "4.0.1",
+      "name": "date",
+      "code": "date",
+      "type": "date",
+      "description": "Multiple Resources: \r\n\r\n* [AllergyIntolerance](allergyintolerance.html): Date first version of the resource instance was recorded\r\n* [CarePlan](careplan.html): Time period plan covers\r\n* [CareTeam](careteam.html): Time period team covers\r\n* [ClinicalImpression](clinicalimpression.html): When the assessment was documented\r\n* [Composition](composition.html): Composition editing time\r\n* [Consent](consent.html): When this Consent was created or indexed\r\n* [DiagnosticReport](diagnosticreport.html): The clinically relevant time of the report\r\n* [Encounter](encounter.html): A date within the period the Encounter lasted\r\n* [EpisodeOfCare](episodeofcare.html): The provided date search value falls within the episode of care's period\r\n* [FamilyMemberHistory](familymemberhistory.html): When history was recorded or last updated\r\n* [Flag](flag.html): Time period when flag is active\r\n* [Immunization](immunization.html): Vaccination  (non)-Administration Date\r\n* [List](list.html): When the list was prepared\r\n* [Observation](observation.html): Obtained date/time. If the obtained element is a period, a date that falls in the period\r\n* [Procedure](procedure.html): When the procedure was performed\r\n* [RiskAssessment](riskassessment.html): When was assessment made?\r\n* [SupplyRequest](supplyrequest.html): When the request was made\r\n",
+      "expression": "AllergyIntolerance.recordedDate | CarePlan.period | CareTeam.period | ClinicalImpression.date | Composition.date | Consent.dateTime | DiagnosticReport.effective | Encounter.period | EpisodeOfCare.period | FamilyMemberHistory.date | Flag.period | Immunization.occurrence | List.date | Observation.effective | Procedure.performed | (RiskAssessment.occurrence as dateTime) | SupplyRequest.authoredOn",
+      "xpath": "f:AllergyIntolerance/f:recordedDate | f:CarePlan/f:period | f:CareTeam/f:period | f:ClinicalImpression/f:date | f:Composition/f:date | f:Consent/f:dateTime | f:DiagnosticReport/f:effectiveDateTime | f:DiagnosticReport/f:effectivePeriod | f:Encounter/f:period | f:EpisodeOfCare/f:period | f:FamilyMemberHistory/f:date | f:Flag/f:period | f:Immunization/f:occurrenceDateTime | f:Immunization/f:occurrenceString | f:List/f:date | f:Observation/f:effectiveDateTime | f:Observation/f:effectivePeriod | f:Observation/f:effectiveTiming | f:Observation/f:effectiveInstant | f:Procedure/f:performedDateTime | f:Procedure/f:performedPeriod | f:Procedure/f:performedString | f:Procedure/f:performedAge | f:Procedure/f:performedRange | f:RiskAssessment/f:occurrenceDateTime | f:SupplyRequest/f:authoredOn",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [
+        "eq",
+        "ne",
+        "gt",
+        "ge",
+        "lt",
+        "le",
+        "sa",
+        "eb",
+        "ap"
+      ],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Composition"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/clinical-encounter",
+      "version": "4.0.1",
+      "name": "encounter",
+      "code": "encounter",
+      "type": "reference",
+      "description": "Multiple Resources: \r\n\r\n* [Composition](composition.html): Context of the Composition\r\n* [DeviceRequest](devicerequest.html): Encounter during which request was created\r\n* [DiagnosticReport](diagnosticreport.html): The Encounter when the order was made\r\n* [DocumentReference](documentreference.html): Context of the document  content\r\n* [Flag](flag.html): Alert relevant during encounter\r\n* [List](list.html): Context in which list created\r\n* [NutritionOrder](nutritionorder.html): Return nutrition orders with this encounter identifier\r\n* [Observation](observation.html): Encounter related to the observation\r\n* [Procedure](procedure.html): Encounter created as part of\r\n* [RiskAssessment](riskassessment.html): Where was assessment performed?\r\n* [ServiceRequest](servicerequest.html): An encounter in which this request is made\r\n* [VisionPrescription](visionprescription.html): Return prescriptions with this encounter identifier\r\n",
+      "expression": "Composition.encounter | DeviceRequest.encounter | DiagnosticReport.encounter | DocumentReference.context.encounter | Flag.encounter | List.encounter | NutritionOrder.encounter | Observation.encounter | Procedure.encounter | RiskAssessment.encounter | ServiceRequest.encounter | VisionPrescription.encounter",
+      "xpath": "f:Composition/f:encounter | f:DeviceRequest/f:encounter | f:DiagnosticReport/f:encounter | f:DocumentReference/f:context/f:encounter | f:Flag/f:encounter | f:List/f:encounter | f:NutritionOrder/f:encounter | f:Observation/f:encounter | f:Procedure/f:encounter | f:RiskAssessment/f:encounter | f:ServiceRequest/f:encounter | f:VisionPrescription/f:encounter",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Encounter",
+        "EpisodeOfCare"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Composition"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Composition-entry",
+      "version": "4.0.1",
+      "name": "entry",
+      "code": "entry",
+      "type": "reference",
+      "description": "A reference to data that supports this section",
+      "expression": "Composition.section.entry",
+      "xpath": "f:Composition/f:section/f:entry",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Account",
+        "ActivityDefinition",
+        "AdverseEvent",
+        "AllergyIntolerance",
+        "Appointment",
+        "AppointmentResponse",
+        "AuditEvent",
+        "Basic",
+        "Binary",
+        "BiologicallyDerivedProduct",
+        "BodyStructure",
+        "Bundle",
+        "CapabilityStatement",
+        "CarePlan",
+        "CareTeam",
+        "CatalogEntry",
+        "ChargeItem",
+        "ChargeItemDefinition",
+        "Claim",
+        "ClaimResponse",
+        "ClinicalImpression",
+        "CodeSystem",
+        "Communication",
+        "CommunicationRequest",
+        "CompartmentDefinition",
+        "Composition",
+        "ConceptMap",
+        "Condition",
+        "Consent",
+        "Contract",
+        "Coverage",
+        "CoverageEligibilityRequest",
+        "CoverageEligibilityResponse",
+        "DetectedIssue",
+        "Device",
+        "DeviceDefinition",
+        "DeviceMetric",
+        "DeviceRequest",
+        "DeviceUseStatement",
+        "DiagnosticReport",
+        "DocumentManifest",
+        "DocumentReference",
+        "EffectEvidenceSynthesis",
+        "Encounter",
+        "Endpoint",
+        "EnrollmentRequest",
+        "EnrollmentResponse",
+        "EpisodeOfCare",
+        "EventDefinition",
+        "Evidence",
+        "EvidenceVariable",
+        "ExampleScenario",
+        "ExplanationOfBenefit",
+        "FamilyMemberHistory",
+        "Flag",
+        "Goal",
+        "GraphDefinition",
+        "Group",
+        "GuidanceResponse",
+        "HealthcareService",
+        "ImagingStudy",
+        "Immunization",
+        "ImmunizationEvaluation",
+        "ImmunizationRecommendation",
+        "ImplementationGuide",
+        "InsurancePlan",
+        "Invoice",
+        "Library",
+        "Linkage",
+        "List",
+        "Location",
+        "Measure",
+        "MeasureReport",
+        "Media",
+        "Medication",
+        "MedicationAdministration",
+        "MedicationDispense",
+        "MedicationKnowledge",
+        "MedicationRequest",
+        "MedicationStatement",
+        "MedicinalProduct",
+        "MedicinalProductAuthorization",
+        "MedicinalProductContraindication",
+        "MedicinalProductIndication",
+        "MedicinalProductIngredient",
+        "MedicinalProductInteraction",
+        "MedicinalProductManufactured",
+        "MedicinalProductPackaged",
+        "MedicinalProductPharmaceutical",
+        "MedicinalProductUndesirableEffect",
+        "MessageDefinition",
+        "MessageHeader",
+        "MolecularSequence",
+        "NamingSystem",
+        "NutritionOrder",
+        "Observation",
+        "ObservationDefinition",
+        "OperationDefinition",
+        "OperationOutcome",
+        "Organization",
+        "OrganizationAffiliation",
+        "Patient",
+        "PaymentNotice",
+        "PaymentReconciliation",
+        "Person",
+        "PlanDefinition",
+        "Practitioner",
+        "PractitionerRole",
+        "Procedure",
+        "Provenance",
+        "Questionnaire",
+        "QuestionnaireResponse",
+        "RelatedPerson",
+        "RequestGroup",
+        "ResearchDefinition",
+        "ResearchElementDefinition",
+        "ResearchStudy",
+        "ResearchSubject",
+        "RiskAssessment",
+        "RiskEvidenceSynthesis",
+        "Schedule",
+        "SearchParameter",
+        "ServiceRequest",
+        "Slot",
+        "Specimen",
+        "SpecimenDefinition",
+        "StructureDefinition",
+        "StructureMap",
+        "Subscription",
+        "Substance",
+        "SubstanceNucleicAcid",
+        "SubstancePolymer",
+        "SubstanceProtein",
+        "SubstanceReferenceInformation",
+        "SubstanceSourceMaterial",
+        "SubstanceSpecification",
+        "SupplyDelivery",
+        "SupplyRequest",
+        "Task",
+        "TerminologyCapabilities",
+        "TestReport",
+        "TestScript",
+        "ValueSet",
+        "VerificationResult",
+        "VisionPrescription"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Composition"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/clinical-identifier",
+      "version": "4.0.1",
+      "name": "identifier",
+      "code": "identifier",
+      "type": "token",
+      "description": "Multiple Resources: \r\n\r\n* [AllergyIntolerance](allergyintolerance.html): External ids for this item\r\n* [CarePlan](careplan.html): External Ids for this plan\r\n* [CareTeam](careteam.html): External Ids for this team\r\n* [Composition](composition.html): Version-independent identifier for the Composition\r\n* [Condition](condition.html): A unique identifier of the condition record\r\n* [Consent](consent.html): Identifier for this record (external references)\r\n* [DetectedIssue](detectedissue.html): Unique id for the detected issue\r\n* [DeviceRequest](devicerequest.html): Business identifier for request/order\r\n* [DiagnosticReport](diagnosticreport.html): An identifier for the report\r\n* [DocumentManifest](documentmanifest.html): Unique Identifier for the set of documents\r\n* [DocumentReference](documentreference.html): Master Version Specific Identifier\r\n* [Encounter](encounter.html): Identifier(s) by which this encounter is known\r\n* [EpisodeOfCare](episodeofcare.html): Business Identifier(s) relevant for this EpisodeOfCare\r\n* [FamilyMemberHistory](familymemberhistory.html): A search by a record identifier\r\n* [Goal](goal.html): External Ids for this goal\r\n* [ImagingStudy](imagingstudy.html): Identifiers for the Study, such as DICOM Study Instance UID and Accession number\r\n* [Immunization](immunization.html): Business identifier\r\n* [List](list.html): Business identifier\r\n* [MedicationAdministration](medicationadministration.html): Return administrations with this external identifier\r\n* [MedicationDispense](medicationdispense.html): Returns dispenses with this external identifier\r\n* [MedicationRequest](medicationrequest.html): Return prescriptions with this external identifier\r\n* [MedicationStatement](medicationstatement.html): Return statements with this external identifier\r\n* [NutritionOrder](nutritionorder.html): Return nutrition orders with this external identifier\r\n* [Observation](observation.html): The unique id for a particular observation\r\n* [Procedure](procedure.html): A unique identifier for a procedure\r\n* [RiskAssessment](riskassessment.html): Unique identifier for the assessment\r\n* [ServiceRequest](servicerequest.html): Identifiers assigned to this order\r\n* [SupplyDelivery](supplydelivery.html): External identifier\r\n* [SupplyRequest](supplyrequest.html): Business Identifier for SupplyRequest\r\n* [VisionPrescription](visionprescription.html): Return prescriptions with this external identifier\r\n",
+      "expression": "AllergyIntolerance.identifier | CarePlan.identifier | CareTeam.identifier | Composition.identifier | Condition.identifier | Consent.identifier | DetectedIssue.identifier | DeviceRequest.identifier | DiagnosticReport.identifier | DocumentManifest.masterIdentifier | DocumentManifest.identifier | DocumentReference.masterIdentifier | DocumentReference.identifier | Encounter.identifier | EpisodeOfCare.identifier | FamilyMemberHistory.identifier | Goal.identifier | ImagingStudy.identifier | Immunization.identifier | List.identifier | MedicationAdministration.identifier | MedicationDispense.identifier | MedicationRequest.identifier | MedicationStatement.identifier | NutritionOrder.identifier | Observation.identifier | Procedure.identifier | RiskAssessment.identifier | ServiceRequest.identifier | SupplyDelivery.identifier | SupplyRequest.identifier | VisionPrescription.identifier",
+      "xpath": "f:AllergyIntolerance/f:identifier | f:CarePlan/f:identifier | f:CareTeam/f:identifier | f:Composition/f:identifier | f:Condition/f:identifier | f:Consent/f:identifier | f:DetectedIssue/f:identifier | f:DeviceRequest/f:identifier | f:DiagnosticReport/f:identifier | f:DocumentManifest/f:masterIdentifier | f:DocumentManifest/f:identifier | f:DocumentReference/f:masterIdentifier | f:DocumentReference/f:identifier | f:Encounter/f:identifier | f:EpisodeOfCare/f:identifier | f:FamilyMemberHistory/f:identifier | f:Goal/f:identifier | f:ImagingStudy/f:identifier | f:Immunization/f:identifier | f:List/f:identifier | f:MedicationAdministration/f:identifier | f:MedicationDispense/f:identifier | f:MedicationRequest/f:identifier | f:MedicationStatement/f:identifier | f:NutritionOrder/f:identifier | f:Observation/f:identifier | f:Procedure/f:identifier | f:RiskAssessment/f:identifier | f:ServiceRequest/f:identifier | f:SupplyDelivery/f:identifier | f:SupplyRequest/f:identifier | f:VisionPrescription/f:identifier",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Composition"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/clinical-patient",
+      "version": "4.0.1",
+      "name": "patient",
+      "code": "patient",
+      "type": "reference",
+      "description": "Multiple Resources: \r\n\r\n* [AllergyIntolerance](allergyintolerance.html): Who the sensitivity is for\r\n* [CarePlan](careplan.html): Who the care plan is for\r\n* [CareTeam](careteam.html): Who care team is for\r\n* [ClinicalImpression](clinicalimpression.html): Patient or group assessed\r\n* [Composition](composition.html): Who and/or what the composition is about\r\n* [Condition](condition.html): Who has the condition?\r\n* [Consent](consent.html): Who the consent applies to\r\n* [DetectedIssue](detectedissue.html): Associated patient\r\n* [DeviceRequest](devicerequest.html): Individual the service is ordered for\r\n* [DeviceUseStatement](deviceusestatement.html): Search by subject - a patient\r\n* [DiagnosticReport](diagnosticreport.html): The subject of the report if a patient\r\n* [DocumentManifest](documentmanifest.html): The subject of the set of documents\r\n* [DocumentReference](documentreference.html): Who/what is the subject of the document\r\n* [Encounter](encounter.html): The patient or group present at the encounter\r\n* [EpisodeOfCare](episodeofcare.html): The patient who is the focus of this episode of care\r\n* [FamilyMemberHistory](familymemberhistory.html): The identity of a subject to list family member history items for\r\n* [Flag](flag.html): The identity of a subject to list flags for\r\n* [Goal](goal.html): Who this goal is intended for\r\n* [ImagingStudy](imagingstudy.html): Who the study is about\r\n* [Immunization](immunization.html): The patient for the vaccination record\r\n* [List](list.html): If all resources have the same subject\r\n* [MedicationAdministration](medicationadministration.html): The identity of a patient to list administrations  for\r\n* [MedicationDispense](medicationdispense.html): The identity of a patient to list dispenses  for\r\n* [MedicationRequest](medicationrequest.html): Returns prescriptions for a specific patient\r\n* [MedicationStatement](medicationstatement.html): Returns statements for a specific patient.\r\n* [NutritionOrder](nutritionorder.html): The identity of the person who requires the diet, formula or nutritional supplement\r\n* [Observation](observation.html): The subject that the observation is about (if patient)\r\n* [Procedure](procedure.html): Search by subject - a patient\r\n* [RiskAssessment](riskassessment.html): Who/what does assessment apply to?\r\n* [ServiceRequest](servicerequest.html): Search by subject - a patient\r\n* [SupplyDelivery](supplydelivery.html): Patient for whom the item is supplied\r\n* [VisionPrescription](visionprescription.html): The identity of a patient to list dispenses for\r\n",
+      "expression": "AllergyIntolerance.patient | CarePlan.subject.where(resolve() is Patient) | CareTeam.subject.where(resolve() is Patient) | ClinicalImpression.subject.where(resolve() is Patient) | Composition.subject.where(resolve() is Patient) | Condition.subject.where(resolve() is Patient) | Consent.patient | DetectedIssue.patient | DeviceRequest.subject.where(resolve() is Patient) | DeviceUseStatement.subject | DiagnosticReport.subject.where(resolve() is Patient) | DocumentManifest.subject.where(resolve() is Patient) | DocumentReference.subject.where(resolve() is Patient) | Encounter.subject.where(resolve() is Patient) | EpisodeOfCare.patient | FamilyMemberHistory.patient | Flag.subject.where(resolve() is Patient) | Goal.subject.where(resolve() is Patient) | ImagingStudy.subject.where(resolve() is Patient) | Immunization.patient | List.subject.where(resolve() is Patient) | MedicationAdministration.subject.where(resolve() is Patient) | MedicationDispense.subject.where(resolve() is Patient) | MedicationRequest.subject.where(resolve() is Patient) | MedicationStatement.subject.where(resolve() is Patient) | NutritionOrder.patient | Observation.subject.where(resolve() is Patient) | Procedure.subject.where(resolve() is Patient) | RiskAssessment.subject.where(resolve() is Patient) | ServiceRequest.subject.where(resolve() is Patient) | SupplyDelivery.patient | VisionPrescription.patient",
+      "xpath": "f:AllergyIntolerance/f:patient | f:CarePlan/f:subject | f:CareTeam/f:subject | f:ClinicalImpression/f:subject | f:Composition/f:subject | f:Condition/f:subject | f:Consent/f:patient | f:DetectedIssue/f:patient | f:DeviceRequest/f:subject | f:DeviceUseStatement/f:subject | f:DiagnosticReport/f:subject | f:DocumentManifest/f:subject | f:DocumentReference/f:subject | f:Encounter/f:subject | f:EpisodeOfCare/f:patient | f:FamilyMemberHistory/f:patient | f:Flag/f:subject | f:Goal/f:subject | f:ImagingStudy/f:subject | f:Immunization/f:patient | f:List/f:subject | f:MedicationAdministration/f:subject | f:MedicationDispense/f:subject | f:MedicationRequest/f:subject | f:MedicationStatement/f:subject | f:NutritionOrder/f:patient | f:Observation/f:subject | f:Procedure/f:subject | f:RiskAssessment/f:subject | f:ServiceRequest/f:subject | f:SupplyDelivery/f:patient | f:VisionPrescription/f:patient",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Patient",
+        "Group"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Composition"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Composition-period",
+      "version": "4.0.1",
+      "name": "period",
+      "code": "period",
+      "type": "date",
+      "description": "The period covered by the documentation",
+      "expression": "Composition.event.period",
+      "xpath": "f:Composition/f:event/f:period",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [
+        "eq",
+        "ne",
+        "gt",
+        "ge",
+        "lt",
+        "le",
+        "sa",
+        "eb",
+        "ap"
+      ],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Composition"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Composition-related-id",
+      "version": "4.0.1",
+      "name": "related-id",
+      "code": "related-id",
+      "type": "token",
+      "description": "Target of the relationship",
+      "expression": "(Composition.relatesTo.target as Identifier)",
+      "xpath": "f:Composition/f:relatesTo/f:targetIdentifier",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Composition"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Composition-related-ref",
+      "version": "4.0.1",
+      "name": "related-ref",
+      "code": "related-ref",
+      "type": "reference",
+      "description": "Target of the relationship",
+      "expression": "(Composition.relatesTo.target as Reference)",
+      "xpath": "f:Composition/f:relatesTo/f:targetReference",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Composition"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Composition"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Composition-section",
+      "version": "4.0.1",
+      "name": "section",
+      "code": "section",
+      "type": "token",
+      "description": "Classification of section (recommended)",
+      "expression": "Composition.section.code",
+      "xpath": "f:Composition/f:section/f:code",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Composition"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Composition-status",
+      "version": "4.0.1",
+      "name": "status",
+      "code": "status",
+      "type": "token",
+      "description": "preliminary | final | amended | entered-in-error",
+      "expression": "Composition.status",
+      "xpath": "f:Composition/f:status",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Composition"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Composition-subject",
+      "version": "4.0.1",
+      "name": "subject",
+      "code": "subject",
+      "type": "reference",
+      "description": "Who and/or what the composition is about",
+      "expression": "Composition.subject",
+      "xpath": "f:Composition/f:subject",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Account",
+        "ActivityDefinition",
+        "AdverseEvent",
+        "AllergyIntolerance",
+        "Appointment",
+        "AppointmentResponse",
+        "AuditEvent",
+        "Basic",
+        "Binary",
+        "BiologicallyDerivedProduct",
+        "BodyStructure",
+        "Bundle",
+        "CapabilityStatement",
+        "CarePlan",
+        "CareTeam",
+        "CatalogEntry",
+        "ChargeItem",
+        "ChargeItemDefinition",
+        "Claim",
+        "ClaimResponse",
+        "ClinicalImpression",
+        "CodeSystem",
+        "Communication",
+        "CommunicationRequest",
+        "CompartmentDefinition",
+        "Composition",
+        "ConceptMap",
+        "Condition",
+        "Consent",
+        "Contract",
+        "Coverage",
+        "CoverageEligibilityRequest",
+        "CoverageEligibilityResponse",
+        "DetectedIssue",
+        "Device",
+        "DeviceDefinition",
+        "DeviceMetric",
+        "DeviceRequest",
+        "DeviceUseStatement",
+        "DiagnosticReport",
+        "DocumentManifest",
+        "DocumentReference",
+        "EffectEvidenceSynthesis",
+        "Encounter",
+        "Endpoint",
+        "EnrollmentRequest",
+        "EnrollmentResponse",
+        "EpisodeOfCare",
+        "EventDefinition",
+        "Evidence",
+        "EvidenceVariable",
+        "ExampleScenario",
+        "ExplanationOfBenefit",
+        "FamilyMemberHistory",
+        "Flag",
+        "Goal",
+        "GraphDefinition",
+        "Group",
+        "GuidanceResponse",
+        "HealthcareService",
+        "ImagingStudy",
+        "Immunization",
+        "ImmunizationEvaluation",
+        "ImmunizationRecommendation",
+        "ImplementationGuide",
+        "InsurancePlan",
+        "Invoice",
+        "Library",
+        "Linkage",
+        "List",
+        "Location",
+        "Measure",
+        "MeasureReport",
+        "Media",
+        "Medication",
+        "MedicationAdministration",
+        "MedicationDispense",
+        "MedicationKnowledge",
+        "MedicationRequest",
+        "MedicationStatement",
+        "MedicinalProduct",
+        "MedicinalProductAuthorization",
+        "MedicinalProductContraindication",
+        "MedicinalProductIndication",
+        "MedicinalProductIngredient",
+        "MedicinalProductInteraction",
+        "MedicinalProductManufactured",
+        "MedicinalProductPackaged",
+        "MedicinalProductPharmaceutical",
+        "MedicinalProductUndesirableEffect",
+        "MessageDefinition",
+        "MessageHeader",
+        "MolecularSequence",
+        "NamingSystem",
+        "NutritionOrder",
+        "Observation",
+        "ObservationDefinition",
+        "OperationDefinition",
+        "OperationOutcome",
+        "Organization",
+        "OrganizationAffiliation",
+        "Patient",
+        "PaymentNotice",
+        "PaymentReconciliation",
+        "Person",
+        "PlanDefinition",
+        "Practitioner",
+        "PractitionerRole",
+        "Procedure",
+        "Provenance",
+        "Questionnaire",
+        "QuestionnaireResponse",
+        "RelatedPerson",
+        "RequestGroup",
+        "ResearchDefinition",
+        "ResearchElementDefinition",
+        "ResearchStudy",
+        "ResearchSubject",
+        "RiskAssessment",
+        "RiskEvidenceSynthesis",
+        "Schedule",
+        "SearchParameter",
+        "ServiceRequest",
+        "Slot",
+        "Specimen",
+        "SpecimenDefinition",
+        "StructureDefinition",
+        "StructureMap",
+        "Subscription",
+        "Substance",
+        "SubstanceNucleicAcid",
+        "SubstancePolymer",
+        "SubstanceProtein",
+        "SubstanceReferenceInformation",
+        "SubstanceSourceMaterial",
+        "SubstanceSpecification",
+        "SupplyDelivery",
+        "SupplyRequest",
+        "Task",
+        "TerminologyCapabilities",
+        "TestReport",
+        "TestScript",
+        "ValueSet",
+        "VerificationResult",
+        "VisionPrescription"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Composition"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Composition-title",
+      "version": "4.0.1",
+      "name": "title",
+      "code": "title",
+      "type": "string",
+      "description": "Human Readable name/title",
+      "expression": "Composition.title",
+      "xpath": "f:Composition/f:title",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Composition"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/clinical-type",
+      "version": "4.0.1",
+      "name": "type",
+      "code": "type",
+      "type": "token",
+      "description": "Multiple Resources: \r\n\r\n* [AllergyIntolerance](allergyintolerance.html): allergy | intolerance - Underlying mechanism (if known)\r\n* [Composition](composition.html): Kind of composition (LOINC if possible)\r\n* [DocumentManifest](documentmanifest.html): Kind of document set\r\n* [DocumentReference](documentreference.html): Kind of document (LOINC if possible)\r\n* [Encounter](encounter.html): Specific type of encounter\r\n* [EpisodeOfCare](episodeofcare.html): Type/class  - e.g. specialist referral, disease management\r\n",
+      "expression": "AllergyIntolerance.type | Composition.type | DocumentManifest.type | DocumentReference.type | Encounter.type | EpisodeOfCare.type",
+      "xpath": "f:AllergyIntolerance/f:type | f:Composition/f:type | f:DocumentManifest/f:type | f:DocumentReference/f:type | f:Encounter/f:type | f:EpisodeOfCare/f:type",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Composition"
+      ]
+    }
+  ]
+}

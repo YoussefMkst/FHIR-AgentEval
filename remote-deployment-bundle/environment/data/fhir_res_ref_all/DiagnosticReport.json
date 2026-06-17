@@ -1,0 +1,992 @@
+{
+  "resourceType": "DiagnosticReport",
+  "fhir_version": "4.0.1",
+  "source_urls": {
+    "structureDefinition": "http://hl7.org/fhir/StructureDefinition/DiagnosticReport"
+  },
+  "elements": [
+    {
+      "path": "DiagnosticReport",
+      "min": 0,
+      "max": "*",
+      "type": [],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "A Diagnostic report - a combination of request information, atomic results, images, interpretation, as well as formatted reports",
+      "definition": "The findings and interpretation of diagnostic  tests performed on patients, groups of patients, devices, and locations, and/or specimens derived from these. The report includes clinical context such as requesting and provider information, and some mix of atomic results, images, textual and coded interpretations, and formatted representation of diagnostic reports.",
+      "binding": null
+    },
+    {
+      "path": "DiagnosticReport.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Logical id of this artifact",
+      "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
+      "binding": null
+    },
+    {
+      "path": "DiagnosticReport.meta",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Meta"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Metadata about the resource",
+      "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.",
+      "binding": null
+    },
+    {
+      "path": "DiagnosticReport.implicitRules",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "uri"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "This element is labeled as a modifier because the implicit rules may provide additional knowledge about the resource that modifies it's meaning or interpretation",
+      "mustSupport": null,
+      "short": "A set of rules under which this content was created",
+      "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.",
+      "binding": null
+    },
+    {
+      "path": "DiagnosticReport.language",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Language of the resource content",
+      "definition": "The base language in which the resource is written.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/languages",
+        "strength": "preferred",
+        "description": "A human language."
+      }
+    },
+    {
+      "path": "DiagnosticReport.text",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Narrative"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Text summary of the resource, for human interpretation",
+      "definition": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
+      "binding": null
+    },
+    {
+      "path": "DiagnosticReport.contained",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Resource"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Contained, inline Resources",
+      "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
+      "binding": null
+    },
+    {
+      "path": "DiagnosticReport.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "DiagnosticReport.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the resource that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "DiagnosticReport.identifier",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Identifier"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Business identifier for report",
+      "definition": "Identifiers assigned to this report by the performer or other systems.",
+      "binding": null
+    },
+    {
+      "path": "DiagnosticReport.basedOn",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/CarePlan",
+            "http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation",
+            "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
+            "http://hl7.org/fhir/StructureDefinition/NutritionOrder",
+            "http://hl7.org/fhir/StructureDefinition/ServiceRequest"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "What was requested",
+      "definition": "Details concerning a service requested.",
+      "binding": null
+    },
+    {
+      "path": "DiagnosticReport.status",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "This element is labeled as a modifier because it is a status element that contains status entered-in-error which means that the resource should not be treated as valid",
+      "mustSupport": null,
+      "short": "registered | partial | preliminary | final +",
+      "definition": "The status of the diagnostic report.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/diagnostic-report-status|4.0.1",
+        "strength": "required",
+        "description": "The status of the diagnostic report."
+      }
+    },
+    {
+      "path": "DiagnosticReport.category",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Service category",
+      "definition": "A code that classifies the clinical discipline, department or diagnostic service that created the report (e.g. cardiology, biochemistry, hematology, MRI). This is used for searching, sorting and display purposes.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/diagnostic-service-sections",
+        "strength": "example",
+        "description": "Codes for diagnostic service sections."
+      }
+    },
+    {
+      "path": "DiagnosticReport.code",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Name/Code for this diagnostic report",
+      "definition": "A code or name that describes this diagnostic report.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/report-codes",
+        "strength": "preferred",
+        "description": "Codes that describe Diagnostic Reports."
+      }
+    },
+    {
+      "path": "DiagnosticReport.subject",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Patient",
+            "http://hl7.org/fhir/StructureDefinition/Group",
+            "http://hl7.org/fhir/StructureDefinition/Device",
+            "http://hl7.org/fhir/StructureDefinition/Location"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The subject of the report - usually, but not always, the patient",
+      "definition": "The subject of the report. Usually, but not always, this is a patient. However, diagnostic services also perform analyses on specimens collected from a variety of other sources.",
+      "binding": null
+    },
+    {
+      "path": "DiagnosticReport.encounter",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Encounter"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Health care event when test ordered",
+      "definition": "The healthcare event  (e.g. a patient and healthcare provider interaction) which this DiagnosticReport is about.",
+      "binding": null
+    },
+    {
+      "path": "DiagnosticReport.effective[x]",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "dateTime"
+        },
+        {
+          "code": "Period"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Clinically relevant time/time-period for report",
+      "definition": "The time or time-period the observed values are related to. When the subject of the report is a patient, this is usually either the time of the procedure or of specimen collection(s), but very often the source of the date/time is not known, only the date/time itself.",
+      "binding": null
+    },
+    {
+      "path": "DiagnosticReport.issued",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "instant"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "DateTime this version was made",
+      "definition": "The date and time that this version of the report was made available to providers, typically after the report was reviewed and verified.",
+      "binding": null
+    },
+    {
+      "path": "DiagnosticReport.performer",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Practitioner",
+            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+            "http://hl7.org/fhir/StructureDefinition/Organization",
+            "http://hl7.org/fhir/StructureDefinition/CareTeam"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Responsible Diagnostic Service",
+      "definition": "The diagnostic service that is responsible for issuing the report.",
+      "binding": null
+    },
+    {
+      "path": "DiagnosticReport.resultsInterpreter",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Practitioner",
+            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+            "http://hl7.org/fhir/StructureDefinition/Organization",
+            "http://hl7.org/fhir/StructureDefinition/CareTeam"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Primary result interpreter",
+      "definition": "The practitioner or organization that is responsible for the report's conclusions and interpretations.",
+      "binding": null
+    },
+    {
+      "path": "DiagnosticReport.specimen",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Specimen"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Specimens this report is based on",
+      "definition": "Details about the specimens on which this diagnostic report is based.",
+      "binding": null
+    },
+    {
+      "path": "DiagnosticReport.result",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Observation"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Observations",
+      "definition": "[Observations](observation.html)  that are part of this diagnostic report.",
+      "binding": null
+    },
+    {
+      "path": "DiagnosticReport.imagingStudy",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/ImagingStudy"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Reference to full details of imaging associated with the diagnostic report",
+      "definition": "One or more links to full details of any imaging performed during the diagnostic investigation. Typically, this is imaging performed by DICOM enabled modalities, but this is not required. A fully enabled PACS viewer can use this information to provide views of the source images.",
+      "binding": null
+    },
+    {
+      "path": "DiagnosticReport.media",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Key images associated with this report",
+      "definition": "A list of key images associated with this report. The images are generally created during the diagnostic process, and may be directly of the patient, or of treated specimens (i.e. slides of interest).",
+      "binding": null
+    },
+    {
+      "path": "DiagnosticReport.media.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "DiagnosticReport.media.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "DiagnosticReport.media.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "DiagnosticReport.media.comment",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Comment about the image (e.g. explanation)",
+      "definition": "A comment about the image. Typically, this is used to provide an explanation for why the image is included, or to draw the viewer's attention to important features.",
+      "binding": null
+    },
+    {
+      "path": "DiagnosticReport.media.link",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Media"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Reference to the image source",
+      "definition": "Reference to the image source.",
+      "binding": null
+    },
+    {
+      "path": "DiagnosticReport.conclusion",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Clinical conclusion (interpretation) of test results",
+      "definition": "Concise and clinically contextualized summary conclusion (interpretation/impression) of the diagnostic report.",
+      "binding": null
+    },
+    {
+      "path": "DiagnosticReport.conclusionCode",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Codes for the clinical conclusion of test results",
+      "definition": "One or more codes that represent the summary conclusion (interpretation/impression) of the diagnostic report.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/clinical-findings",
+        "strength": "example",
+        "description": "Diagnosis codes provided as adjuncts to the report."
+      }
+    },
+    {
+      "path": "DiagnosticReport.presentedForm",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Attachment"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Entire report as issued",
+      "definition": "Rich text representation of the entire result as issued by the diagnostic service. Multiple formats are allowed but they SHALL be semantically equivalent.",
+      "binding": null
+    }
+  ],
+  "search": [
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/diagnosticreport-genetic-DiagnosticReport-assessed-condition",
+      "version": "4.0.1",
+      "name": "assessed-condition",
+      "code": "assessed-condition",
+      "type": "reference",
+      "description": "Condition assessed by genetic test",
+      "expression": "DiagnosticReport.extension('http://hl7.org/fhir/StructureDefinition/DiagnosticReport-geneticsAssessedCondition')",
+      "xpath": null,
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "DiagnosticReport"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/DiagnosticReport-based-on",
+      "version": "4.0.1",
+      "name": "based-on",
+      "code": "based-on",
+      "type": "reference",
+      "description": "Reference to the service request.",
+      "expression": "DiagnosticReport.basedOn",
+      "xpath": "f:DiagnosticReport/f:basedOn",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "CarePlan",
+        "MedicationRequest",
+        "NutritionOrder",
+        "ServiceRequest",
+        "ImmunizationRecommendation"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "DiagnosticReport"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/DiagnosticReport-category",
+      "version": "4.0.1",
+      "name": "category",
+      "code": "category",
+      "type": "token",
+      "description": "Which diagnostic discipline/department created the report",
+      "expression": "DiagnosticReport.category",
+      "xpath": "f:DiagnosticReport/f:category",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "DiagnosticReport"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/clinical-code",
+      "version": "4.0.1",
+      "name": "code",
+      "code": "code",
+      "type": "token",
+      "description": "Multiple Resources: \r\n\r\n* [AllergyIntolerance](allergyintolerance.html): Code that identifies the allergy or intolerance\r\n* [Condition](condition.html): Code for the condition\r\n* [DeviceRequest](devicerequest.html): Code for what is being requested/ordered\r\n* [DiagnosticReport](diagnosticreport.html): The code for the report, as opposed to codes for the atomic results, which are the names on the observation resource referred to from the result\r\n* [FamilyMemberHistory](familymemberhistory.html): A search by a condition code\r\n* [List](list.html): What the purpose of this list is\r\n* [Medication](medication.html): Returns medications for a specific code\r\n* [MedicationAdministration](medicationadministration.html): Return administrations of this medication code\r\n* [MedicationDispense](medicationdispense.html): Returns dispenses of this medicine code\r\n* [MedicationRequest](medicationrequest.html): Return prescriptions of this medication code\r\n* [MedicationStatement](medicationstatement.html): Return statements of this medication code\r\n* [Observation](observation.html): The code of the observation type\r\n* [Procedure](procedure.html): A code to identify a  procedure\r\n* [ServiceRequest](servicerequest.html): What is being requested/ordered\r\n",
+      "expression": "AllergyIntolerance.code | AllergyIntolerance.reaction.substance | Condition.code | (DeviceRequest.code as CodeableConcept) | DiagnosticReport.code | FamilyMemberHistory.condition.code | List.code | Medication.code | (MedicationAdministration.medication as CodeableConcept) | (MedicationDispense.medication as CodeableConcept) | (MedicationRequest.medication as CodeableConcept) | (MedicationStatement.medication as CodeableConcept) | Observation.code | Procedure.code | ServiceRequest.code",
+      "xpath": "f:AllergyIntolerance/f:code | f:AllergyIntolerance/f:reaction/f:substance | f:Condition/f:code | f:DeviceRequest/f:codeCodeableConcept | f:DiagnosticReport/f:code | f:FamilyMemberHistory/f:condition/f:code | f:List/f:code | f:Medication/f:code | f:MedicationAdministration/f:medicationCodeableConcept | f:MedicationDispense/f:medicationCodeableConcept | f:MedicationRequest/f:medicationCodeableConcept | f:MedicationStatement/f:medicationCodeableConcept | f:Observation/f:code | f:Procedure/f:code | f:ServiceRequest/f:code",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "DiagnosticReport"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/DiagnosticReport-conclusion",
+      "version": "4.0.1",
+      "name": "conclusion",
+      "code": "conclusion",
+      "type": "token",
+      "description": "A coded conclusion (interpretation/impression) on the report",
+      "expression": "DiagnosticReport.conclusionCode",
+      "xpath": "f:DiagnosticReport/f:conclusionCode",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "DiagnosticReport"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/clinical-date",
+      "version": "4.0.1",
+      "name": "date",
+      "code": "date",
+      "type": "date",
+      "description": "Multiple Resources: \r\n\r\n* [AllergyIntolerance](allergyintolerance.html): Date first version of the resource instance was recorded\r\n* [CarePlan](careplan.html): Time period plan covers\r\n* [CareTeam](careteam.html): Time period team covers\r\n* [ClinicalImpression](clinicalimpression.html): When the assessment was documented\r\n* [Composition](composition.html): Composition editing time\r\n* [Consent](consent.html): When this Consent was created or indexed\r\n* [DiagnosticReport](diagnosticreport.html): The clinically relevant time of the report\r\n* [Encounter](encounter.html): A date within the period the Encounter lasted\r\n* [EpisodeOfCare](episodeofcare.html): The provided date search value falls within the episode of care's period\r\n* [FamilyMemberHistory](familymemberhistory.html): When history was recorded or last updated\r\n* [Flag](flag.html): Time period when flag is active\r\n* [Immunization](immunization.html): Vaccination  (non)-Administration Date\r\n* [List](list.html): When the list was prepared\r\n* [Observation](observation.html): Obtained date/time. If the obtained element is a period, a date that falls in the period\r\n* [Procedure](procedure.html): When the procedure was performed\r\n* [RiskAssessment](riskassessment.html): When was assessment made?\r\n* [SupplyRequest](supplyrequest.html): When the request was made\r\n",
+      "expression": "AllergyIntolerance.recordedDate | CarePlan.period | CareTeam.period | ClinicalImpression.date | Composition.date | Consent.dateTime | DiagnosticReport.effective | Encounter.period | EpisodeOfCare.period | FamilyMemberHistory.date | Flag.period | Immunization.occurrence | List.date | Observation.effective | Procedure.performed | (RiskAssessment.occurrence as dateTime) | SupplyRequest.authoredOn",
+      "xpath": "f:AllergyIntolerance/f:recordedDate | f:CarePlan/f:period | f:CareTeam/f:period | f:ClinicalImpression/f:date | f:Composition/f:date | f:Consent/f:dateTime | f:DiagnosticReport/f:effectiveDateTime | f:DiagnosticReport/f:effectivePeriod | f:Encounter/f:period | f:EpisodeOfCare/f:period | f:FamilyMemberHistory/f:date | f:Flag/f:period | f:Immunization/f:occurrenceDateTime | f:Immunization/f:occurrenceString | f:List/f:date | f:Observation/f:effectiveDateTime | f:Observation/f:effectivePeriod | f:Observation/f:effectiveTiming | f:Observation/f:effectiveInstant | f:Procedure/f:performedDateTime | f:Procedure/f:performedPeriod | f:Procedure/f:performedString | f:Procedure/f:performedAge | f:Procedure/f:performedRange | f:RiskAssessment/f:occurrenceDateTime | f:SupplyRequest/f:authoredOn",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [
+        "eq",
+        "ne",
+        "gt",
+        "ge",
+        "lt",
+        "le",
+        "sa",
+        "eb",
+        "ap"
+      ],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "DiagnosticReport"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/clinical-encounter",
+      "version": "4.0.1",
+      "name": "encounter",
+      "code": "encounter",
+      "type": "reference",
+      "description": "Multiple Resources: \r\n\r\n* [Composition](composition.html): Context of the Composition\r\n* [DeviceRequest](devicerequest.html): Encounter during which request was created\r\n* [DiagnosticReport](diagnosticreport.html): The Encounter when the order was made\r\n* [DocumentReference](documentreference.html): Context of the document  content\r\n* [Flag](flag.html): Alert relevant during encounter\r\n* [List](list.html): Context in which list created\r\n* [NutritionOrder](nutritionorder.html): Return nutrition orders with this encounter identifier\r\n* [Observation](observation.html): Encounter related to the observation\r\n* [Procedure](procedure.html): Encounter created as part of\r\n* [RiskAssessment](riskassessment.html): Where was assessment performed?\r\n* [ServiceRequest](servicerequest.html): An encounter in which this request is made\r\n* [VisionPrescription](visionprescription.html): Return prescriptions with this encounter identifier\r\n",
+      "expression": "Composition.encounter | DeviceRequest.encounter | DiagnosticReport.encounter | DocumentReference.context.encounter | Flag.encounter | List.encounter | NutritionOrder.encounter | Observation.encounter | Procedure.encounter | RiskAssessment.encounter | ServiceRequest.encounter | VisionPrescription.encounter",
+      "xpath": "f:Composition/f:encounter | f:DeviceRequest/f:encounter | f:DiagnosticReport/f:encounter | f:DocumentReference/f:context/f:encounter | f:Flag/f:encounter | f:List/f:encounter | f:NutritionOrder/f:encounter | f:Observation/f:encounter | f:Procedure/f:encounter | f:RiskAssessment/f:encounter | f:ServiceRequest/f:encounter | f:VisionPrescription/f:encounter",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Encounter",
+        "EpisodeOfCare"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "DiagnosticReport"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/clinical-identifier",
+      "version": "4.0.1",
+      "name": "identifier",
+      "code": "identifier",
+      "type": "token",
+      "description": "Multiple Resources: \r\n\r\n* [AllergyIntolerance](allergyintolerance.html): External ids for this item\r\n* [CarePlan](careplan.html): External Ids for this plan\r\n* [CareTeam](careteam.html): External Ids for this team\r\n* [Composition](composition.html): Version-independent identifier for the Composition\r\n* [Condition](condition.html): A unique identifier of the condition record\r\n* [Consent](consent.html): Identifier for this record (external references)\r\n* [DetectedIssue](detectedissue.html): Unique id for the detected issue\r\n* [DeviceRequest](devicerequest.html): Business identifier for request/order\r\n* [DiagnosticReport](diagnosticreport.html): An identifier for the report\r\n* [DocumentManifest](documentmanifest.html): Unique Identifier for the set of documents\r\n* [DocumentReference](documentreference.html): Master Version Specific Identifier\r\n* [Encounter](encounter.html): Identifier(s) by which this encounter is known\r\n* [EpisodeOfCare](episodeofcare.html): Business Identifier(s) relevant for this EpisodeOfCare\r\n* [FamilyMemberHistory](familymemberhistory.html): A search by a record identifier\r\n* [Goal](goal.html): External Ids for this goal\r\n* [ImagingStudy](imagingstudy.html): Identifiers for the Study, such as DICOM Study Instance UID and Accession number\r\n* [Immunization](immunization.html): Business identifier\r\n* [List](list.html): Business identifier\r\n* [MedicationAdministration](medicationadministration.html): Return administrations with this external identifier\r\n* [MedicationDispense](medicationdispense.html): Returns dispenses with this external identifier\r\n* [MedicationRequest](medicationrequest.html): Return prescriptions with this external identifier\r\n* [MedicationStatement](medicationstatement.html): Return statements with this external identifier\r\n* [NutritionOrder](nutritionorder.html): Return nutrition orders with this external identifier\r\n* [Observation](observation.html): The unique id for a particular observation\r\n* [Procedure](procedure.html): A unique identifier for a procedure\r\n* [RiskAssessment](riskassessment.html): Unique identifier for the assessment\r\n* [ServiceRequest](servicerequest.html): Identifiers assigned to this order\r\n* [SupplyDelivery](supplydelivery.html): External identifier\r\n* [SupplyRequest](supplyrequest.html): Business Identifier for SupplyRequest\r\n* [VisionPrescription](visionprescription.html): Return prescriptions with this external identifier\r\n",
+      "expression": "AllergyIntolerance.identifier | CarePlan.identifier | CareTeam.identifier | Composition.identifier | Condition.identifier | Consent.identifier | DetectedIssue.identifier | DeviceRequest.identifier | DiagnosticReport.identifier | DocumentManifest.masterIdentifier | DocumentManifest.identifier | DocumentReference.masterIdentifier | DocumentReference.identifier | Encounter.identifier | EpisodeOfCare.identifier | FamilyMemberHistory.identifier | Goal.identifier | ImagingStudy.identifier | Immunization.identifier | List.identifier | MedicationAdministration.identifier | MedicationDispense.identifier | MedicationRequest.identifier | MedicationStatement.identifier | NutritionOrder.identifier | Observation.identifier | Procedure.identifier | RiskAssessment.identifier | ServiceRequest.identifier | SupplyDelivery.identifier | SupplyRequest.identifier | VisionPrescription.identifier",
+      "xpath": "f:AllergyIntolerance/f:identifier | f:CarePlan/f:identifier | f:CareTeam/f:identifier | f:Composition/f:identifier | f:Condition/f:identifier | f:Consent/f:identifier | f:DetectedIssue/f:identifier | f:DeviceRequest/f:identifier | f:DiagnosticReport/f:identifier | f:DocumentManifest/f:masterIdentifier | f:DocumentManifest/f:identifier | f:DocumentReference/f:masterIdentifier | f:DocumentReference/f:identifier | f:Encounter/f:identifier | f:EpisodeOfCare/f:identifier | f:FamilyMemberHistory/f:identifier | f:Goal/f:identifier | f:ImagingStudy/f:identifier | f:Immunization/f:identifier | f:List/f:identifier | f:MedicationAdministration/f:identifier | f:MedicationDispense/f:identifier | f:MedicationRequest/f:identifier | f:MedicationStatement/f:identifier | f:NutritionOrder/f:identifier | f:Observation/f:identifier | f:Procedure/f:identifier | f:RiskAssessment/f:identifier | f:ServiceRequest/f:identifier | f:SupplyDelivery/f:identifier | f:SupplyRequest/f:identifier | f:VisionPrescription/f:identifier",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "DiagnosticReport"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/DiagnosticReport-issued",
+      "version": "4.0.1",
+      "name": "issued",
+      "code": "issued",
+      "type": "date",
+      "description": "When the report was issued",
+      "expression": "DiagnosticReport.issued",
+      "xpath": "f:DiagnosticReport/f:issued",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [
+        "eq",
+        "ne",
+        "gt",
+        "ge",
+        "lt",
+        "le",
+        "sa",
+        "eb",
+        "ap"
+      ],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "DiagnosticReport"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/DiagnosticReport-media",
+      "version": "4.0.1",
+      "name": "media",
+      "code": "media",
+      "type": "reference",
+      "description": "A reference to the image source.",
+      "expression": "DiagnosticReport.media.link",
+      "xpath": "f:DiagnosticReport/f:media/f:link",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Media"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "DiagnosticReport"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/clinical-patient",
+      "version": "4.0.1",
+      "name": "patient",
+      "code": "patient",
+      "type": "reference",
+      "description": "Multiple Resources: \r\n\r\n* [AllergyIntolerance](allergyintolerance.html): Who the sensitivity is for\r\n* [CarePlan](careplan.html): Who the care plan is for\r\n* [CareTeam](careteam.html): Who care team is for\r\n* [ClinicalImpression](clinicalimpression.html): Patient or group assessed\r\n* [Composition](composition.html): Who and/or what the composition is about\r\n* [Condition](condition.html): Who has the condition?\r\n* [Consent](consent.html): Who the consent applies to\r\n* [DetectedIssue](detectedissue.html): Associated patient\r\n* [DeviceRequest](devicerequest.html): Individual the service is ordered for\r\n* [DeviceUseStatement](deviceusestatement.html): Search by subject - a patient\r\n* [DiagnosticReport](diagnosticreport.html): The subject of the report if a patient\r\n* [DocumentManifest](documentmanifest.html): The subject of the set of documents\r\n* [DocumentReference](documentreference.html): Who/what is the subject of the document\r\n* [Encounter](encounter.html): The patient or group present at the encounter\r\n* [EpisodeOfCare](episodeofcare.html): The patient who is the focus of this episode of care\r\n* [FamilyMemberHistory](familymemberhistory.html): The identity of a subject to list family member history items for\r\n* [Flag](flag.html): The identity of a subject to list flags for\r\n* [Goal](goal.html): Who this goal is intended for\r\n* [ImagingStudy](imagingstudy.html): Who the study is about\r\n* [Immunization](immunization.html): The patient for the vaccination record\r\n* [List](list.html): If all resources have the same subject\r\n* [MedicationAdministration](medicationadministration.html): The identity of a patient to list administrations  for\r\n* [MedicationDispense](medicationdispense.html): The identity of a patient to list dispenses  for\r\n* [MedicationRequest](medicationrequest.html): Returns prescriptions for a specific patient\r\n* [MedicationStatement](medicationstatement.html): Returns statements for a specific patient.\r\n* [NutritionOrder](nutritionorder.html): The identity of the person who requires the diet, formula or nutritional supplement\r\n* [Observation](observation.html): The subject that the observation is about (if patient)\r\n* [Procedure](procedure.html): Search by subject - a patient\r\n* [RiskAssessment](riskassessment.html): Who/what does assessment apply to?\r\n* [ServiceRequest](servicerequest.html): Search by subject - a patient\r\n* [SupplyDelivery](supplydelivery.html): Patient for whom the item is supplied\r\n* [VisionPrescription](visionprescription.html): The identity of a patient to list dispenses for\r\n",
+      "expression": "AllergyIntolerance.patient | CarePlan.subject.where(resolve() is Patient) | CareTeam.subject.where(resolve() is Patient) | ClinicalImpression.subject.where(resolve() is Patient) | Composition.subject.where(resolve() is Patient) | Condition.subject.where(resolve() is Patient) | Consent.patient | DetectedIssue.patient | DeviceRequest.subject.where(resolve() is Patient) | DeviceUseStatement.subject | DiagnosticReport.subject.where(resolve() is Patient) | DocumentManifest.subject.where(resolve() is Patient) | DocumentReference.subject.where(resolve() is Patient) | Encounter.subject.where(resolve() is Patient) | EpisodeOfCare.patient | FamilyMemberHistory.patient | Flag.subject.where(resolve() is Patient) | Goal.subject.where(resolve() is Patient) | ImagingStudy.subject.where(resolve() is Patient) | Immunization.patient | List.subject.where(resolve() is Patient) | MedicationAdministration.subject.where(resolve() is Patient) | MedicationDispense.subject.where(resolve() is Patient) | MedicationRequest.subject.where(resolve() is Patient) | MedicationStatement.subject.where(resolve() is Patient) | NutritionOrder.patient | Observation.subject.where(resolve() is Patient) | Procedure.subject.where(resolve() is Patient) | RiskAssessment.subject.where(resolve() is Patient) | ServiceRequest.subject.where(resolve() is Patient) | SupplyDelivery.patient | VisionPrescription.patient",
+      "xpath": "f:AllergyIntolerance/f:patient | f:CarePlan/f:subject | f:CareTeam/f:subject | f:ClinicalImpression/f:subject | f:Composition/f:subject | f:Condition/f:subject | f:Consent/f:patient | f:DetectedIssue/f:patient | f:DeviceRequest/f:subject | f:DeviceUseStatement/f:subject | f:DiagnosticReport/f:subject | f:DocumentManifest/f:subject | f:DocumentReference/f:subject | f:Encounter/f:subject | f:EpisodeOfCare/f:patient | f:FamilyMemberHistory/f:patient | f:Flag/f:subject | f:Goal/f:subject | f:ImagingStudy/f:subject | f:Immunization/f:patient | f:List/f:subject | f:MedicationAdministration/f:subject | f:MedicationDispense/f:subject | f:MedicationRequest/f:subject | f:MedicationStatement/f:subject | f:NutritionOrder/f:patient | f:Observation/f:subject | f:Procedure/f:subject | f:RiskAssessment/f:subject | f:ServiceRequest/f:subject | f:SupplyDelivery/f:patient | f:VisionPrescription/f:patient",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Patient",
+        "Group"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "DiagnosticReport"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/DiagnosticReport-performer",
+      "version": "4.0.1",
+      "name": "performer",
+      "code": "performer",
+      "type": "reference",
+      "description": "Who is responsible for the report",
+      "expression": "DiagnosticReport.performer",
+      "xpath": "f:DiagnosticReport/f:performer",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Practitioner",
+        "Organization",
+        "CareTeam",
+        "PractitionerRole"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "DiagnosticReport"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/DiagnosticReport-result",
+      "version": "4.0.1",
+      "name": "result",
+      "code": "result",
+      "type": "reference",
+      "description": "Link to an atomic result (observation resource)",
+      "expression": "DiagnosticReport.result",
+      "xpath": "f:DiagnosticReport/f:result",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Observation"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "DiagnosticReport"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/DiagnosticReport-results-interpreter",
+      "version": "4.0.1",
+      "name": "results-interpreter",
+      "code": "results-interpreter",
+      "type": "reference",
+      "description": "Who was the source of the report",
+      "expression": "DiagnosticReport.resultsInterpreter",
+      "xpath": "f:DiagnosticReport/f:resultsInterpreter",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Practitioner",
+        "Organization",
+        "CareTeam",
+        "PractitionerRole"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "DiagnosticReport"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/DiagnosticReport-specimen",
+      "version": "4.0.1",
+      "name": "specimen",
+      "code": "specimen",
+      "type": "reference",
+      "description": "The specimen details",
+      "expression": "DiagnosticReport.specimen",
+      "xpath": "f:DiagnosticReport/f:specimen",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Specimen"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "DiagnosticReport"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/DiagnosticReport-status",
+      "version": "4.0.1",
+      "name": "status",
+      "code": "status",
+      "type": "token",
+      "description": "The status of the report",
+      "expression": "DiagnosticReport.status",
+      "xpath": "f:DiagnosticReport/f:status",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "DiagnosticReport"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/DiagnosticReport-subject",
+      "version": "4.0.1",
+      "name": "subject",
+      "code": "subject",
+      "type": "reference",
+      "description": "The subject of the report",
+      "expression": "DiagnosticReport.subject",
+      "xpath": "f:DiagnosticReport/f:subject",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Group",
+        "Device",
+        "Patient",
+        "Location"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "DiagnosticReport"
+      ]
+    }
+  ]
+}

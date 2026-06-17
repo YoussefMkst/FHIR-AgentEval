@@ -1,0 +1,1794 @@
+{
+  "resourceType": "EffectEvidenceSynthesis",
+  "fhir_version": "4.0.1",
+  "source_urls": {
+    "structureDefinition": "http://hl7.org/fhir/StructureDefinition/EffectEvidenceSynthesis"
+  },
+  "elements": [
+    {
+      "path": "EffectEvidenceSynthesis",
+      "min": 0,
+      "max": "*",
+      "type": [],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "A quantified estimate of effect based on a body of evidence",
+      "definition": "The EffectEvidenceSynthesis resource describes the difference in an outcome between exposures states in a population where the effect estimate is derived from a combination of research studies.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Logical id of this artifact",
+      "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.meta",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Meta"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Metadata about the resource",
+      "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.implicitRules",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "uri"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "This element is labeled as a modifier because the implicit rules may provide additional knowledge about the resource that modifies it's meaning or interpretation",
+      "mustSupport": null,
+      "short": "A set of rules under which this content was created",
+      "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.language",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Language of the resource content",
+      "definition": "The base language in which the resource is written.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/languages",
+        "strength": "preferred",
+        "description": "A human language."
+      }
+    },
+    {
+      "path": "EffectEvidenceSynthesis.text",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Narrative"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Text summary of the resource, for human interpretation",
+      "definition": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.contained",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Resource"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Contained, inline Resources",
+      "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the resource that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.url",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "uri"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Canonical identifier for this effect evidence synthesis, represented as a URI (globally unique)",
+      "definition": "An absolute URI that is used to identify this effect evidence synthesis when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this effect evidence synthesis is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the effect evidence synthesis is stored on different servers.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.identifier",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Identifier"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional identifier for the effect evidence synthesis",
+      "definition": "A formal identifier that is used to identify this effect evidence synthesis when it is represented in other formats, or referenced in a specification, model, design or an instance.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.version",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Business version of the effect evidence synthesis",
+      "definition": "The identifier that is used to identify this version of the effect evidence synthesis when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the effect evidence synthesis author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.name",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Name for this effect evidence synthesis (computer friendly)",
+      "definition": "A natural language name identifying the effect evidence synthesis. This name should be usable as an identifier for the module by machine processing applications such as code generation.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.title",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Name for this effect evidence synthesis (human friendly)",
+      "definition": "A short, descriptive, user-friendly title for the effect evidence synthesis.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.status",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "This is labeled as \"Is Modifier\" because applications should not use a retired {{title}} without due consideration",
+      "mustSupport": null,
+      "short": "draft | active | retired | unknown",
+      "definition": "The status of this effect evidence synthesis. Enables tracking the life-cycle of the content.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/publication-status|4.0.1",
+        "strength": "required",
+        "description": "The lifecycle status of an artifact."
+      }
+    },
+    {
+      "path": "EffectEvidenceSynthesis.date",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "dateTime"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Date last changed",
+      "definition": "The date  (and optionally time) when the effect evidence synthesis was published. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the effect evidence synthesis changes.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.publisher",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Name of the publisher (organization or individual)",
+      "definition": "The name of the organization or individual that published the effect evidence synthesis.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.contact",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "ContactDetail"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Contact details for the publisher",
+      "definition": "Contact details to assist a user in finding and communicating with the publisher.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.description",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "markdown"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Natural language description of the effect evidence synthesis",
+      "definition": "A free text natural language description of the effect evidence synthesis from a consumer's perspective.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.note",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Annotation"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Used for footnotes or explanatory notes",
+      "definition": "A human-readable string to clarify or explain concepts about the resource.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.useContext",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "UsageContext"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The context that the content is intended to support",
+      "definition": "The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate effect evidence synthesis instances.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.jurisdiction",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Intended jurisdiction for effect evidence synthesis (if applicable)",
+      "definition": "A legal or geographic region in which the effect evidence synthesis is intended to be used.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/jurisdiction",
+        "strength": "extensible",
+        "description": "Countries and regions within which this artifact is targeted for use."
+      }
+    },
+    {
+      "path": "EffectEvidenceSynthesis.copyright",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "markdown"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Use and/or publishing restrictions",
+      "definition": "A copyright statement relating to the effect evidence synthesis and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the effect evidence synthesis.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.approvalDate",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "date"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "When the effect evidence synthesis was approved by publisher",
+      "definition": "The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.lastReviewDate",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "date"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "When the effect evidence synthesis was last reviewed",
+      "definition": "The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.effectivePeriod",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Period"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "When the effect evidence synthesis is expected to be used",
+      "definition": "The period during which the effect evidence synthesis content was or is planned to be in active use.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.topic",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The category of the EffectEvidenceSynthesis, such as Education, Treatment, Assessment, etc.",
+      "definition": "Descriptive topics related to the content of the EffectEvidenceSynthesis. Topics provide a high-level categorization grouping types of EffectEvidenceSynthesiss that can be useful for filtering and searching.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/definition-topic",
+        "strength": "example",
+        "description": "High-level categorization of the definition, used for searching, sorting, and filtering."
+      }
+    },
+    {
+      "path": "EffectEvidenceSynthesis.author",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "ContactDetail"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Who authored the content",
+      "definition": "An individiual or organization primarily involved in the creation and maintenance of the content.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.editor",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "ContactDetail"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Who edited the content",
+      "definition": "An individual or organization primarily responsible for internal coherence of the content.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.reviewer",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "ContactDetail"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Who reviewed the content",
+      "definition": "An individual or organization primarily responsible for review of some aspect of the content.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.endorser",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "ContactDetail"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Who endorsed the content",
+      "definition": "An individual or organization responsible for officially endorsing the content for use in some setting.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.relatedArtifact",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "RelatedArtifact"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional documentation, citations, etc.",
+      "definition": "Related artifacts such as additional documentation, justification, or bibliographic references.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.synthesisType",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Type of synthesis",
+      "definition": "Type of synthesis eg meta-analysis.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/synthesis-type",
+        "strength": "extensible",
+        "description": "Types of combining results from a body of evidence (eg. summary data meta-analysis)."
+      }
+    },
+    {
+      "path": "EffectEvidenceSynthesis.studyType",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Type of study",
+      "definition": "Type of study eg randomized trial.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/study-type",
+        "strength": "extensible",
+        "description": "Types of research studies (types of research methods)."
+      }
+    },
+    {
+      "path": "EffectEvidenceSynthesis.population",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/EvidenceVariable"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "What population?",
+      "definition": "A reference to a EvidenceVariable resource that defines the population for the research.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.exposure",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/EvidenceVariable"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "What exposure?",
+      "definition": "A reference to a EvidenceVariable resource that defines the exposure for the research.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.exposureAlternative",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/EvidenceVariable"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "What comparison exposure?",
+      "definition": "A reference to a EvidenceVariable resource that defines the comparison exposure for the research.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.outcome",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/EvidenceVariable"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "What outcome?",
+      "definition": "A reference to a EvidenceVariable resomece that defines the outcome for the research.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.sampleSize",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "What sample size was involved?",
+      "definition": "A description of the size of the sample involved in the synthesis.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.sampleSize.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.sampleSize.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.sampleSize.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.sampleSize.description",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Description of sample size",
+      "definition": "Human-readable summary of sample size.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.sampleSize.numberOfStudies",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "integer"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "How many studies?",
+      "definition": "Number of studies included in this evidence synthesis.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.sampleSize.numberOfParticipants",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "integer"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "How many participants?",
+      "definition": "Number of participants included in this evidence synthesis.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.resultsByExposure",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "What was the result per exposure?",
+      "definition": "A description of the results for each exposure considered in the effect estimate.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.resultsByExposure.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.resultsByExposure.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.resultsByExposure.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.resultsByExposure.description",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Description of results by exposure",
+      "definition": "Human-readable summary of results by exposure state.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.resultsByExposure.exposureState",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "exposure | exposure-alternative",
+      "definition": "Whether these results are for the exposure state or alternative exposure state.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/exposure-state|4.0.1",
+        "strength": "required",
+        "description": "Whether the results by exposure is describing the results for the primary exposure of interest (exposure) or the alternative state (exposureAlternative)."
+      }
+    },
+    {
+      "path": "EffectEvidenceSynthesis.resultsByExposure.variantState",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Variant exposure states",
+      "definition": "Used to define variant exposure states such as low-risk state.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/evidence-variant-state",
+        "strength": "extensible",
+        "description": "Used for results by exposure in variant states such as low-risk, medium-risk and high-risk states."
+      }
+    },
+    {
+      "path": "EffectEvidenceSynthesis.resultsByExposure.riskEvidenceSynthesis",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/RiskEvidenceSynthesis"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Risk evidence synthesis",
+      "definition": "Reference to a RiskEvidenceSynthesis resource.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.effectEstimate",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "What was the estimated effect",
+      "definition": "The estimated effect of the exposure variant.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.effectEstimate.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.effectEstimate.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.effectEstimate.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.effectEstimate.description",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Description of effect estimate",
+      "definition": "Human-readable summary of effect estimate.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.effectEstimate.type",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Type of efffect estimate",
+      "definition": "Examples include relative risk and mean difference.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/effect-estimate-type",
+        "strength": "extensible",
+        "description": "Whether the effect estimate is an absolute effect estimate (absolute difference) or a relative effect estimate (relative difference), and the specific type of effect estimate (eg relative risk or median difference)."
+      }
+    },
+    {
+      "path": "EffectEvidenceSynthesis.effectEstimate.variantState",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Variant exposure states",
+      "definition": "Used to define variant exposure states such as low-risk state.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/evidence-variant-state",
+        "strength": "extensible",
+        "description": "Used for results by exposure in variant states such as low-risk, medium-risk and high-risk states."
+      }
+    },
+    {
+      "path": "EffectEvidenceSynthesis.effectEstimate.value",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "decimal"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Point estimate",
+      "definition": "The point estimate of the effect estimate.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.effectEstimate.unitOfMeasure",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "What unit is the outcome described in?",
+      "definition": "Specifies the UCUM unit for the outcome.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/ucum-units|4.0.1",
+        "strength": "required",
+        "description": "Unified Code for Units of Measure (UCUM)."
+      }
+    },
+    {
+      "path": "EffectEvidenceSynthesis.effectEstimate.precisionEstimate",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "How precise the estimate is",
+      "definition": "A description of the precision of the estimate for the effect.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.effectEstimate.precisionEstimate.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.effectEstimate.precisionEstimate.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.effectEstimate.precisionEstimate.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.effectEstimate.precisionEstimate.type",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Type of precision estimate",
+      "definition": "Examples include confidence interval and interquartile range.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/precision-estimate-type",
+        "strength": "extensible",
+        "description": "Method of reporting variability of estimates, such as confidence intervals, interquartile range or standard deviation."
+      }
+    },
+    {
+      "path": "EffectEvidenceSynthesis.effectEstimate.precisionEstimate.level",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "decimal"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Level of confidence interval",
+      "definition": "Use 95 for a 95% confidence interval.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.effectEstimate.precisionEstimate.from",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "decimal"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Lower bound",
+      "definition": "Lower bound of confidence interval.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.effectEstimate.precisionEstimate.to",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "decimal"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Upper bound",
+      "definition": "Upper bound of confidence interval.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.certainty",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "How certain is the effect",
+      "definition": "A description of the certainty of the effect estimate.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.certainty.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.certainty.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.certainty.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.certainty.rating",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Certainty rating",
+      "definition": "A rating of the certainty of the effect estimate.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/evidence-quality",
+        "strength": "extensible",
+        "description": "The quality of the evidence described. The code system used specifies the quality scale used to grade this evidence source while the code specifies the actual quality score (represented as a coded value) associated with the evidence."
+      }
+    },
+    {
+      "path": "EffectEvidenceSynthesis.certainty.note",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Annotation"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Used for footnotes or explanatory notes",
+      "definition": "A human-readable string to clarify or explain concepts about the resource.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.certainty.certaintySubcomponent",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "A component that contributes to the overall certainty",
+      "definition": "A description of a component of the overall certainty.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.certainty.certaintySubcomponent.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.certainty.certaintySubcomponent.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.certainty.certaintySubcomponent.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "EffectEvidenceSynthesis.certainty.certaintySubcomponent.type",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Type of subcomponent of certainty rating",
+      "definition": "Type of subcomponent of certainty rating.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/certainty-subcomponent-type",
+        "strength": "extensible",
+        "description": "The subcomponent classification of quality of evidence rating systems."
+      }
+    },
+    {
+      "path": "EffectEvidenceSynthesis.certainty.certaintySubcomponent.rating",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Subcomponent certainty rating",
+      "definition": "A rating of a subcomponent of rating certainty.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/certainty-subcomponent-rating",
+        "strength": "extensible",
+        "description": "The quality rating of the subcomponent of a quality of evidence rating."
+      }
+    },
+    {
+      "path": "EffectEvidenceSynthesis.certainty.certaintySubcomponent.note",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Annotation"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Used for footnotes or explanatory notes",
+      "definition": "A human-readable string to clarify or explain concepts about the resource.",
+      "binding": null
+    }
+  ],
+  "search": [
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/EffectEvidenceSynthesis-context",
+      "version": "4.0.1",
+      "name": "context",
+      "code": "context",
+      "type": "token",
+      "description": "A use context assigned to the effect evidence synthesis",
+      "expression": "(EffectEvidenceSynthesis.useContext.value as CodeableConcept)",
+      "xpath": "f:EffectEvidenceSynthesis/f:useContext/f:valueCodeableConcept",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "EffectEvidenceSynthesis"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/EffectEvidenceSynthesis-context-quantity",
+      "version": "4.0.1",
+      "name": "context-quantity",
+      "code": "context-quantity",
+      "type": "quantity",
+      "description": "A quantity- or range-valued use context assigned to the effect evidence synthesis",
+      "expression": "(EffectEvidenceSynthesis.useContext.value as Quantity) | (EffectEvidenceSynthesis.useContext.value as Range)",
+      "xpath": "f:EffectEvidenceSynthesis/f:useContext/f:valueQuantity | f:EffectEvidenceSynthesis/f:useContext/f:valueRange",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [
+        "eq",
+        "ne",
+        "gt",
+        "ge",
+        "lt",
+        "le",
+        "sa",
+        "eb",
+        "ap"
+      ],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "EffectEvidenceSynthesis"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/EffectEvidenceSynthesis-context-type",
+      "version": "4.0.1",
+      "name": "context-type",
+      "code": "context-type",
+      "type": "token",
+      "description": "A type of use context assigned to the effect evidence synthesis",
+      "expression": "EffectEvidenceSynthesis.useContext.code",
+      "xpath": "f:EffectEvidenceSynthesis/f:useContext/f:code",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "EffectEvidenceSynthesis"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/EffectEvidenceSynthesis-context-type-quantity",
+      "version": "4.0.1",
+      "name": "context-type-quantity",
+      "code": "context-type-quantity",
+      "type": "composite",
+      "description": "A use context type and quantity- or range-based value assigned to the effect evidence synthesis",
+      "expression": "EffectEvidenceSynthesis.useContext",
+      "xpath": null,
+      "xpathUsage": "normal",
+      "multipleOr": false,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [
+        {
+          "definition": "http://hl7.org/fhir/SearchParameter/EffectEvidenceSynthesis-context-type",
+          "expression": "code"
+        },
+        {
+          "definition": "http://hl7.org/fhir/SearchParameter/EffectEvidenceSynthesis-context-quantity",
+          "expression": "value.as(Quantity) | value.as(Range)"
+        }
+      ],
+      "base": [
+        "EffectEvidenceSynthesis"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/EffectEvidenceSynthesis-context-type-value",
+      "version": "4.0.1",
+      "name": "context-type-value",
+      "code": "context-type-value",
+      "type": "composite",
+      "description": "A use context type and value assigned to the effect evidence synthesis",
+      "expression": "EffectEvidenceSynthesis.useContext",
+      "xpath": null,
+      "xpathUsage": "normal",
+      "multipleOr": false,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [
+        {
+          "definition": "http://hl7.org/fhir/SearchParameter/EffectEvidenceSynthesis-context-type",
+          "expression": "code"
+        },
+        {
+          "definition": "http://hl7.org/fhir/SearchParameter/EffectEvidenceSynthesis-context",
+          "expression": "value.as(CodeableConcept)"
+        }
+      ],
+      "base": [
+        "EffectEvidenceSynthesis"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/EffectEvidenceSynthesis-date",
+      "version": "4.0.1",
+      "name": "date",
+      "code": "date",
+      "type": "date",
+      "description": "The effect evidence synthesis publication date",
+      "expression": "EffectEvidenceSynthesis.date",
+      "xpath": "f:EffectEvidenceSynthesis/f:date",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [
+        "eq",
+        "ne",
+        "gt",
+        "ge",
+        "lt",
+        "le",
+        "sa",
+        "eb",
+        "ap"
+      ],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "EffectEvidenceSynthesis"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/EffectEvidenceSynthesis-description",
+      "version": "4.0.1",
+      "name": "description",
+      "code": "description",
+      "type": "string",
+      "description": "The description of the effect evidence synthesis",
+      "expression": "EffectEvidenceSynthesis.description",
+      "xpath": "f:EffectEvidenceSynthesis/f:description",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "EffectEvidenceSynthesis"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/EffectEvidenceSynthesis-effective",
+      "version": "4.0.1",
+      "name": "effective",
+      "code": "effective",
+      "type": "date",
+      "description": "The time during which the effect evidence synthesis is intended to be in use",
+      "expression": "EffectEvidenceSynthesis.effectivePeriod",
+      "xpath": "f:EffectEvidenceSynthesis/f:effectivePeriod",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [
+        "eq",
+        "ne",
+        "gt",
+        "ge",
+        "lt",
+        "le",
+        "sa",
+        "eb",
+        "ap"
+      ],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "EffectEvidenceSynthesis"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/EffectEvidenceSynthesis-identifier",
+      "version": "4.0.1",
+      "name": "identifier",
+      "code": "identifier",
+      "type": "token",
+      "description": "External identifier for the effect evidence synthesis",
+      "expression": "EffectEvidenceSynthesis.identifier",
+      "xpath": "f:EffectEvidenceSynthesis/f:identifier",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "EffectEvidenceSynthesis"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/EffectEvidenceSynthesis-jurisdiction",
+      "version": "4.0.1",
+      "name": "jurisdiction",
+      "code": "jurisdiction",
+      "type": "token",
+      "description": "Intended jurisdiction for the effect evidence synthesis",
+      "expression": "EffectEvidenceSynthesis.jurisdiction",
+      "xpath": "f:EffectEvidenceSynthesis/f:jurisdiction",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "EffectEvidenceSynthesis"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/EffectEvidenceSynthesis-name",
+      "version": "4.0.1",
+      "name": "name",
+      "code": "name",
+      "type": "string",
+      "description": "Computationally friendly name of the effect evidence synthesis",
+      "expression": "EffectEvidenceSynthesis.name",
+      "xpath": "f:EffectEvidenceSynthesis/f:name",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "EffectEvidenceSynthesis"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/EffectEvidenceSynthesis-publisher",
+      "version": "4.0.1",
+      "name": "publisher",
+      "code": "publisher",
+      "type": "string",
+      "description": "Name of the publisher of the effect evidence synthesis",
+      "expression": "EffectEvidenceSynthesis.publisher",
+      "xpath": "f:EffectEvidenceSynthesis/f:publisher",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "EffectEvidenceSynthesis"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/EffectEvidenceSynthesis-status",
+      "version": "4.0.1",
+      "name": "status",
+      "code": "status",
+      "type": "token",
+      "description": "The current status of the effect evidence synthesis",
+      "expression": "EffectEvidenceSynthesis.status",
+      "xpath": "f:EffectEvidenceSynthesis/f:status",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "EffectEvidenceSynthesis"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/EffectEvidenceSynthesis-title",
+      "version": "4.0.1",
+      "name": "title",
+      "code": "title",
+      "type": "string",
+      "description": "The human-friendly name of the effect evidence synthesis",
+      "expression": "EffectEvidenceSynthesis.title",
+      "xpath": "f:EffectEvidenceSynthesis/f:title",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "EffectEvidenceSynthesis"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/EffectEvidenceSynthesis-url",
+      "version": "4.0.1",
+      "name": "url",
+      "code": "url",
+      "type": "uri",
+      "description": "The uri that identifies the effect evidence synthesis",
+      "expression": "EffectEvidenceSynthesis.url",
+      "xpath": "f:EffectEvidenceSynthesis/f:url",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "EffectEvidenceSynthesis"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/EffectEvidenceSynthesis-version",
+      "version": "4.0.1",
+      "name": "version",
+      "code": "version",
+      "type": "token",
+      "description": "The business version of the effect evidence synthesis",
+      "expression": "EffectEvidenceSynthesis.version",
+      "xpath": "f:EffectEvidenceSynthesis/f:version",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "EffectEvidenceSynthesis"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "dataType": "Distance",
+  "typeKind": "complex-type",
+  "fhir_version": "4.0.1",
+  "source_urls": {
+    "structureDefinition": "http://hl7.org/fhir/StructureDefinition/Distance"
+  },
+  "elements": [
+    {
+      "path": "Distance",
+      "min": 0,
+      "max": "*",
+      "type": [],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "A length - a value with a unit that is a physical distance",
+      "definition": "A length - a value with a unit that is a physical distance.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/distance-units",
+        "strength": "extensible",
+        "description": "Appropriate units for Distance."
+      }
+    },
+    {
+      "path": "Distance.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String",
+          "fhirType": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "Distance.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "Distance.value",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "decimal"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Numerical value (with implicit precision)",
+      "definition": "The value of the measured amount. The value includes an implicit precision in the presentation of the value.",
+      "binding": null
+    },
+    {
+      "path": "Distance.comparator",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "This is labeled as \"Is Modifier\" because the comparator modifies the interpretation of the value significantly. If there is no comparator, then there is no modification of the value",
+      "mustSupport": null,
+      "short": "< | <= | >= | > - how to understand the value",
+      "definition": "How the value should be understood and represented - whether the actual value is greater or less than the stated value due to measurement issues; e.g. if the comparator is \"<\" , then the real value is < stated value.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/quantity-comparator|4.0.1",
+        "strength": "required",
+        "description": "How the Quantity should be understood and represented."
+      }
+    },
+    {
+      "path": "Distance.unit",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unit representation",
+      "definition": "A human-readable form of the unit.",
+      "binding": null
+    },
+    {
+      "path": "Distance.system",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "uri"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "System that defines coded unit form",
+      "definition": "The identification of the system that provides the coded form of the unit.",
+      "binding": null
+    },
+    {
+      "path": "Distance.code",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Coded form of the unit",
+      "definition": "A computer processable form of the unit in some unit representation system.",
+      "binding": null
+    }
+  ]
+}

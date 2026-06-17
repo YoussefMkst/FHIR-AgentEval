@@ -1,0 +1,191 @@
+{
+  "dataType": "Attachment",
+  "typeKind": "complex-type",
+  "fhir_version": "4.0.1",
+  "source_urls": {
+    "structureDefinition": "http://hl7.org/fhir/StructureDefinition/Attachment"
+  },
+  "elements": [
+    {
+      "path": "Attachment",
+      "min": 0,
+      "max": "*",
+      "type": [],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Content in a format defined elsewhere",
+      "definition": "For referring to data content defined in other formats.",
+      "binding": null
+    },
+    {
+      "path": "Attachment.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String",
+          "fhirType": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "Attachment.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "Attachment.contentType",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Mime type of the content, with charset etc.",
+      "definition": "Identifies the type of the data in the attachment and allows a method to be chosen to interpret or render the data. Includes mime type parameters such as charset where appropriate.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/mimetypes|4.0.1",
+        "strength": "required",
+        "description": "The mime type of an attachment. Any valid mime type is allowed."
+      }
+    },
+    {
+      "path": "Attachment.language",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Human language of the content (BCP-47)",
+      "definition": "The human language of the content. The value can be any valid value according to BCP 47.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/languages",
+        "strength": "preferred",
+        "description": "A human language."
+      }
+    },
+    {
+      "path": "Attachment.data",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "base64Binary"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Data inline, base64ed",
+      "definition": "The actual data of the attachment - a sequence of bytes, base64 encoded.",
+      "binding": null
+    },
+    {
+      "path": "Attachment.url",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "url"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Uri where the data can be found",
+      "definition": "A location where the data can be accessed.",
+      "binding": null
+    },
+    {
+      "path": "Attachment.size",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "unsignedInt"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Number of bytes of content (if url provided)",
+      "definition": "The number of bytes of data that make up this attachment (before base64 encoding, if that is done).",
+      "binding": null
+    },
+    {
+      "path": "Attachment.hash",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "base64Binary"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Hash of the data (sha-1, base64ed)",
+      "definition": "The calculated hash of the data using SHA-1. Represented using base64.",
+      "binding": null
+    },
+    {
+      "path": "Attachment.title",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Label to display in place of the data",
+      "definition": "A label or set of text to display in place of the data.",
+      "binding": null
+    },
+    {
+      "path": "Attachment.creation",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "dateTime"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Date attachment was first created",
+      "definition": "The date that the attachment was first created.",
+      "binding": null
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "dataType": "Identifier",
+  "typeKind": "complex-type",
+  "fhir_version": "4.0.1",
+  "source_urls": {
+    "structureDefinition": "http://hl7.org/fhir/StructureDefinition/Identifier"
+  },
+  "elements": [
+    {
+      "path": "Identifier",
+      "min": 0,
+      "max": "*",
+      "type": [],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "An identifier intended for computation",
+      "definition": "An identifier - identifies some entity uniquely and unambiguously. Typically this is used for business identifiers.",
+      "binding": null
+    },
+    {
+      "path": "Identifier.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String",
+          "fhirType": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "Identifier.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "Identifier.use",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "This is labeled as \"Is Modifier\" because applications should not mistake a temporary id for a permanent one.",
+      "mustSupport": null,
+      "short": "usual | official | temp | secondary | old (If known)",
+      "definition": "The purpose of this identifier.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/identifier-use|4.0.1",
+        "strength": "required",
+        "description": "Identifies the purpose for this identifier, if known ."
+      }
+    },
+    {
+      "path": "Identifier.type",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Description of identifier",
+      "definition": "A coded type for the identifier that can be used to determine which identifier to use for a specific purpose.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/identifier-type",
+        "strength": "extensible",
+        "description": "A coded type for an identifier that can be used to determine which identifier to use for a specific purpose."
+      }
+    },
+    {
+      "path": "Identifier.system",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "uri"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The namespace for the identifier value",
+      "definition": "Establishes the namespace for the value - that is, a URL that describes a set values that are unique.",
+      "binding": null
+    },
+    {
+      "path": "Identifier.value",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The value that is unique",
+      "definition": "The portion of the identifier typically relevant to the user and which is unique within the context of the system.",
+      "binding": null
+    },
+    {
+      "path": "Identifier.period",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Period"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Time period when id is/was valid for use",
+      "definition": "Time period during which identifier is/was valid for use.",
+      "binding": null
+    },
+    {
+      "path": "Identifier.assigner",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Organization"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Organization that issued id (may be just text)",
+      "definition": "Organization that issued/manages the identifier.",
+      "binding": null
+    }
+  ]
+}

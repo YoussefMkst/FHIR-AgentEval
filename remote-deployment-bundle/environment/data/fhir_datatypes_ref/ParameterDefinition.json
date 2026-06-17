@@ -1,0 +1,178 @@
+{
+  "dataType": "ParameterDefinition",
+  "typeKind": "complex-type",
+  "fhir_version": "4.0.1",
+  "source_urls": {
+    "structureDefinition": "http://hl7.org/fhir/StructureDefinition/ParameterDefinition"
+  },
+  "elements": [
+    {
+      "path": "ParameterDefinition",
+      "min": 0,
+      "max": "*",
+      "type": [],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Definition of a parameter to a module",
+      "definition": "The parameters to the module. This collection specifies both the input and output parameters. Input parameters are provided by the caller as part of the $evaluate operation. Output parameters are included in the GuidanceResponse.",
+      "binding": null
+    },
+    {
+      "path": "ParameterDefinition.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String",
+          "fhirType": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "ParameterDefinition.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "ParameterDefinition.name",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Name used to access the parameter value",
+      "definition": "The name of the parameter used to allow access to the value of the parameter in evaluation contexts.",
+      "binding": null
+    },
+    {
+      "path": "ParameterDefinition.use",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "in | out",
+      "definition": "Whether the parameter is input or output for the module.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/operation-parameter-use|4.0.1",
+        "strength": "required",
+        "description": "Whether the parameter is input or output."
+      }
+    },
+    {
+      "path": "ParameterDefinition.min",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "integer"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Minimum cardinality",
+      "definition": "The minimum number of times this parameter SHALL appear in the request or response.",
+      "binding": null
+    },
+    {
+      "path": "ParameterDefinition.max",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Maximum cardinality (a number of *)",
+      "definition": "The maximum number of times this element is permitted to appear in the request or response.",
+      "binding": null
+    },
+    {
+      "path": "ParameterDefinition.documentation",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "A brief description of the parameter",
+      "definition": "A brief discussion of what the parameter is for and how it is used by the module.",
+      "binding": null
+    },
+    {
+      "path": "ParameterDefinition.type",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "What type of value",
+      "definition": "The type of the parameter.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/all-types|4.0.1",
+        "strength": "required",
+        "description": "A list of all the concrete types defined in this version of the FHIR specification - Abstract Types, Data Types and Resource Types."
+      }
+    },
+    {
+      "path": "ParameterDefinition.profile",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "canonical",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/StructureDefinition"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "What profile the value is expected to be",
+      "definition": "If specified, this indicates a profile that the input data must conform to, or that the output data will conform to.",
+      "binding": null
+    }
+  ]
+}

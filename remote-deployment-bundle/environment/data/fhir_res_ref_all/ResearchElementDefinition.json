@@ -1,0 +1,2238 @@
+{
+  "resourceType": "ResearchElementDefinition",
+  "fhir_version": "4.0.1",
+  "source_urls": {
+    "structureDefinition": "http://hl7.org/fhir/StructureDefinition/ResearchElementDefinition"
+  },
+  "elements": [
+    {
+      "path": "ResearchElementDefinition",
+      "min": 0,
+      "max": "*",
+      "type": [],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "A population, intervention, or exposure definition",
+      "definition": "The ResearchElementDefinition resource describes a \"PICO\" element that knowledge (evidence, assertion, recommendation) is about.",
+      "binding": null
+    },
+    {
+      "path": "ResearchElementDefinition.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Logical id of this artifact",
+      "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
+      "binding": null
+    },
+    {
+      "path": "ResearchElementDefinition.meta",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Meta"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Metadata about the resource",
+      "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.",
+      "binding": null
+    },
+    {
+      "path": "ResearchElementDefinition.implicitRules",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "uri"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "This element is labeled as a modifier because the implicit rules may provide additional knowledge about the resource that modifies it's meaning or interpretation",
+      "mustSupport": null,
+      "short": "A set of rules under which this content was created",
+      "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.",
+      "binding": null
+    },
+    {
+      "path": "ResearchElementDefinition.language",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Language of the resource content",
+      "definition": "The base language in which the resource is written.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/languages",
+        "strength": "preferred",
+        "description": "A human language."
+      }
+    },
+    {
+      "path": "ResearchElementDefinition.text",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Narrative"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Text summary of the resource, for human interpretation",
+      "definition": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
+      "binding": null
+    },
+    {
+      "path": "ResearchElementDefinition.contained",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Resource"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Contained, inline Resources",
+      "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
+      "binding": null
+    },
+    {
+      "path": "ResearchElementDefinition.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "ResearchElementDefinition.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the resource that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "ResearchElementDefinition.url",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "uri"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Canonical identifier for this research element definition, represented as a URI (globally unique)",
+      "definition": "An absolute URI that is used to identify this research element definition when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this research element definition is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the research element definition is stored on different servers.",
+      "binding": null
+    },
+    {
+      "path": "ResearchElementDefinition.identifier",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Identifier"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional identifier for the research element definition",
+      "definition": "A formal identifier that is used to identify this research element definition when it is represented in other formats, or referenced in a specification, model, design or an instance.",
+      "binding": null
+    },
+    {
+      "path": "ResearchElementDefinition.version",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Business version of the research element definition",
+      "definition": "The identifier that is used to identify this version of the research element definition when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the research element definition author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence. To provide a version consistent with the Decision Support Service specification, use the format Major.Minor.Revision (e.g. 1.0.0). For more information on versioning knowledge assets, refer to the Decision Support Service specification. Note that a version is required for non-experimental active artifacts.",
+      "binding": null
+    },
+    {
+      "path": "ResearchElementDefinition.name",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Name for this research element definition (computer friendly)",
+      "definition": "A natural language name identifying the research element definition. This name should be usable as an identifier for the module by machine processing applications such as code generation.",
+      "binding": null
+    },
+    {
+      "path": "ResearchElementDefinition.title",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Name for this research element definition (human friendly)",
+      "definition": "A short, descriptive, user-friendly title for the research element definition.",
+      "binding": null
+    },
+    {
+      "path": "ResearchElementDefinition.shortTitle",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Title for use in informal contexts",
+      "definition": "The short title provides an alternate title for use in informal descriptive contexts where the full, formal title is not necessary.",
+      "binding": null
+    },
+    {
+      "path": "ResearchElementDefinition.subtitle",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Subordinate title of the ResearchElementDefinition",
+      "definition": "An explanatory or alternate title for the ResearchElementDefinition giving additional information about its content.",
+      "binding": null
+    },
+    {
+      "path": "ResearchElementDefinition.status",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "This is labeled as \"Is Modifier\" because applications should not use a retired {{title}} without due consideration",
+      "mustSupport": null,
+      "short": "draft | active | retired | unknown",
+      "definition": "The status of this research element definition. Enables tracking the life-cycle of the content.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/publication-status|4.0.1",
+        "strength": "required",
+        "description": "The lifecycle status of an artifact."
+      }
+    },
+    {
+      "path": "ResearchElementDefinition.experimental",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "boolean"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "For testing purposes, not real usage",
+      "definition": "A Boolean value to indicate that this research element definition is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.",
+      "binding": null
+    },
+    {
+      "path": "ResearchElementDefinition.subject[x]",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        },
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Group"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "E.g. Patient, Practitioner, RelatedPerson, Organization, Location, Device",
+      "definition": "The intended subjects for the ResearchElementDefinition. If this element is not provided, a Patient subject is assumed, but the subject of the ResearchElementDefinition can be anything.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/subject-type",
+        "strength": "extensible",
+        "description": "The possible types of subjects for a measure (E.g. Patient, Practitioner, Organization, Location, etc.)."
+      }
+    },
+    {
+      "path": "ResearchElementDefinition.date",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "dateTime"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Date last changed",
+      "definition": "The date  (and optionally time) when the research element definition was published. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the research element definition changes.",
+      "binding": null
+    },
+    {
+      "path": "ResearchElementDefinition.publisher",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Name of the publisher (organization or individual)",
+      "definition": "The name of the organization or individual that published the research element definition.",
+      "binding": null
+    },
+    {
+      "path": "ResearchElementDefinition.contact",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "ContactDetail"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Contact details for the publisher",
+      "definition": "Contact details to assist a user in finding and communicating with the publisher.",
+      "binding": null
+    },
+    {
+      "path": "ResearchElementDefinition.description",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "markdown"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Natural language description of the research element definition",
+      "definition": "A free text natural language description of the research element definition from a consumer's perspective.",
+      "binding": null
+    },
+    {
+      "path": "ResearchElementDefinition.comment",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Used for footnotes or explanatory notes",
+      "definition": "A human-readable string to clarify or explain concepts about the resource.",
+      "binding": null
+    },
+    {
+      "path": "ResearchElementDefinition.useContext",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "UsageContext"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The context that the content is intended to support",
+      "definition": "The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate research element definition instances.",
+      "binding": null
+    },
+    {
+      "path": "ResearchElementDefinition.jurisdiction",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Intended jurisdiction for research element definition (if applicable)",
+      "definition": "A legal or geographic region in which the research element definition is intended to be used.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/jurisdiction",
+        "strength": "extensible",
+        "description": "Countries and regions within which this artifact is targeted for use."
+      }
+    },
+    {
+      "path": "ResearchElementDefinition.purpose",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "markdown"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Why this research element definition is defined",
+      "definition": "Explanation of why this research element definition is needed and why it has been designed as it has.",
+      "binding": null
+    },
+    {
+      "path": "ResearchElementDefinition.usage",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Describes the clinical usage of the ResearchElementDefinition",
+      "definition": "A detailed description, from a clinical perspective, of how the ResearchElementDefinition is used.",
+      "binding": null
+    },
+    {
+      "path": "ResearchElementDefinition.copyright",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "markdown"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Use and/or publishing restrictions",
+      "definition": "A copyright statement relating to the research element definition and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the research element definition.",
+      "binding": null
+    },
+    {
+      "path": "ResearchElementDefinition.approvalDate",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "date"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "When the research element definition was approved by publisher",
+      "definition": "The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.",
+      "binding": null
+    },
+    {
+      "path": "ResearchElementDefinition.lastReviewDate",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "date"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "When the research element definition was last reviewed",
+      "definition": "The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.",
+      "binding": null
+    },
+    {
+      "path": "ResearchElementDefinition.effectivePeriod",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Period"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "When the research element definition is expected to be used",
+      "definition": "The period during which the research element definition content was or is planned to be in active use.",
+      "binding": null
+    },
+    {
+      "path": "ResearchElementDefinition.topic",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The category of the ResearchElementDefinition, such as Education, Treatment, Assessment, etc.",
+      "definition": "Descriptive topics related to the content of the ResearchElementDefinition. Topics provide a high-level categorization grouping types of ResearchElementDefinitions that can be useful for filtering and searching.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/definition-topic",
+        "strength": "example",
+        "description": "High-level categorization of the definition, used for searching, sorting, and filtering."
+      }
+    },
+    {
+      "path": "ResearchElementDefinition.author",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "ContactDetail"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Who authored the content",
+      "definition": "An individiual or organization primarily involved in the creation and maintenance of the content.",
+      "binding": null
+    },
+    {
+      "path": "ResearchElementDefinition.editor",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "ContactDetail"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Who edited the content",
+      "definition": "An individual or organization primarily responsible for internal coherence of the content.",
+      "binding": null
+    },
+    {
+      "path": "ResearchElementDefinition.reviewer",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "ContactDetail"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Who reviewed the content",
+      "definition": "An individual or organization primarily responsible for review of some aspect of the content.",
+      "binding": null
+    },
+    {
+      "path": "ResearchElementDefinition.endorser",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "ContactDetail"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Who endorsed the content",
+      "definition": "An individual or organization responsible for officially endorsing the content for use in some setting.",
+      "binding": null
+    },
+    {
+      "path": "ResearchElementDefinition.relatedArtifact",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "RelatedArtifact"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional documentation, citations, etc.",
+      "definition": "Related artifacts such as additional documentation, justification, or bibliographic references.",
+      "binding": null
+    },
+    {
+      "path": "ResearchElementDefinition.library",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "canonical",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Library"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Logic used by the ResearchElementDefinition",
+      "definition": "A reference to a Library resource containing the formal logic used by the ResearchElementDefinition.",
+      "binding": null
+    },
+    {
+      "path": "ResearchElementDefinition.type",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "population | exposure | outcome",
+      "definition": "The type of research element, a population, an exposure, or an outcome.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/research-element-type|4.0.1",
+        "strength": "required",
+        "description": "The possible types of research elements (E.g. Population, Exposure, Outcome)."
+      }
+    },
+    {
+      "path": "ResearchElementDefinition.variableType",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "dichotomous | continuous | descriptive",
+      "definition": "The type of the outcome (e.g. Dichotomous, Continuous, or Descriptive).",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/variable-type|4.0.1",
+        "strength": "required",
+        "description": "The possible types of variables for exposures or outcomes (E.g. Dichotomous, Continuous, Descriptive)."
+      }
+    },
+    {
+      "path": "ResearchElementDefinition.characteristic",
+      "min": 1,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "What defines the members of the research element",
+      "definition": "A characteristic that defines the members of the research element. Multiple characteristics are applied with \"and\" semantics.",
+      "binding": null
+    },
+    {
+      "path": "ResearchElementDefinition.characteristic.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "ResearchElementDefinition.characteristic.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "ResearchElementDefinition.characteristic.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "ResearchElementDefinition.characteristic.definition[x]",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        },
+        {
+          "code": "canonical",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/ValueSet"
+          ]
+        },
+        {
+          "code": "Expression"
+        },
+        {
+          "code": "DataRequirement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "What code or expression defines members?",
+      "definition": "Define members of the research element using Codes (such as condition, medication, or observation), Expressions ( using an expression language such as FHIRPath or CQL) or DataRequirements (such as Diabetes diagnosis onset in the last year).",
+      "binding": null
+    },
+    {
+      "path": "ResearchElementDefinition.characteristic.usageContext",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "UsageContext"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "What code/value pairs define members?",
+      "definition": "Use UsageContext to define the members of the population, such as Age Ranges, Genders, Settings.",
+      "binding": null
+    },
+    {
+      "path": "ResearchElementDefinition.characteristic.exclude",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "boolean"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Whether the characteristic includes or excludes members",
+      "definition": "When true, members with this characteristic are excluded from the element.",
+      "binding": null
+    },
+    {
+      "path": "ResearchElementDefinition.characteristic.unitOfMeasure",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "What unit is the outcome described in?",
+      "definition": "Specifies the UCUM unit for the outcome.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/ucum-units|4.0.1",
+        "strength": "required",
+        "description": "Unified Code for Units of Measure (UCUM)."
+      }
+    },
+    {
+      "path": "ResearchElementDefinition.characteristic.studyEffectiveDescription",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "What time period does the study cover",
+      "definition": "A narrative description of the time period the study covers.",
+      "binding": null
+    },
+    {
+      "path": "ResearchElementDefinition.characteristic.studyEffective[x]",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "dateTime"
+        },
+        {
+          "code": "Period"
+        },
+        {
+          "code": "Duration"
+        },
+        {
+          "code": "Timing"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "What time period does the study cover",
+      "definition": "Indicates what effective period the study covers.",
+      "binding": null
+    },
+    {
+      "path": "ResearchElementDefinition.characteristic.studyEffectiveTimeFromStart",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Duration"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Observation time from study start",
+      "definition": "Indicates duration from the study initiation.",
+      "binding": null
+    },
+    {
+      "path": "ResearchElementDefinition.characteristic.studyEffectiveGroupMeasure",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "mean | median | mean-of-mean | mean-of-median | median-of-mean | median-of-median",
+      "definition": "Indicates how elements are aggregated within the study effective period.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/group-measure|4.0.1",
+        "strength": "required",
+        "description": "Possible group measure aggregates (E.g. Mean, Median)."
+      }
+    },
+    {
+      "path": "ResearchElementDefinition.characteristic.participantEffectiveDescription",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "What time period do participants cover",
+      "definition": "A narrative description of the time period the study covers.",
+      "binding": null
+    },
+    {
+      "path": "ResearchElementDefinition.characteristic.participantEffective[x]",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "dateTime"
+        },
+        {
+          "code": "Period"
+        },
+        {
+          "code": "Duration"
+        },
+        {
+          "code": "Timing"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "What time period do participants cover",
+      "definition": "Indicates what effective period the study covers.",
+      "binding": null
+    },
+    {
+      "path": "ResearchElementDefinition.characteristic.participantEffectiveTimeFromStart",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Duration"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Observation time from study start",
+      "definition": "Indicates duration from the participant's study entry.",
+      "binding": null
+    },
+    {
+      "path": "ResearchElementDefinition.characteristic.participantEffectiveGroupMeasure",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "mean | median | mean-of-mean | mean-of-median | median-of-mean | median-of-median",
+      "definition": "Indicates how elements are aggregated within the study effective period.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/group-measure|4.0.1",
+        "strength": "required",
+        "description": "Possible group measure aggregates (E.g. Mean, Median)."
+      }
+    }
+  ],
+  "search": [
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ResearchElementDefinition-composed-of",
+      "version": "4.0.1",
+      "name": "composed-of",
+      "code": "composed-of",
+      "type": "reference",
+      "description": "What resource is being referenced",
+      "expression": "ResearchElementDefinition.relatedArtifact.where(type='composed-of').resource",
+      "xpath": "f:ResearchElementDefinition/f:relatedArtifact[f:type/@value='composed-of']/f:resource",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Account",
+        "ActivityDefinition",
+        "AdverseEvent",
+        "AllergyIntolerance",
+        "Appointment",
+        "AppointmentResponse",
+        "AuditEvent",
+        "Basic",
+        "Binary",
+        "BiologicallyDerivedProduct",
+        "BodyStructure",
+        "Bundle",
+        "CapabilityStatement",
+        "CarePlan",
+        "CareTeam",
+        "CatalogEntry",
+        "ChargeItem",
+        "ChargeItemDefinition",
+        "Claim",
+        "ClaimResponse",
+        "ClinicalImpression",
+        "CodeSystem",
+        "Communication",
+        "CommunicationRequest",
+        "CompartmentDefinition",
+        "Composition",
+        "ConceptMap",
+        "Condition",
+        "Consent",
+        "Contract",
+        "Coverage",
+        "CoverageEligibilityRequest",
+        "CoverageEligibilityResponse",
+        "DetectedIssue",
+        "Device",
+        "DeviceDefinition",
+        "DeviceMetric",
+        "DeviceRequest",
+        "DeviceUseStatement",
+        "DiagnosticReport",
+        "DocumentManifest",
+        "DocumentReference",
+        "EffectEvidenceSynthesis",
+        "Encounter",
+        "Endpoint",
+        "EnrollmentRequest",
+        "EnrollmentResponse",
+        "EpisodeOfCare",
+        "EventDefinition",
+        "Evidence",
+        "EvidenceVariable",
+        "ExampleScenario",
+        "ExplanationOfBenefit",
+        "FamilyMemberHistory",
+        "Flag",
+        "Goal",
+        "GraphDefinition",
+        "Group",
+        "GuidanceResponse",
+        "HealthcareService",
+        "ImagingStudy",
+        "Immunization",
+        "ImmunizationEvaluation",
+        "ImmunizationRecommendation",
+        "ImplementationGuide",
+        "InsurancePlan",
+        "Invoice",
+        "Library",
+        "Linkage",
+        "List",
+        "Location",
+        "Measure",
+        "MeasureReport",
+        "Media",
+        "Medication",
+        "MedicationAdministration",
+        "MedicationDispense",
+        "MedicationKnowledge",
+        "MedicationRequest",
+        "MedicationStatement",
+        "MedicinalProduct",
+        "MedicinalProductAuthorization",
+        "MedicinalProductContraindication",
+        "MedicinalProductIndication",
+        "MedicinalProductIngredient",
+        "MedicinalProductInteraction",
+        "MedicinalProductManufactured",
+        "MedicinalProductPackaged",
+        "MedicinalProductPharmaceutical",
+        "MedicinalProductUndesirableEffect",
+        "MessageDefinition",
+        "MessageHeader",
+        "MolecularSequence",
+        "NamingSystem",
+        "NutritionOrder",
+        "Observation",
+        "ObservationDefinition",
+        "OperationDefinition",
+        "OperationOutcome",
+        "Organization",
+        "OrganizationAffiliation",
+        "Patient",
+        "PaymentNotice",
+        "PaymentReconciliation",
+        "Person",
+        "PlanDefinition",
+        "Practitioner",
+        "PractitionerRole",
+        "Procedure",
+        "Provenance",
+        "Questionnaire",
+        "QuestionnaireResponse",
+        "RelatedPerson",
+        "RequestGroup",
+        "ResearchDefinition",
+        "ResearchElementDefinition",
+        "ResearchStudy",
+        "ResearchSubject",
+        "RiskAssessment",
+        "RiskEvidenceSynthesis",
+        "Schedule",
+        "SearchParameter",
+        "ServiceRequest",
+        "Slot",
+        "Specimen",
+        "SpecimenDefinition",
+        "StructureDefinition",
+        "StructureMap",
+        "Subscription",
+        "Substance",
+        "SubstanceNucleicAcid",
+        "SubstancePolymer",
+        "SubstanceProtein",
+        "SubstanceReferenceInformation",
+        "SubstanceSourceMaterial",
+        "SubstanceSpecification",
+        "SupplyDelivery",
+        "SupplyRequest",
+        "Task",
+        "TerminologyCapabilities",
+        "TestReport",
+        "TestScript",
+        "ValueSet",
+        "VerificationResult",
+        "VisionPrescription"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ResearchElementDefinition"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ResearchElementDefinition-context",
+      "version": "4.0.1",
+      "name": "context",
+      "code": "context",
+      "type": "token",
+      "description": "A use context assigned to the research element definition",
+      "expression": "(ResearchElementDefinition.useContext.value as CodeableConcept)",
+      "xpath": "f:ResearchElementDefinition/f:useContext/f:valueCodeableConcept",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ResearchElementDefinition"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ResearchElementDefinition-context-quantity",
+      "version": "4.0.1",
+      "name": "context-quantity",
+      "code": "context-quantity",
+      "type": "quantity",
+      "description": "A quantity- or range-valued use context assigned to the research element definition",
+      "expression": "(ResearchElementDefinition.useContext.value as Quantity) | (ResearchElementDefinition.useContext.value as Range)",
+      "xpath": "f:ResearchElementDefinition/f:useContext/f:valueQuantity | f:ResearchElementDefinition/f:useContext/f:valueRange",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [
+        "eq",
+        "ne",
+        "gt",
+        "ge",
+        "lt",
+        "le",
+        "sa",
+        "eb",
+        "ap"
+      ],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ResearchElementDefinition"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ResearchElementDefinition-context-type",
+      "version": "4.0.1",
+      "name": "context-type",
+      "code": "context-type",
+      "type": "token",
+      "description": "A type of use context assigned to the research element definition",
+      "expression": "ResearchElementDefinition.useContext.code",
+      "xpath": "f:ResearchElementDefinition/f:useContext/f:code",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ResearchElementDefinition"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ResearchElementDefinition-context-type-quantity",
+      "version": "4.0.1",
+      "name": "context-type-quantity",
+      "code": "context-type-quantity",
+      "type": "composite",
+      "description": "A use context type and quantity- or range-based value assigned to the research element definition",
+      "expression": "ResearchElementDefinition.useContext",
+      "xpath": null,
+      "xpathUsage": "normal",
+      "multipleOr": false,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [
+        {
+          "definition": "http://hl7.org/fhir/SearchParameter/ResearchElementDefinition-context-type",
+          "expression": "code"
+        },
+        {
+          "definition": "http://hl7.org/fhir/SearchParameter/ResearchElementDefinition-context-quantity",
+          "expression": "value.as(Quantity) | value.as(Range)"
+        }
+      ],
+      "base": [
+        "ResearchElementDefinition"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ResearchElementDefinition-context-type-value",
+      "version": "4.0.1",
+      "name": "context-type-value",
+      "code": "context-type-value",
+      "type": "composite",
+      "description": "A use context type and value assigned to the research element definition",
+      "expression": "ResearchElementDefinition.useContext",
+      "xpath": null,
+      "xpathUsage": "normal",
+      "multipleOr": false,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [
+        {
+          "definition": "http://hl7.org/fhir/SearchParameter/ResearchElementDefinition-context-type",
+          "expression": "code"
+        },
+        {
+          "definition": "http://hl7.org/fhir/SearchParameter/ResearchElementDefinition-context",
+          "expression": "value.as(CodeableConcept)"
+        }
+      ],
+      "base": [
+        "ResearchElementDefinition"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ResearchElementDefinition-date",
+      "version": "4.0.1",
+      "name": "date",
+      "code": "date",
+      "type": "date",
+      "description": "The research element definition publication date",
+      "expression": "ResearchElementDefinition.date",
+      "xpath": "f:ResearchElementDefinition/f:date",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [
+        "eq",
+        "ne",
+        "gt",
+        "ge",
+        "lt",
+        "le",
+        "sa",
+        "eb",
+        "ap"
+      ],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ResearchElementDefinition"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ResearchElementDefinition-depends-on",
+      "version": "4.0.1",
+      "name": "depends-on",
+      "code": "depends-on",
+      "type": "reference",
+      "description": "What resource is being referenced",
+      "expression": "ResearchElementDefinition.relatedArtifact.where(type='depends-on').resource | ResearchElementDefinition.library",
+      "xpath": "f:ResearchElementDefinition/f:relatedArtifact[f:type/@value='depends-on']/f:resource | f:ResearchElementDefinition/f:library",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Library",
+        "Account",
+        "ActivityDefinition",
+        "AdverseEvent",
+        "AllergyIntolerance",
+        "Appointment",
+        "AppointmentResponse",
+        "AuditEvent",
+        "Basic",
+        "Binary",
+        "BiologicallyDerivedProduct",
+        "BodyStructure",
+        "Bundle",
+        "CapabilityStatement",
+        "CarePlan",
+        "CareTeam",
+        "CatalogEntry",
+        "ChargeItem",
+        "ChargeItemDefinition",
+        "Claim",
+        "ClaimResponse",
+        "ClinicalImpression",
+        "CodeSystem",
+        "Communication",
+        "CommunicationRequest",
+        "CompartmentDefinition",
+        "Composition",
+        "ConceptMap",
+        "Condition",
+        "Consent",
+        "Contract",
+        "Coverage",
+        "CoverageEligibilityRequest",
+        "CoverageEligibilityResponse",
+        "DetectedIssue",
+        "Device",
+        "DeviceDefinition",
+        "DeviceMetric",
+        "DeviceRequest",
+        "DeviceUseStatement",
+        "DiagnosticReport",
+        "DocumentManifest",
+        "DocumentReference",
+        "EffectEvidenceSynthesis",
+        "Encounter",
+        "Endpoint",
+        "EnrollmentRequest",
+        "EnrollmentResponse",
+        "EpisodeOfCare",
+        "EventDefinition",
+        "Evidence",
+        "EvidenceVariable",
+        "ExampleScenario",
+        "ExplanationOfBenefit",
+        "FamilyMemberHistory",
+        "Flag",
+        "Goal",
+        "GraphDefinition",
+        "Group",
+        "GuidanceResponse",
+        "HealthcareService",
+        "ImagingStudy",
+        "Immunization",
+        "ImmunizationEvaluation",
+        "ImmunizationRecommendation",
+        "ImplementationGuide",
+        "InsurancePlan",
+        "Invoice",
+        "Linkage",
+        "List",
+        "Location",
+        "Measure",
+        "MeasureReport",
+        "Media",
+        "Medication",
+        "MedicationAdministration",
+        "MedicationDispense",
+        "MedicationKnowledge",
+        "MedicationRequest",
+        "MedicationStatement",
+        "MedicinalProduct",
+        "MedicinalProductAuthorization",
+        "MedicinalProductContraindication",
+        "MedicinalProductIndication",
+        "MedicinalProductIngredient",
+        "MedicinalProductInteraction",
+        "MedicinalProductManufactured",
+        "MedicinalProductPackaged",
+        "MedicinalProductPharmaceutical",
+        "MedicinalProductUndesirableEffect",
+        "MessageDefinition",
+        "MessageHeader",
+        "MolecularSequence",
+        "NamingSystem",
+        "NutritionOrder",
+        "Observation",
+        "ObservationDefinition",
+        "OperationDefinition",
+        "OperationOutcome",
+        "Organization",
+        "OrganizationAffiliation",
+        "Patient",
+        "PaymentNotice",
+        "PaymentReconciliation",
+        "Person",
+        "PlanDefinition",
+        "Practitioner",
+        "PractitionerRole",
+        "Procedure",
+        "Provenance",
+        "Questionnaire",
+        "QuestionnaireResponse",
+        "RelatedPerson",
+        "RequestGroup",
+        "ResearchDefinition",
+        "ResearchElementDefinition",
+        "ResearchStudy",
+        "ResearchSubject",
+        "RiskAssessment",
+        "RiskEvidenceSynthesis",
+        "Schedule",
+        "SearchParameter",
+        "ServiceRequest",
+        "Slot",
+        "Specimen",
+        "SpecimenDefinition",
+        "StructureDefinition",
+        "StructureMap",
+        "Subscription",
+        "Substance",
+        "SubstanceNucleicAcid",
+        "SubstancePolymer",
+        "SubstanceProtein",
+        "SubstanceReferenceInformation",
+        "SubstanceSourceMaterial",
+        "SubstanceSpecification",
+        "SupplyDelivery",
+        "SupplyRequest",
+        "Task",
+        "TerminologyCapabilities",
+        "TestReport",
+        "TestScript",
+        "ValueSet",
+        "VerificationResult",
+        "VisionPrescription"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ResearchElementDefinition"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ResearchElementDefinition-derived-from",
+      "version": "4.0.1",
+      "name": "derived-from",
+      "code": "derived-from",
+      "type": "reference",
+      "description": "What resource is being referenced",
+      "expression": "ResearchElementDefinition.relatedArtifact.where(type='derived-from').resource",
+      "xpath": "f:ResearchElementDefinition/f:relatedArtifact[f:type/@value='derived-from']/f:resource",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Account",
+        "ActivityDefinition",
+        "AdverseEvent",
+        "AllergyIntolerance",
+        "Appointment",
+        "AppointmentResponse",
+        "AuditEvent",
+        "Basic",
+        "Binary",
+        "BiologicallyDerivedProduct",
+        "BodyStructure",
+        "Bundle",
+        "CapabilityStatement",
+        "CarePlan",
+        "CareTeam",
+        "CatalogEntry",
+        "ChargeItem",
+        "ChargeItemDefinition",
+        "Claim",
+        "ClaimResponse",
+        "ClinicalImpression",
+        "CodeSystem",
+        "Communication",
+        "CommunicationRequest",
+        "CompartmentDefinition",
+        "Composition",
+        "ConceptMap",
+        "Condition",
+        "Consent",
+        "Contract",
+        "Coverage",
+        "CoverageEligibilityRequest",
+        "CoverageEligibilityResponse",
+        "DetectedIssue",
+        "Device",
+        "DeviceDefinition",
+        "DeviceMetric",
+        "DeviceRequest",
+        "DeviceUseStatement",
+        "DiagnosticReport",
+        "DocumentManifest",
+        "DocumentReference",
+        "EffectEvidenceSynthesis",
+        "Encounter",
+        "Endpoint",
+        "EnrollmentRequest",
+        "EnrollmentResponse",
+        "EpisodeOfCare",
+        "EventDefinition",
+        "Evidence",
+        "EvidenceVariable",
+        "ExampleScenario",
+        "ExplanationOfBenefit",
+        "FamilyMemberHistory",
+        "Flag",
+        "Goal",
+        "GraphDefinition",
+        "Group",
+        "GuidanceResponse",
+        "HealthcareService",
+        "ImagingStudy",
+        "Immunization",
+        "ImmunizationEvaluation",
+        "ImmunizationRecommendation",
+        "ImplementationGuide",
+        "InsurancePlan",
+        "Invoice",
+        "Library",
+        "Linkage",
+        "List",
+        "Location",
+        "Measure",
+        "MeasureReport",
+        "Media",
+        "Medication",
+        "MedicationAdministration",
+        "MedicationDispense",
+        "MedicationKnowledge",
+        "MedicationRequest",
+        "MedicationStatement",
+        "MedicinalProduct",
+        "MedicinalProductAuthorization",
+        "MedicinalProductContraindication",
+        "MedicinalProductIndication",
+        "MedicinalProductIngredient",
+        "MedicinalProductInteraction",
+        "MedicinalProductManufactured",
+        "MedicinalProductPackaged",
+        "MedicinalProductPharmaceutical",
+        "MedicinalProductUndesirableEffect",
+        "MessageDefinition",
+        "MessageHeader",
+        "MolecularSequence",
+        "NamingSystem",
+        "NutritionOrder",
+        "Observation",
+        "ObservationDefinition",
+        "OperationDefinition",
+        "OperationOutcome",
+        "Organization",
+        "OrganizationAffiliation",
+        "Patient",
+        "PaymentNotice",
+        "PaymentReconciliation",
+        "Person",
+        "PlanDefinition",
+        "Practitioner",
+        "PractitionerRole",
+        "Procedure",
+        "Provenance",
+        "Questionnaire",
+        "QuestionnaireResponse",
+        "RelatedPerson",
+        "RequestGroup",
+        "ResearchDefinition",
+        "ResearchElementDefinition",
+        "ResearchStudy",
+        "ResearchSubject",
+        "RiskAssessment",
+        "RiskEvidenceSynthesis",
+        "Schedule",
+        "SearchParameter",
+        "ServiceRequest",
+        "Slot",
+        "Specimen",
+        "SpecimenDefinition",
+        "StructureDefinition",
+        "StructureMap",
+        "Subscription",
+        "Substance",
+        "SubstanceNucleicAcid",
+        "SubstancePolymer",
+        "SubstanceProtein",
+        "SubstanceReferenceInformation",
+        "SubstanceSourceMaterial",
+        "SubstanceSpecification",
+        "SupplyDelivery",
+        "SupplyRequest",
+        "Task",
+        "TerminologyCapabilities",
+        "TestReport",
+        "TestScript",
+        "ValueSet",
+        "VerificationResult",
+        "VisionPrescription"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ResearchElementDefinition"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ResearchElementDefinition-description",
+      "version": "4.0.1",
+      "name": "description",
+      "code": "description",
+      "type": "string",
+      "description": "The description of the research element definition",
+      "expression": "ResearchElementDefinition.description",
+      "xpath": "f:ResearchElementDefinition/f:description",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ResearchElementDefinition"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ResearchElementDefinition-effective",
+      "version": "4.0.1",
+      "name": "effective",
+      "code": "effective",
+      "type": "date",
+      "description": "The time during which the research element definition is intended to be in use",
+      "expression": "ResearchElementDefinition.effectivePeriod",
+      "xpath": "f:ResearchElementDefinition/f:effectivePeriod",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [
+        "eq",
+        "ne",
+        "gt",
+        "ge",
+        "lt",
+        "le",
+        "sa",
+        "eb",
+        "ap"
+      ],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ResearchElementDefinition"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ResearchElementDefinition-identifier",
+      "version": "4.0.1",
+      "name": "identifier",
+      "code": "identifier",
+      "type": "token",
+      "description": "External identifier for the research element definition",
+      "expression": "ResearchElementDefinition.identifier",
+      "xpath": "f:ResearchElementDefinition/f:identifier",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ResearchElementDefinition"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ResearchElementDefinition-jurisdiction",
+      "version": "4.0.1",
+      "name": "jurisdiction",
+      "code": "jurisdiction",
+      "type": "token",
+      "description": "Intended jurisdiction for the research element definition",
+      "expression": "ResearchElementDefinition.jurisdiction",
+      "xpath": "f:ResearchElementDefinition/f:jurisdiction",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ResearchElementDefinition"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ResearchElementDefinition-name",
+      "version": "4.0.1",
+      "name": "name",
+      "code": "name",
+      "type": "string",
+      "description": "Computationally friendly name of the research element definition",
+      "expression": "ResearchElementDefinition.name",
+      "xpath": "f:ResearchElementDefinition/f:name",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ResearchElementDefinition"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ResearchElementDefinition-predecessor",
+      "version": "4.0.1",
+      "name": "predecessor",
+      "code": "predecessor",
+      "type": "reference",
+      "description": "What resource is being referenced",
+      "expression": "ResearchElementDefinition.relatedArtifact.where(type='predecessor').resource",
+      "xpath": "f:ResearchElementDefinition/f:relatedArtifact[f:type/@value='predecessor']/f:resource",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Account",
+        "ActivityDefinition",
+        "AdverseEvent",
+        "AllergyIntolerance",
+        "Appointment",
+        "AppointmentResponse",
+        "AuditEvent",
+        "Basic",
+        "Binary",
+        "BiologicallyDerivedProduct",
+        "BodyStructure",
+        "Bundle",
+        "CapabilityStatement",
+        "CarePlan",
+        "CareTeam",
+        "CatalogEntry",
+        "ChargeItem",
+        "ChargeItemDefinition",
+        "Claim",
+        "ClaimResponse",
+        "ClinicalImpression",
+        "CodeSystem",
+        "Communication",
+        "CommunicationRequest",
+        "CompartmentDefinition",
+        "Composition",
+        "ConceptMap",
+        "Condition",
+        "Consent",
+        "Contract",
+        "Coverage",
+        "CoverageEligibilityRequest",
+        "CoverageEligibilityResponse",
+        "DetectedIssue",
+        "Device",
+        "DeviceDefinition",
+        "DeviceMetric",
+        "DeviceRequest",
+        "DeviceUseStatement",
+        "DiagnosticReport",
+        "DocumentManifest",
+        "DocumentReference",
+        "EffectEvidenceSynthesis",
+        "Encounter",
+        "Endpoint",
+        "EnrollmentRequest",
+        "EnrollmentResponse",
+        "EpisodeOfCare",
+        "EventDefinition",
+        "Evidence",
+        "EvidenceVariable",
+        "ExampleScenario",
+        "ExplanationOfBenefit",
+        "FamilyMemberHistory",
+        "Flag",
+        "Goal",
+        "GraphDefinition",
+        "Group",
+        "GuidanceResponse",
+        "HealthcareService",
+        "ImagingStudy",
+        "Immunization",
+        "ImmunizationEvaluation",
+        "ImmunizationRecommendation",
+        "ImplementationGuide",
+        "InsurancePlan",
+        "Invoice",
+        "Library",
+        "Linkage",
+        "List",
+        "Location",
+        "Measure",
+        "MeasureReport",
+        "Media",
+        "Medication",
+        "MedicationAdministration",
+        "MedicationDispense",
+        "MedicationKnowledge",
+        "MedicationRequest",
+        "MedicationStatement",
+        "MedicinalProduct",
+        "MedicinalProductAuthorization",
+        "MedicinalProductContraindication",
+        "MedicinalProductIndication",
+        "MedicinalProductIngredient",
+        "MedicinalProductInteraction",
+        "MedicinalProductManufactured",
+        "MedicinalProductPackaged",
+        "MedicinalProductPharmaceutical",
+        "MedicinalProductUndesirableEffect",
+        "MessageDefinition",
+        "MessageHeader",
+        "MolecularSequence",
+        "NamingSystem",
+        "NutritionOrder",
+        "Observation",
+        "ObservationDefinition",
+        "OperationDefinition",
+        "OperationOutcome",
+        "Organization",
+        "OrganizationAffiliation",
+        "Patient",
+        "PaymentNotice",
+        "PaymentReconciliation",
+        "Person",
+        "PlanDefinition",
+        "Practitioner",
+        "PractitionerRole",
+        "Procedure",
+        "Provenance",
+        "Questionnaire",
+        "QuestionnaireResponse",
+        "RelatedPerson",
+        "RequestGroup",
+        "ResearchDefinition",
+        "ResearchElementDefinition",
+        "ResearchStudy",
+        "ResearchSubject",
+        "RiskAssessment",
+        "RiskEvidenceSynthesis",
+        "Schedule",
+        "SearchParameter",
+        "ServiceRequest",
+        "Slot",
+        "Specimen",
+        "SpecimenDefinition",
+        "StructureDefinition",
+        "StructureMap",
+        "Subscription",
+        "Substance",
+        "SubstanceNucleicAcid",
+        "SubstancePolymer",
+        "SubstanceProtein",
+        "SubstanceReferenceInformation",
+        "SubstanceSourceMaterial",
+        "SubstanceSpecification",
+        "SupplyDelivery",
+        "SupplyRequest",
+        "Task",
+        "TerminologyCapabilities",
+        "TestReport",
+        "TestScript",
+        "ValueSet",
+        "VerificationResult",
+        "VisionPrescription"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ResearchElementDefinition"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ResearchElementDefinition-publisher",
+      "version": "4.0.1",
+      "name": "publisher",
+      "code": "publisher",
+      "type": "string",
+      "description": "Name of the publisher of the research element definition",
+      "expression": "ResearchElementDefinition.publisher",
+      "xpath": "f:ResearchElementDefinition/f:publisher",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ResearchElementDefinition"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ResearchElementDefinition-status",
+      "version": "4.0.1",
+      "name": "status",
+      "code": "status",
+      "type": "token",
+      "description": "The current status of the research element definition",
+      "expression": "ResearchElementDefinition.status",
+      "xpath": "f:ResearchElementDefinition/f:status",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ResearchElementDefinition"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ResearchElementDefinition-successor",
+      "version": "4.0.1",
+      "name": "successor",
+      "code": "successor",
+      "type": "reference",
+      "description": "What resource is being referenced",
+      "expression": "ResearchElementDefinition.relatedArtifact.where(type='successor').resource",
+      "xpath": "f:ResearchElementDefinition/f:relatedArtifact[f:type/@value='successor']/f:resource",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Account",
+        "ActivityDefinition",
+        "AdverseEvent",
+        "AllergyIntolerance",
+        "Appointment",
+        "AppointmentResponse",
+        "AuditEvent",
+        "Basic",
+        "Binary",
+        "BiologicallyDerivedProduct",
+        "BodyStructure",
+        "Bundle",
+        "CapabilityStatement",
+        "CarePlan",
+        "CareTeam",
+        "CatalogEntry",
+        "ChargeItem",
+        "ChargeItemDefinition",
+        "Claim",
+        "ClaimResponse",
+        "ClinicalImpression",
+        "CodeSystem",
+        "Communication",
+        "CommunicationRequest",
+        "CompartmentDefinition",
+        "Composition",
+        "ConceptMap",
+        "Condition",
+        "Consent",
+        "Contract",
+        "Coverage",
+        "CoverageEligibilityRequest",
+        "CoverageEligibilityResponse",
+        "DetectedIssue",
+        "Device",
+        "DeviceDefinition",
+        "DeviceMetric",
+        "DeviceRequest",
+        "DeviceUseStatement",
+        "DiagnosticReport",
+        "DocumentManifest",
+        "DocumentReference",
+        "EffectEvidenceSynthesis",
+        "Encounter",
+        "Endpoint",
+        "EnrollmentRequest",
+        "EnrollmentResponse",
+        "EpisodeOfCare",
+        "EventDefinition",
+        "Evidence",
+        "EvidenceVariable",
+        "ExampleScenario",
+        "ExplanationOfBenefit",
+        "FamilyMemberHistory",
+        "Flag",
+        "Goal",
+        "GraphDefinition",
+        "Group",
+        "GuidanceResponse",
+        "HealthcareService",
+        "ImagingStudy",
+        "Immunization",
+        "ImmunizationEvaluation",
+        "ImmunizationRecommendation",
+        "ImplementationGuide",
+        "InsurancePlan",
+        "Invoice",
+        "Library",
+        "Linkage",
+        "List",
+        "Location",
+        "Measure",
+        "MeasureReport",
+        "Media",
+        "Medication",
+        "MedicationAdministration",
+        "MedicationDispense",
+        "MedicationKnowledge",
+        "MedicationRequest",
+        "MedicationStatement",
+        "MedicinalProduct",
+        "MedicinalProductAuthorization",
+        "MedicinalProductContraindication",
+        "MedicinalProductIndication",
+        "MedicinalProductIngredient",
+        "MedicinalProductInteraction",
+        "MedicinalProductManufactured",
+        "MedicinalProductPackaged",
+        "MedicinalProductPharmaceutical",
+        "MedicinalProductUndesirableEffect",
+        "MessageDefinition",
+        "MessageHeader",
+        "MolecularSequence",
+        "NamingSystem",
+        "NutritionOrder",
+        "Observation",
+        "ObservationDefinition",
+        "OperationDefinition",
+        "OperationOutcome",
+        "Organization",
+        "OrganizationAffiliation",
+        "Patient",
+        "PaymentNotice",
+        "PaymentReconciliation",
+        "Person",
+        "PlanDefinition",
+        "Practitioner",
+        "PractitionerRole",
+        "Procedure",
+        "Provenance",
+        "Questionnaire",
+        "QuestionnaireResponse",
+        "RelatedPerson",
+        "RequestGroup",
+        "ResearchDefinition",
+        "ResearchElementDefinition",
+        "ResearchStudy",
+        "ResearchSubject",
+        "RiskAssessment",
+        "RiskEvidenceSynthesis",
+        "Schedule",
+        "SearchParameter",
+        "ServiceRequest",
+        "Slot",
+        "Specimen",
+        "SpecimenDefinition",
+        "StructureDefinition",
+        "StructureMap",
+        "Subscription",
+        "Substance",
+        "SubstanceNucleicAcid",
+        "SubstancePolymer",
+        "SubstanceProtein",
+        "SubstanceReferenceInformation",
+        "SubstanceSourceMaterial",
+        "SubstanceSpecification",
+        "SupplyDelivery",
+        "SupplyRequest",
+        "Task",
+        "TerminologyCapabilities",
+        "TestReport",
+        "TestScript",
+        "ValueSet",
+        "VerificationResult",
+        "VisionPrescription"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ResearchElementDefinition"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ResearchElementDefinition-title",
+      "version": "4.0.1",
+      "name": "title",
+      "code": "title",
+      "type": "string",
+      "description": "The human-friendly name of the research element definition",
+      "expression": "ResearchElementDefinition.title",
+      "xpath": "f:ResearchElementDefinition/f:title",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ResearchElementDefinition"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ResearchElementDefinition-topic",
+      "version": "4.0.1",
+      "name": "topic",
+      "code": "topic",
+      "type": "token",
+      "description": "Topics associated with the ResearchElementDefinition",
+      "expression": "ResearchElementDefinition.topic",
+      "xpath": "f:ResearchElementDefinition/f:topic",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ResearchElementDefinition"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ResearchElementDefinition-url",
+      "version": "4.0.1",
+      "name": "url",
+      "code": "url",
+      "type": "uri",
+      "description": "The uri that identifies the research element definition",
+      "expression": "ResearchElementDefinition.url",
+      "xpath": "f:ResearchElementDefinition/f:url",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ResearchElementDefinition"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ResearchElementDefinition-version",
+      "version": "4.0.1",
+      "name": "version",
+      "code": "version",
+      "type": "token",
+      "description": "The business version of the research element definition",
+      "expression": "ResearchElementDefinition.version",
+      "xpath": "f:ResearchElementDefinition/f:version",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ResearchElementDefinition"
+      ]
+    }
+  ]
+}

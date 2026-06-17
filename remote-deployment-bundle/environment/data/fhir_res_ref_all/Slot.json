@@ -1,0 +1,534 @@
+{
+  "resourceType": "Slot",
+  "fhir_version": "4.0.1",
+  "source_urls": {
+    "structureDefinition": "http://hl7.org/fhir/StructureDefinition/Slot"
+  },
+  "elements": [
+    {
+      "path": "Slot",
+      "min": 0,
+      "max": "*",
+      "type": [],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "A slot of time on a schedule that may be available for booking appointments",
+      "definition": "A slot of time on a schedule that may be available for booking appointments.",
+      "binding": null
+    },
+    {
+      "path": "Slot.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Logical id of this artifact",
+      "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
+      "binding": null
+    },
+    {
+      "path": "Slot.meta",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Meta"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Metadata about the resource",
+      "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.",
+      "binding": null
+    },
+    {
+      "path": "Slot.implicitRules",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "uri"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "This element is labeled as a modifier because the implicit rules may provide additional knowledge about the resource that modifies it's meaning or interpretation",
+      "mustSupport": null,
+      "short": "A set of rules under which this content was created",
+      "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.",
+      "binding": null
+    },
+    {
+      "path": "Slot.language",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Language of the resource content",
+      "definition": "The base language in which the resource is written.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/languages",
+        "strength": "preferred",
+        "description": "A human language."
+      }
+    },
+    {
+      "path": "Slot.text",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Narrative"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Text summary of the resource, for human interpretation",
+      "definition": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
+      "binding": null
+    },
+    {
+      "path": "Slot.contained",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Resource"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Contained, inline Resources",
+      "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
+      "binding": null
+    },
+    {
+      "path": "Slot.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "Slot.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the resource that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "Slot.identifier",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Identifier"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "External Ids for this item",
+      "definition": "External Ids for this item.",
+      "binding": null
+    },
+    {
+      "path": "Slot.serviceCategory",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "A broad categorization of the service that is to be performed during this appointment",
+      "definition": "A broad categorization of the service that is to be performed during this appointment.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/service-category",
+        "strength": "example",
+        "description": null
+      }
+    },
+    {
+      "path": "Slot.serviceType",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The type of appointments that can be booked into this slot (ideally this would be an identifiable service - which is at a location, rather than the location itself). If provided then this overrides the value provided on the availability resource",
+      "definition": "The type of appointments that can be booked into this slot (ideally this would be an identifiable service - which is at a location, rather than the location itself). If provided then this overrides the value provided on the availability resource.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/service-type",
+        "strength": "example",
+        "description": null
+      }
+    },
+    {
+      "path": "Slot.specialty",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The specialty of a practitioner that would be required to perform the service requested in this appointment",
+      "definition": "The specialty of a practitioner that would be required to perform the service requested in this appointment.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/c80-practice-codes",
+        "strength": "preferred",
+        "description": "Additional details about where the content was created (e.g. clinical specialty)."
+      }
+    },
+    {
+      "path": "Slot.appointmentType",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The style of appointment or patient that may be booked in the slot (not service type)",
+      "definition": "The style of appointment or patient that may be booked in the slot (not service type).",
+      "binding": {
+        "valueSet": "http://terminology.hl7.org/ValueSet/v2-0276",
+        "strength": "preferred",
+        "description": null
+      }
+    },
+    {
+      "path": "Slot.schedule",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Schedule"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The schedule resource that this slot defines an interval of status information",
+      "definition": "The schedule resource that this slot defines an interval of status information.",
+      "binding": null
+    },
+    {
+      "path": "Slot.status",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "busy | free | busy-unavailable | busy-tentative | entered-in-error",
+      "definition": "busy | free | busy-unavailable | busy-tentative | entered-in-error.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/slotstatus|4.0.1",
+        "strength": "required",
+        "description": "The free/busy status of the slot."
+      }
+    },
+    {
+      "path": "Slot.start",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "instant"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Date/Time that the slot is to begin",
+      "definition": "Date/Time that the slot is to begin.",
+      "binding": null
+    },
+    {
+      "path": "Slot.end",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "instant"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Date/Time that the slot is to conclude",
+      "definition": "Date/Time that the slot is to conclude.",
+      "binding": null
+    },
+    {
+      "path": "Slot.overbooked",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "boolean"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "This slot has already been overbooked, appointments are unlikely to be accepted for this time",
+      "definition": "This slot has already been overbooked, appointments are unlikely to be accepted for this time.",
+      "binding": null
+    },
+    {
+      "path": "Slot.comment",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Comments on the slot to describe any extended information. Such as custom constraints on the slot",
+      "definition": "Comments on the slot to describe any extended information. Such as custom constraints on the slot.",
+      "binding": null
+    }
+  ],
+  "search": [
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Slot-appointment-type",
+      "version": "4.0.1",
+      "name": "appointment-type",
+      "code": "appointment-type",
+      "type": "token",
+      "description": "The style of appointment or patient that may be booked in the slot (not service type)",
+      "expression": "Slot.appointmentType",
+      "xpath": "f:Slot/f:appointmentType",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Slot"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Slot-identifier",
+      "version": "4.0.1",
+      "name": "identifier",
+      "code": "identifier",
+      "type": "token",
+      "description": "A Slot Identifier",
+      "expression": "Slot.identifier",
+      "xpath": "f:Slot/f:identifier",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Slot"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Slot-schedule",
+      "version": "4.0.1",
+      "name": "schedule",
+      "code": "schedule",
+      "type": "reference",
+      "description": "The Schedule Resource that we are seeking a slot within",
+      "expression": "Slot.schedule",
+      "xpath": "f:Slot/f:schedule",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Schedule"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Slot"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Slot-service-category",
+      "version": "4.0.1",
+      "name": "service-category",
+      "code": "service-category",
+      "type": "token",
+      "description": "A broad categorization of the service that is to be performed during this appointment",
+      "expression": "Slot.serviceCategory",
+      "xpath": "f:Slot/f:serviceCategory",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Slot"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Slot-service-type",
+      "version": "4.0.1",
+      "name": "service-type",
+      "code": "service-type",
+      "type": "token",
+      "description": "The type of appointments that can be booked into the slot",
+      "expression": "Slot.serviceType",
+      "xpath": "f:Slot/f:serviceType",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Slot"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Slot-specialty",
+      "version": "4.0.1",
+      "name": "specialty",
+      "code": "specialty",
+      "type": "token",
+      "description": "The specialty of a practitioner that would be required to perform the service requested in this appointment",
+      "expression": "Slot.specialty",
+      "xpath": "f:Slot/f:specialty",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Slot"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Slot-start",
+      "version": "4.0.1",
+      "name": "start",
+      "code": "start",
+      "type": "date",
+      "description": "Appointment date/time.",
+      "expression": "Slot.start",
+      "xpath": "f:Slot/f:start",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [
+        "eq",
+        "ne",
+        "gt",
+        "ge",
+        "lt",
+        "le",
+        "sa",
+        "eb",
+        "ap"
+      ],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Slot"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Slot-status",
+      "version": "4.0.1",
+      "name": "status",
+      "code": "status",
+      "type": "token",
+      "description": "The free/busy status of the appointment",
+      "expression": "Slot.status",
+      "xpath": "f:Slot/f:status",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Slot"
+      ]
+    }
+  ]
+}

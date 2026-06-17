@@ -1,0 +1,702 @@
+{
+  "resourceType": "ObservationDefinition",
+  "fhir_version": "4.0.1",
+  "source_urls": {
+    "structureDefinition": "http://hl7.org/fhir/StructureDefinition/ObservationDefinition"
+  },
+  "elements": [
+    {
+      "path": "ObservationDefinition",
+      "min": 0,
+      "max": "*",
+      "type": [],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Definition of an observation",
+      "definition": "Set of definitional characteristics for a kind of observation or measurement produced or consumed by an orderable health care service.",
+      "binding": null
+    },
+    {
+      "path": "ObservationDefinition.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Logical id of this artifact",
+      "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
+      "binding": null
+    },
+    {
+      "path": "ObservationDefinition.meta",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Meta"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Metadata about the resource",
+      "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.",
+      "binding": null
+    },
+    {
+      "path": "ObservationDefinition.implicitRules",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "uri"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "This element is labeled as a modifier because the implicit rules may provide additional knowledge about the resource that modifies it's meaning or interpretation",
+      "mustSupport": null,
+      "short": "A set of rules under which this content was created",
+      "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.",
+      "binding": null
+    },
+    {
+      "path": "ObservationDefinition.language",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Language of the resource content",
+      "definition": "The base language in which the resource is written.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/languages",
+        "strength": "preferred",
+        "description": "A human language."
+      }
+    },
+    {
+      "path": "ObservationDefinition.text",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Narrative"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Text summary of the resource, for human interpretation",
+      "definition": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
+      "binding": null
+    },
+    {
+      "path": "ObservationDefinition.contained",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Resource"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Contained, inline Resources",
+      "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
+      "binding": null
+    },
+    {
+      "path": "ObservationDefinition.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "ObservationDefinition.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the resource that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "ObservationDefinition.category",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Category of observation",
+      "definition": "A code that classifies the general type of observation.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/observation-category",
+        "strength": "example",
+        "description": "Codes for high level observation categories."
+      }
+    },
+    {
+      "path": "ObservationDefinition.code",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Type of observation (code / type)",
+      "definition": "Describes what will be observed. Sometimes this is called the observation \"name\".",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/observation-codes",
+        "strength": "example",
+        "description": "Codes identifying names of simple observations."
+      }
+    },
+    {
+      "path": "ObservationDefinition.identifier",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Identifier"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Business identifier for this ObservationDefinition instance",
+      "definition": "A unique identifier assigned to this ObservationDefinition artifact.",
+      "binding": null
+    },
+    {
+      "path": "ObservationDefinition.permittedDataType",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Quantity | CodeableConcept | string | boolean | integer | Range | Ratio | SampledData | time | dateTime | Period",
+      "definition": "The data types allowed for the value element of the instance observations conforming to this ObservationDefinition.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/permitted-data-type|4.0.1",
+        "strength": "required",
+        "description": "Permitted data type for observation value."
+      }
+    },
+    {
+      "path": "ObservationDefinition.multipleResultsAllowed",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "boolean"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Multiple results allowed",
+      "definition": "Multiple results allowed for observations conforming to this ObservationDefinition.",
+      "binding": null
+    },
+    {
+      "path": "ObservationDefinition.method",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Method used to produce the observation",
+      "definition": "The method or technique used to perform the observation.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/observation-methods",
+        "strength": "example",
+        "description": "Methods for simple observations."
+      }
+    },
+    {
+      "path": "ObservationDefinition.preferredReportName",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Preferred report name",
+      "definition": "The preferred name to be used when reporting the results of observations conforming to this ObservationDefinition.",
+      "binding": null
+    },
+    {
+      "path": "ObservationDefinition.quantitativeDetails",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Characteristics of quantitative results",
+      "definition": "Characteristics for quantitative results of this observation.",
+      "binding": null
+    },
+    {
+      "path": "ObservationDefinition.quantitativeDetails.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "ObservationDefinition.quantitativeDetails.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "ObservationDefinition.quantitativeDetails.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "ObservationDefinition.quantitativeDetails.customaryUnit",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Customary unit for quantitative results",
+      "definition": "Customary unit used to report quantitative results of observations conforming to this ObservationDefinition.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/ucum-units",
+        "strength": "extensible",
+        "description": "Codes identifying units of measure."
+      }
+    },
+    {
+      "path": "ObservationDefinition.quantitativeDetails.unit",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "SI unit for quantitative results",
+      "definition": "SI unit used to report quantitative results of observations conforming to this ObservationDefinition.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/ucum-units",
+        "strength": "extensible",
+        "description": "Codes identifying units of measure."
+      }
+    },
+    {
+      "path": "ObservationDefinition.quantitativeDetails.conversionFactor",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "decimal"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "SI to Customary unit conversion factor",
+      "definition": "Factor for converting value expressed with SI unit to value expressed with customary unit.",
+      "binding": null
+    },
+    {
+      "path": "ObservationDefinition.quantitativeDetails.decimalPrecision",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "integer"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Decimal precision of observation quantitative results",
+      "definition": "Number of digits after decimal separator when the results of such observations are of type Quantity.",
+      "binding": null
+    },
+    {
+      "path": "ObservationDefinition.qualifiedInterval",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Qualified range for continuous and ordinal observation results",
+      "definition": "Multiple  ranges of results qualified by different contexts for ordinal or continuous observations conforming to this ObservationDefinition.",
+      "binding": null
+    },
+    {
+      "path": "ObservationDefinition.qualifiedInterval.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "ObservationDefinition.qualifiedInterval.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "ObservationDefinition.qualifiedInterval.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "ObservationDefinition.qualifiedInterval.category",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "reference | critical | absolute",
+      "definition": "The category of interval of values for continuous or ordinal observations conforming to this ObservationDefinition.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/observation-range-category|4.0.1",
+        "strength": "required",
+        "description": "Codes identifying the category of observation range."
+      }
+    },
+    {
+      "path": "ObservationDefinition.qualifiedInterval.range",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Range"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The interval itself, for continuous or ordinal observations",
+      "definition": "The low and high values determining the interval. There may be only one of the two.",
+      "binding": null
+    },
+    {
+      "path": "ObservationDefinition.qualifiedInterval.context",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Range context qualifier",
+      "definition": "Codes to indicate the health context the range applies to. For example, the normal or therapeutic range.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-meaning",
+        "strength": "extensible",
+        "description": "Code identifying the health context of a range."
+      }
+    },
+    {
+      "path": "ObservationDefinition.qualifiedInterval.appliesTo",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Targetted population of the range",
+      "definition": "Codes to indicate the target population this reference range applies to.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-appliesto",
+        "strength": "example",
+        "description": "Codes identifying the population the reference range applies to."
+      }
+    },
+    {
+      "path": "ObservationDefinition.qualifiedInterval.gender",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "male | female | other | unknown",
+      "definition": "Sex of the population the range applies to.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1",
+        "strength": "required",
+        "description": "The gender of a person used for administrative purposes."
+      }
+    },
+    {
+      "path": "ObservationDefinition.qualifiedInterval.age",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Range"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Applicable age range, if relevant",
+      "definition": "The age at which this reference range is applicable. This is a neonatal age (e.g. number of weeks at term) if the meaning says so.",
+      "binding": null
+    },
+    {
+      "path": "ObservationDefinition.qualifiedInterval.gestationalAge",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Range"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Applicable gestational age range, if relevant",
+      "definition": "The gestational age to which this reference range is applicable, in the context of pregnancy.",
+      "binding": null
+    },
+    {
+      "path": "ObservationDefinition.qualifiedInterval.condition",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Condition associated with the reference range",
+      "definition": "Text based condition for which the reference range is valid.",
+      "binding": null
+    },
+    {
+      "path": "ObservationDefinition.validCodedValueSet",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/ValueSet"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Value set of valid coded values for the observations conforming to this ObservationDefinition",
+      "definition": "The set of valid coded results for the observations  conforming to this ObservationDefinition.",
+      "binding": null
+    },
+    {
+      "path": "ObservationDefinition.normalCodedValueSet",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/ValueSet"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Value set of normal coded values for the observations conforming to this ObservationDefinition",
+      "definition": "The set of normal coded results for the observations conforming to this ObservationDefinition.",
+      "binding": null
+    },
+    {
+      "path": "ObservationDefinition.abnormalCodedValueSet",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/ValueSet"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Value set of abnormal coded values for the observations conforming to this ObservationDefinition",
+      "definition": "The set of abnormal coded results for the observation conforming to this ObservationDefinition.",
+      "binding": null
+    },
+    {
+      "path": "ObservationDefinition.criticalCodedValueSet",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/ValueSet"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Value set of critical coded values for the observations conforming to this ObservationDefinition",
+      "definition": "The set of critical coded results for the observation conforming to this ObservationDefinition.",
+      "binding": null
+    }
+  ],
+  "search": []
+}

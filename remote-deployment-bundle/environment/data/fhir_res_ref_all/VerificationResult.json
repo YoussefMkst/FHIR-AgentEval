@@ -1,0 +1,1043 @@
+{
+  "resourceType": "VerificationResult",
+  "fhir_version": "4.0.1",
+  "source_urls": {
+    "structureDefinition": "http://hl7.org/fhir/StructureDefinition/VerificationResult"
+  },
+  "elements": [
+    {
+      "path": "VerificationResult",
+      "min": 0,
+      "max": "*",
+      "type": [],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Describes validation requirements, source(s), status and dates for one or more elements",
+      "definition": "Describes validation requirements, source(s), status and dates for one or more elements.",
+      "binding": null
+    },
+    {
+      "path": "VerificationResult.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Logical id of this artifact",
+      "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
+      "binding": null
+    },
+    {
+      "path": "VerificationResult.meta",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Meta"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Metadata about the resource",
+      "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.",
+      "binding": null
+    },
+    {
+      "path": "VerificationResult.implicitRules",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "uri"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "This element is labeled as a modifier because the implicit rules may provide additional knowledge about the resource that modifies it's meaning or interpretation",
+      "mustSupport": null,
+      "short": "A set of rules under which this content was created",
+      "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.",
+      "binding": null
+    },
+    {
+      "path": "VerificationResult.language",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Language of the resource content",
+      "definition": "The base language in which the resource is written.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/languages",
+        "strength": "preferred",
+        "description": "A human language."
+      }
+    },
+    {
+      "path": "VerificationResult.text",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Narrative"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Text summary of the resource, for human interpretation",
+      "definition": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
+      "binding": null
+    },
+    {
+      "path": "VerificationResult.contained",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Resource"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Contained, inline Resources",
+      "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
+      "binding": null
+    },
+    {
+      "path": "VerificationResult.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "VerificationResult.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the resource that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "VerificationResult.target",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Resource"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "A resource that was validated",
+      "definition": "A resource that was validated.",
+      "binding": null
+    },
+    {
+      "path": "VerificationResult.targetLocation",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The fhirpath location(s) within the resource that was validated",
+      "definition": "The fhirpath location(s) within the resource that was validated.",
+      "binding": null
+    },
+    {
+      "path": "VerificationResult.need",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "none | initial | periodic",
+      "definition": "The frequency with which the target must be validated (none; initial; periodic).",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/verificationresult-need",
+        "strength": "preferred",
+        "description": "The frequency with which the target must be validated."
+      }
+    },
+    {
+      "path": "VerificationResult.status",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "attested | validated | in-process | req-revalid | val-fail | reval-fail",
+      "definition": "The validation status of the target (attested; validated; in process; requires revalidation; validation failed; revalidation failed).",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/verificationresult-status|4.0.1",
+        "strength": "required",
+        "description": "The validation status of the target."
+      }
+    },
+    {
+      "path": "VerificationResult.statusDate",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "dateTime"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "When the validation status was updated",
+      "definition": "When the validation status was updated.",
+      "binding": null
+    },
+    {
+      "path": "VerificationResult.validationType",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "nothing | primary | multiple",
+      "definition": "What the target is validated against (nothing; primary source; multiple sources).",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/verificationresult-validation-type",
+        "strength": "preferred",
+        "description": "What the target is validated against."
+      }
+    },
+    {
+      "path": "VerificationResult.validationProcess",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The primary process by which the target is validated (edit check; value set; primary source; multiple sources; standalone; in context)",
+      "definition": "The primary process by which the target is validated (edit check; value set; primary source; multiple sources; standalone; in context).",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/verificationresult-validation-process",
+        "strength": "example",
+        "description": "The primary process by which the target is validated."
+      }
+    },
+    {
+      "path": "VerificationResult.frequency",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Timing"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Frequency of revalidation",
+      "definition": "Frequency of revalidation.",
+      "binding": null
+    },
+    {
+      "path": "VerificationResult.lastPerformed",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "dateTime"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The date/time validation was last completed (including failed validations)",
+      "definition": "The date/time validation was last completed (including failed validations).",
+      "binding": null
+    },
+    {
+      "path": "VerificationResult.nextScheduled",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "date"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The date when target is next validated, if appropriate",
+      "definition": "The date when target is next validated, if appropriate.",
+      "binding": null
+    },
+    {
+      "path": "VerificationResult.failureAction",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "fatal | warn | rec-only | none",
+      "definition": "The result if validation fails (fatal; warning; record only; none).",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/verificationresult-failure-action",
+        "strength": "preferred",
+        "description": "The result if validation fails."
+      }
+    },
+    {
+      "path": "VerificationResult.primarySource",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Information about the primary source(s) involved in validation",
+      "definition": "Information about the primary source(s) involved in validation.",
+      "binding": null
+    },
+    {
+      "path": "VerificationResult.primarySource.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "VerificationResult.primarySource.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "VerificationResult.primarySource.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "VerificationResult.primarySource.who",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Organization",
+            "http://hl7.org/fhir/StructureDefinition/Practitioner",
+            "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Reference to the primary source",
+      "definition": "Reference to the primary source.",
+      "binding": null
+    },
+    {
+      "path": "VerificationResult.primarySource.type",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Type of primary source (License Board; Primary Education; Continuing Education; Postal Service; Relationship owner; Registration Authority; legal source; issuing source; authoritative source)",
+      "definition": "Type of primary source (License Board; Primary Education; Continuing Education; Postal Service; Relationship owner; Registration Authority; legal source; issuing source; authoritative source).",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/verificationresult-primary-source-type",
+        "strength": "example",
+        "description": "Type of the validation primary source."
+      }
+    },
+    {
+      "path": "VerificationResult.primarySource.communicationMethod",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Method for exchanging information with the primary source",
+      "definition": "Method for communicating with the primary source (manual; API; Push).",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/verificationresult-communication-method",
+        "strength": "example",
+        "description": "Method for communicating with the data source (manual; API; Push)."
+      }
+    },
+    {
+      "path": "VerificationResult.primarySource.validationStatus",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "successful | failed | unknown",
+      "definition": "Status of the validation of the target against the primary source (successful; failed; unknown).",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/verificationresult-validation-status",
+        "strength": "preferred",
+        "description": "Status of the validation of the target against the primary source."
+      }
+    },
+    {
+      "path": "VerificationResult.primarySource.validationDate",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "dateTime"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "When the target was validated against the primary source",
+      "definition": "When the target was validated against the primary source.",
+      "binding": null
+    },
+    {
+      "path": "VerificationResult.primarySource.canPushUpdates",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "yes | no | undetermined",
+      "definition": "Ability of the primary source to push updates/alerts (yes; no; undetermined).",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/verificationresult-can-push-updates",
+        "strength": "preferred",
+        "description": "Ability of the primary source to push updates/alerts."
+      }
+    },
+    {
+      "path": "VerificationResult.primarySource.pushTypeAvailable",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "specific | any | source",
+      "definition": "Type of alerts/updates the primary source can send (specific requested changes; any changes; as defined by source).",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/verificationresult-push-type-available",
+        "strength": "preferred",
+        "description": "Type of alerts/updates the primary source can send."
+      }
+    },
+    {
+      "path": "VerificationResult.attestation",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Information about the entity attesting to information",
+      "definition": "Information about the entity attesting to information.",
+      "binding": null
+    },
+    {
+      "path": "VerificationResult.attestation.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "VerificationResult.attestation.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "VerificationResult.attestation.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "VerificationResult.attestation.who",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Practitioner",
+            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+            "http://hl7.org/fhir/StructureDefinition/Organization"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The individual or organization attesting to information",
+      "definition": "The individual or organization attesting to information.",
+      "binding": null
+    },
+    {
+      "path": "VerificationResult.attestation.onBehalfOf",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Organization",
+            "http://hl7.org/fhir/StructureDefinition/Practitioner",
+            "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "When the who is asserting on behalf of another (organization or individual)",
+      "definition": "When the who is asserting on behalf of another (organization or individual).",
+      "binding": null
+    },
+    {
+      "path": "VerificationResult.attestation.communicationMethod",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The method by which attested information was submitted/retrieved",
+      "definition": "The method by which attested information was submitted/retrieved (manual; API; Push).",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/verificationresult-communication-method",
+        "strength": "example",
+        "description": "Method for communicating with the data source (manual; API; Push)."
+      }
+    },
+    {
+      "path": "VerificationResult.attestation.date",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "date"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The date the information was attested to",
+      "definition": "The date the information was attested to.",
+      "binding": null
+    },
+    {
+      "path": "VerificationResult.attestation.sourceIdentityCertificate",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "A digital identity certificate associated with the attestation source",
+      "definition": "A digital identity certificate associated with the attestation source.",
+      "binding": null
+    },
+    {
+      "path": "VerificationResult.attestation.proxyIdentityCertificate",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "A digital identity certificate associated with the proxy entity submitting attested information on behalf of the attestation source",
+      "definition": "A digital identity certificate associated with the proxy entity submitting attested information on behalf of the attestation source.",
+      "binding": null
+    },
+    {
+      "path": "VerificationResult.attestation.proxySignature",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Signature"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Proxy signature",
+      "definition": "Signed assertion by the proxy entity indicating that they have the right to submit attested information on behalf of the attestation source.",
+      "binding": null
+    },
+    {
+      "path": "VerificationResult.attestation.sourceSignature",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Signature"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Attester signature",
+      "definition": "Signed assertion by the attestation source that they have attested to the information.",
+      "binding": null
+    },
+    {
+      "path": "VerificationResult.validator",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Information about the entity validating information",
+      "definition": "Information about the entity validating information.",
+      "binding": null
+    },
+    {
+      "path": "VerificationResult.validator.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "VerificationResult.validator.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "VerificationResult.validator.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "VerificationResult.validator.organization",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Organization"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Reference to the organization validating information",
+      "definition": "Reference to the organization validating information.",
+      "binding": null
+    },
+    {
+      "path": "VerificationResult.validator.identityCertificate",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "A digital identity certificate associated with the validator",
+      "definition": "A digital identity certificate associated with the validator.",
+      "binding": null
+    },
+    {
+      "path": "VerificationResult.validator.attestationSignature",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Signature"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Validator signature",
+      "definition": "Signed assertion by the validator that they have validated the information.",
+      "binding": null
+    }
+  ],
+  "search": [
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/VerificationResult-target",
+      "version": "4.0.1",
+      "name": "target",
+      "code": "target",
+      "type": "reference",
+      "description": "A resource that was validated",
+      "expression": "VerificationResult.target",
+      "xpath": "f:VerificationResult/f:target",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Account",
+        "ActivityDefinition",
+        "AdverseEvent",
+        "AllergyIntolerance",
+        "Appointment",
+        "AppointmentResponse",
+        "AuditEvent",
+        "Basic",
+        "Binary",
+        "BiologicallyDerivedProduct",
+        "BodyStructure",
+        "Bundle",
+        "CapabilityStatement",
+        "CarePlan",
+        "CareTeam",
+        "CatalogEntry",
+        "ChargeItem",
+        "ChargeItemDefinition",
+        "Claim",
+        "ClaimResponse",
+        "ClinicalImpression",
+        "CodeSystem",
+        "Communication",
+        "CommunicationRequest",
+        "CompartmentDefinition",
+        "Composition",
+        "ConceptMap",
+        "Condition",
+        "Consent",
+        "Contract",
+        "Coverage",
+        "CoverageEligibilityRequest",
+        "CoverageEligibilityResponse",
+        "DetectedIssue",
+        "Device",
+        "DeviceDefinition",
+        "DeviceMetric",
+        "DeviceRequest",
+        "DeviceUseStatement",
+        "DiagnosticReport",
+        "DocumentManifest",
+        "DocumentReference",
+        "EffectEvidenceSynthesis",
+        "Encounter",
+        "Endpoint",
+        "EnrollmentRequest",
+        "EnrollmentResponse",
+        "EpisodeOfCare",
+        "EventDefinition",
+        "Evidence",
+        "EvidenceVariable",
+        "ExampleScenario",
+        "ExplanationOfBenefit",
+        "FamilyMemberHistory",
+        "Flag",
+        "Goal",
+        "GraphDefinition",
+        "Group",
+        "GuidanceResponse",
+        "HealthcareService",
+        "ImagingStudy",
+        "Immunization",
+        "ImmunizationEvaluation",
+        "ImmunizationRecommendation",
+        "ImplementationGuide",
+        "InsurancePlan",
+        "Invoice",
+        "Library",
+        "Linkage",
+        "List",
+        "Location",
+        "Measure",
+        "MeasureReport",
+        "Media",
+        "Medication",
+        "MedicationAdministration",
+        "MedicationDispense",
+        "MedicationKnowledge",
+        "MedicationRequest",
+        "MedicationStatement",
+        "MedicinalProduct",
+        "MedicinalProductAuthorization",
+        "MedicinalProductContraindication",
+        "MedicinalProductIndication",
+        "MedicinalProductIngredient",
+        "MedicinalProductInteraction",
+        "MedicinalProductManufactured",
+        "MedicinalProductPackaged",
+        "MedicinalProductPharmaceutical",
+        "MedicinalProductUndesirableEffect",
+        "MessageDefinition",
+        "MessageHeader",
+        "MolecularSequence",
+        "NamingSystem",
+        "NutritionOrder",
+        "Observation",
+        "ObservationDefinition",
+        "OperationDefinition",
+        "OperationOutcome",
+        "Organization",
+        "OrganizationAffiliation",
+        "Patient",
+        "PaymentNotice",
+        "PaymentReconciliation",
+        "Person",
+        "PlanDefinition",
+        "Practitioner",
+        "PractitionerRole",
+        "Procedure",
+        "Provenance",
+        "Questionnaire",
+        "QuestionnaireResponse",
+        "RelatedPerson",
+        "RequestGroup",
+        "ResearchDefinition",
+        "ResearchElementDefinition",
+        "ResearchStudy",
+        "ResearchSubject",
+        "RiskAssessment",
+        "RiskEvidenceSynthesis",
+        "Schedule",
+        "SearchParameter",
+        "ServiceRequest",
+        "Slot",
+        "Specimen",
+        "SpecimenDefinition",
+        "StructureDefinition",
+        "StructureMap",
+        "Subscription",
+        "Substance",
+        "SubstanceNucleicAcid",
+        "SubstancePolymer",
+        "SubstanceProtein",
+        "SubstanceReferenceInformation",
+        "SubstanceSourceMaterial",
+        "SubstanceSpecification",
+        "SupplyDelivery",
+        "SupplyRequest",
+        "Task",
+        "TerminologyCapabilities",
+        "TestReport",
+        "TestScript",
+        "ValueSet",
+        "VerificationResult",
+        "VisionPrescription"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "VerificationResult"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "dataType": "Contributor",
+  "typeKind": "complex-type",
+  "fhir_version": "4.0.1",
+  "source_urls": {
+    "structureDefinition": "http://hl7.org/fhir/StructureDefinition/Contributor"
+  },
+  "elements": [
+    {
+      "path": "Contributor",
+      "min": 0,
+      "max": "*",
+      "type": [],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Contributor information",
+      "definition": "A contributor to the content of a knowledge asset, including authors, editors, reviewers, and endorsers.",
+      "binding": null
+    },
+    {
+      "path": "Contributor.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String",
+          "fhirType": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "Contributor.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "Contributor.type",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "author | editor | reviewer | endorser",
+      "definition": "The type of contributor.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/contributor-type|4.0.1",
+        "strength": "required",
+        "description": "The type of contributor."
+      }
+    },
+    {
+      "path": "Contributor.name",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Who contributed the content",
+      "definition": "The name of the individual or organization responsible for the contribution.",
+      "binding": null
+    },
+    {
+      "path": "Contributor.contact",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "ContactDetail"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Contact details of the contributor",
+      "definition": "Contact details to assist a user in finding and communicating with the contributor.",
+      "binding": null
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+# Droplet-only requirements: just what HAPI's MCP servers need to import.
+# Intentionally a subset of the project's root requirements.txt.
+
+fastmcp>=0.4.0
+httpx>=0.27.0
+pydantic>=2.0
+python-dotenv>=1.0
+faiss-cpu>=1.8
+numpy>=1.26
+langchain-openai>=0.2

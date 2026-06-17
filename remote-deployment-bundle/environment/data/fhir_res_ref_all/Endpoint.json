@@ -1,0 +1,478 @@
+{
+  "resourceType": "Endpoint",
+  "fhir_version": "4.0.1",
+  "source_urls": {
+    "structureDefinition": "http://hl7.org/fhir/StructureDefinition/Endpoint"
+  },
+  "elements": [
+    {
+      "path": "Endpoint",
+      "min": 0,
+      "max": "*",
+      "type": [],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The technical details of an endpoint that can be used for electronic services",
+      "definition": "The technical details of an endpoint that can be used for electronic services, such as for web services providing XDS.b or a REST endpoint for another FHIR server. This may include any security context information.",
+      "binding": null
+    },
+    {
+      "path": "Endpoint.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Logical id of this artifact",
+      "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
+      "binding": null
+    },
+    {
+      "path": "Endpoint.meta",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Meta"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Metadata about the resource",
+      "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.",
+      "binding": null
+    },
+    {
+      "path": "Endpoint.implicitRules",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "uri"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "This element is labeled as a modifier because the implicit rules may provide additional knowledge about the resource that modifies it's meaning or interpretation",
+      "mustSupport": null,
+      "short": "A set of rules under which this content was created",
+      "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.",
+      "binding": null
+    },
+    {
+      "path": "Endpoint.language",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Language of the resource content",
+      "definition": "The base language in which the resource is written.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/languages",
+        "strength": "preferred",
+        "description": "A human language."
+      }
+    },
+    {
+      "path": "Endpoint.text",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Narrative"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Text summary of the resource, for human interpretation",
+      "definition": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
+      "binding": null
+    },
+    {
+      "path": "Endpoint.contained",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Resource"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Contained, inline Resources",
+      "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
+      "binding": null
+    },
+    {
+      "path": "Endpoint.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "Endpoint.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the resource that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "Endpoint.identifier",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Identifier"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Identifies this endpoint across multiple systems",
+      "definition": "Identifier for the organization that is used to identify the endpoint across multiple disparate systems.",
+      "binding": null
+    },
+    {
+      "path": "Endpoint.status",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "This element is labelled as a modifier because it is a status element that contains status entered-in-error which means that the resource should not be treated as valid",
+      "mustSupport": null,
+      "short": "active | suspended | error | off | entered-in-error | test",
+      "definition": "active | suspended | error | off | test.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/endpoint-status|4.0.1",
+        "strength": "required",
+        "description": "The status of the endpoint."
+      }
+    },
+    {
+      "path": "Endpoint.connectionType",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "Coding"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Protocol/Profile/Standard to be used with this endpoint connection",
+      "definition": "A coded value that represents the technical details of the usage of this endpoint, such as what WSDLs should be used in what way. (e.g. XDS.b/DICOM/cds-hook).",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/endpoint-connection-type",
+        "strength": "extensible",
+        "description": null
+      }
+    },
+    {
+      "path": "Endpoint.name",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "A name that this endpoint can be identified by",
+      "definition": "A friendly name that this endpoint can be referred to with.",
+      "binding": null
+    },
+    {
+      "path": "Endpoint.managingOrganization",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Organization"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Organization that manages this endpoint (might not be the organization that exposes the endpoint)",
+      "definition": "The organization that manages this endpoint (even if technically another organization is hosting this in the cloud, it is the organization associated with the data).",
+      "binding": null
+    },
+    {
+      "path": "Endpoint.contact",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "ContactPoint"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Contact details for source (e.g. troubleshooting)",
+      "definition": "Contact details for a human to contact about the subscription. The primary use of this for system administrator troubleshooting.",
+      "binding": null
+    },
+    {
+      "path": "Endpoint.period",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Period"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Interval the endpoint is expected to be operational",
+      "definition": "The interval during which the endpoint is expected to be operational.",
+      "binding": null
+    },
+    {
+      "path": "Endpoint.payloadType",
+      "min": 1,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The type of content that may be used at this endpoint (e.g. XDS Discharge summaries)",
+      "definition": "The payload type describes the acceptable content that can be communicated on the endpoint.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/endpoint-payload-type",
+        "strength": "example",
+        "description": null
+      }
+    },
+    {
+      "path": "Endpoint.payloadMimeType",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Mimetype to send. If not specified, the content could be anything (including no payload, if the connectionType defined this)",
+      "definition": "The mime type to send the payload in - e.g. application/fhir+xml, application/fhir+json. If the mime type is not specified, then the sender could send any content (including no content depending on the connectionType).",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/mimetypes|4.0.1",
+        "strength": "required",
+        "description": "The mime type of an attachment. Any valid mime type is allowed."
+      }
+    },
+    {
+      "path": "Endpoint.address",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "url"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The technical base address for connecting to this endpoint",
+      "definition": "The uri that describes the actual end-point to connect to.",
+      "binding": null
+    },
+    {
+      "path": "Endpoint.header",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Usage depends on the channel type",
+      "definition": "Additional headers / information to send as part of the notification.",
+      "binding": null
+    }
+  ],
+  "search": [
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Endpoint-connection-type",
+      "version": "4.0.1",
+      "name": "connection-type",
+      "code": "connection-type",
+      "type": "token",
+      "description": "Protocol/Profile/Standard to be used with this endpoint connection",
+      "expression": "Endpoint.connectionType",
+      "xpath": "f:Endpoint/f:connectionType",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Endpoint"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Endpoint-identifier",
+      "version": "4.0.1",
+      "name": "identifier",
+      "code": "identifier",
+      "type": "token",
+      "description": "Identifies this endpoint across multiple systems",
+      "expression": "Endpoint.identifier",
+      "xpath": "f:Endpoint/f:identifier",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Endpoint"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Endpoint-name",
+      "version": "4.0.1",
+      "name": "name",
+      "code": "name",
+      "type": "string",
+      "description": "A name that this endpoint can be identified by",
+      "expression": "Endpoint.name",
+      "xpath": "f:Endpoint/f:name",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Endpoint"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Endpoint-organization",
+      "version": "4.0.1",
+      "name": "organization",
+      "code": "organization",
+      "type": "reference",
+      "description": "The organization that is managing the endpoint",
+      "expression": "Endpoint.managingOrganization",
+      "xpath": "f:Endpoint/f:managingOrganization",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Organization"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Endpoint"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Endpoint-payload-type",
+      "version": "4.0.1",
+      "name": "payload-type",
+      "code": "payload-type",
+      "type": "token",
+      "description": "The type of content that may be used at this endpoint (e.g. XDS Discharge summaries)",
+      "expression": "Endpoint.payloadType",
+      "xpath": "f:Endpoint/f:payloadType",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Endpoint"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Endpoint-status",
+      "version": "4.0.1",
+      "name": "status",
+      "code": "status",
+      "type": "token",
+      "description": "The current status of the Endpoint (usually expected to be active)",
+      "expression": "Endpoint.status",
+      "xpath": "f:Endpoint/f:status",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Endpoint"
+      ]
+    }
+  ]
+}

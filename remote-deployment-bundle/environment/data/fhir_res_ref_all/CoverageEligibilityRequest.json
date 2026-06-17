@@ -1,0 +1,1086 @@
+{
+  "resourceType": "CoverageEligibilityRequest",
+  "fhir_version": "4.0.1",
+  "source_urls": {
+    "structureDefinition": "http://hl7.org/fhir/StructureDefinition/CoverageEligibilityRequest"
+  },
+  "elements": [
+    {
+      "path": "CoverageEligibilityRequest",
+      "min": 0,
+      "max": "*",
+      "type": [],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "CoverageEligibilityRequest resource",
+      "definition": "The CoverageEligibilityRequest provides patient and insurance coverage information to an insurer for them to respond, in the form of an CoverageEligibilityResponse, with information regarding whether the stated coverage is valid and in-force and optionally to provide the insurance details of the policy.",
+      "binding": null
+    },
+    {
+      "path": "CoverageEligibilityRequest.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Logical id of this artifact",
+      "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
+      "binding": null
+    },
+    {
+      "path": "CoverageEligibilityRequest.meta",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Meta"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Metadata about the resource",
+      "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.",
+      "binding": null
+    },
+    {
+      "path": "CoverageEligibilityRequest.implicitRules",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "uri"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "This element is labeled as a modifier because the implicit rules may provide additional knowledge about the resource that modifies it's meaning or interpretation",
+      "mustSupport": null,
+      "short": "A set of rules under which this content was created",
+      "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.",
+      "binding": null
+    },
+    {
+      "path": "CoverageEligibilityRequest.language",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Language of the resource content",
+      "definition": "The base language in which the resource is written.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/languages",
+        "strength": "preferred",
+        "description": "A human language."
+      }
+    },
+    {
+      "path": "CoverageEligibilityRequest.text",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Narrative"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Text summary of the resource, for human interpretation",
+      "definition": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
+      "binding": null
+    },
+    {
+      "path": "CoverageEligibilityRequest.contained",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Resource"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Contained, inline Resources",
+      "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
+      "binding": null
+    },
+    {
+      "path": "CoverageEligibilityRequest.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "CoverageEligibilityRequest.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the resource that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "CoverageEligibilityRequest.identifier",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Identifier"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Business Identifier for coverage eligiblity request",
+      "definition": "A unique identifier assigned to this coverage eligiblity request.",
+      "binding": null
+    },
+    {
+      "path": "CoverageEligibilityRequest.status",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "This element is labeled as a modifier because it is a status element that contains status entered-in-error which means that the resource should not be treated as valid",
+      "mustSupport": null,
+      "short": "active | cancelled | draft | entered-in-error",
+      "definition": "The status of the resource instance.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/fm-status|4.0.1",
+        "strength": "required",
+        "description": "A code specifying the state of the resource instance."
+      }
+    },
+    {
+      "path": "CoverageEligibilityRequest.priority",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Desired processing priority",
+      "definition": "When the requestor expects the processor to complete processing.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/process-priority",
+        "strength": "example",
+        "description": "The timeliness with which processing is required: STAT, normal, Deferred."
+      }
+    },
+    {
+      "path": "CoverageEligibilityRequest.purpose",
+      "min": 1,
+      "max": "*",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "auth-requirements | benefits | discovery | validation",
+      "definition": "Code to specify whether requesting: prior authorization requirements for some service categories or billing codes; benefits for coverages specified or discovered; discovery and return of coverages for the patient; and/or validation that the specified coverage is in-force at the date/period specified or 'now' if not specified.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/eligibilityrequest-purpose|4.0.1",
+        "strength": "required",
+        "description": "A code specifying the types of information being requested."
+      }
+    },
+    {
+      "path": "CoverageEligibilityRequest.patient",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Patient"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Intended recipient of products and services",
+      "definition": "The party who is the beneficiary of the supplied coverage and for whom eligibility is sought.",
+      "binding": null
+    },
+    {
+      "path": "CoverageEligibilityRequest.serviced[x]",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "date"
+        },
+        {
+          "code": "Period"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Estimated date or dates of service",
+      "definition": "The date or dates when the enclosed suite of services were performed or completed.",
+      "binding": null
+    },
+    {
+      "path": "CoverageEligibilityRequest.created",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "dateTime"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Creation date",
+      "definition": "The date when this resource was created.",
+      "binding": null
+    },
+    {
+      "path": "CoverageEligibilityRequest.enterer",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Practitioner",
+            "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Author",
+      "definition": "Person who created the request.",
+      "binding": null
+    },
+    {
+      "path": "CoverageEligibilityRequest.provider",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Practitioner",
+            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+            "http://hl7.org/fhir/StructureDefinition/Organization"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Party responsible for the request",
+      "definition": "The provider which is responsible for the request.",
+      "binding": null
+    },
+    {
+      "path": "CoverageEligibilityRequest.insurer",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Organization"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Coverage issuer",
+      "definition": "The Insurer who issued the coverage in question and is the recipient of the request.",
+      "binding": null
+    },
+    {
+      "path": "CoverageEligibilityRequest.facility",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Location"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Servicing facility",
+      "definition": "Facility where the services are intended to be provided.",
+      "binding": null
+    },
+    {
+      "path": "CoverageEligibilityRequest.supportingInfo",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Supporting information",
+      "definition": "Additional information codes regarding exceptions, special considerations, the condition, situation, prior or concurrent issues.",
+      "binding": null
+    },
+    {
+      "path": "CoverageEligibilityRequest.supportingInfo.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "CoverageEligibilityRequest.supportingInfo.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "CoverageEligibilityRequest.supportingInfo.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "CoverageEligibilityRequest.supportingInfo.sequence",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "positiveInt"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Information instance identifier",
+      "definition": "A number to uniquely identify supporting information entries.",
+      "binding": null
+    },
+    {
+      "path": "CoverageEligibilityRequest.supportingInfo.information",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Resource"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Data to be provided",
+      "definition": "Additional data or information such as resources, documents, images etc. including references to the data or the actual inclusion of the data.",
+      "binding": null
+    },
+    {
+      "path": "CoverageEligibilityRequest.supportingInfo.appliesToAll",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "boolean"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Applies to all items",
+      "definition": "The supporting materials are applicable for all detail items, product/servce categories and specific billing codes.",
+      "binding": null
+    },
+    {
+      "path": "CoverageEligibilityRequest.insurance",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Patient insurance information",
+      "definition": "Financial instruments for reimbursement for the health care products and services.",
+      "binding": null
+    },
+    {
+      "path": "CoverageEligibilityRequest.insurance.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "CoverageEligibilityRequest.insurance.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "CoverageEligibilityRequest.insurance.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "CoverageEligibilityRequest.insurance.focal",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "boolean"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Applicable coverage",
+      "definition": "A flag to indicate that this Coverage is to be used for evaluation of this request when set to true.",
+      "binding": null
+    },
+    {
+      "path": "CoverageEligibilityRequest.insurance.coverage",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Coverage"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Insurance information",
+      "definition": "Reference to the insurance card level information contained in the Coverage resource. The coverage issuing insurer will use these details to locate the patient's actual coverage within the insurer's information system.",
+      "binding": null
+    },
+    {
+      "path": "CoverageEligibilityRequest.insurance.businessArrangement",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional provider contract number",
+      "definition": "A business agreement number established between the provider and the insurer for special business processing purposes.",
+      "binding": null
+    },
+    {
+      "path": "CoverageEligibilityRequest.item",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Item to be evaluated for eligibiity",
+      "definition": "Service categories or billable services for which benefit details and/or an authorization prior to service delivery may be required by the payor.",
+      "binding": null
+    },
+    {
+      "path": "CoverageEligibilityRequest.item.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "CoverageEligibilityRequest.item.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "CoverageEligibilityRequest.item.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "CoverageEligibilityRequest.item.supportingInfoSequence",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "positiveInt"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Applicable exception or supporting information",
+      "definition": "Exceptions, special conditions and supporting information applicable for this service or product line.",
+      "binding": null
+    },
+    {
+      "path": "CoverageEligibilityRequest.item.category",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Benefit classification",
+      "definition": "Code to identify the general type of benefits under which products and services are provided.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/ex-benefitcategory",
+        "strength": "example",
+        "description": "Benefit categories such as: oral, medical, vision etc."
+      }
+    },
+    {
+      "path": "CoverageEligibilityRequest.item.productOrService",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Billing, service, product, or drug code",
+      "definition": "This contains the product, service, drug or other billing code for the item.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/service-uscls",
+        "strength": "example",
+        "description": "Allowable service and product codes."
+      }
+    },
+    {
+      "path": "CoverageEligibilityRequest.item.modifier",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Product or service billing modifiers",
+      "definition": "Item typification or modifiers codes to convey additional context for the product or service.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/claim-modifiers",
+        "strength": "example",
+        "description": "Item type or modifiers codes, eg for Oral whether the treatment is cosmetic or associated with TMJ, or an appliance was lost or stolen."
+      }
+    },
+    {
+      "path": "CoverageEligibilityRequest.item.provider",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Practitioner",
+            "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Perfoming practitioner",
+      "definition": "The practitioner who is responsible for the product or service to be rendered to the patient.",
+      "binding": null
+    },
+    {
+      "path": "CoverageEligibilityRequest.item.quantity",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Quantity",
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/SimpleQuantity"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Count of products or services",
+      "definition": "The number of repetitions of a service or product.",
+      "binding": null
+    },
+    {
+      "path": "CoverageEligibilityRequest.item.unitPrice",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Money"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Fee, charge or cost per item",
+      "definition": "The amount charged to the patient by the provider for a single unit.",
+      "binding": null
+    },
+    {
+      "path": "CoverageEligibilityRequest.item.facility",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Location",
+            "http://hl7.org/fhir/StructureDefinition/Organization"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Servicing facility",
+      "definition": "Facility where the services will be provided.",
+      "binding": null
+    },
+    {
+      "path": "CoverageEligibilityRequest.item.diagnosis",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Applicable diagnosis",
+      "definition": "Patient diagnosis for which care is sought.",
+      "binding": null
+    },
+    {
+      "path": "CoverageEligibilityRequest.item.diagnosis.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "CoverageEligibilityRequest.item.diagnosis.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "CoverageEligibilityRequest.item.diagnosis.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "CoverageEligibilityRequest.item.diagnosis.diagnosis[x]",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        },
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Condition"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Nature of illness or problem",
+      "definition": "The nature of illness or problem in a coded form or as a reference to an external defined Condition.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/icd-10",
+        "strength": "example",
+        "description": "ICD10 Diagnostic codes."
+      }
+    },
+    {
+      "path": "CoverageEligibilityRequest.item.detail",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Resource"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Product or service details",
+      "definition": "The plan/proposal/order describing the proposed service in detail.",
+      "binding": null
+    }
+  ],
+  "search": [
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/CoverageEligibilityRequest-created",
+      "version": "4.0.1",
+      "name": "created",
+      "code": "created",
+      "type": "date",
+      "description": "The creation date for the EOB",
+      "expression": "CoverageEligibilityRequest.created",
+      "xpath": "f:CoverageEligibilityRequest/f:created",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [
+        "eq",
+        "ne",
+        "gt",
+        "ge",
+        "lt",
+        "le",
+        "sa",
+        "eb",
+        "ap"
+      ],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "CoverageEligibilityRequest"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/CoverageEligibilityRequest-enterer",
+      "version": "4.0.1",
+      "name": "enterer",
+      "code": "enterer",
+      "type": "reference",
+      "description": "The party who is responsible for the request",
+      "expression": "CoverageEligibilityRequest.enterer",
+      "xpath": "f:CoverageEligibilityRequest/f:enterer",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Practitioner",
+        "PractitionerRole"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "CoverageEligibilityRequest"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/CoverageEligibilityRequest-facility",
+      "version": "4.0.1",
+      "name": "facility",
+      "code": "facility",
+      "type": "reference",
+      "description": "Facility responsible for the goods and services",
+      "expression": "CoverageEligibilityRequest.facility",
+      "xpath": "f:CoverageEligibilityRequest/f:facility",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Location"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "CoverageEligibilityRequest"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/CoverageEligibilityRequest-identifier",
+      "version": "4.0.1",
+      "name": "identifier",
+      "code": "identifier",
+      "type": "token",
+      "description": "The business identifier of the Eligibility",
+      "expression": "CoverageEligibilityRequest.identifier",
+      "xpath": "f:CoverageEligibilityRequest/f:identifier",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "CoverageEligibilityRequest"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/CoverageEligibilityRequest-patient",
+      "version": "4.0.1",
+      "name": "patient",
+      "code": "patient",
+      "type": "reference",
+      "description": "The reference to the patient",
+      "expression": "CoverageEligibilityRequest.patient",
+      "xpath": "f:CoverageEligibilityRequest/f:patient",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Patient"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "CoverageEligibilityRequest"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/CoverageEligibilityRequest-provider",
+      "version": "4.0.1",
+      "name": "provider",
+      "code": "provider",
+      "type": "reference",
+      "description": "The reference to the provider",
+      "expression": "CoverageEligibilityRequest.provider",
+      "xpath": "f:CoverageEligibilityRequest/f:provider",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Practitioner",
+        "Organization",
+        "PractitionerRole"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "CoverageEligibilityRequest"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/CoverageEligibilityRequest-status",
+      "version": "4.0.1",
+      "name": "status",
+      "code": "status",
+      "type": "token",
+      "description": "The status of the EligibilityRequest",
+      "expression": "CoverageEligibilityRequest.status",
+      "xpath": "f:CoverageEligibilityRequest/f:status",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "CoverageEligibilityRequest"
+      ]
+    }
+  ]
+}

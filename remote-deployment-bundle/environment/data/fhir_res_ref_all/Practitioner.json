@@ -1,0 +1,799 @@
+{
+  "resourceType": "Practitioner",
+  "fhir_version": "4.0.1",
+  "source_urls": {
+    "structureDefinition": "http://hl7.org/fhir/StructureDefinition/Practitioner"
+  },
+  "elements": [
+    {
+      "path": "Practitioner",
+      "min": 0,
+      "max": "*",
+      "type": [],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "A person with a  formal responsibility in the provisioning of healthcare or related services",
+      "definition": "A person who is directly or indirectly involved in the provisioning of healthcare.",
+      "binding": null
+    },
+    {
+      "path": "Practitioner.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Logical id of this artifact",
+      "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
+      "binding": null
+    },
+    {
+      "path": "Practitioner.meta",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Meta"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Metadata about the resource",
+      "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.",
+      "binding": null
+    },
+    {
+      "path": "Practitioner.implicitRules",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "uri"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "This element is labeled as a modifier because the implicit rules may provide additional knowledge about the resource that modifies it's meaning or interpretation",
+      "mustSupport": null,
+      "short": "A set of rules under which this content was created",
+      "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.",
+      "binding": null
+    },
+    {
+      "path": "Practitioner.language",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Language of the resource content",
+      "definition": "The base language in which the resource is written.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/languages",
+        "strength": "preferred",
+        "description": "A human language."
+      }
+    },
+    {
+      "path": "Practitioner.text",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Narrative"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Text summary of the resource, for human interpretation",
+      "definition": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
+      "binding": null
+    },
+    {
+      "path": "Practitioner.contained",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Resource"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Contained, inline Resources",
+      "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
+      "binding": null
+    },
+    {
+      "path": "Practitioner.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "Practitioner.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the resource that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "Practitioner.identifier",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Identifier"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "An identifier for the person as this agent",
+      "definition": "An identifier that applies to this person in this role.",
+      "binding": null
+    },
+    {
+      "path": "Practitioner.active",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "boolean"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Whether this practitioner's record is in active use",
+      "definition": "Whether this practitioner's record is in active use.",
+      "binding": null
+    },
+    {
+      "path": "Practitioner.name",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "HumanName"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The name(s) associated with the practitioner",
+      "definition": "The name(s) associated with the practitioner.",
+      "binding": null
+    },
+    {
+      "path": "Practitioner.telecom",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "ContactPoint"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "A contact detail for the practitioner (that apply to all roles)",
+      "definition": "A contact detail for the practitioner, e.g. a telephone number or an email address.",
+      "binding": null
+    },
+    {
+      "path": "Practitioner.address",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Address"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Address(es) of the practitioner that are not role specific (typically home address)",
+      "definition": "Address(es) of the practitioner that are not role specific (typically home address). \rWork addresses are not typically entered in this property as they are usually role dependent.",
+      "binding": null
+    },
+    {
+      "path": "Practitioner.gender",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "male | female | other | unknown",
+      "definition": "Administrative Gender - the gender that the person is considered to have for administration and record keeping purposes.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1",
+        "strength": "required",
+        "description": "The gender of a person used for administrative purposes."
+      }
+    },
+    {
+      "path": "Practitioner.birthDate",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "date"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The date  on which the practitioner was born",
+      "definition": "The date of birth for the practitioner.",
+      "binding": null
+    },
+    {
+      "path": "Practitioner.photo",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Attachment"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Image of the person",
+      "definition": "Image of the person.",
+      "binding": null
+    },
+    {
+      "path": "Practitioner.qualification",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Certification, licenses, or training pertaining to the provision of care",
+      "definition": "The official certifications, training, and licenses that authorize or otherwise pertain to the provision of care by the practitioner.  For example, a medical license issued by a medical board authorizing the practitioner to practice medicine within a certian locality.",
+      "binding": null
+    },
+    {
+      "path": "Practitioner.qualification.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "Practitioner.qualification.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "Practitioner.qualification.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "Practitioner.qualification.identifier",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Identifier"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "An identifier for this qualification for the practitioner",
+      "definition": "An identifier that applies to this person's qualification in this role.",
+      "binding": null
+    },
+    {
+      "path": "Practitioner.qualification.code",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Coded representation of the qualification",
+      "definition": "Coded representation of the qualification.",
+      "binding": {
+        "valueSet": "http://terminology.hl7.org/ValueSet/v2-2.7-0360",
+        "strength": "example",
+        "description": "Specific qualification the practitioner has to provide a service."
+      }
+    },
+    {
+      "path": "Practitioner.qualification.period",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Period"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Period during which the qualification is valid",
+      "definition": "Period during which the qualification is valid.",
+      "binding": null
+    },
+    {
+      "path": "Practitioner.qualification.issuer",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Organization"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Organization that regulates and issues the qualification",
+      "definition": "Organization that regulates and issues the qualification.",
+      "binding": null
+    },
+    {
+      "path": "Practitioner.communication",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "A language the practitioner can use in patient communication",
+      "definition": "A language the practitioner can use in patient communication.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/languages",
+        "strength": "preferred",
+        "description": "A human language."
+      }
+    }
+  ],
+  "search": [
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Practitioner-active",
+      "version": "4.0.1",
+      "name": "active",
+      "code": "active",
+      "type": "token",
+      "description": "Whether the practitioner record is active",
+      "expression": "Practitioner.active",
+      "xpath": "f:Practitioner/f:active",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Practitioner"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/individual-address",
+      "version": "4.0.1",
+      "name": "address",
+      "code": "address",
+      "type": "string",
+      "description": "Multiple Resources: \r\n\r\n* [Patient](patient.html): A server defined search that may match any of the string fields in the Address, including line, city, district, state, country, postalCode, and/or text\r\n* [Person](person.html): A server defined search that may match any of the string fields in the Address, including line, city, district, state, country, postalCode, and/or text\r\n* [Practitioner](practitioner.html): A server defined search that may match any of the string fields in the Address, including line, city, district, state, country, postalCode, and/or text\r\n* [RelatedPerson](relatedperson.html): A server defined search that may match any of the string fields in the Address, including line, city, district, state, country, postalCode, and/or text\r\n",
+      "expression": "Patient.address | Person.address | Practitioner.address | RelatedPerson.address",
+      "xpath": "f:Patient/f:address | f:Person/f:address | f:Practitioner/f:address | f:RelatedPerson/f:address",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Practitioner"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/individual-address-city",
+      "version": "4.0.1",
+      "name": "address-city",
+      "code": "address-city",
+      "type": "string",
+      "description": "Multiple Resources: \r\n\r\n* [Patient](patient.html): A city specified in an address\r\n* [Person](person.html): A city specified in an address\r\n* [Practitioner](practitioner.html): A city specified in an address\r\n* [RelatedPerson](relatedperson.html): A city specified in an address\r\n",
+      "expression": "Patient.address.city | Person.address.city | Practitioner.address.city | RelatedPerson.address.city",
+      "xpath": "f:Patient/f:address/f:city | f:Person/f:address/f:city | f:Practitioner/f:address/f:city | f:RelatedPerson/f:address/f:city",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Practitioner"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/individual-address-country",
+      "version": "4.0.1",
+      "name": "address-country",
+      "code": "address-country",
+      "type": "string",
+      "description": "Multiple Resources: \r\n\r\n* [Patient](patient.html): A country specified in an address\r\n* [Person](person.html): A country specified in an address\r\n* [Practitioner](practitioner.html): A country specified in an address\r\n* [RelatedPerson](relatedperson.html): A country specified in an address\r\n",
+      "expression": "Patient.address.country | Person.address.country | Practitioner.address.country | RelatedPerson.address.country",
+      "xpath": "f:Patient/f:address/f:country | f:Person/f:address/f:country | f:Practitioner/f:address/f:country | f:RelatedPerson/f:address/f:country",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Practitioner"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/individual-address-postalcode",
+      "version": "4.0.1",
+      "name": "address-postalcode",
+      "code": "address-postalcode",
+      "type": "string",
+      "description": "Multiple Resources: \r\n\r\n* [Patient](patient.html): A postalCode specified in an address\r\n* [Person](person.html): A postal code specified in an address\r\n* [Practitioner](practitioner.html): A postalCode specified in an address\r\n* [RelatedPerson](relatedperson.html): A postal code specified in an address\r\n",
+      "expression": "Patient.address.postalCode | Person.address.postalCode | Practitioner.address.postalCode | RelatedPerson.address.postalCode",
+      "xpath": "f:Patient/f:address/f:postalCode | f:Person/f:address/f:postalCode | f:Practitioner/f:address/f:postalCode | f:RelatedPerson/f:address/f:postalCode",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Practitioner"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/individual-address-state",
+      "version": "4.0.1",
+      "name": "address-state",
+      "code": "address-state",
+      "type": "string",
+      "description": "Multiple Resources: \r\n\r\n* [Patient](patient.html): A state specified in an address\r\n* [Person](person.html): A state specified in an address\r\n* [Practitioner](practitioner.html): A state specified in an address\r\n* [RelatedPerson](relatedperson.html): A state specified in an address\r\n",
+      "expression": "Patient.address.state | Person.address.state | Practitioner.address.state | RelatedPerson.address.state",
+      "xpath": "f:Patient/f:address/f:state | f:Person/f:address/f:state | f:Practitioner/f:address/f:state | f:RelatedPerson/f:address/f:state",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Practitioner"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/individual-address-use",
+      "version": "4.0.1",
+      "name": "address-use",
+      "code": "address-use",
+      "type": "token",
+      "description": "Multiple Resources: \r\n\r\n* [Patient](patient.html): A use code specified in an address\r\n* [Person](person.html): A use code specified in an address\r\n* [Practitioner](practitioner.html): A use code specified in an address\r\n* [RelatedPerson](relatedperson.html): A use code specified in an address\r\n",
+      "expression": "Patient.address.use | Person.address.use | Practitioner.address.use | RelatedPerson.address.use",
+      "xpath": "f:Patient/f:address/f:use | f:Person/f:address/f:use | f:Practitioner/f:address/f:use | f:RelatedPerson/f:address/f:use",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Practitioner"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Practitioner-communication",
+      "version": "4.0.1",
+      "name": "communication",
+      "code": "communication",
+      "type": "token",
+      "description": "One of the languages that the practitioner can communicate with",
+      "expression": "Practitioner.communication",
+      "xpath": "f:Practitioner/f:communication",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Practitioner"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/individual-email",
+      "version": "4.0.1",
+      "name": "email",
+      "code": "email",
+      "type": "token",
+      "description": "Multiple Resources: \r\n\r\n* [Patient](patient.html): A value in an email contact\r\n* [Person](person.html): A value in an email contact\r\n* [Practitioner](practitioner.html): A value in an email contact\r\n* [PractitionerRole](practitionerrole.html): A value in an email contact\r\n* [RelatedPerson](relatedperson.html): A value in an email contact\r\n",
+      "expression": "Patient.telecom.where(system='email') | Person.telecom.where(system='email') | Practitioner.telecom.where(system='email') | PractitionerRole.telecom.where(system='email') | RelatedPerson.telecom.where(system='email')",
+      "xpath": "f:Patient/f:telecom[system/@value='email'] | f:Person/f:telecom[system/@value='email'] | f:Practitioner/f:telecom[system/@value='email'] | f:PractitionerRole/f:telecom[system/@value='email'] | f:RelatedPerson/f:telecom[system/@value='email']",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Practitioner"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/individual-family",
+      "version": "4.0.1",
+      "name": "family",
+      "code": "family",
+      "type": "string",
+      "description": "Multiple Resources: \r\n\r\n* [Patient](patient.html): A portion of the family name of the patient\r\n* [Practitioner](practitioner.html): A portion of the family name\r\n",
+      "expression": "Patient.name.family | Practitioner.name.family",
+      "xpath": "f:Patient/f:name/f:family | f:Practitioner/f:name/f:family",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Practitioner"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/individual-gender",
+      "version": "4.0.1",
+      "name": "gender",
+      "code": "gender",
+      "type": "token",
+      "description": "Multiple Resources: \r\n\r\n* [Patient](patient.html): Gender of the patient\r\n* [Person](person.html): The gender of the person\r\n* [Practitioner](practitioner.html): Gender of the practitioner\r\n* [RelatedPerson](relatedperson.html): Gender of the related person\r\n",
+      "expression": "Patient.gender | Person.gender | Practitioner.gender | RelatedPerson.gender",
+      "xpath": "f:Patient/f:gender | f:Person/f:gender | f:Practitioner/f:gender | f:RelatedPerson/f:gender",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Practitioner"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/individual-given",
+      "version": "4.0.1",
+      "name": "given",
+      "code": "given",
+      "type": "string",
+      "description": "Multiple Resources: \r\n\r\n* [Patient](patient.html): A portion of the given name of the patient\r\n* [Practitioner](practitioner.html): A portion of the given name\r\n",
+      "expression": "Patient.name.given | Practitioner.name.given",
+      "xpath": "f:Patient/f:name/f:given | f:Practitioner/f:name/f:given",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Practitioner"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Practitioner-identifier",
+      "version": "4.0.1",
+      "name": "identifier",
+      "code": "identifier",
+      "type": "token",
+      "description": "A practitioner's Identifier",
+      "expression": "Practitioner.identifier",
+      "xpath": "f:Practitioner/f:identifier",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Practitioner"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Practitioner-name",
+      "version": "4.0.1",
+      "name": "name",
+      "code": "name",
+      "type": "string",
+      "description": "A server defined search that may match any of the string fields in the HumanName, including family, give, prefix, suffix, suffix, and/or text",
+      "expression": "Practitioner.name",
+      "xpath": "f:Practitioner/f:name",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Practitioner"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/individual-phone",
+      "version": "4.0.1",
+      "name": "phone",
+      "code": "phone",
+      "type": "token",
+      "description": "Multiple Resources: \r\n\r\n* [Patient](patient.html): A value in a phone contact\r\n* [Person](person.html): A value in a phone contact\r\n* [Practitioner](practitioner.html): A value in a phone contact\r\n* [PractitionerRole](practitionerrole.html): A value in a phone contact\r\n* [RelatedPerson](relatedperson.html): A value in a phone contact\r\n",
+      "expression": "Patient.telecom.where(system='phone') | Person.telecom.where(system='phone') | Practitioner.telecom.where(system='phone') | PractitionerRole.telecom.where(system='phone') | RelatedPerson.telecom.where(system='phone')",
+      "xpath": "f:Patient/f:telecom[system/@value='phone'] | f:Person/f:telecom[system/@value='phone'] | f:Practitioner/f:telecom[system/@value='phone'] | f:PractitionerRole/f:telecom[system/@value='phone'] | f:RelatedPerson/f:telecom[system/@value='phone']",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Practitioner"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/individual-phonetic",
+      "version": "4.0.1",
+      "name": "phonetic",
+      "code": "phonetic",
+      "type": "string",
+      "description": "Multiple Resources: \r\n\r\n* [Patient](patient.html): A portion of either family or given name using some kind of phonetic matching algorithm\r\n* [Person](person.html): A portion of name using some kind of phonetic matching algorithm\r\n* [Practitioner](practitioner.html): A portion of either family or given name using some kind of phonetic matching algorithm\r\n* [RelatedPerson](relatedperson.html): A portion of name using some kind of phonetic matching algorithm\r\n",
+      "expression": "Patient.name | Person.name | Practitioner.name | RelatedPerson.name",
+      "xpath": "f:Patient/f:name | f:Person/f:name | f:Practitioner/f:name | f:RelatedPerson/f:name",
+      "xpathUsage": "phonetic",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Practitioner"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/individual-telecom",
+      "version": "4.0.1",
+      "name": "telecom",
+      "code": "telecom",
+      "type": "token",
+      "description": "Multiple Resources: \r\n\r\n* [Patient](patient.html): The value in any kind of telecom details of the patient\r\n* [Person](person.html): The value in any kind of contact\r\n* [Practitioner](practitioner.html): The value in any kind of contact\r\n* [PractitionerRole](practitionerrole.html): The value in any kind of contact\r\n* [RelatedPerson](relatedperson.html): The value in any kind of contact\r\n",
+      "expression": "Patient.telecom | Person.telecom | Practitioner.telecom | PractitionerRole.telecom | RelatedPerson.telecom",
+      "xpath": "f:Patient/f:telecom | f:Person/f:telecom | f:Practitioner/f:telecom | f:PractitionerRole/f:telecom | f:RelatedPerson/f:telecom",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Practitioner"
+      ]
+    }
+  ]
+}

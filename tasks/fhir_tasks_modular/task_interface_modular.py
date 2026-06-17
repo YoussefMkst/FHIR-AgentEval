@@ -73,6 +73,7 @@ class TaskInterfaceModular(ABC):
             "Accept": "application/fhir+json",
             "Cache-Control": "no-cache" #just added, TEST IT OUT
         }
+        self.session = requests.Session()  # pooled HTTP connections (keep-alive)
 
         self.RESOURCE_TYPES = [
             "Patient",
@@ -247,12 +248,25 @@ class TaskInterfaceModular(ABC):
             }
         return out
 
+    def _request_with_retry(self, method: str, url: str, **kwargs):
+        """requests.<method> with retry on transient connection errors.
+        Attempts: 3, backoff: 0.5s, 1.5s. Non-connection errors propagate."""
+        last_exc = None
+        for attempt in range(3):
+            try:
+                return self.session.request(method, url, **kwargs)
+            except (requests.exceptions.ConnectionError, requests.exceptions.Timeout) as e:
+                last_exc = e
+                if attempt < 2:
+                    time.sleep(0.5 * (3 ** attempt))  # 0.5s, 1.5s
+        raise last_exc
+
     def get_resource_ids(self, resource_type):
         """Fetches all resource IDs for the given resource type, handling pagination."""
         url = f"{self.FHIR_SERVER_URL}/{resource_type}?_count=1000"
         resource_ids = []
         while url:
-            response = requests.get(url, headers=self.HEADERS)
+            response = self._request_with_retry("GET", url, headers=self.HEADERS)
             if response.status_code != 200:
                 logger.error(f"Failed to fetch {resource_type}: {response.status_code}")
                 break
@@ -280,7 +294,7 @@ class TaskInterfaceModular(ABC):
         # Find any resources that reference this one
         url = f"{self.FHIR_SERVER_URL}/{resource_type}/{resource_id}"
         rev_url = f"{self.FHIR_SERVER_URL}/{resource_type}?_id={resource_id}&_revinclude:iterate=*"
-        response = requests.get(rev_url, headers=self.HEADERS)
+        response = self._request_with_retry("GET", rev_url, headers=self.HEADERS)
         if response.status_code != 200:
             logger.error(f"Failed to revinclude for {url}")
             logger.error(response.json())
@@ -295,7 +309,7 @@ class TaskInterfaceModular(ABC):
                 self.delete_resource(child_type, child_id)
         
         # Now delete the resource itself
-        del_response = requests.delete(url, headers=self.HEADERS)
+        del_response = self._request_with_retry("DELETE", url, headers=self.HEADERS)
         logger.debug(f"DELETE {url}: {del_response.status_code}")
         time.sleep(0.1)  # avoid overwhelming the server
         
@@ -351,7 +365,8 @@ class TaskInterfaceModular(ABC):
             "Content-Type": "application/fhir+json",
             "Accept": "application/fhir+json",
         }
-        response = requests.post(url, json=resource, headers=headers)
+        response = self._request_with_retry("POST", url, json=resource, headers=headers)
+        time.sleep(0.1)  # throttle bursty seed traffic to avoid TCP RSTs
 
         if response.status_code in [200, 201]:
             return response
@@ -359,7 +374,7 @@ class TaskInterfaceModular(ABC):
             raise ValueError(
                 f"Failed to create {resource['resourceType']}: {response.text}"
             )
-            
+
 
     def upsert_to_fhir(self,resource):
         """
@@ -370,7 +385,8 @@ class TaskInterfaceModular(ABC):
             "Content-Type": "application/fhir+json",
             "Accept": "application/fhir+json",
         }
-        response = requests.put(url, json=resource, headers=headers)
+        response = self._request_with_retry("PUT", url, json=resource, headers=headers)
+        time.sleep(0.1)  # throttle bursty seed traffic to avoid TCP RSTs
 
         if response.status_code in [200, 201]:
             logger.debug(

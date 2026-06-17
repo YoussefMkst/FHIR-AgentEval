@@ -1,0 +1,4896 @@
+{
+  "resourceType": "ExplanationOfBenefit",
+  "fhir_version": "4.0.1",
+  "source_urls": {
+    "structureDefinition": "http://hl7.org/fhir/StructureDefinition/ExplanationOfBenefit"
+  },
+  "elements": [
+    {
+      "path": "ExplanationOfBenefit",
+      "min": 0,
+      "max": "*",
+      "type": [],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Explanation of Benefit resource",
+      "definition": "This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Logical id of this artifact",
+      "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.meta",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Meta"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Metadata about the resource",
+      "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.implicitRules",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "uri"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "This element is labeled as a modifier because the implicit rules may provide additional knowledge about the resource that modifies it's meaning or interpretation",
+      "mustSupport": null,
+      "short": "A set of rules under which this content was created",
+      "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.language",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Language of the resource content",
+      "definition": "The base language in which the resource is written.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/languages",
+        "strength": "preferred",
+        "description": "A human language."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.text",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Narrative"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Text summary of the resource, for human interpretation",
+      "definition": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.contained",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Resource"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Contained, inline Resources",
+      "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the resource that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.identifier",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Identifier"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Business Identifier for the resource",
+      "definition": "A unique identifier assigned to this explanation of benefit.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.status",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "This element is labeled as a modifier because it is a status element that contains status entered-in-error which means that the resource should not be treated as valid",
+      "mustSupport": null,
+      "short": "active | cancelled | draft | entered-in-error",
+      "definition": "The status of the resource instance.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/explanationofbenefit-status|4.0.1",
+        "strength": "required",
+        "description": "A code specifying the state of the resource instance."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.type",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Category or discipline",
+      "definition": "The category of claim, e.g. oral, pharmacy, vision, institutional, professional.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/claim-type",
+        "strength": "extensible",
+        "description": "The type or discipline-style of the claim."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.subType",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "More granular claim type",
+      "definition": "A finer grained suite of claim type codes which may convey additional information such as Inpatient vs Outpatient and/or a specialty service.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/claim-subtype",
+        "strength": "example",
+        "description": "A more granular claim typecode."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.use",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "claim | preauthorization | predetermination",
+      "definition": "A code to indicate whether the nature of the request is: to request adjudication of products and services previously rendered; or requesting authorization and adjudication for provision in the future; or requesting the non-binding adjudication of the listed products and services which could be provided in the future.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/claim-use|4.0.1",
+        "strength": "required",
+        "description": "Complete, proposed, exploratory, other."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.patient",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Patient"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The recipient of the products and services",
+      "definition": "The party to whom the professional services and/or products have been supplied or are being considered and for whom actual for forecast reimbursement is sought.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.billablePeriod",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Period"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Relevant time frame for the claim",
+      "definition": "The period for which charges are being submitted.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.created",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "dateTime"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Response creation date",
+      "definition": "The date this resource was created.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.enterer",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Practitioner",
+            "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Author of the claim",
+      "definition": "Individual who created the claim, predetermination or preauthorization.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.insurer",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Organization"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Party responsible for reimbursement",
+      "definition": "The party responsible for authorization, adjudication and reimbursement.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.provider",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Practitioner",
+            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+            "http://hl7.org/fhir/StructureDefinition/Organization"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Party responsible for the claim",
+      "definition": "The provider which is responsible for the claim, predetermination or preauthorization.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.priority",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Desired processing urgency",
+      "definition": "The provider-required urgency of processing the request. Typical values include: stat, routine deferred.",
+      "binding": {
+        "valueSet": "http://terminology.hl7.org/CodeSystem/processpriority",
+        "strength": "example",
+        "description": "The timeliness with which processing is required: stat, normal, deferred."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.fundsReserveRequested",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "For whom to reserve funds",
+      "definition": "A code to indicate whether and for whom funds are to be reserved for future claims.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/fundsreserve",
+        "strength": "example",
+        "description": "For whom funds are to be reserved: (Patient, Provider, None)."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.fundsReserve",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Funds reserved status",
+      "definition": "A code, used only on a response to a preauthorization, to indicate whether the benefits payable have been reserved and for whom.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/fundsreserve",
+        "strength": "example",
+        "description": "For whom funds are to be reserved: (Patient, Provider, None)."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.related",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Prior or corollary claims",
+      "definition": "Other claims which are related to this claim such as prior submissions or claims for related services or for the same event.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.related.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.related.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.related.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.related.claim",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Claim"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Reference to the related claim",
+      "definition": "Reference to a related claim.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.related.relationship",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "How the reference claim is related",
+      "definition": "A code to convey how the claims are related.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/related-claim-relationship",
+        "strength": "example",
+        "description": "Relationship of this claim to a related Claim."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.related.reference",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Identifier"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "File or case reference",
+      "definition": "An alternate organizational reference to the case or file to which this particular claim pertains.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.prescription",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
+            "http://hl7.org/fhir/StructureDefinition/VisionPrescription"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Prescription authorizing services or products",
+      "definition": "Prescription to support the dispensing of pharmacy, device or vision products.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.originalPrescription",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/MedicationRequest"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Original prescription if superceded by fulfiller",
+      "definition": "Original prescription which has been superseded by this prescription to support the dispensing of pharmacy services, medications or products.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.payee",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Recipient of benefits payable",
+      "definition": "The party to be reimbursed for cost of the products and services according to the terms of the policy.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.payee.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.payee.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.payee.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.payee.type",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Category of recipient",
+      "definition": "Type of Party to be reimbursed: Subscriber, provider, other.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/payeetype",
+        "strength": "example",
+        "description": "A code for the party to be reimbursed."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.payee.party",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Practitioner",
+            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+            "http://hl7.org/fhir/StructureDefinition/Organization",
+            "http://hl7.org/fhir/StructureDefinition/Patient",
+            "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Recipient reference",
+      "definition": "Reference to the individual or organization to whom any payment will be made.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.referral",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/ServiceRequest"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Treatment Referral",
+      "definition": "A reference to a referral resource.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.facility",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Location"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Servicing Facility",
+      "definition": "Facility where the services were provided.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.claim",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Claim"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Claim reference",
+      "definition": "The business identifier for the instance of the adjudication request: claim predetermination or preauthorization.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.claimResponse",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/ClaimResponse"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Claim response reference",
+      "definition": "The business identifier for the instance of the adjudication response: claim, predetermination or preauthorization response.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.outcome",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "queued | complete | error | partial",
+      "definition": "The outcome of the claim, predetermination, or preauthorization processing.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/remittance-outcome|4.0.1",
+        "strength": "required",
+        "description": "The result of the claim processing."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.disposition",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Disposition Message",
+      "definition": "A human readable description of the status of the adjudication.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.preAuthRef",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Preauthorization reference",
+      "definition": "Reference from the Insurer which is used in later communications which refers to this adjudication.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.preAuthRefPeriod",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Period"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Preauthorization in-effect period",
+      "definition": "The timeframe during which the supplied preauthorization reference may be quoted on claims to obtain the adjudication as provided.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.careTeam",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Care Team members",
+      "definition": "The members of the team who provided the products and services.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.careTeam.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.careTeam.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.careTeam.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.careTeam.sequence",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "positiveInt"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Order of care team",
+      "definition": "A number to uniquely identify care team entries.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.careTeam.provider",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Practitioner",
+            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+            "http://hl7.org/fhir/StructureDefinition/Organization"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Practitioner or organization",
+      "definition": "Member of the team who provided the product or service.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.careTeam.responsible",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "boolean"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Indicator of the lead practitioner",
+      "definition": "The party who is billing and/or responsible for the claimed products or services.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.careTeam.role",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Function within the team",
+      "definition": "The lead, assisting or supervising practitioner and their discipline if a multidisciplinary team.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/claim-careteamrole",
+        "strength": "example",
+        "description": "The role codes for the care team members."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.careTeam.qualification",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Practitioner credential or specialization",
+      "definition": "The qualification of the practitioner which is applicable for this service.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/provider-qualification",
+        "strength": "example",
+        "description": "Provider professional qualifications."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.supportingInfo",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Supporting information",
+      "definition": "Additional information codes regarding exceptions, special considerations, the condition, situation, prior or concurrent issues.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.supportingInfo.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.supportingInfo.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.supportingInfo.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.supportingInfo.sequence",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "positiveInt"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Information instance identifier",
+      "definition": "A number to uniquely identify supporting information entries.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.supportingInfo.category",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Classification of the supplied information",
+      "definition": "The general class of the information supplied: information; exception; accident, employment; onset, etc.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/claim-informationcategory",
+        "strength": "example",
+        "description": "The valuset used for additional information category codes."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.supportingInfo.code",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Type of information",
+      "definition": "System and code pertaining to the specific information regarding special conditions relating to the setting, treatment or patient  for which care is sought.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/claim-exception",
+        "strength": "example",
+        "description": "The valuset used for additional information codes."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.supportingInfo.timing[x]",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "date"
+        },
+        {
+          "code": "Period"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "When it occurred",
+      "definition": "The date when or period to which this information refers.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.supportingInfo.value[x]",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "boolean"
+        },
+        {
+          "code": "string"
+        },
+        {
+          "code": "Quantity"
+        },
+        {
+          "code": "Attachment"
+        },
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Resource"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Data to be provided",
+      "definition": "Additional data or information such as resources, documents, images etc. including references to the data or the actual inclusion of the data.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.supportingInfo.reason",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Coding"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Explanation for the information",
+      "definition": "Provides the reason in the situation where a reason code is required in addition to the content.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/missing-tooth-reason",
+        "strength": "example",
+        "description": "Reason codes for the missing teeth."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.diagnosis",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Pertinent diagnosis information",
+      "definition": "Information about diagnoses relevant to the claim items.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.diagnosis.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.diagnosis.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.diagnosis.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.diagnosis.sequence",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "positiveInt"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Diagnosis instance identifier",
+      "definition": "A number to uniquely identify diagnosis entries.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.diagnosis.diagnosis[x]",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        },
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Condition"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Nature of illness or problem",
+      "definition": "The nature of illness or problem in a coded form or as a reference to an external defined Condition.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/icd-10",
+        "strength": "example",
+        "description": "ICD10 Diagnostic codes."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.diagnosis.type",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Timing or nature of the diagnosis",
+      "definition": "When the condition was observed or the relative ranking.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/ex-diagnosistype",
+        "strength": "example",
+        "description": "The type of the diagnosis: admitting, principal, discharge."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.diagnosis.onAdmission",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Present on admission",
+      "definition": "Indication of whether the diagnosis was present on admission to a facility.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/ex-diagnosis-on-admission",
+        "strength": "example",
+        "description": "Present on admission."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.diagnosis.packageCode",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Package billing code",
+      "definition": "A package billing code or bundle code used to group products and services to a particular health condition (such as heart attack) which is based on a predetermined grouping code system.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/ex-diagnosisrelatedgroup",
+        "strength": "example",
+        "description": "The DRG codes associated with the diagnosis."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.procedure",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Clinical procedures performed",
+      "definition": "Procedures performed on the patient relevant to the billing items with the claim.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.procedure.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.procedure.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.procedure.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.procedure.sequence",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "positiveInt"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Procedure instance identifier",
+      "definition": "A number to uniquely identify procedure entries.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.procedure.type",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Category of Procedure",
+      "definition": "When the condition was observed or the relative ranking.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/ex-procedure-type",
+        "strength": "example",
+        "description": "Example procedure type codes."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.procedure.date",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "dateTime"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "When the procedure was performed",
+      "definition": "Date and optionally time the procedure was performed.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.procedure.procedure[x]",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        },
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Procedure"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Specific clinical procedure",
+      "definition": "The code or reference to a Procedure resource which identifies the clinical intervention performed.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/icd-10-procedures",
+        "strength": "example",
+        "description": "ICD10 Procedure codes."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.procedure.udi",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Device"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique device identifier",
+      "definition": "Unique Device Identifiers associated with this line item.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.precedence",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "positiveInt"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Precedence (primary, secondary, etc.)",
+      "definition": "This indicates the relative order of a series of EOBs related to different coverages for the same suite of services.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.insurance",
+      "min": 1,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Patient insurance information",
+      "definition": "Financial instruments for reimbursement for the health care products and services specified on the claim.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.insurance.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.insurance.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.insurance.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.insurance.focal",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "boolean"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Coverage to be used for adjudication",
+      "definition": "A flag to indicate that this Coverage is to be used for adjudication of this claim when set to true.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.insurance.coverage",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Coverage"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Insurance information",
+      "definition": "Reference to the insurance card level information contained in the Coverage resource. The coverage issuing insurer will use these details to locate the patient's actual coverage within the insurer's information system.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.insurance.preAuthRef",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Prior authorization reference number",
+      "definition": "Reference numbers previously provided by the insurer to the provider to be quoted on subsequent claims containing services or products related to the prior authorization.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.accident",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Details of the event",
+      "definition": "Details of a accident which resulted in injuries which required the products and services listed in the claim.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.accident.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.accident.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.accident.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.accident.date",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "date"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "When the incident occurred",
+      "definition": "Date of an accident event  related to the products and services contained in the claim.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.accident.type",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The nature of the accident",
+      "definition": "The type or context of the accident event for the purposes of selection of potential insurance coverages and determination of coordination between insurers.",
+      "binding": {
+        "valueSet": "http://terminology.hl7.org/ValueSet/v3-ActIncidentCode",
+        "strength": "extensible",
+        "description": "Type of accident: work place, auto, etc."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.accident.location[x]",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Address"
+        },
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Location"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Where the event occurred",
+      "definition": "The physical location of the accident event.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.item",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Product or service provided",
+      "definition": "A claim line. Either a simple (a product or service) or a 'group' of details which can also be a simple items or groups of sub-details.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.item.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.item.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.item.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.item.sequence",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "positiveInt"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Item instance identifier",
+      "definition": "A number to uniquely identify item entries.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.item.careTeamSequence",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "positiveInt"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Applicable care team members",
+      "definition": "Care team members related to this service or product.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.item.diagnosisSequence",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "positiveInt"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Applicable diagnoses",
+      "definition": "Diagnoses applicable for this service or product.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.item.procedureSequence",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "positiveInt"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Applicable procedures",
+      "definition": "Procedures applicable for this service or product.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.item.informationSequence",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "positiveInt"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Applicable exception and supporting information",
+      "definition": "Exceptions, special conditions and supporting information applicable for this service or product.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.item.revenue",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Revenue or cost center code",
+      "definition": "The type of revenue or cost center providing the product and/or service.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/ex-revenue-center",
+        "strength": "example",
+        "description": "Codes for the revenue or cost centers supplying the service and/or products."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.item.category",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Benefit classification",
+      "definition": "Code to identify the general type of benefits under which products and services are provided.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/ex-benefitcategory",
+        "strength": "example",
+        "description": "Benefit categories such as: oral, medical, vision, oral-basic etc."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.item.productOrService",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Billing, service, product, or drug code",
+      "definition": "When the value is a group code then this item collects a set of related claim details, otherwise this contains the product, service, drug or other billing code for the item.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/service-uscls",
+        "strength": "example",
+        "description": "Allowable service and product codes."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.item.modifier",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Product or service billing modifiers",
+      "definition": "Item typification or modifiers codes to convey additional context for the product or service.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/claim-modifiers",
+        "strength": "example",
+        "description": "Item type or modifiers codes, eg for Oral whether the treatment is cosmetic or associated with TMJ, or an appliance was lost or stolen."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.item.programCode",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Program the product or service is provided under",
+      "definition": "Identifies the program under which this may be recovered.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/ex-program-code",
+        "strength": "example",
+        "description": "Program specific reason codes."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.item.serviced[x]",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "date"
+        },
+        {
+          "code": "Period"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Date or dates of service or product delivery",
+      "definition": "The date or dates when the service or product was supplied, performed or completed.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.item.location[x]",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        },
+        {
+          "code": "Address"
+        },
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Location"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Place of service or where product was supplied",
+      "definition": "Where the product or service was provided.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/service-place",
+        "strength": "example",
+        "description": "Place where the service is rendered."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.item.quantity",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Quantity",
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/SimpleQuantity"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Count of products or services",
+      "definition": "The number of repetitions of a service or product.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.item.unitPrice",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Money"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Fee, charge or cost per item",
+      "definition": "If the item is not a group then this is the fee for the product or service, otherwise this is the total of the fees for the details of the group.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.item.factor",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "decimal"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Price scaling factor",
+      "definition": "A real number that represents a multiplier used in determining the overall value of services delivered and/or goods received. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.item.net",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Money"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Total item cost",
+      "definition": "The quantity times the unit price for an additional service or product or charge.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.item.udi",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Device"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique device identifier",
+      "definition": "Unique Device Identifiers associated with this line item.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.item.bodySite",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Anatomical location",
+      "definition": "Physical service site on the patient (limb, tooth, etc.).",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/tooth",
+        "strength": "example",
+        "description": "The code for the teeth, quadrant, sextant and arch."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.item.subSite",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Anatomical sub-location",
+      "definition": "A region or surface of the bodySite, e.g. limb region or tooth surface(s).",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/surface",
+        "strength": "example",
+        "description": "The code for the tooth surface and surface combinations."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.item.encounter",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Encounter"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Encounters related to this billed item",
+      "definition": "A billed item may include goods or services provided in multiple encounters.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.item.noteNumber",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "positiveInt"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Applicable note numbers",
+      "definition": "The numbers associated with notes below which apply to the adjudication of this item.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.item.adjudication",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Adjudication details",
+      "definition": "If this item is a group then the values here are a summary of the adjudication of the detail items. If this item is a simple product or service then this is the result of the adjudication of this item.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.item.adjudication.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.item.adjudication.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.item.adjudication.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.item.adjudication.category",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Type of adjudication information",
+      "definition": "A code to indicate the information type of this adjudication record. Information types may include: the value submitted, maximum values or percentages allowed or payable under the plan, amounts that the patient is responsible for in-aggregate or pertaining to this item, amounts paid by other coverages, and the benefit payable for this item.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/adjudication",
+        "strength": "example",
+        "description": "The adjudication codes."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.item.adjudication.reason",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Explanation of adjudication outcome",
+      "definition": "A code supporting the understanding of the adjudication result and explaining variance from expected amount.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/adjudication-reason",
+        "strength": "example",
+        "description": "Adjudication reason codes."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.item.adjudication.amount",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Money"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Monetary amount",
+      "definition": "Monetary amount associated with the category.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.item.adjudication.value",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "decimal"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Non-monitary value",
+      "definition": "A non-monetary value associated with the category. Mutually exclusive to the amount element above.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.item.detail",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional items",
+      "definition": "Second-tier of goods and services.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.item.detail.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.item.detail.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.item.detail.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.item.detail.sequence",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "positiveInt"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Product or service provided",
+      "definition": "A claim detail line. Either a simple (a product or service) or a 'group' of sub-details which are simple items.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.item.detail.revenue",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Revenue or cost center code",
+      "definition": "The type of revenue or cost center providing the product and/or service.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/ex-revenue-center",
+        "strength": "example",
+        "description": "Codes for the revenue or cost centers supplying the service and/or products."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.item.detail.category",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Benefit classification",
+      "definition": "Code to identify the general type of benefits under which products and services are provided.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/ex-benefitcategory",
+        "strength": "example",
+        "description": "Benefit categories such as: oral, medical, vision, oral-basic etc."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.item.detail.productOrService",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Billing, service, product, or drug code",
+      "definition": "When the value is a group code then this item collects a set of related claim details, otherwise this contains the product, service, drug or other billing code for the item.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/service-uscls",
+        "strength": "example",
+        "description": "Allowable service and product codes."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.item.detail.modifier",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Service/Product billing modifiers",
+      "definition": "Item typification or modifiers codes to convey additional context for the product or service.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/claim-modifiers",
+        "strength": "example",
+        "description": "Item type or modifiers codes, eg for Oral whether the treatment is cosmetic or associated with TMJ, or an appliance was lost or stolen."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.item.detail.programCode",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Program the product or service is provided under",
+      "definition": "Identifies the program under which this may be recovered.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/ex-program-code",
+        "strength": "example",
+        "description": "Program specific reason codes."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.item.detail.quantity",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Quantity",
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/SimpleQuantity"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Count of products or services",
+      "definition": "The number of repetitions of a service or product.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.item.detail.unitPrice",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Money"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Fee, charge or cost per item",
+      "definition": "If the item is not a group then this is the fee for the product or service, otherwise this is the total of the fees for the details of the group.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.item.detail.factor",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "decimal"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Price scaling factor",
+      "definition": "A real number that represents a multiplier used in determining the overall value of services delivered and/or goods received. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.item.detail.net",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Money"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Total item cost",
+      "definition": "The quantity times the unit price for an additional service or product or charge.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.item.detail.udi",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Device"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique device identifier",
+      "definition": "Unique Device Identifiers associated with this line item.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.item.detail.noteNumber",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "positiveInt"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Applicable note numbers",
+      "definition": "The numbers associated with notes below which apply to the adjudication of this item.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.item.detail.adjudication",
+      "min": 0,
+      "max": "*",
+      "type": [],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Detail level adjudication details",
+      "definition": "The adjudication results.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.item.detail.subDetail",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional items",
+      "definition": "Third-tier of goods and services.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.item.detail.subDetail.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.item.detail.subDetail.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.item.detail.subDetail.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.item.detail.subDetail.sequence",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "positiveInt"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Product or service provided",
+      "definition": "A claim detail line. Either a simple (a product or service) or a 'group' of sub-details which are simple items.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.item.detail.subDetail.revenue",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Revenue or cost center code",
+      "definition": "The type of revenue or cost center providing the product and/or service.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/ex-revenue-center",
+        "strength": "example",
+        "description": "Codes for the revenue or cost centers supplying the service and/or products."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.item.detail.subDetail.category",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Benefit classification",
+      "definition": "Code to identify the general type of benefits under which products and services are provided.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/ex-benefitcategory",
+        "strength": "example",
+        "description": "Benefit categories such as: oral, medical, vision, oral-basic etc."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.item.detail.subDetail.productOrService",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Billing, service, product, or drug code",
+      "definition": "When the value is a group code then this item collects a set of related claim details, otherwise this contains the product, service, drug or other billing code for the item.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/service-uscls",
+        "strength": "example",
+        "description": "Allowable service and product codes."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.item.detail.subDetail.modifier",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Service/Product billing modifiers",
+      "definition": "Item typification or modifiers codes to convey additional context for the product or service.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/claim-modifiers",
+        "strength": "example",
+        "description": "Item type or modifiers codes, eg for Oral whether the treatment is cosmetic or associated with TMJ, or an appliance was lost or stolen."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.item.detail.subDetail.programCode",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Program the product or service is provided under",
+      "definition": "Identifies the program under which this may be recovered.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/ex-program-code",
+        "strength": "example",
+        "description": "Program specific reason codes."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.item.detail.subDetail.quantity",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Quantity",
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/SimpleQuantity"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Count of products or services",
+      "definition": "The number of repetitions of a service or product.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.item.detail.subDetail.unitPrice",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Money"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Fee, charge or cost per item",
+      "definition": "If the item is not a group then this is the fee for the product or service, otherwise this is the total of the fees for the details of the group.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.item.detail.subDetail.factor",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "decimal"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Price scaling factor",
+      "definition": "A real number that represents a multiplier used in determining the overall value of services delivered and/or goods received. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.item.detail.subDetail.net",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Money"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Total item cost",
+      "definition": "The quantity times the unit price for an additional service or product or charge.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.item.detail.subDetail.udi",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Device"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique device identifier",
+      "definition": "Unique Device Identifiers associated with this line item.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.item.detail.subDetail.noteNumber",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "positiveInt"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Applicable note numbers",
+      "definition": "The numbers associated with notes below which apply to the adjudication of this item.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.item.detail.subDetail.adjudication",
+      "min": 0,
+      "max": "*",
+      "type": [],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Subdetail level adjudication details",
+      "definition": "The adjudication results.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.addItem",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Insurer added line items",
+      "definition": "The first-tier service adjudications for payor added product or service lines.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.addItem.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.addItem.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.addItem.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.addItem.itemSequence",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "positiveInt"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Item sequence number",
+      "definition": "Claim items which this service line is intended to replace.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.addItem.detailSequence",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "positiveInt"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Detail sequence number",
+      "definition": "The sequence number of the details within the claim item which this line is intended to replace.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.addItem.subDetailSequence",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "positiveInt"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Subdetail sequence number",
+      "definition": "The sequence number of the sub-details woithin the details within the claim item which this line is intended to replace.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.addItem.provider",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Practitioner",
+            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+            "http://hl7.org/fhir/StructureDefinition/Organization"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Authorized providers",
+      "definition": "The providers who are authorized for the services rendered to the patient.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.addItem.productOrService",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Billing, service, product, or drug code",
+      "definition": "When the value is a group code then this item collects a set of related claim details, otherwise this contains the product, service, drug or other billing code for the item.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/service-uscls",
+        "strength": "example",
+        "description": "Allowable service and product codes."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.addItem.modifier",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Service/Product billing modifiers",
+      "definition": "Item typification or modifiers codes to convey additional context for the product or service.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/claim-modifiers",
+        "strength": "example",
+        "description": "Item type or modifiers codes, eg for Oral whether the treatment is cosmetic or associated with TMJ, or an appliance was lost or stolen."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.addItem.programCode",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Program the product or service is provided under",
+      "definition": "Identifies the program under which this may be recovered.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/ex-program-code",
+        "strength": "example",
+        "description": "Program specific reason codes."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.addItem.serviced[x]",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "date"
+        },
+        {
+          "code": "Period"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Date or dates of service or product delivery",
+      "definition": "The date or dates when the service or product was supplied, performed or completed.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.addItem.location[x]",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        },
+        {
+          "code": "Address"
+        },
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Location"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Place of service or where product was supplied",
+      "definition": "Where the product or service was provided.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/service-place",
+        "strength": "example",
+        "description": "Place where the service is rendered."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.addItem.quantity",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Quantity",
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/SimpleQuantity"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Count of products or services",
+      "definition": "The number of repetitions of a service or product.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.addItem.unitPrice",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Money"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Fee, charge or cost per item",
+      "definition": "If the item is not a group then this is the fee for the product or service, otherwise this is the total of the fees for the details of the group.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.addItem.factor",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "decimal"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Price scaling factor",
+      "definition": "A real number that represents a multiplier used in determining the overall value of services delivered and/or goods received. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.addItem.net",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Money"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Total item cost",
+      "definition": "The quantity times the unit price for an additional service or product or charge.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.addItem.bodySite",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Anatomical location",
+      "definition": "Physical service site on the patient (limb, tooth, etc.).",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/tooth",
+        "strength": "example",
+        "description": "The code for the teeth, quadrant, sextant and arch."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.addItem.subSite",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Anatomical sub-location",
+      "definition": "A region or surface of the bodySite, e.g. limb region or tooth surface(s).",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/surface",
+        "strength": "example",
+        "description": "The code for the tooth surface and surface combinations."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.addItem.noteNumber",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "positiveInt"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Applicable note numbers",
+      "definition": "The numbers associated with notes below which apply to the adjudication of this item.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.addItem.adjudication",
+      "min": 0,
+      "max": "*",
+      "type": [],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Added items adjudication",
+      "definition": "The adjudication results.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.addItem.detail",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Insurer added line items",
+      "definition": "The second-tier service adjudications for payor added services.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.addItem.detail.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.addItem.detail.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.addItem.detail.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.addItem.detail.productOrService",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Billing, service, product, or drug code",
+      "definition": "When the value is a group code then this item collects a set of related claim details, otherwise this contains the product, service, drug or other billing code for the item.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/service-uscls",
+        "strength": "example",
+        "description": "Allowable service and product codes."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.addItem.detail.modifier",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Service/Product billing modifiers",
+      "definition": "Item typification or modifiers codes to convey additional context for the product or service.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/claim-modifiers",
+        "strength": "example",
+        "description": "Item type or modifiers codes, eg for Oral whether the treatment is cosmetic or associated with TMJ, or an appliance was lost or stolen."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.addItem.detail.quantity",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Quantity",
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/SimpleQuantity"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Count of products or services",
+      "definition": "The number of repetitions of a service or product.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.addItem.detail.unitPrice",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Money"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Fee, charge or cost per item",
+      "definition": "If the item is not a group then this is the fee for the product or service, otherwise this is the total of the fees for the details of the group.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.addItem.detail.factor",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "decimal"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Price scaling factor",
+      "definition": "A real number that represents a multiplier used in determining the overall value of services delivered and/or goods received. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.addItem.detail.net",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Money"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Total item cost",
+      "definition": "The quantity times the unit price for an additional service or product or charge.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.addItem.detail.noteNumber",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "positiveInt"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Applicable note numbers",
+      "definition": "The numbers associated with notes below which apply to the adjudication of this item.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.addItem.detail.adjudication",
+      "min": 0,
+      "max": "*",
+      "type": [],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Added items adjudication",
+      "definition": "The adjudication results.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.addItem.detail.subDetail",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Insurer added line items",
+      "definition": "The third-tier service adjudications for payor added services.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.addItem.detail.subDetail.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.addItem.detail.subDetail.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.addItem.detail.subDetail.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.addItem.detail.subDetail.productOrService",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Billing, service, product, or drug code",
+      "definition": "When the value is a group code then this item collects a set of related claim details, otherwise this contains the product, service, drug or other billing code for the item.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/service-uscls",
+        "strength": "example",
+        "description": "Allowable service and product codes."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.addItem.detail.subDetail.modifier",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Service/Product billing modifiers",
+      "definition": "Item typification or modifiers codes to convey additional context for the product or service.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/claim-modifiers",
+        "strength": "example",
+        "description": "Item type or modifiers codes, eg for Oral whether the treatment is cosmetic or associated with TMJ, or an appliance was lost or stolen."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.addItem.detail.subDetail.quantity",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Quantity",
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/SimpleQuantity"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Count of products or services",
+      "definition": "The number of repetitions of a service or product.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.addItem.detail.subDetail.unitPrice",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Money"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Fee, charge or cost per item",
+      "definition": "If the item is not a group then this is the fee for the product or service, otherwise this is the total of the fees for the details of the group.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.addItem.detail.subDetail.factor",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "decimal"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Price scaling factor",
+      "definition": "A real number that represents a multiplier used in determining the overall value of services delivered and/or goods received. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.addItem.detail.subDetail.net",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Money"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Total item cost",
+      "definition": "The quantity times the unit price for an additional service or product or charge.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.addItem.detail.subDetail.noteNumber",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "positiveInt"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Applicable note numbers",
+      "definition": "The numbers associated with notes below which apply to the adjudication of this item.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.addItem.detail.subDetail.adjudication",
+      "min": 0,
+      "max": "*",
+      "type": [],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Added items adjudication",
+      "definition": "The adjudication results.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.adjudication",
+      "min": 0,
+      "max": "*",
+      "type": [],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Header-level adjudication",
+      "definition": "The adjudication results which are presented at the header level rather than at the line-item or add-item levels.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.total",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Adjudication totals",
+      "definition": "Categorized monetary totals for the adjudication.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.total.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.total.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.total.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.total.category",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Type of adjudication information",
+      "definition": "A code to indicate the information type of this adjudication record. Information types may include: the value submitted, maximum values or percentages allowed or payable under the plan, amounts that the patient is responsible for in aggregate or pertaining to this item, amounts paid by other coverages, and the benefit payable for this item.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/adjudication",
+        "strength": "example",
+        "description": "The adjudication codes."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.total.amount",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "Money"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Financial total for the category",
+      "definition": "Monetary total amount associated with the category.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.payment",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Payment Details",
+      "definition": "Payment details for the adjudication of the claim.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.payment.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.payment.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.payment.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.payment.type",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Partial or complete payment",
+      "definition": "Whether this represents partial or complete payment of the benefits payable.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/ex-paymenttype",
+        "strength": "example",
+        "description": "The type (partial, complete) of the payment."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.payment.adjustment",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Money"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Payment adjustment for non-claim issues",
+      "definition": "Total amount of all adjustments to this payment included in this transaction which are not related to this claim's adjudication.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.payment.adjustmentReason",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Explanation for the variance",
+      "definition": "Reason for the payment adjustment.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/payment-adjustment-reason",
+        "strength": "example",
+        "description": "Payment Adjustment reason codes."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.payment.date",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "date"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Expected date of payment",
+      "definition": "Estimated date the payment will be issued or the actual issue date of payment.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.payment.amount",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Money"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Payable amount after adjustment",
+      "definition": "Benefits payable less any payment adjustment.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.payment.identifier",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Identifier"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Business identifier for the payment",
+      "definition": "Issuer's unique identifier for the payment instrument.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.formCode",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Printed form identifier",
+      "definition": "A code for the form to be used for printing the content.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/forms",
+        "strength": "example",
+        "description": "The forms codes."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.form",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Attachment"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Printed reference or actual form",
+      "definition": "The actual form, by reference or inclusion, for printing the content or an EOB.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.processNote",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Note concerning adjudication",
+      "definition": "A note that describes or explains adjudication results in a human readable form.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.processNote.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.processNote.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.processNote.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.processNote.number",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "positiveInt"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Note instance identifier",
+      "definition": "A number to uniquely identify a note entry.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.processNote.type",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "display | print | printoper",
+      "definition": "The business purpose of the note text.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/note-type|4.0.1",
+        "strength": "required",
+        "description": "The presentation types of notes."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.processNote.text",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Note explanatory text",
+      "definition": "The explanation or description associated with the processing.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.processNote.language",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Language of the text",
+      "definition": "A code to define the language used in the text of the note.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/languages",
+        "strength": "preferred",
+        "description": "A human language."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.benefitPeriod",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Period"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "When the benefits are applicable",
+      "definition": "The term of the benefits documented in this response.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.benefitBalance",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Balance by Benefit Category",
+      "definition": "Balance by Benefit Category.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.benefitBalance.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.benefitBalance.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.benefitBalance.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.benefitBalance.category",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Benefit classification",
+      "definition": "Code to identify the general type of benefits under which products and services are provided.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/ex-benefitcategory",
+        "strength": "example",
+        "description": "Benefit categories such as: oral, medical, vision, oral-basic etc."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.benefitBalance.excluded",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "boolean"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Excluded from the plan",
+      "definition": "True if the indicated class of service is excluded from the plan, missing or False indicates the product or service is included in the coverage.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.benefitBalance.name",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Short name for the benefit",
+      "definition": "A short name or tag for the benefit.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.benefitBalance.description",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Description of the benefit or services covered",
+      "definition": "A richer description of the benefit or services covered.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.benefitBalance.network",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "In or out of network",
+      "definition": "Is a flag to indicate whether the benefits refer to in-network providers or out-of-network providers.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/benefit-network",
+        "strength": "example",
+        "description": "Code to classify in or out of network services."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.benefitBalance.unit",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Individual or family",
+      "definition": "Indicates if the benefits apply to an individual or to the family.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/benefit-unit",
+        "strength": "example",
+        "description": "Unit covered/serviced - individual or family."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.benefitBalance.term",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Annual or lifetime",
+      "definition": "The term or period of the values such as 'maximum lifetime benefit' or 'maximum annual visits'.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/benefit-term",
+        "strength": "example",
+        "description": "Coverage unit - annual, lifetime."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.benefitBalance.financial",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Benefit Summary",
+      "definition": "Benefits Used to date.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.benefitBalance.financial.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.benefitBalance.financial.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.benefitBalance.financial.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.benefitBalance.financial.type",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Benefit classification",
+      "definition": "Classification of benefit being provided.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/benefit-type",
+        "strength": "example",
+        "description": "Deductable, visits, co-pay, etc."
+      }
+    },
+    {
+      "path": "ExplanationOfBenefit.benefitBalance.financial.allowed[x]",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "unsignedInt"
+        },
+        {
+          "code": "string"
+        },
+        {
+          "code": "Money"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Benefits allowed",
+      "definition": "The quantity of the benefit which is permitted under the coverage.",
+      "binding": null
+    },
+    {
+      "path": "ExplanationOfBenefit.benefitBalance.financial.used[x]",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "unsignedInt"
+        },
+        {
+          "code": "Money"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Benefits used",
+      "definition": "The quantity of the benefit which have been consumed to date.",
+      "binding": null
+    }
+  ],
+  "search": [
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ExplanationOfBenefit-care-team",
+      "version": "4.0.1",
+      "name": "care-team",
+      "code": "care-team",
+      "type": "reference",
+      "description": "Member of the CareTeam",
+      "expression": "ExplanationOfBenefit.careTeam.provider",
+      "xpath": "f:ExplanationOfBenefit/f:careTeam/f:provider",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Practitioner",
+        "Organization",
+        "PractitionerRole"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ExplanationOfBenefit"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ExplanationOfBenefit-claim",
+      "version": "4.0.1",
+      "name": "claim",
+      "code": "claim",
+      "type": "reference",
+      "description": "The reference to the claim",
+      "expression": "ExplanationOfBenefit.claim",
+      "xpath": "f:ExplanationOfBenefit/f:claim",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Claim"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ExplanationOfBenefit"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ExplanationOfBenefit-coverage",
+      "version": "4.0.1",
+      "name": "coverage",
+      "code": "coverage",
+      "type": "reference",
+      "description": "The plan under which the claim was adjudicated",
+      "expression": "ExplanationOfBenefit.insurance.coverage",
+      "xpath": "f:ExplanationOfBenefit/f:insurance/f:coverage",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Coverage"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ExplanationOfBenefit"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ExplanationOfBenefit-created",
+      "version": "4.0.1",
+      "name": "created",
+      "code": "created",
+      "type": "date",
+      "description": "The creation date for the EOB",
+      "expression": "ExplanationOfBenefit.created",
+      "xpath": "f:ExplanationOfBenefit/f:created",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [
+        "eq",
+        "ne",
+        "gt",
+        "ge",
+        "lt",
+        "le",
+        "sa",
+        "eb",
+        "ap"
+      ],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ExplanationOfBenefit"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ExplanationOfBenefit-detail-udi",
+      "version": "4.0.1",
+      "name": "detail-udi",
+      "code": "detail-udi",
+      "type": "reference",
+      "description": "UDI associated with a line item detail product or service",
+      "expression": "ExplanationOfBenefit.item.detail.udi",
+      "xpath": "f:ExplanationOfBenefit/f:item/f:detail/f:udi",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Device"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ExplanationOfBenefit"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ExplanationOfBenefit-disposition",
+      "version": "4.0.1",
+      "name": "disposition",
+      "code": "disposition",
+      "type": "string",
+      "description": "The contents of the disposition message",
+      "expression": "ExplanationOfBenefit.disposition",
+      "xpath": "f:ExplanationOfBenefit/f:disposition",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ExplanationOfBenefit"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ExplanationOfBenefit-encounter",
+      "version": "4.0.1",
+      "name": "encounter",
+      "code": "encounter",
+      "type": "reference",
+      "description": "Encounters associated with a billed line item",
+      "expression": "ExplanationOfBenefit.item.encounter",
+      "xpath": "f:ExplanationOfBenefit/f:item/f:encounter",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Encounter"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ExplanationOfBenefit"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ExplanationOfBenefit-enterer",
+      "version": "4.0.1",
+      "name": "enterer",
+      "code": "enterer",
+      "type": "reference",
+      "description": "The party responsible for the entry of the Claim",
+      "expression": "ExplanationOfBenefit.enterer",
+      "xpath": "f:ExplanationOfBenefit/f:enterer",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Practitioner",
+        "PractitionerRole"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ExplanationOfBenefit"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ExplanationOfBenefit-facility",
+      "version": "4.0.1",
+      "name": "facility",
+      "code": "facility",
+      "type": "reference",
+      "description": "Facility responsible for the goods and services",
+      "expression": "ExplanationOfBenefit.facility",
+      "xpath": "f:ExplanationOfBenefit/f:facility",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Location"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ExplanationOfBenefit"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ExplanationOfBenefit-identifier",
+      "version": "4.0.1",
+      "name": "identifier",
+      "code": "identifier",
+      "type": "token",
+      "description": "The business identifier of the Explanation of Benefit",
+      "expression": "ExplanationOfBenefit.identifier",
+      "xpath": "f:ExplanationOfBenefit/f:identifier",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ExplanationOfBenefit"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ExplanationOfBenefit-item-udi",
+      "version": "4.0.1",
+      "name": "item-udi",
+      "code": "item-udi",
+      "type": "reference",
+      "description": "UDI associated with a line item product or service",
+      "expression": "ExplanationOfBenefit.item.udi",
+      "xpath": "f:ExplanationOfBenefit/f:item/f:udi",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Device"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ExplanationOfBenefit"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ExplanationOfBenefit-patient",
+      "version": "4.0.1",
+      "name": "patient",
+      "code": "patient",
+      "type": "reference",
+      "description": "The reference to the patient",
+      "expression": "ExplanationOfBenefit.patient",
+      "xpath": "f:ExplanationOfBenefit/f:patient",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Patient"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ExplanationOfBenefit"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ExplanationOfBenefit-payee",
+      "version": "4.0.1",
+      "name": "payee",
+      "code": "payee",
+      "type": "reference",
+      "description": "The party receiving any payment for the Claim",
+      "expression": "ExplanationOfBenefit.payee.party",
+      "xpath": "f:ExplanationOfBenefit/f:payee/f:party",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Practitioner",
+        "Organization",
+        "Patient",
+        "PractitionerRole",
+        "RelatedPerson"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ExplanationOfBenefit"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ExplanationOfBenefit-procedure-udi",
+      "version": "4.0.1",
+      "name": "procedure-udi",
+      "code": "procedure-udi",
+      "type": "reference",
+      "description": "UDI associated with a procedure",
+      "expression": "ExplanationOfBenefit.procedure.udi",
+      "xpath": "f:ExplanationOfBenefit/f:procedure/f:udi",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Device"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ExplanationOfBenefit"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ExplanationOfBenefit-provider",
+      "version": "4.0.1",
+      "name": "provider",
+      "code": "provider",
+      "type": "reference",
+      "description": "The reference to the provider",
+      "expression": "ExplanationOfBenefit.provider",
+      "xpath": "f:ExplanationOfBenefit/f:provider",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Practitioner",
+        "Organization",
+        "PractitionerRole"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ExplanationOfBenefit"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ExplanationOfBenefit-status",
+      "version": "4.0.1",
+      "name": "status",
+      "code": "status",
+      "type": "token",
+      "description": "Status of the instance",
+      "expression": "ExplanationOfBenefit.status",
+      "xpath": "f:ExplanationOfBenefit/f:status",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ExplanationOfBenefit"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ExplanationOfBenefit-subdetail-udi",
+      "version": "4.0.1",
+      "name": "subdetail-udi",
+      "code": "subdetail-udi",
+      "type": "reference",
+      "description": "UDI associated with a line item detail subdetail product or service",
+      "expression": "ExplanationOfBenefit.item.detail.subDetail.udi",
+      "xpath": "f:ExplanationOfBenefit/f:item/f:detail/f:subDetail/f:udi",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Device"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ExplanationOfBenefit"
+      ]
+    }
+  ]
+}
