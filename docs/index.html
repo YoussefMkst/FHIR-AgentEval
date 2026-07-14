@@ -62,7 +62,7 @@
 </head>
 <body>
   <h1>FHIR-AgentEval Results Dashboard</h1>
-  <div class="sub">Agent success rates across experiments, configs, task categories, and difficulty — mean &plusmn; std over runs.</div>
+  <div class="sub">Agent success rates across experiments, configs, task categories, and difficulty: mean &plusmn; std over runs.</div>
 
   <div class="controls">
     <div class="ctrl">
@@ -87,9 +87,9 @@
       <select id="sliceValue"></select>
     </div>
     <div class="ctrl">
-      <label>Metric</label>
+      <label>Success rate</label>
       <div class="toggle" id="metricToggle">
-        <button data-metric="strict" class="active">Deterministic</button>
+        <button data-metric="strict" class="active">Deterministic validator</button>
         <button data-metric="light">Light validator</button>
       </div>
     </div>
