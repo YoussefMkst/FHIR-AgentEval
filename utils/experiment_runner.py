@@ -242,6 +242,7 @@ async def _run_entry_with_agent(
     prov = _provenance(agent)
     shaped["variation"] = variation_index
     shaped["agent_tag"] = agent_tag
+    shaped["difficulty_level"] = entry.get("difficulty_level")
     return {**shaped, **prov}
 
 

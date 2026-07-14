@@ -1,0 +1,38 @@
+# Smoketest: same 6 models as exp_openrouter_baseline_6models.yaml, but one
+# task and a single run — to verify the runner end-to-end cheaply.
+
+base_dir: results/smoketest_openrouter_6models
+runs: 1
+variations_yaml: environment/data/exp_smoketest_one_task.yaml
+fhir_sse_url: http://localhost:8000/fhir_mcp
+
+configs:
+  - tag: gpt_oss_120b_baseline
+    model: openai/gpt-oss-120b
+    system_prompt: baseline
+    mcp_endpoints: []
+
+  - tag: qwen3_32b_baseline
+    model: qwen/qwen3-32b
+    system_prompt: baseline
+    mcp_endpoints: []
+
+  - tag: gpt41mini_baseline
+    model: openai/gpt-4.1-mini
+    system_prompt: baseline
+    mcp_endpoints: []
+
+  - tag: deepseek_v4_flash_baseline
+    model: deepseek/deepseek-v4-flash
+    system_prompt: baseline
+    mcp_endpoints: []
+
+  - tag: claude_sonnet_46_baseline
+    model: anthropic/claude-sonnet-4.6
+    system_prompt: baseline
+    mcp_endpoints: []
+
+  - tag: glm_52_baseline
+    model: z-ai/glm-5.2
+    system_prompt: baseline
+    mcp_endpoints: []
