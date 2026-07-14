@@ -1,0 +1,14 @@
+# Rerun of GLM 5.2 only, into the SAME experiment dir as the 6-model run.
+# Same base_dir + same tag → results land under results/exp_openrouter_baseline_6models/glm_52_baseline/
+# Delete that glm_52_baseline/ folder first to start clean.
+
+base_dir: results/exp_openrouter_baseline_6models
+runs: 3
+variations_yaml: environment/data/exp_1_task_variation_updated.yaml
+fhir_sse_url: http://localhost:8000/fhir_mcp
+
+configs:
+  - tag: glm_52_baseline
+    model: z-ai/glm-5.2
+    system_prompt: baseline
+    mcp_endpoints: []
