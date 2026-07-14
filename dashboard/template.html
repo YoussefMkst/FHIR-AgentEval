@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FHIR-AgentEval Results Dashboard</title>
+<style>
+  :root {
+    --bg: #0f1115; --panel: #181b22; --border: #2a2f3a; --fg: #e6e9ef;
+    --muted: #9aa4b2; --accent: #4A90E2; --bar: #4A90E2; --grid: #2a2f3a;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg); color: var(--fg); padding: 24px;
+  }
+  h1 { font-size: 20px; margin: 0 0 4px; }
+  .sub { color: var(--muted); font-size: 13px; margin-bottom: 20px; }
+  .controls {
+    display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-end;
+    background: var(--panel); border: 1px solid var(--border);
+    border-radius: 10px; padding: 16px; margin-bottom: 20px;
+  }
+  .ctrl { display: flex; flex-direction: column; gap: 6px; }
+  .ctrl label { font-size: 11px; text-transform: uppercase; letter-spacing: .5px; color: var(--muted); }
+  select, .toggle button {
+    background: #11141a; color: var(--fg); border: 1px solid var(--border);
+    border-radius: 6px; padding: 8px 10px; font-size: 13px; min-width: 150px;
+  }
+  .toggle { display: flex; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+  .toggle button { border: 0; border-radius: 0; min-width: 0; padding: 8px 14px; cursor: pointer; }
+  .toggle button.active { background: var(--accent); color: #fff; }
+  .multi { position: relative; }
+  .multi-btn {
+    background: #11141a; color: var(--fg); border: 1px solid var(--border);
+    border-radius: 6px; padding: 8px 10px; font-size: 13px; min-width: 150px;
+    text-align: left; cursor: pointer;
+  }
+  .multi-menu {
+    position: absolute; z-index: 10; top: calc(100% + 4px); left: 0;
+    background: var(--panel); border: 1px solid var(--border); border-radius: 6px;
+    padding: 8px; min-width: 260px; max-height: 320px; overflow-y: auto;
+    box-shadow: 0 8px 24px rgba(0,0,0,.4);
+  }
+  .multi-menu.hidden { display: none; }
+  .multi-menu .row { display: flex; align-items: center; gap: 8px; padding: 5px 6px; font-size: 13px; border-radius: 4px; cursor: pointer; }
+  .multi-menu .row:hover { background: #11141a; }
+  .multi-menu .sep { border-top: 1px solid var(--border); margin: 6px 0; }
+  .multi-menu .mini { font-size: 11px; color: var(--accent); cursor: pointer; padding: 2px 6px; }
+  .chart-card { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 20px; }
+  #chart-title { font-size: 15px; font-weight: 600; margin: 0 0 16px; }
+  svg { width: 100%; height: auto; display: block; }
+  .bar { fill: var(--bar); }
+  .bar-label { fill: var(--fg); font-size: 11px; }
+  .val-label { fill: var(--fg); font-size: 11px; font-weight: 600; }
+  .axis { stroke: var(--grid); stroke-width: 1; }
+  .gridline { stroke: var(--grid); stroke-width: 1; stroke-dasharray: 3 3; }
+  .tick-label { fill: var(--muted); font-size: 10px; }
+  .whisker { stroke: #e6e9ef; stroke-width: 1.5; }
+  .empty { color: var(--muted); font-size: 13px; padding: 40px; text-align: center; }
+</style>
+</head>
+<body>
+  <h1>FHIR-AgentEval Results Dashboard</h1>
+  <div class="sub">Agent success rates across experiments, configs, task categories, and difficulty — mean &plusmn; std over runs.</div>
+
+  <div class="controls">
+    <div class="ctrl">
+      <label>Experiment</label>
+      <select id="experiment"></select>
+    </div>
+    <div class="ctrl multi">
+      <label>Configs</label>
+      <button class="multi-btn" id="configBtn">All configs</button>
+      <div class="multi-menu hidden" id="configMenu"></div>
+    </div>
+    <div class="ctrl">
+      <label>Slice by</label>
+      <select id="sliceBy">
+        <option value="overall">Overall</option>
+        <option value="by_category">Task Category</option>
+        <option value="by_difficulty">Task Difficulty</option>
+      </select>
+    </div>
+    <div class="ctrl" id="sliceValWrap" style="display:none">
+      <label id="sliceValLabel">Value</label>
+      <select id="sliceValue"></select>
+    </div>
+    <div class="ctrl">
+      <label>Metric</label>
+      <div class="toggle" id="metricToggle">
+        <button data-metric="strict" class="active">Deterministic</button>
+        <button data-metric="light">Light validator</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="chart-card">
+    <div id="chart-title"></div>
+    <div id="chart"></div>
+  </div>
+
+<script>
+// __DATA__ is injected by build_dashboard.py: { exp1: {...}, exp2: {...}, ... }
+const DATA = __DATA__;
+
+const state = { exp: null, sliceBy: "overall", sliceValue: null, metric: "strict", configs: null };
+
+const el = id => document.getElementById(id);
+const experiments = Object.values(DATA);
+
+// ---- populate experiment dropdown ----
+function initExperiments() {
+  const sel = el("experiment");
+  experiments.forEach(e => {
+    const o = document.createElement("option");
+    o.value = e.id; o.textContent = e.name || e.id;
+    sel.appendChild(o);
+  });
+  state.exp = experiments[0].id;
+}
+
+function currentExp() { return DATA[state.exp]; }
+
+// ---- config multi-select (repopulates per experiment) ----
+function refreshConfigMenu() {
+  const tags = currentExp().configs.map(c => c.tag);
+  // default: all selected. Keep prior selections that still exist on experiment change.
+  if (state.configs === null) state.configs = new Set(tags);
+  else state.configs = new Set(tags.filter(t => state.configs.has(t)));
+  if (!state.configs.size) state.configs = new Set(tags);
+
+  const menu = el("configMenu");
+  menu.innerHTML = "";
+  const bar = document.createElement("div");
+  bar.innerHTML = '<span class="mini" data-act="all">Select all</span> · <span class="mini" data-act="none">Clear</span>';
+  bar.querySelector('[data-act="all"]').onclick = () => { state.configs = new Set(tags); syncConfigMenu(); render(); };
+  bar.querySelector('[data-act="none"]').onclick = () => { state.configs = new Set(); syncConfigMenu(); render(); };
+  menu.appendChild(bar);
+  const sep = document.createElement("div"); sep.className = "sep"; menu.appendChild(sep);
+
+  currentExp().configs.forEach(c => {
+    const row = document.createElement("label"); row.className = "row";
+    const cb = document.createElement("input"); cb.type = "checkbox"; cb.value = c.tag;
+    cb.checked = state.configs.has(c.tag);
+    cb.onchange = () => { cb.checked ? state.configs.add(c.tag) : state.configs.delete(c.tag); updateConfigBtn(); render(); };
+    row.appendChild(cb);
+    const span = document.createElement("span"); span.textContent = c.label; row.appendChild(span);
+    menu.appendChild(row);
+  });
+  updateConfigBtn();
+}
+
+function syncConfigMenu() {
+  el("configMenu").querySelectorAll('input[type=checkbox]').forEach(cb => { cb.checked = state.configs.has(cb.value); });
+  updateConfigBtn();
+}
+
+function updateConfigBtn() {
+  const total = currentExp().configs.length, n = state.configs.size;
+  el("configBtn").textContent = (n === total) ? "All configs" : `${n} of ${total} configs`;
+}
+
+// slice-value options depend on sliceBy (union of keys across configs)
+function sliceValues() {
+  if (state.sliceBy === "overall") return [];
+  const keys = new Set();
+  currentExp().configs.forEach(c => Object.keys(c[state.sliceBy] || {}).forEach(k => keys.add(k)));
+  return [...keys].sort();
+}
+
+function refreshSliceValue() {
+  const wrap = el("sliceValWrap"), sel = el("sliceValue");
+  const vals = sliceValues();
+  if (!vals.length) { wrap.style.display = "none"; state.sliceValue = null; return; }
+  wrap.style.display = "";
+  el("sliceValLabel").textContent = state.sliceBy === "by_category" ? "Category" : "Difficulty";
+  sel.innerHTML = "";
+  vals.forEach(v => {
+    const o = document.createElement("option");
+    o.value = v; o.textContent = state.sliceBy === "by_difficulty" ? ("Difficulty " + v) : v;
+    sel.appendChild(o);
+  });
+  if (!vals.includes(state.sliceValue)) state.sliceValue = vals[0];
+  sel.value = state.sliceValue;
+}
+
+// ---- pull (mean, std, n) for one config given current slice + metric ----
+function statFor(cfg) {
+  const meanKey = state.metric === "light" ? "light_success_rate_mean" : "success_rate_mean";
+  const stdKey  = state.metric === "light" ? "light_success_rate_std"  : "success_rate_std";
+  let src;
+  if (state.sliceBy === "overall") src = cfg;
+  else src = (cfg[state.sliceBy] || {})[state.sliceValue];
+  if (!src) return null;
+  const mean = src[meanKey], std = src[stdKey];
+  if (mean === null || mean === undefined) return null;
+  return { mean: mean * 100, std: (std || 0) * 100,
+           n: src.num_tasks ?? (state.metric === "light" ? src.light_applicable : undefined) };
+}
+
+// ---- title ----
+function chartTitle() {
+  const e = currentExp();
+  let slice = "All tasks";
+  if (state.sliceBy === "by_category") slice = "Category: " + state.sliceValue;
+  else if (state.sliceBy === "by_difficulty") slice = "Difficulty " + state.sliceValue;
+  const metric = state.metric === "light" ? "Light validator" : "Deterministic";
+  return `${e.name} — ${slice} — ${metric} success rate`;
+}
+
+// ---- SVG bar chart with error bars ----
+function render() {
+  el("chart-title").textContent = chartTitle();
+  const cfgs = currentExp().configs
+    .filter(c => state.configs.has(c.tag))
+    .map(c => ({ label: c.label, source: c.source, stat: statFor(c) }))
+    .filter(c => c.stat !== null);
+
+  const host = el("chart");
+  if (!cfgs.length) { host.innerHTML = '<div class="empty">No data for this selection.</div>'; return; }
+
+  const W = 900, rowH = 34, padTop = 10, padBot = 34, padLeft = 260, padRight = 60;
+  const H = padTop + cfgs.length * rowH + padBot;
+  const plotW = W - padLeft - padRight;
+  const x = v => padLeft + (v / 100) * plotW;
+
+  let svg = `<svg viewBox="0 0 ${W} ${H}" role="img">`;
+  // gridlines + ticks (0..100)
+  for (let t = 0; t <= 100; t += 25) {
+    svg += `<line class="gridline" x1="${x(t)}" y1="${padTop}" x2="${x(t)}" y2="${H - padBot}"/>`;
+    svg += `<text class="tick-label" x="${x(t)}" y="${H - padBot + 16}" text-anchor="middle">${t}%</text>`;
+  }
+  svg += `<line class="axis" x1="${padLeft}" y1="${padTop}" x2="${padLeft}" y2="${H - padBot}"/>`;
+
+  cfgs.forEach((c, i) => {
+    const y = padTop + i * rowH + 6, bh = rowH - 14;
+    const m = c.stat.mean, s = c.stat.std;
+    svg += `<text class="bar-label" x="${padLeft - 10}" y="${y + bh / 2 + 4}" text-anchor="end">${escapeXml(c.label)}</text>`;
+    svg += `<rect class="bar" x="${padLeft}" y="${y}" width="${Math.max(0, x(m) - padLeft)}" height="${bh}" rx="2"/>`;
+    // error whisker
+    const cy = y + bh / 2, lo = x(Math.max(0, m - s)), hi = x(Math.min(100, m + s));
+    svg += `<line class="whisker" x1="${lo}" y1="${cy}" x2="${hi}" y2="${cy}"/>`;
+    svg += `<line class="whisker" x1="${lo}" y1="${cy - 4}" x2="${lo}" y2="${cy + 4}"/>`;
+    svg += `<line class="whisker" x1="${hi}" y1="${cy - 4}" x2="${hi}" y2="${cy + 4}"/>`;
+    svg += `<text class="val-label" x="${x(Math.min(100, m + s)) + 6}" y="${cy + 4}">${m.toFixed(1)}% &plusmn; ${s.toFixed(1)}</text>`;
+  });
+  svg += `</svg>`;
+  host.innerHTML = svg;
+}
+
+function escapeXml(s) { return s.replace(/[<>&]/g, c => ({ "<": "&lt;", ">": "&gt;", "&": "&amp;" }[c])); }
+
+// ---- wire up ----
+function initEvents() {
+  el("experiment").addEventListener("change", e => { state.exp = e.target.value; refreshConfigMenu(); refreshSliceValue(); render(); });
+  // config dropdown open/close
+  el("configBtn").addEventListener("click", ev => {
+    ev.stopPropagation();
+    el("configMenu").classList.toggle("hidden");
+  });
+  document.addEventListener("click", ev => {
+    if (!el("configMenu").contains(ev.target) && ev.target !== el("configBtn"))
+      el("configMenu").classList.add("hidden");
+  });
+  el("sliceBy").addEventListener("change", e => { state.sliceBy = e.target.value; refreshSliceValue(); render(); });
+  el("sliceValue").addEventListener("change", e => { state.sliceValue = e.target.value; render(); });
+  el("metricToggle").querySelectorAll("button").forEach(b =>
+    b.addEventListener("click", () => {
+      state.metric = b.dataset.metric;
+      el("metricToggle").querySelectorAll("button").forEach(x => x.classList.toggle("active", x === b));
+      render();
+    }));
+}
+
+initExperiments();
+initEvents();
+refreshConfigMenu();
+refreshSliceValue();
+render();
+</script>
+</body>
+</html>
