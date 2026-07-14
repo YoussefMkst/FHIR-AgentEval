@@ -192,10 +192,12 @@ def _load_config_meta(tag_dir: Path) -> Dict[str, Any]:
 
 def _aggregate_runs(run_totals: List[Dict[str, Any]]) -> Dict[str, Any]:
     rates = [r["success_rate"] for r in run_totals if r["success_rate"] is not None]
+    light = [r["light_success_rate"] for r in run_totals if r["light_success_rate"] is not None]
     toks = [r["avg_tokens"] for r in run_totals if r["avg_tokens"] is not None]
     ms = [r["avg_exec_ms"] for r in run_totals if r["avg_exec_ms"] is not None]
     return {
         "success_rate_mean": _mean(rates), "success_rate_std": _std(rates),
+        "light_success_rate_mean": _mean(light), "light_success_rate_std": _std(light),
         "avg_tokens_mean": _mean(toks), "avg_exec_ms_mean": _mean(ms),
     }
 
@@ -208,23 +210,32 @@ def _totals_by(records: List[Dict[str, Any]], key: str) -> Dict[str, Any]:
     out: Dict[str, Any] = {}
     for g, recs in groups.items():
         success = sum(1 for r in recs if r["success"])
+        light = [r for r in recs if r["light_success"] is not None]
+        light_success = sum(1 for r in light if r["light_success"])
         out[str(g)] = {
             "success": success, "total": len(recs),
             "success_rate": round(success / len(recs), 4) if recs else None,
+            "light_total": len(light),
+            "light_success_rate": round(light_success / len(light), 4) if light else None,
         }
     return out
 
 
 def _aggregate_grouped(run_group_totals: List[Dict[str, Any]]) -> Dict[str, Any]:
-    """Mean +/- std of per-group success_rate ACROSS runs (for error bars)."""
+    """Mean +/- std of per-group strict & light success_rate ACROSS runs (for error bars)."""
     groups = sorted({g for rt in run_group_totals for g in rt})
     out: Dict[str, Any] = {}
     for g in groups:
         rates = [rt[g]["success_rate"] for rt in run_group_totals if g in rt and rt[g]["success_rate"] is not None]
+        light = [rt[g]["light_success_rate"] for rt in run_group_totals if g in rt and rt[g]["light_success_rate"] is not None]
         totals = [rt[g]["total"] for rt in run_group_totals if g in rt]
+        light_totals = [rt[g]["light_total"] for rt in run_group_totals if g in rt]
         out[g] = {
             "success_rate_mean": _mean(rates), "success_rate_std": _std(rates),
-            "num_tasks": totals[0] if totals else 0, "runs_included": len(rates),
+            "light_success_rate_mean": _mean(light), "light_success_rate_std": _std(light),
+            "num_tasks": totals[0] if totals else 0,
+            "light_applicable": light_totals[0] if light_totals else 0,
+            "runs_included": len(rates),
         }
     return out
 
@@ -233,12 +244,14 @@ def _aggregate_by_task(task_runs: Dict[str, List[Dict[str, Any]]]) -> Dict[str, 
     out: Dict[str, Any] = {}
     for task, recs in task_runs.items():
         succ = [1 if r["success"] else 0 for r in recs]
+        light = [1 if r["light_success"] else 0 for r in recs if r["light_success"] is not None]
         toks = [r["tokens"] for r in recs if r["tokens"] is not None]
         ms = [r["exec_ms"] for r in recs if r["exec_ms"] is not None]
         out[task] = {
             "difficulty_level": recs[0]["difficulty_level"] if recs else None,
             "category": recs[0]["category"] if recs else None,
             "success_rate": round(sum(succ) / len(succ), 4) if succ else None,
+            "light_success_rate": round(sum(light) / len(light), 4) if light else None,
             "runs_included": len(recs),
             "avg_tokens": _mean(toks),
             "avg_exec_ms": _mean(ms),
