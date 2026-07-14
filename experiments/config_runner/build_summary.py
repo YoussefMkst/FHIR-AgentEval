@@ -26,6 +26,27 @@ if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
 
+# Broad workflow category per task, keyed by task_module prefix (task_NN). Used
+# for dashboard filtering. Excluded tasks (18a/19x) are intentionally uncategorized.
+_CATEGORY_BY_PREFIX = {
+    "Patient Records": ["01", "02a", "02b", "03", "04a", "04b", "22"],
+    "Insurance & Billing": ["07", "08a", "08b", "09a", "09b", "09c", "09d", "10a", "10b"],
+    "Scheduling & Appointments": ["11a", "11b", "11c", "11d", "12a", "12b", "12c", "12d",
+                                  "13a", "13b", "14a", "14b", "15a", "15b", "15c",
+                                  "16a", "16b", "16c", "17a", "17b"],
+    "Surgery & Test Orders": ["05", "06a", "06b", "20", "21a", "21b", "21c"],
+}
+_CATEGORY = {f"task_{code}": cat for cat, codes in _CATEGORY_BY_PREFIX.items() for code in codes}
+
+
+def _category(task_module: Optional[str]) -> Optional[str]:
+    """Broad workflow category from the task_NN prefix of task_module."""
+    if not task_module:
+        return None
+    code = task_module.split("_")[1] if len(task_module.split("_")) > 1 else ""
+    return _CATEGORY.get(f"task_{code}")
+
+
 @lru_cache(maxsize=None)
 def _difficulty(task_module: Optional[str], task_class: Optional[str]) -> Optional[int]:
     """Canonical difficulty from the task class definition (get_difficulty_level).
@@ -62,6 +83,7 @@ def _task_record(data: Dict[str, Any]) -> Dict[str, Any]:
         "task": data.get("task_module"),
         "variation": data.get("variation"),
         "difficulty_level": _difficulty(data.get("task_module"), data.get("task_class")),
+        "category": _category(data.get("task_module")),
         "success": bool(tr.get("task_success")),
         "light_success": trl.get("task_success"),  # True/False/None
         "tokens": exec_res.get("token_total"),
@@ -119,33 +141,38 @@ def build_experiment(base_dir: Path) -> Path:
 
         run_totals: List[Dict[str, Any]] = []
         run_diff_totals: List[Dict[str, Any]] = []
+        run_cat_totals: List[Dict[str, Any]] = []
         task_runs: Dict[str, List[Dict[str, Any]]] = {}  # task -> [records across runs]
 
         for run_dir in run_dirs:
             records = read_run_dir(run_dir).get(tag, [])
             totals = _totals(records)
-            diff_totals = _totals_by_difficulty(records)
+            diff_totals = _totals_by(records, "difficulty_level")
+            cat_totals = _totals_by(records, "category")
             run_index = int(run_dir.name.split("_")[-1])
             _write(run_dir / f"run_summary_{tag}.json", {
                 "tag": tag, "model": meta.get("model"), "run_index": run_index,
                 "num_tasks": totals["total"], "totals": totals,
-                "by_difficulty": diff_totals, "per_task": records,
+                "by_difficulty": diff_totals, "by_category": cat_totals, "per_task": records,
             })
             run_totals.append({"run_index": run_index, **totals})
             run_diff_totals.append(diff_totals)
+            run_cat_totals.append(cat_totals)
             for r in records:
                 task_runs.setdefault(r["task"], []).append(r)
 
         config_overall = _aggregate_runs(run_totals)
-        diff_agg = _aggregate_by_difficulty(run_diff_totals)
+        diff_agg = _aggregate_grouped(run_diff_totals)
+        cat_agg = _aggregate_grouped(run_cat_totals)
         task_agg = _aggregate_by_task(task_runs)
         _write(tag_dir / f"config_summary_{tag}.json", {
             "tag": tag, "model": meta.get("model"), "runs": len(run_dirs),
             "overall": config_overall, "per_run": run_totals,
-            "by_difficulty": diff_agg, "by_task": task_agg,
+            "by_difficulty": diff_agg, "by_category": cat_agg, "by_task": task_agg,
         })
         # per_run totals embedded so the top-level view needs no drill-down.
-        by_config[tag] = {"model": meta.get("model"), **config_overall, "per_run": run_totals, "by_difficulty": diff_agg}
+        by_config[tag] = {"model": meta.get("model"), **config_overall, "per_run": run_totals,
+                          "by_difficulty": diff_agg, "by_category": cat_agg}
         by_config_task[tag] = task_agg
 
     exp_path = base_dir / "experiment.json"
@@ -173,29 +200,29 @@ def _aggregate_runs(run_totals: List[Dict[str, Any]]) -> Dict[str, Any]:
     }
 
 
-def _totals_by_difficulty(records: List[Dict[str, Any]]) -> Dict[str, Any]:
-    """Per-difficulty success totals for ONE run: {level: {success, total, success_rate}}."""
-    by_level: Dict[Any, List[Dict[str, Any]]] = {}
+def _totals_by(records: List[Dict[str, Any]], key: str) -> Dict[str, Any]:
+    """Group records by `key` field for ONE run: {group: {success, total, success_rate}}."""
+    groups: Dict[Any, List[Dict[str, Any]]] = {}
     for r in records:
-        by_level.setdefault(r["difficulty_level"], []).append(r)
+        groups.setdefault(r[key], []).append(r)
     out: Dict[str, Any] = {}
-    for level, recs in by_level.items():
+    for g, recs in groups.items():
         success = sum(1 for r in recs if r["success"])
-        out[str(level)] = {
+        out[str(g)] = {
             "success": success, "total": len(recs),
             "success_rate": round(success / len(recs), 4) if recs else None,
         }
     return out
 
 
-def _aggregate_by_difficulty(run_diff_totals: List[Dict[str, Any]]) -> Dict[str, Any]:
-    """Mean +/- std of per-difficulty success_rate ACROSS runs (for error bars)."""
-    levels = sorted({lvl for rt in run_diff_totals for lvl in rt}, key=lambda x: (x is None, x))
+def _aggregate_grouped(run_group_totals: List[Dict[str, Any]]) -> Dict[str, Any]:
+    """Mean +/- std of per-group success_rate ACROSS runs (for error bars)."""
+    groups = sorted({g for rt in run_group_totals for g in rt})
     out: Dict[str, Any] = {}
-    for lvl in levels:
-        rates = [rt[lvl]["success_rate"] for rt in run_diff_totals if lvl in rt and rt[lvl]["success_rate"] is not None]
-        totals = [rt[lvl]["total"] for rt in run_diff_totals if lvl in rt]
-        out[lvl] = {
+    for g in groups:
+        rates = [rt[g]["success_rate"] for rt in run_group_totals if g in rt and rt[g]["success_rate"] is not None]
+        totals = [rt[g]["total"] for rt in run_group_totals if g in rt]
+        out[g] = {
             "success_rate_mean": _mean(rates), "success_rate_std": _std(rates),
             "num_tasks": totals[0] if totals else 0, "runs_included": len(rates),
         }
@@ -210,6 +237,7 @@ def _aggregate_by_task(task_runs: Dict[str, List[Dict[str, Any]]]) -> Dict[str, 
         ms = [r["exec_ms"] for r in recs if r["exec_ms"] is not None]
         out[task] = {
             "difficulty_level": recs[0]["difficulty_level"] if recs else None,
+            "category": recs[0]["category"] if recs else None,
             "success_rate": round(sum(succ) / len(succ), 4) if succ else None,
             "runs_included": len(recs),
             "avg_tokens": _mean(toks),

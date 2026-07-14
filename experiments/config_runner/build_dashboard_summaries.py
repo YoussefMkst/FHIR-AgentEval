@@ -21,8 +21,8 @@ if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
 from experiments.config_runner.build_summary import (
-    read_run_dir, _totals, _totals_by_difficulty, _aggregate_runs,
-    _aggregate_by_difficulty, _aggregate_by_task, _write,
+    read_run_dir, _totals, _totals_by, _aggregate_runs,
+    _aggregate_grouped, _aggregate_by_task, _write,
 )
 
 RESULTS_DIR = ROOT_DIR / "results"
@@ -33,12 +33,14 @@ def _build_config(cfg: Dict[str, Any]) -> Dict[str, Any]:
     tag = cfg["tag"]
     run_totals: List[Dict[str, Any]] = []
     run_diff_totals: List[Dict[str, Any]] = []
+    run_cat_totals: List[Dict[str, Any]] = []
     task_runs: Dict[str, List[Dict[str, Any]]] = {}
 
     for i, run in enumerate(cfg["runs"], start=1):
         records = read_run_dir(RESULTS_DIR / run).get(tag, [])
         run_totals.append({"run_index": i, "run_dir": run, **_totals(records)})
-        run_diff_totals.append(_totals_by_difficulty(records))
+        run_diff_totals.append(_totals_by(records, "difficulty_level"))
+        run_cat_totals.append(_totals_by(records, "category"))
         for r in records:
             task_runs.setdefault(r["task"], []).append(r)
 
@@ -50,7 +52,8 @@ def _build_config(cfg: Dict[str, Any]) -> Dict[str, Any]:
         "runs": len(cfg["runs"]),
         **_aggregate_runs(run_totals),
         "per_run": run_totals,
-        "by_difficulty": _aggregate_by_difficulty(run_diff_totals),
+        "by_difficulty": _aggregate_grouped(run_diff_totals),
+        "by_category": _aggregate_grouped(run_cat_totals),
         "by_task": _aggregate_by_task(task_runs),
     }
 
