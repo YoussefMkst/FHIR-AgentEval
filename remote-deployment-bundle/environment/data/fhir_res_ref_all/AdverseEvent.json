@@ -1,0 +1,1040 @@
+{
+  "resourceType": "AdverseEvent",
+  "fhir_version": "4.0.1",
+  "source_urls": {
+    "structureDefinition": "http://hl7.org/fhir/StructureDefinition/AdverseEvent"
+  },
+  "elements": [
+    {
+      "path": "AdverseEvent",
+      "min": 0,
+      "max": "*",
+      "type": [],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Medical care, research study or other healthcare event causing physical injury",
+      "definition": "Actual or  potential/avoided event causing unintended physical injury resulting from or contributed to by medical care, a research study or other healthcare setting factors that requires additional monitoring, treatment, or hospitalization, or that results in death.",
+      "binding": null
+    },
+    {
+      "path": "AdverseEvent.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Logical id of this artifact",
+      "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
+      "binding": null
+    },
+    {
+      "path": "AdverseEvent.meta",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Meta"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Metadata about the resource",
+      "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.",
+      "binding": null
+    },
+    {
+      "path": "AdverseEvent.implicitRules",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "uri"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "This element is labeled as a modifier because the implicit rules may provide additional knowledge about the resource that modifies it's meaning or interpretation",
+      "mustSupport": null,
+      "short": "A set of rules under which this content was created",
+      "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.",
+      "binding": null
+    },
+    {
+      "path": "AdverseEvent.language",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Language of the resource content",
+      "definition": "The base language in which the resource is written.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/languages",
+        "strength": "preferred",
+        "description": "A human language."
+      }
+    },
+    {
+      "path": "AdverseEvent.text",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Narrative"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Text summary of the resource, for human interpretation",
+      "definition": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
+      "binding": null
+    },
+    {
+      "path": "AdverseEvent.contained",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Resource"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Contained, inline Resources",
+      "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
+      "binding": null
+    },
+    {
+      "path": "AdverseEvent.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "AdverseEvent.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the resource that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "AdverseEvent.identifier",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Identifier"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Business identifier for the event",
+      "definition": "Business identifiers assigned to this adverse event by the performer or other systems which remain constant as the resource is updated and propagates from server to server.",
+      "binding": null
+    },
+    {
+      "path": "AdverseEvent.actuality",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "This element is labeled as a modifier because it has a potential code that indicates the adverse event did not actually happen.",
+      "mustSupport": null,
+      "short": "actual | potential",
+      "definition": "Whether the event actually happened, or just had the potential to. Note that this is independent of whether anyone was affected or harmed or how severely.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/adverse-event-actuality|4.0.1",
+        "strength": "required",
+        "description": "Overall nature of the adverse event, e.g. real or potential."
+      }
+    },
+    {
+      "path": "AdverseEvent.category",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "product-problem | product-quality | product-use-error | wrong-dose | incorrect-prescribing-information | wrong-technique | wrong-route-of-administration | wrong-rate | wrong-duration | wrong-time | expired-drug | medical-device-use-error | problem-different-manufacturer | unsafe-physical-environment",
+      "definition": "The overall type of event, intended for search and filtering purposes.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/adverse-event-category",
+        "strength": "extensible",
+        "description": "Overall categorization of the event, e.g. product-related or situational."
+      }
+    },
+    {
+      "path": "AdverseEvent.event",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Type of the event itself in relation to the subject",
+      "definition": "This element defines the specific type of event that occurred or that was prevented from occurring.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/adverse-event-type",
+        "strength": "example",
+        "description": "Detailed type of event."
+      }
+    },
+    {
+      "path": "AdverseEvent.subject",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Patient",
+            "http://hl7.org/fhir/StructureDefinition/Group",
+            "http://hl7.org/fhir/StructureDefinition/Practitioner",
+            "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Subject impacted by event",
+      "definition": "This subject or group impacted by the event.",
+      "binding": null
+    },
+    {
+      "path": "AdverseEvent.encounter",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Encounter"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Encounter created as part of",
+      "definition": "The Encounter during which AdverseEvent was created or to which the creation of this record is tightly associated.",
+      "binding": null
+    },
+    {
+      "path": "AdverseEvent.date",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "dateTime"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "When the event occurred",
+      "definition": "The date (and perhaps time) when the adverse event occurred.",
+      "binding": null
+    },
+    {
+      "path": "AdverseEvent.detected",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "dateTime"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "When the event was detected",
+      "definition": "Estimated or actual date the AdverseEvent began, in the opinion of the reporter.",
+      "binding": null
+    },
+    {
+      "path": "AdverseEvent.recordedDate",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "dateTime"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "When the event was recorded",
+      "definition": "The date on which the existence of the AdverseEvent was first recorded.",
+      "binding": null
+    },
+    {
+      "path": "AdverseEvent.resultingCondition",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Condition"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Effect on the subject due to this event",
+      "definition": "Includes information about the reaction that occurred as a result of exposure to a substance (for example, a drug or a chemical).",
+      "binding": null
+    },
+    {
+      "path": "AdverseEvent.location",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Location"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Location where adverse event occurred",
+      "definition": "The information about where the adverse event occurred.",
+      "binding": null
+    },
+    {
+      "path": "AdverseEvent.seriousness",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Seriousness of the event",
+      "definition": "Assessment whether this event was of real importance.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/adverse-event-seriousness",
+        "strength": "example",
+        "description": "Overall seriousness of this event for the patient."
+      }
+    },
+    {
+      "path": "AdverseEvent.severity",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "mild | moderate | severe",
+      "definition": "Describes the severity of the adverse event, in relation to the subject. Contrast to AdverseEvent.seriousness - a severe rash might not be serious, but a mild heart problem is.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/adverse-event-severity|4.0.1",
+        "strength": "required",
+        "description": "The severity of the adverse event itself, in direct relation to the subject."
+      }
+    },
+    {
+      "path": "AdverseEvent.outcome",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "resolved | recovering | ongoing | resolvedWithSequelae | fatal | unknown",
+      "definition": "Describes the type of outcome from the adverse event.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/adverse-event-outcome|4.0.1",
+        "strength": "required",
+        "description": "TODO (and should this be required?)."
+      }
+    },
+    {
+      "path": "AdverseEvent.recorder",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Patient",
+            "http://hl7.org/fhir/StructureDefinition/Practitioner",
+            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+            "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Who recorded the adverse event",
+      "definition": "Information on who recorded the adverse event.  May be the patient or a practitioner.",
+      "binding": null
+    },
+    {
+      "path": "AdverseEvent.contributor",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Practitioner",
+            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+            "http://hl7.org/fhir/StructureDefinition/Device"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Who  was involved in the adverse event or the potential adverse event",
+      "definition": "Parties that may or should contribute or have contributed information to the adverse event, which can consist of one or more activities.  Such information includes information leading to the decision to perform the activity and how to perform the activity (e.g. consultant), information that the activity itself seeks to reveal (e.g. informant of clinical history), or information about what activity was performed (e.g. informant witness).",
+      "binding": null
+    },
+    {
+      "path": "AdverseEvent.suspectEntity",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The suspected agent causing the adverse event",
+      "definition": "Describes the entity that is suspected to have caused the adverse event.",
+      "binding": null
+    },
+    {
+      "path": "AdverseEvent.suspectEntity.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "AdverseEvent.suspectEntity.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "AdverseEvent.suspectEntity.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "AdverseEvent.suspectEntity.instance",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Immunization",
+            "http://hl7.org/fhir/StructureDefinition/Procedure",
+            "http://hl7.org/fhir/StructureDefinition/Substance",
+            "http://hl7.org/fhir/StructureDefinition/Medication",
+            "http://hl7.org/fhir/StructureDefinition/MedicationAdministration",
+            "http://hl7.org/fhir/StructureDefinition/MedicationStatement",
+            "http://hl7.org/fhir/StructureDefinition/Device"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Refers to the specific entity that caused the adverse event",
+      "definition": "Identifies the actual instance of what caused the adverse event.  May be a substance, medication, medication administration, medication statement or a device.",
+      "binding": null
+    },
+    {
+      "path": "AdverseEvent.suspectEntity.causality",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Information on the possible cause of the event",
+      "definition": "Information on the possible cause of the event.",
+      "binding": null
+    },
+    {
+      "path": "AdverseEvent.suspectEntity.causality.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "AdverseEvent.suspectEntity.causality.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "AdverseEvent.suspectEntity.causality.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "AdverseEvent.suspectEntity.causality.assessment",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Assessment of if the entity caused the event",
+      "definition": "Assessment of if the entity caused the event.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/adverse-event-causality-assess",
+        "strength": "example",
+        "description": "Codes for the assessment of whether the entity caused the event."
+      }
+    },
+    {
+      "path": "AdverseEvent.suspectEntity.causality.productRelatedness",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "AdverseEvent.suspectEntity.causalityProductRelatedness",
+      "definition": "AdverseEvent.suspectEntity.causalityProductRelatedness.",
+      "binding": null
+    },
+    {
+      "path": "AdverseEvent.suspectEntity.causality.author",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Practitioner",
+            "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "AdverseEvent.suspectEntity.causalityAuthor",
+      "definition": "AdverseEvent.suspectEntity.causalityAuthor.",
+      "binding": null
+    },
+    {
+      "path": "AdverseEvent.suspectEntity.causality.method",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "ProbabilityScale | Bayesian | Checklist",
+      "definition": "ProbabilityScale | Bayesian | Checklist.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/adverse-event-causality-method",
+        "strength": "example",
+        "description": "TODO."
+      }
+    },
+    {
+      "path": "AdverseEvent.subjectMedicalHistory",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Condition",
+            "http://hl7.org/fhir/StructureDefinition/Observation",
+            "http://hl7.org/fhir/StructureDefinition/AllergyIntolerance",
+            "http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory",
+            "http://hl7.org/fhir/StructureDefinition/Immunization",
+            "http://hl7.org/fhir/StructureDefinition/Procedure",
+            "http://hl7.org/fhir/StructureDefinition/Media",
+            "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "AdverseEvent.subjectMedicalHistory",
+      "definition": "AdverseEvent.subjectMedicalHistory.",
+      "binding": null
+    },
+    {
+      "path": "AdverseEvent.referenceDocument",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "AdverseEvent.referenceDocument",
+      "definition": "AdverseEvent.referenceDocument.",
+      "binding": null
+    },
+    {
+      "path": "AdverseEvent.study",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/ResearchStudy"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "AdverseEvent.study",
+      "definition": "AdverseEvent.study.",
+      "binding": null
+    }
+  ],
+  "search": [
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/AdverseEvent-actuality",
+      "version": "4.0.1",
+      "name": "actuality",
+      "code": "actuality",
+      "type": "token",
+      "description": "actual | potential",
+      "expression": "AdverseEvent.actuality",
+      "xpath": "f:AdverseEvent/f:actuality",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "AdverseEvent"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/AdverseEvent-category",
+      "version": "4.0.1",
+      "name": "category",
+      "code": "category",
+      "type": "token",
+      "description": "product-problem | product-quality | product-use-error | wrong-dose | incorrect-prescribing-information | wrong-technique | wrong-route-of-administration | wrong-rate | wrong-duration | wrong-time | expired-drug | medical-device-use-error | problem-different-manufacturer | unsafe-physical-environment",
+      "expression": "AdverseEvent.category",
+      "xpath": "f:AdverseEvent/f:category",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "AdverseEvent"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/AdverseEvent-date",
+      "version": "4.0.1",
+      "name": "date",
+      "code": "date",
+      "type": "date",
+      "description": "When the event occurred",
+      "expression": "AdverseEvent.date",
+      "xpath": "f:AdverseEvent/f:date",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [
+        "eq",
+        "ne",
+        "gt",
+        "ge",
+        "lt",
+        "le",
+        "sa",
+        "eb",
+        "ap"
+      ],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "AdverseEvent"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/AdverseEvent-event",
+      "version": "4.0.1",
+      "name": "event",
+      "code": "event",
+      "type": "token",
+      "description": "Type of the event itself in relation to the subject",
+      "expression": "AdverseEvent.event",
+      "xpath": "f:AdverseEvent/f:event",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "AdverseEvent"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/AdverseEvent-location",
+      "version": "4.0.1",
+      "name": "location",
+      "code": "location",
+      "type": "reference",
+      "description": "Location where adverse event occurred",
+      "expression": "AdverseEvent.location",
+      "xpath": "f:AdverseEvent/f:location",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Location"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "AdverseEvent"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/AdverseEvent-recorder",
+      "version": "4.0.1",
+      "name": "recorder",
+      "code": "recorder",
+      "type": "reference",
+      "description": "Who recorded the adverse event",
+      "expression": "AdverseEvent.recorder",
+      "xpath": "f:AdverseEvent/f:recorder",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Practitioner",
+        "Patient",
+        "PractitionerRole",
+        "RelatedPerson"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "AdverseEvent"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/AdverseEvent-resultingcondition",
+      "version": "4.0.1",
+      "name": "resultingcondition",
+      "code": "resultingcondition",
+      "type": "reference",
+      "description": "Effect on the subject due to this event",
+      "expression": "AdverseEvent.resultingCondition",
+      "xpath": "f:AdverseEvent/f:resultingCondition",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Condition"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "AdverseEvent"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/AdverseEvent-seriousness",
+      "version": "4.0.1",
+      "name": "seriousness",
+      "code": "seriousness",
+      "type": "token",
+      "description": "Seriousness of the event",
+      "expression": "AdverseEvent.seriousness",
+      "xpath": "f:AdverseEvent/f:seriousness",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "AdverseEvent"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/AdverseEvent-severity",
+      "version": "4.0.1",
+      "name": "severity",
+      "code": "severity",
+      "type": "token",
+      "description": "mild | moderate | severe",
+      "expression": "AdverseEvent.severity",
+      "xpath": "f:AdverseEvent/f:severity",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "AdverseEvent"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/AdverseEvent-study",
+      "version": "4.0.1",
+      "name": "study",
+      "code": "study",
+      "type": "reference",
+      "description": "AdverseEvent.study",
+      "expression": "AdverseEvent.study",
+      "xpath": "f:AdverseEvent/f:study",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "ResearchStudy"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "AdverseEvent"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/AdverseEvent-subject",
+      "version": "4.0.1",
+      "name": "subject",
+      "code": "subject",
+      "type": "reference",
+      "description": "Subject impacted by event",
+      "expression": "AdverseEvent.subject",
+      "xpath": "f:AdverseEvent/f:subject",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Practitioner",
+        "Group",
+        "Patient",
+        "RelatedPerson"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "AdverseEvent"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/AdverseEvent-substance",
+      "version": "4.0.1",
+      "name": "substance",
+      "code": "substance",
+      "type": "reference",
+      "description": "Refers to the specific entity that caused the adverse event",
+      "expression": "AdverseEvent.suspectEntity.instance",
+      "xpath": "f:AdverseEvent/f:suspectEntity/f:instance",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Immunization",
+        "Device",
+        "Medication",
+        "Procedure",
+        "Substance",
+        "MedicationAdministration",
+        "MedicationStatement"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "AdverseEvent"
+      ]
+    }
+  ]
+}

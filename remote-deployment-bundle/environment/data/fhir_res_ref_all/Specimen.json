@@ -1,0 +1,1134 @@
+{
+  "resourceType": "Specimen",
+  "fhir_version": "4.0.1",
+  "source_urls": {
+    "structureDefinition": "http://hl7.org/fhir/StructureDefinition/Specimen"
+  },
+  "elements": [
+    {
+      "path": "Specimen",
+      "min": 0,
+      "max": "*",
+      "type": [],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Sample for analysis",
+      "definition": "A sample to be used for analysis.",
+      "binding": null
+    },
+    {
+      "path": "Specimen.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Logical id of this artifact",
+      "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
+      "binding": null
+    },
+    {
+      "path": "Specimen.meta",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Meta"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Metadata about the resource",
+      "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.",
+      "binding": null
+    },
+    {
+      "path": "Specimen.implicitRules",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "uri"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "This element is labeled as a modifier because the implicit rules may provide additional knowledge about the resource that modifies it's meaning or interpretation",
+      "mustSupport": null,
+      "short": "A set of rules under which this content was created",
+      "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.",
+      "binding": null
+    },
+    {
+      "path": "Specimen.language",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Language of the resource content",
+      "definition": "The base language in which the resource is written.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/languages",
+        "strength": "preferred",
+        "description": "A human language."
+      }
+    },
+    {
+      "path": "Specimen.text",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Narrative"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Text summary of the resource, for human interpretation",
+      "definition": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
+      "binding": null
+    },
+    {
+      "path": "Specimen.contained",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Resource"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Contained, inline Resources",
+      "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
+      "binding": null
+    },
+    {
+      "path": "Specimen.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "Specimen.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the resource that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "Specimen.identifier",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Identifier"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "External Identifier",
+      "definition": "Id for specimen.",
+      "binding": null
+    },
+    {
+      "path": "Specimen.accessionIdentifier",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Identifier"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Identifier assigned by the lab",
+      "definition": "The identifier assigned by the lab when accessioning specimen(s). This is not necessarily the same as the specimen identifier, depending on local lab procedures.",
+      "binding": null
+    },
+    {
+      "path": "Specimen.status",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "This element is labelled as a modifier because it is a status element that contains status entered-in-error which means that the resource should not be treated as valid",
+      "mustSupport": null,
+      "short": "available | unavailable | unsatisfactory | entered-in-error",
+      "definition": "The availability of the specimen.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/specimen-status|4.0.1",
+        "strength": "required",
+        "description": "Codes providing the status/availability of a specimen."
+      }
+    },
+    {
+      "path": "Specimen.type",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Kind of material that forms the specimen",
+      "definition": "The kind of material that forms the specimen.",
+      "binding": {
+        "valueSet": "http://terminology.hl7.org/ValueSet/v2-0487",
+        "strength": "example",
+        "description": "The type of the specimen."
+      }
+    },
+    {
+      "path": "Specimen.subject",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Patient",
+            "http://hl7.org/fhir/StructureDefinition/Group",
+            "http://hl7.org/fhir/StructureDefinition/Device",
+            "http://hl7.org/fhir/StructureDefinition/Substance",
+            "http://hl7.org/fhir/StructureDefinition/Location"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Where the specimen came from. This may be from patient(s), from a location (e.g., the source of an environmental sample), or a sampling of a substance or a device",
+      "definition": "Where the specimen came from. This may be from patient(s), from a location (e.g., the source of an environmental sample), or a sampling of a substance or a device.",
+      "binding": null
+    },
+    {
+      "path": "Specimen.receivedTime",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "dateTime"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The time when specimen was received for processing",
+      "definition": "Time when specimen was received for processing or testing.",
+      "binding": null
+    },
+    {
+      "path": "Specimen.parent",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Specimen"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Specimen from which this specimen originated",
+      "definition": "Reference to the parent (source) specimen which is used when the specimen was either derived from or a component of another specimen.",
+      "binding": null
+    },
+    {
+      "path": "Specimen.request",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/ServiceRequest"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Why the specimen was collected",
+      "definition": "Details concerning a service request that required a specimen to be collected.",
+      "binding": null
+    },
+    {
+      "path": "Specimen.collection",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Collection details",
+      "definition": "Details concerning the specimen collection.",
+      "binding": null
+    },
+    {
+      "path": "Specimen.collection.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "Specimen.collection.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "Specimen.collection.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "Specimen.collection.collector",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Practitioner",
+            "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Who collected the specimen",
+      "definition": "Person who collected the specimen.",
+      "binding": null
+    },
+    {
+      "path": "Specimen.collection.collected[x]",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "dateTime"
+        },
+        {
+          "code": "Period"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Collection time",
+      "definition": "Time when specimen was collected from subject - the physiologically relevant time.",
+      "binding": null
+    },
+    {
+      "path": "Specimen.collection.duration",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Duration"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "How long it took to collect specimen",
+      "definition": "The span of time over which the collection of a specimen occurred.",
+      "binding": null
+    },
+    {
+      "path": "Specimen.collection.quantity",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Quantity",
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/SimpleQuantity"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The quantity of specimen collected",
+      "definition": "The quantity of specimen collected; for instance the volume of a blood sample, or the physical measurement of an anatomic pathology sample.",
+      "binding": null
+    },
+    {
+      "path": "Specimen.collection.method",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Technique used to perform collection",
+      "definition": "A coded value specifying the technique that is used to perform the procedure.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/specimen-collection-method",
+        "strength": "example",
+        "description": "The  technique that is used to perform the procedure."
+      }
+    },
+    {
+      "path": "Specimen.collection.bodySite",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Anatomical collection site",
+      "definition": "Anatomical location from which the specimen was collected (if subject is a patient). This is the target site.  This element is not used for environmental specimens.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/body-site",
+        "strength": "example",
+        "description": "Codes describing anatomical locations. May include laterality."
+      }
+    },
+    {
+      "path": "Specimen.collection.fastingStatus[x]",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        },
+        {
+          "code": "Duration"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Whether or how long patient abstained from food and/or drink",
+      "definition": "Abstinence or reduction from some or all food, drink, or both, for a period of time prior to sample collection.",
+      "binding": {
+        "valueSet": "http://terminology.hl7.org/ValueSet/v2-0916",
+        "strength": "extensible",
+        "description": "Codes describing the fasting status of the patient."
+      }
+    },
+    {
+      "path": "Specimen.processing",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Processing and processing step details",
+      "definition": "Details concerning processing and processing steps for the specimen.",
+      "binding": null
+    },
+    {
+      "path": "Specimen.processing.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "Specimen.processing.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "Specimen.processing.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "Specimen.processing.description",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Textual description of procedure",
+      "definition": "Textual description of procedure.",
+      "binding": null
+    },
+    {
+      "path": "Specimen.processing.procedure",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Indicates the treatment step  applied to the specimen",
+      "definition": "A coded value specifying the procedure used to process the specimen.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/specimen-processing-procedure",
+        "strength": "example",
+        "description": "Type indicating the technique used to process the specimen."
+      }
+    },
+    {
+      "path": "Specimen.processing.additive",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Substance"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Material used in the processing step",
+      "definition": "Material used in the processing step.",
+      "binding": null
+    },
+    {
+      "path": "Specimen.processing.time[x]",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "dateTime"
+        },
+        {
+          "code": "Period"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Date and time of specimen processing",
+      "definition": "A record of the time or period when the specimen processing occurred.  For example the time of sample fixation or the period of time the sample was in formalin.",
+      "binding": null
+    },
+    {
+      "path": "Specimen.container",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Direct container of specimen (tube/slide, etc.)",
+      "definition": "The container holding the specimen.  The recursive nature of containers; i.e. blood in tube in tray in rack is not addressed here.",
+      "binding": null
+    },
+    {
+      "path": "Specimen.container.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "Specimen.container.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "Specimen.container.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "Specimen.container.identifier",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Identifier"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Id for the container",
+      "definition": "Id for container. There may be multiple; a manufacturer's bar code, lab assigned identifier, etc. The container ID may differ from the specimen id in some circumstances.",
+      "binding": null
+    },
+    {
+      "path": "Specimen.container.description",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Textual description of the container",
+      "definition": "Textual description of the container.",
+      "binding": null
+    },
+    {
+      "path": "Specimen.container.type",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Kind of container directly associated with specimen",
+      "definition": "The type of container associated with the specimen (e.g. slide, aliquot, etc.).",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/specimen-container-type",
+        "strength": "example",
+        "description": "Type of specimen container."
+      }
+    },
+    {
+      "path": "Specimen.container.capacity",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Quantity",
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/SimpleQuantity"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Container volume or size",
+      "definition": "The capacity (volume or other measure) the container may contain.",
+      "binding": null
+    },
+    {
+      "path": "Specimen.container.specimenQuantity",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Quantity",
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/SimpleQuantity"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Quantity of specimen within container",
+      "definition": "The quantity of specimen in the container; may be volume, dimensions, or other appropriate measurements, depending on the specimen type.",
+      "binding": null
+    },
+    {
+      "path": "Specimen.container.additive[x]",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        },
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Substance"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additive associated with container",
+      "definition": "Introduced substance to preserve, maintain or enhance the specimen. Examples: Formalin, Citrate, EDTA.",
+      "binding": {
+        "valueSet": "http://terminology.hl7.org/ValueSet/v2-0371",
+        "strength": "example",
+        "description": "Substance added to specimen container."
+      }
+    },
+    {
+      "path": "Specimen.condition",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "State of the specimen",
+      "definition": "A mode or state of being that describes the nature of the specimen.",
+      "binding": {
+        "valueSet": "http://terminology.hl7.org/ValueSet/v2-0493",
+        "strength": "extensible",
+        "description": "Codes describing the state of the specimen."
+      }
+    },
+    {
+      "path": "Specimen.note",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Annotation"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Comments",
+      "definition": "To communicate any details or issues about the specimen or during the specimen collection. (for example: broken vial, sent with patient, frozen).",
+      "binding": null
+    }
+  ],
+  "search": [
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Specimen-accession",
+      "version": "4.0.1",
+      "name": "accession",
+      "code": "accession",
+      "type": "token",
+      "description": "The accession number associated with the specimen",
+      "expression": "Specimen.accessionIdentifier",
+      "xpath": "f:Specimen/f:accessionIdentifier",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Specimen"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Specimen-bodysite",
+      "version": "4.0.1",
+      "name": "bodysite",
+      "code": "bodysite",
+      "type": "token",
+      "description": "The code for the body site from where the specimen originated",
+      "expression": "Specimen.collection.bodySite",
+      "xpath": "f:Specimen/f:collection/f:bodySite",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Specimen"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Specimen-collected",
+      "version": "4.0.1",
+      "name": "collected",
+      "code": "collected",
+      "type": "date",
+      "description": "The date the specimen was collected",
+      "expression": "Specimen.collection.collected",
+      "xpath": "f:Specimen/f:collection/f:collectedDateTime | f:Specimen/f:collection/f:collectedPeriod",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [
+        "eq",
+        "ne",
+        "gt",
+        "ge",
+        "lt",
+        "le",
+        "sa",
+        "eb",
+        "ap"
+      ],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Specimen"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Specimen-collector",
+      "version": "4.0.1",
+      "name": "collector",
+      "code": "collector",
+      "type": "reference",
+      "description": "Who collected the specimen",
+      "expression": "Specimen.collection.collector",
+      "xpath": "f:Specimen/f:collection/f:collector",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Practitioner",
+        "PractitionerRole"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Specimen"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Specimen-container",
+      "version": "4.0.1",
+      "name": "container",
+      "code": "container",
+      "type": "token",
+      "description": "The kind of specimen container",
+      "expression": "Specimen.container.type",
+      "xpath": "f:Specimen/f:container/f:type",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Specimen"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Specimen-container-id",
+      "version": "4.0.1",
+      "name": "container-id",
+      "code": "container-id",
+      "type": "token",
+      "description": "The unique identifier associated with the specimen container",
+      "expression": "Specimen.container.identifier",
+      "xpath": "f:Specimen/f:container/f:identifier",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Specimen"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Specimen-identifier",
+      "version": "4.0.1",
+      "name": "identifier",
+      "code": "identifier",
+      "type": "token",
+      "description": "The unique identifier associated with the specimen",
+      "expression": "Specimen.identifier",
+      "xpath": "f:Specimen/f:identifier",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Specimen"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Specimen-parent",
+      "version": "4.0.1",
+      "name": "parent",
+      "code": "parent",
+      "type": "reference",
+      "description": "The parent of the specimen",
+      "expression": "Specimen.parent",
+      "xpath": "f:Specimen/f:parent",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Specimen"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Specimen"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Specimen-patient",
+      "version": "4.0.1",
+      "name": "patient",
+      "code": "patient",
+      "type": "reference",
+      "description": "The patient the specimen comes from",
+      "expression": "Specimen.subject.where(resolve() is Patient)",
+      "xpath": "f:Specimen/f:subject",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Patient"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Specimen"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Specimen-status",
+      "version": "4.0.1",
+      "name": "status",
+      "code": "status",
+      "type": "token",
+      "description": "available | unavailable | unsatisfactory | entered-in-error",
+      "expression": "Specimen.status",
+      "xpath": "f:Specimen/f:status",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Specimen"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Specimen-subject",
+      "version": "4.0.1",
+      "name": "subject",
+      "code": "subject",
+      "type": "reference",
+      "description": "The subject of the specimen",
+      "expression": "Specimen.subject",
+      "xpath": "f:Specimen/f:subject",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Group",
+        "Device",
+        "Patient",
+        "Substance",
+        "Location"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Specimen"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Specimen-type",
+      "version": "4.0.1",
+      "name": "type",
+      "code": "type",
+      "type": "token",
+      "description": "The specimen type",
+      "expression": "Specimen.type",
+      "xpath": "f:Specimen/f:type",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Specimen"
+      ]
+    }
+  ]
+}

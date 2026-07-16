@@ -43,10 +43,15 @@ On top of this core sandbox, we include optional add-ons that can be enabled, mo
 │       └── reflexion_faiss/                 # Reflexion memory indices
 │
 ├── experiments/                              # Experiment runners
-│   ├── run_experiment_fhir.py               # Main experiment harness
+│   ├── run_experiment_fhir.py               # LangChain agents harness (5 configs)
+│   ├── run_experiment_fhir_claude_code.py   # Claude Code harness (1 config)
+│   ├── claude_code_configs/                 # MCP configs passed to `claude -p`
 │   ├── verify_modular_tasks.py              # Task verification script
 │   ├── start_servers.sh                     # Helper to start MCP servers
 │   └── README.md                            # Experiment documentation
+
+├── remote-deployment-bundle/                # Self-contained subset to copy to a VPS
+│   └── README.md                            # Bundle setup instructions
 │
 ├── training/                                 # Learning & optimization
 │   └── fhir_reflexion_workflow.py           # Reflexion-based learning
@@ -116,14 +121,17 @@ On top of this core sandbox, we include optional add-ons that can be enabled, mo
    docker-compose up -d
    ```
 
-5. **Start MCP servers** (from project root, in separate terminals)
-   ```bash
-   # FHIR operations server
-   python environment/mcp/baseline_server/fhir_mcp_server.py --port 8000
+5. **Start the MCP servers**
 
-   # FHIR reference server (for specs)
-   python environment/mcp/memory_servers/fhir_ref_mcp_server.py --port 8010
+   `run_experiment_fhir.py` expects four MCP servers running on ports 8000,
+   8010, 8011, and 8012. The helper script starts all four in the foreground
+   with color-coded logs:
+
+   ```bash
+   ./experiments/start_servers.sh   # Ctrl+C stops all
    ```
+
+   To start them individually instead, see `experiments/README.md`.
 
 ### Running Agents
 
@@ -146,3 +154,49 @@ python training/fhir_reflexion_workflow.py \
   --yaml environment/data/exp_1_task_variation_updated.yaml \
   --use-specs
 ```
+
+### Running with Claude Code
+
+`experiments/run_experiment_fhir_claude_code.py` runs the benchmark through the
+Claude Code CLI (`claude -p`) instead of the LangChain agents. Claude Code is
+given the FHIR MCP server plus its default toolset (Bash, Read, Edit, Write,
+Grep, etc.).
+
+You can run it in two modes.
+
+**Remote mode (recommended).** Claude Code runs on a VPS that also hosts the
+HAPI server and the MCP servers. The harness on your laptop drives it over
+SSH. Use the `remote-deployment-bundle/` folder to set the VPS up — see
+`remote-deployment-bundle/README.md`.
+
+```bash
+# Point the harness at the VPS's HAPI for setup/validation:
+echo "FHIR_SERVER_URL=http://<host-ip>:7070/fhir" >> environment/.env
+
+python experiments/run_experiment_fhir_claude_code.py \
+  --variations-yaml environment/data/exp_1_task_variation_updated.yaml \
+  --ssh-target user@host \
+  --model sonnet \
+  --output-dir results/exp_claude_code
+```
+
+**Local mode (smoke tests only).** Omit `--ssh-target`. Claude Code runs on
+your laptop, so HAPI and the MCP servers must run there too — deploy
+`remote-deployment-bundle/` locally and start it the same way.
+
+```bash
+python experiments/run_experiment_fhir_claude_code.py \
+  --variations-yaml environment/data/exp_1_task_variation_updated.yaml \
+  --model sonnet \
+  --output-dir results/exp_claude_code_local
+```
+
+Both example commands run the full variation set three times. `--output-dir`
+is treated as a base name: results land in `<output-dir>_run_1`,
+`<output-dir>_run_2`, and `<output-dir>_run_3`.
+
+> **Warning — local mode may break the benchmark.** Claude Code's default toolset
+> includes `Bash`, `Read`, and `Grep`, so when it runs on your laptop it can
+> open the task source files in `tasks/`, the answer keys in the variation
+> YAMLs, and the validator code. Use local mode only for quick checks; never
+> use it for results you intend to report.

@@ -1,0 +1,2187 @@
+{
+  "resourceType": "Task",
+  "fhir_version": "4.0.1",
+  "source_urls": {
+    "structureDefinition": "http://hl7.org/fhir/StructureDefinition/Task"
+  },
+  "elements": [
+    {
+      "path": "Task",
+      "min": 0,
+      "max": "*",
+      "type": [],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "A task to be performed",
+      "definition": "A task to be performed.",
+      "binding": null
+    },
+    {
+      "path": "Task.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Logical id of this artifact",
+      "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
+      "binding": null
+    },
+    {
+      "path": "Task.meta",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Meta"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Metadata about the resource",
+      "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.",
+      "binding": null
+    },
+    {
+      "path": "Task.implicitRules",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "uri"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "This element is labeled as a modifier because the implicit rules may provide additional knowledge about the resource that modifies it's meaning or interpretation",
+      "mustSupport": null,
+      "short": "A set of rules under which this content was created",
+      "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.",
+      "binding": null
+    },
+    {
+      "path": "Task.language",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Language of the resource content",
+      "definition": "The base language in which the resource is written.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/languages",
+        "strength": "preferred",
+        "description": "A human language."
+      }
+    },
+    {
+      "path": "Task.text",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Narrative"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Text summary of the resource, for human interpretation",
+      "definition": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
+      "binding": null
+    },
+    {
+      "path": "Task.contained",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Resource"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Contained, inline Resources",
+      "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
+      "binding": null
+    },
+    {
+      "path": "Task.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "Task.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the resource that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "Task.identifier",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Identifier"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Task Instance Identifier",
+      "definition": "The business identifier for this task.",
+      "binding": null
+    },
+    {
+      "path": "Task.instantiatesCanonical",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "canonical",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/ActivityDefinition"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Formal definition of task",
+      "definition": "The URL pointing to a *FHIR*-defined protocol, guideline, orderset or other definition that is adhered to in whole or in part by this Task.",
+      "binding": null
+    },
+    {
+      "path": "Task.instantiatesUri",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "uri"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Formal definition of task",
+      "definition": "The URL pointing to an *externally* maintained  protocol, guideline, orderset or other definition that is adhered to in whole or in part by this Task.",
+      "binding": null
+    },
+    {
+      "path": "Task.basedOn",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Resource"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Request fulfilled by this task",
+      "definition": "BasedOn refers to a higher-level authorization that triggered the creation of the task.  It references a \"request\" resource such as a ServiceRequest, MedicationRequest, ServiceRequest, CarePlan, etc. which is distinct from the \"request\" resource the task is seeking to fulfill.  This latter resource is referenced by FocusOn.  For example, based on a ServiceRequest (= BasedOn), a task is created to fulfill a procedureRequest ( = FocusOn ) to collect a specimen from a patient.",
+      "binding": null
+    },
+    {
+      "path": "Task.groupIdentifier",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Identifier"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Requisition or grouper id",
+      "definition": "An identifier that links together multiple tasks and other requests that were created in the same context.",
+      "binding": null
+    },
+    {
+      "path": "Task.partOf",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Task"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Composite task",
+      "definition": "Task that this particular task is part of.",
+      "binding": null
+    },
+    {
+      "path": "Task.status",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "This element is labeled as a modifier because it is a status element that contains status entered-in-error which means that the resource should not be treated as valid",
+      "mustSupport": null,
+      "short": "draft | requested | received | accepted | +",
+      "definition": "The current status of the task.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/task-status|4.0.1",
+        "strength": "required",
+        "description": "The current status of the task."
+      }
+    },
+    {
+      "path": "Task.statusReason",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Reason for current status",
+      "definition": "An explanation as to why this task is held, failed, was refused, etc.",
+      "binding": {
+        "valueSet": null,
+        "strength": "example",
+        "description": "Codes to identify the reason for current status.  These will typically be specific to a particular workflow."
+      }
+    },
+    {
+      "path": "Task.businessStatus",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "E.g. \"Specimen collected\", \"IV prepped\"",
+      "definition": "Contains business-specific nuances of the business state.",
+      "binding": {
+        "valueSet": null,
+        "strength": "example",
+        "description": "The domain-specific business-contextual sub-state of the task.  For example: \"Blood drawn\", \"IV inserted\", \"Awaiting physician signature\", etc."
+      }
+    },
+    {
+      "path": "Task.intent",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "unknown | proposal | plan | order | original-order | reflex-order | filler-order | instance-order | option",
+      "definition": "Indicates the \"level\" of actionability associated with the Task, i.e. i+R[9]Cs this a proposed task, a planned task, an actionable task, etc.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/task-intent|4.0.1",
+        "strength": "required",
+        "description": "Distinguishes whether the task is a proposal, plan or full order."
+      }
+    },
+    {
+      "path": "Task.priority",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "routine | urgent | asap | stat",
+      "definition": "Indicates how quickly the Task should be addressed with respect to other requests.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/request-priority|4.0.1",
+        "strength": "required",
+        "description": "The task's priority."
+      }
+    },
+    {
+      "path": "Task.code",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Task Type",
+      "definition": "A name or code (or both) briefly describing what the task involves.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/task-code",
+        "strength": "example",
+        "description": "Codes to identify what the task involves.  These will typically be specific to a particular workflow."
+      }
+    },
+    {
+      "path": "Task.description",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Human-readable explanation of task",
+      "definition": "A free-text description of what is to be performed.",
+      "binding": null
+    },
+    {
+      "path": "Task.focus",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Resource"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "What task is acting on",
+      "definition": "The request being actioned or the resource being manipulated by this task.",
+      "binding": null
+    },
+    {
+      "path": "Task.for",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Resource"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Beneficiary of the Task",
+      "definition": "The entity who benefits from the performance of the service specified in the task (e.g., the patient).",
+      "binding": null
+    },
+    {
+      "path": "Task.encounter",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Encounter"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Healthcare event during which this task originated",
+      "definition": "The healthcare event  (e.g. a patient and healthcare provider interaction) during which this task was created.",
+      "binding": null
+    },
+    {
+      "path": "Task.executionPeriod",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Period"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Start and end time of execution",
+      "definition": "Identifies the time action was first taken against the task (start) and/or the time final action was taken against the task prior to marking it as completed (end).",
+      "binding": null
+    },
+    {
+      "path": "Task.authoredOn",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "dateTime"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Task Creation Date",
+      "definition": "The date and time this task was created.",
+      "binding": null
+    },
+    {
+      "path": "Task.lastModified",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "dateTime"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Task Last Modified Date",
+      "definition": "The date and time of last modification to this task.",
+      "binding": null
+    },
+    {
+      "path": "Task.requester",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Device",
+            "http://hl7.org/fhir/StructureDefinition/Organization",
+            "http://hl7.org/fhir/StructureDefinition/Patient",
+            "http://hl7.org/fhir/StructureDefinition/Practitioner",
+            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+            "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Who is asking for task to be done",
+      "definition": "The creator of the task.",
+      "binding": null
+    },
+    {
+      "path": "Task.performerType",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Requested performer",
+      "definition": "The kind of participant that should perform the task.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/performer-role",
+        "strength": "preferred",
+        "description": "The type(s) of task performers allowed."
+      }
+    },
+    {
+      "path": "Task.owner",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Practitioner",
+            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+            "http://hl7.org/fhir/StructureDefinition/Organization",
+            "http://hl7.org/fhir/StructureDefinition/CareTeam",
+            "http://hl7.org/fhir/StructureDefinition/HealthcareService",
+            "http://hl7.org/fhir/StructureDefinition/Patient",
+            "http://hl7.org/fhir/StructureDefinition/Device",
+            "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Responsible individual",
+      "definition": "Individual organization or Device currently responsible for task execution.",
+      "binding": null
+    },
+    {
+      "path": "Task.location",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Location"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Where task occurs",
+      "definition": "Principal physical location where the this task is performed.",
+      "binding": null
+    },
+    {
+      "path": "Task.reasonCode",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Why task is needed",
+      "definition": "A description or code indicating why this task needs to be performed.",
+      "binding": {
+        "valueSet": null,
+        "strength": "example",
+        "description": "Indicates why the task is needed.  E.g. Suspended because patient admitted to hospital."
+      }
+    },
+    {
+      "path": "Task.reasonReference",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Resource"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Why task is needed",
+      "definition": "A resource reference indicating why this task needs to be performed.",
+      "binding": null
+    },
+    {
+      "path": "Task.insurance",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Coverage",
+            "http://hl7.org/fhir/StructureDefinition/ClaimResponse"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Associated insurance coverage",
+      "definition": "Insurance plans, coverage extensions, pre-authorizations and/or pre-determinations that may be relevant to the Task.",
+      "binding": null
+    },
+    {
+      "path": "Task.note",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Annotation"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Comments made about the task",
+      "definition": "Free-text information captured about the task as it progresses.",
+      "binding": null
+    },
+    {
+      "path": "Task.relevantHistory",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Provenance"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Key events in history of the Task",
+      "definition": "Links to Provenance records for past versions of this Task that identify key state transitions or updates that are likely to be relevant to a user looking at the current version of the task.",
+      "binding": null
+    },
+    {
+      "path": "Task.restriction",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Constraints on fulfillment tasks",
+      "definition": "If the Task.focus is a request resource and the task is seeking fulfillment (i.e. is asking for the request to be actioned), this element identifies any limitations on what parts of the referenced request should be actioned.",
+      "binding": null
+    },
+    {
+      "path": "Task.restriction.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "Task.restriction.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "Task.restriction.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "Task.restriction.repetitions",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "positiveInt"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "How many times to repeat",
+      "definition": "Indicates the number of times the requested action should occur.",
+      "binding": null
+    },
+    {
+      "path": "Task.restriction.period",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Period"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "When fulfillment sought",
+      "definition": "Over what time-period is fulfillment sought.",
+      "binding": null
+    },
+    {
+      "path": "Task.restriction.recipient",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Patient",
+            "http://hl7.org/fhir/StructureDefinition/Practitioner",
+            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+            "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+            "http://hl7.org/fhir/StructureDefinition/Group",
+            "http://hl7.org/fhir/StructureDefinition/Organization"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "For whom is fulfillment sought?",
+      "definition": "For requests that are targeted to more than on potential recipient/target, for whom is fulfillment sought?",
+      "binding": null
+    },
+    {
+      "path": "Task.input",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Information used to perform task",
+      "definition": "Additional information that may be needed in the execution of the task.",
+      "binding": null
+    },
+    {
+      "path": "Task.input.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "Task.input.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "Task.input.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "Task.input.type",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Label for the input",
+      "definition": "A code or description indicating how the input is intended to be used as part of the task execution.",
+      "binding": {
+        "valueSet": null,
+        "strength": "example",
+        "description": "Codes to identify types of input parameters.  These will typically be specific to a particular workflow.  E.g. \"Comparison source\", \"Applicable consent\", \"Concomitent Medications\", etc."
+      }
+    },
+    {
+      "path": "Task.input.value[x]",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "base64Binary"
+        },
+        {
+          "code": "boolean"
+        },
+        {
+          "code": "canonical"
+        },
+        {
+          "code": "code"
+        },
+        {
+          "code": "date"
+        },
+        {
+          "code": "dateTime"
+        },
+        {
+          "code": "decimal"
+        },
+        {
+          "code": "id"
+        },
+        {
+          "code": "instant"
+        },
+        {
+          "code": "integer"
+        },
+        {
+          "code": "markdown"
+        },
+        {
+          "code": "oid"
+        },
+        {
+          "code": "positiveInt"
+        },
+        {
+          "code": "string"
+        },
+        {
+          "code": "time"
+        },
+        {
+          "code": "unsignedInt"
+        },
+        {
+          "code": "uri"
+        },
+        {
+          "code": "url"
+        },
+        {
+          "code": "uuid"
+        },
+        {
+          "code": "Address"
+        },
+        {
+          "code": "Age"
+        },
+        {
+          "code": "Annotation"
+        },
+        {
+          "code": "Attachment"
+        },
+        {
+          "code": "CodeableConcept"
+        },
+        {
+          "code": "Coding"
+        },
+        {
+          "code": "ContactPoint"
+        },
+        {
+          "code": "Count"
+        },
+        {
+          "code": "Distance"
+        },
+        {
+          "code": "Duration"
+        },
+        {
+          "code": "HumanName"
+        },
+        {
+          "code": "Identifier"
+        },
+        {
+          "code": "Money"
+        },
+        {
+          "code": "Period"
+        },
+        {
+          "code": "Quantity"
+        },
+        {
+          "code": "Range"
+        },
+        {
+          "code": "Ratio"
+        },
+        {
+          "code": "Reference"
+        },
+        {
+          "code": "SampledData"
+        },
+        {
+          "code": "Signature"
+        },
+        {
+          "code": "Timing"
+        },
+        {
+          "code": "ContactDetail"
+        },
+        {
+          "code": "Contributor"
+        },
+        {
+          "code": "DataRequirement"
+        },
+        {
+          "code": "Expression"
+        },
+        {
+          "code": "ParameterDefinition"
+        },
+        {
+          "code": "RelatedArtifact"
+        },
+        {
+          "code": "TriggerDefinition"
+        },
+        {
+          "code": "UsageContext"
+        },
+        {
+          "code": "Dosage"
+        },
+        {
+          "code": "Meta"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Content to use in performing the task",
+      "definition": "The value of the input parameter as a basic type.",
+      "binding": null
+    },
+    {
+      "path": "Task.output",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Information produced as part of task",
+      "definition": "Outputs produced by the Task.",
+      "binding": null
+    },
+    {
+      "path": "Task.output.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "Task.output.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "Task.output.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "Task.output.type",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Label for output",
+      "definition": "The name of the Output parameter.",
+      "binding": {
+        "valueSet": null,
+        "strength": "example",
+        "description": "Codes to identify types of input parameters.  These will typically be specific to a particular workflow.  E.g. \"Identified issues\", \"Preliminary results\", \"Filler order\", \"Final results\", etc."
+      }
+    },
+    {
+      "path": "Task.output.value[x]",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "base64Binary"
+        },
+        {
+          "code": "boolean"
+        },
+        {
+          "code": "canonical"
+        },
+        {
+          "code": "code"
+        },
+        {
+          "code": "date"
+        },
+        {
+          "code": "dateTime"
+        },
+        {
+          "code": "decimal"
+        },
+        {
+          "code": "id"
+        },
+        {
+          "code": "instant"
+        },
+        {
+          "code": "integer"
+        },
+        {
+          "code": "markdown"
+        },
+        {
+          "code": "oid"
+        },
+        {
+          "code": "positiveInt"
+        },
+        {
+          "code": "string"
+        },
+        {
+          "code": "time"
+        },
+        {
+          "code": "unsignedInt"
+        },
+        {
+          "code": "uri"
+        },
+        {
+          "code": "url"
+        },
+        {
+          "code": "uuid"
+        },
+        {
+          "code": "Address"
+        },
+        {
+          "code": "Age"
+        },
+        {
+          "code": "Annotation"
+        },
+        {
+          "code": "Attachment"
+        },
+        {
+          "code": "CodeableConcept"
+        },
+        {
+          "code": "Coding"
+        },
+        {
+          "code": "ContactPoint"
+        },
+        {
+          "code": "Count"
+        },
+        {
+          "code": "Distance"
+        },
+        {
+          "code": "Duration"
+        },
+        {
+          "code": "HumanName"
+        },
+        {
+          "code": "Identifier"
+        },
+        {
+          "code": "Money"
+        },
+        {
+          "code": "Period"
+        },
+        {
+          "code": "Quantity"
+        },
+        {
+          "code": "Range"
+        },
+        {
+          "code": "Ratio"
+        },
+        {
+          "code": "Reference"
+        },
+        {
+          "code": "SampledData"
+        },
+        {
+          "code": "Signature"
+        },
+        {
+          "code": "Timing"
+        },
+        {
+          "code": "ContactDetail"
+        },
+        {
+          "code": "Contributor"
+        },
+        {
+          "code": "DataRequirement"
+        },
+        {
+          "code": "Expression"
+        },
+        {
+          "code": "ParameterDefinition"
+        },
+        {
+          "code": "RelatedArtifact"
+        },
+        {
+          "code": "TriggerDefinition"
+        },
+        {
+          "code": "UsageContext"
+        },
+        {
+          "code": "Dosage"
+        },
+        {
+          "code": "Meta"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Result of output",
+      "definition": "The value of the Output parameter as a basic type.",
+      "binding": null
+    }
+  ],
+  "search": [
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Task-authored-on",
+      "version": "4.0.1",
+      "name": "authored-on",
+      "code": "authored-on",
+      "type": "date",
+      "description": "Search by creation date",
+      "expression": "Task.authoredOn",
+      "xpath": "f:Task/f:authoredOn",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [
+        "eq",
+        "ne",
+        "gt",
+        "ge",
+        "lt",
+        "le",
+        "sa",
+        "eb",
+        "ap"
+      ],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Task"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Task-based-on",
+      "version": "4.0.1",
+      "name": "based-on",
+      "code": "based-on",
+      "type": "reference",
+      "description": "Search by requests this task is based on",
+      "expression": "Task.basedOn",
+      "xpath": "f:Task/f:basedOn",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Account",
+        "ActivityDefinition",
+        "AdverseEvent",
+        "AllergyIntolerance",
+        "Appointment",
+        "AppointmentResponse",
+        "AuditEvent",
+        "Basic",
+        "Binary",
+        "BiologicallyDerivedProduct",
+        "BodyStructure",
+        "Bundle",
+        "CapabilityStatement",
+        "CarePlan",
+        "CareTeam",
+        "CatalogEntry",
+        "ChargeItem",
+        "ChargeItemDefinition",
+        "Claim",
+        "ClaimResponse",
+        "ClinicalImpression",
+        "CodeSystem",
+        "Communication",
+        "CommunicationRequest",
+        "CompartmentDefinition",
+        "Composition",
+        "ConceptMap",
+        "Condition",
+        "Consent",
+        "Contract",
+        "Coverage",
+        "CoverageEligibilityRequest",
+        "CoverageEligibilityResponse",
+        "DetectedIssue",
+        "Device",
+        "DeviceDefinition",
+        "DeviceMetric",
+        "DeviceRequest",
+        "DeviceUseStatement",
+        "DiagnosticReport",
+        "DocumentManifest",
+        "DocumentReference",
+        "EffectEvidenceSynthesis",
+        "Encounter",
+        "Endpoint",
+        "EnrollmentRequest",
+        "EnrollmentResponse",
+        "EpisodeOfCare",
+        "EventDefinition",
+        "Evidence",
+        "EvidenceVariable",
+        "ExampleScenario",
+        "ExplanationOfBenefit",
+        "FamilyMemberHistory",
+        "Flag",
+        "Goal",
+        "GraphDefinition",
+        "Group",
+        "GuidanceResponse",
+        "HealthcareService",
+        "ImagingStudy",
+        "Immunization",
+        "ImmunizationEvaluation",
+        "ImmunizationRecommendation",
+        "ImplementationGuide",
+        "InsurancePlan",
+        "Invoice",
+        "Library",
+        "Linkage",
+        "List",
+        "Location",
+        "Measure",
+        "MeasureReport",
+        "Media",
+        "Medication",
+        "MedicationAdministration",
+        "MedicationDispense",
+        "MedicationKnowledge",
+        "MedicationRequest",
+        "MedicationStatement",
+        "MedicinalProduct",
+        "MedicinalProductAuthorization",
+        "MedicinalProductContraindication",
+        "MedicinalProductIndication",
+        "MedicinalProductIngredient",
+        "MedicinalProductInteraction",
+        "MedicinalProductManufactured",
+        "MedicinalProductPackaged",
+        "MedicinalProductPharmaceutical",
+        "MedicinalProductUndesirableEffect",
+        "MessageDefinition",
+        "MessageHeader",
+        "MolecularSequence",
+        "NamingSystem",
+        "NutritionOrder",
+        "Observation",
+        "ObservationDefinition",
+        "OperationDefinition",
+        "OperationOutcome",
+        "Organization",
+        "OrganizationAffiliation",
+        "Patient",
+        "PaymentNotice",
+        "PaymentReconciliation",
+        "Person",
+        "PlanDefinition",
+        "Practitioner",
+        "PractitionerRole",
+        "Procedure",
+        "Provenance",
+        "Questionnaire",
+        "QuestionnaireResponse",
+        "RelatedPerson",
+        "RequestGroup",
+        "ResearchDefinition",
+        "ResearchElementDefinition",
+        "ResearchStudy",
+        "ResearchSubject",
+        "RiskAssessment",
+        "RiskEvidenceSynthesis",
+        "Schedule",
+        "SearchParameter",
+        "ServiceRequest",
+        "Slot",
+        "Specimen",
+        "SpecimenDefinition",
+        "StructureDefinition",
+        "StructureMap",
+        "Subscription",
+        "Substance",
+        "SubstanceNucleicAcid",
+        "SubstancePolymer",
+        "SubstanceProtein",
+        "SubstanceReferenceInformation",
+        "SubstanceSourceMaterial",
+        "SubstanceSpecification",
+        "SupplyDelivery",
+        "SupplyRequest",
+        "Task",
+        "TerminologyCapabilities",
+        "TestReport",
+        "TestScript",
+        "ValueSet",
+        "VerificationResult",
+        "VisionPrescription"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Task"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Task-business-status",
+      "version": "4.0.1",
+      "name": "business-status",
+      "code": "business-status",
+      "type": "token",
+      "description": "Search by business status",
+      "expression": "Task.businessStatus",
+      "xpath": "f:Task/f:businessStatus",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Task"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Task-code",
+      "version": "4.0.1",
+      "name": "code",
+      "code": "code",
+      "type": "token",
+      "description": "Search by task code",
+      "expression": "Task.code",
+      "xpath": "f:Task/f:code",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Task"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Task-encounter",
+      "version": "4.0.1",
+      "name": "encounter",
+      "code": "encounter",
+      "type": "reference",
+      "description": "Search by encounter",
+      "expression": "Task.encounter",
+      "xpath": "f:Task/f:encounter",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Encounter"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Task"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Task-focus",
+      "version": "4.0.1",
+      "name": "focus",
+      "code": "focus",
+      "type": "reference",
+      "description": "Search by task focus",
+      "expression": "Task.focus",
+      "xpath": "f:Task/f:focus",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Account",
+        "ActivityDefinition",
+        "AdverseEvent",
+        "AllergyIntolerance",
+        "Appointment",
+        "AppointmentResponse",
+        "AuditEvent",
+        "Basic",
+        "Binary",
+        "BiologicallyDerivedProduct",
+        "BodyStructure",
+        "Bundle",
+        "CapabilityStatement",
+        "CarePlan",
+        "CareTeam",
+        "CatalogEntry",
+        "ChargeItem",
+        "ChargeItemDefinition",
+        "Claim",
+        "ClaimResponse",
+        "ClinicalImpression",
+        "CodeSystem",
+        "Communication",
+        "CommunicationRequest",
+        "CompartmentDefinition",
+        "Composition",
+        "ConceptMap",
+        "Condition",
+        "Consent",
+        "Contract",
+        "Coverage",
+        "CoverageEligibilityRequest",
+        "CoverageEligibilityResponse",
+        "DetectedIssue",
+        "Device",
+        "DeviceDefinition",
+        "DeviceMetric",
+        "DeviceRequest",
+        "DeviceUseStatement",
+        "DiagnosticReport",
+        "DocumentManifest",
+        "DocumentReference",
+        "EffectEvidenceSynthesis",
+        "Encounter",
+        "Endpoint",
+        "EnrollmentRequest",
+        "EnrollmentResponse",
+        "EpisodeOfCare",
+        "EventDefinition",
+        "Evidence",
+        "EvidenceVariable",
+        "ExampleScenario",
+        "ExplanationOfBenefit",
+        "FamilyMemberHistory",
+        "Flag",
+        "Goal",
+        "GraphDefinition",
+        "Group",
+        "GuidanceResponse",
+        "HealthcareService",
+        "ImagingStudy",
+        "Immunization",
+        "ImmunizationEvaluation",
+        "ImmunizationRecommendation",
+        "ImplementationGuide",
+        "InsurancePlan",
+        "Invoice",
+        "Library",
+        "Linkage",
+        "List",
+        "Location",
+        "Measure",
+        "MeasureReport",
+        "Media",
+        "Medication",
+        "MedicationAdministration",
+        "MedicationDispense",
+        "MedicationKnowledge",
+        "MedicationRequest",
+        "MedicationStatement",
+        "MedicinalProduct",
+        "MedicinalProductAuthorization",
+        "MedicinalProductContraindication",
+        "MedicinalProductIndication",
+        "MedicinalProductIngredient",
+        "MedicinalProductInteraction",
+        "MedicinalProductManufactured",
+        "MedicinalProductPackaged",
+        "MedicinalProductPharmaceutical",
+        "MedicinalProductUndesirableEffect",
+        "MessageDefinition",
+        "MessageHeader",
+        "MolecularSequence",
+        "NamingSystem",
+        "NutritionOrder",
+        "Observation",
+        "ObservationDefinition",
+        "OperationDefinition",
+        "OperationOutcome",
+        "Organization",
+        "OrganizationAffiliation",
+        "Patient",
+        "PaymentNotice",
+        "PaymentReconciliation",
+        "Person",
+        "PlanDefinition",
+        "Practitioner",
+        "PractitionerRole",
+        "Procedure",
+        "Provenance",
+        "Questionnaire",
+        "QuestionnaireResponse",
+        "RelatedPerson",
+        "RequestGroup",
+        "ResearchDefinition",
+        "ResearchElementDefinition",
+        "ResearchStudy",
+        "ResearchSubject",
+        "RiskAssessment",
+        "RiskEvidenceSynthesis",
+        "Schedule",
+        "SearchParameter",
+        "ServiceRequest",
+        "Slot",
+        "Specimen",
+        "SpecimenDefinition",
+        "StructureDefinition",
+        "StructureMap",
+        "Subscription",
+        "Substance",
+        "SubstanceNucleicAcid",
+        "SubstancePolymer",
+        "SubstanceProtein",
+        "SubstanceReferenceInformation",
+        "SubstanceSourceMaterial",
+        "SubstanceSpecification",
+        "SupplyDelivery",
+        "SupplyRequest",
+        "Task",
+        "TerminologyCapabilities",
+        "TestReport",
+        "TestScript",
+        "ValueSet",
+        "VerificationResult",
+        "VisionPrescription"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Task"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Task-group-identifier",
+      "version": "4.0.1",
+      "name": "group-identifier",
+      "code": "group-identifier",
+      "type": "token",
+      "description": "Search by group identifier",
+      "expression": "Task.groupIdentifier",
+      "xpath": "f:Task/f:groupIdentifier",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Task"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Task-identifier",
+      "version": "4.0.1",
+      "name": "identifier",
+      "code": "identifier",
+      "type": "token",
+      "description": "Search for a task instance by its business identifier",
+      "expression": "Task.identifier",
+      "xpath": "f:Task/f:identifier",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Task"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Task-intent",
+      "version": "4.0.1",
+      "name": "intent",
+      "code": "intent",
+      "type": "token",
+      "description": "Search by task intent",
+      "expression": "Task.intent",
+      "xpath": "f:Task/f:intent",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Task"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Task-modified",
+      "version": "4.0.1",
+      "name": "modified",
+      "code": "modified",
+      "type": "date",
+      "description": "Search by last modification date",
+      "expression": "Task.lastModified",
+      "xpath": "f:Task/f:lastModified",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [
+        "eq",
+        "ne",
+        "gt",
+        "ge",
+        "lt",
+        "le",
+        "sa",
+        "eb",
+        "ap"
+      ],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Task"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Task-owner",
+      "version": "4.0.1",
+      "name": "owner",
+      "code": "owner",
+      "type": "reference",
+      "description": "Search by task owner",
+      "expression": "Task.owner",
+      "xpath": "f:Task/f:owner",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Practitioner",
+        "Organization",
+        "CareTeam",
+        "Device",
+        "Patient",
+        "HealthcareService",
+        "PractitionerRole",
+        "RelatedPerson"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Task"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Task-part-of",
+      "version": "4.0.1",
+      "name": "part-of",
+      "code": "part-of",
+      "type": "reference",
+      "description": "Search by task this task is part of",
+      "expression": "Task.partOf",
+      "xpath": "f:Task/f:partOf",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Task"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Task"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Task-patient",
+      "version": "4.0.1",
+      "name": "patient",
+      "code": "patient",
+      "type": "reference",
+      "description": "Search by patient",
+      "expression": "Task.for.where(resolve() is Patient)",
+      "xpath": "f:Task/f:for",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Patient"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Task"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Task-performer",
+      "version": "4.0.1",
+      "name": "performer",
+      "code": "performer",
+      "type": "token",
+      "description": "Search by recommended type of performer (e.g., Requester, Performer, Scheduler).",
+      "expression": "Task.performerType",
+      "xpath": "f:Task/f:performerType",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Task"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Task-period",
+      "version": "4.0.1",
+      "name": "period",
+      "code": "period",
+      "type": "date",
+      "description": "Search by period Task is/was underway",
+      "expression": "Task.executionPeriod",
+      "xpath": "f:Task/f:executionPeriod",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [
+        "eq",
+        "ne",
+        "gt",
+        "ge",
+        "lt",
+        "le",
+        "sa",
+        "eb",
+        "ap"
+      ],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Task"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Task-priority",
+      "version": "4.0.1",
+      "name": "priority",
+      "code": "priority",
+      "type": "token",
+      "description": "Search by task priority",
+      "expression": "Task.priority",
+      "xpath": "f:Task/f:priority",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Task"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Task-requester",
+      "version": "4.0.1",
+      "name": "requester",
+      "code": "requester",
+      "type": "reference",
+      "description": "Search by task requester",
+      "expression": "Task.requester",
+      "xpath": "f:Task/f:requester",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Practitioner",
+        "Organization",
+        "Device",
+        "Patient",
+        "PractitionerRole",
+        "RelatedPerson"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Task"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Task-status",
+      "version": "4.0.1",
+      "name": "status",
+      "code": "status",
+      "type": "token",
+      "description": "Search by task status",
+      "expression": "Task.status",
+      "xpath": "f:Task/f:status",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Task"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Task-subject",
+      "version": "4.0.1",
+      "name": "subject",
+      "code": "subject",
+      "type": "reference",
+      "description": "Search by subject",
+      "expression": "Task.for",
+      "xpath": "f:Task/f:for",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Account",
+        "ActivityDefinition",
+        "AdverseEvent",
+        "AllergyIntolerance",
+        "Appointment",
+        "AppointmentResponse",
+        "AuditEvent",
+        "Basic",
+        "Binary",
+        "BiologicallyDerivedProduct",
+        "BodyStructure",
+        "Bundle",
+        "CapabilityStatement",
+        "CarePlan",
+        "CareTeam",
+        "CatalogEntry",
+        "ChargeItem",
+        "ChargeItemDefinition",
+        "Claim",
+        "ClaimResponse",
+        "ClinicalImpression",
+        "CodeSystem",
+        "Communication",
+        "CommunicationRequest",
+        "CompartmentDefinition",
+        "Composition",
+        "ConceptMap",
+        "Condition",
+        "Consent",
+        "Contract",
+        "Coverage",
+        "CoverageEligibilityRequest",
+        "CoverageEligibilityResponse",
+        "DetectedIssue",
+        "Device",
+        "DeviceDefinition",
+        "DeviceMetric",
+        "DeviceRequest",
+        "DeviceUseStatement",
+        "DiagnosticReport",
+        "DocumentManifest",
+        "DocumentReference",
+        "EffectEvidenceSynthesis",
+        "Encounter",
+        "Endpoint",
+        "EnrollmentRequest",
+        "EnrollmentResponse",
+        "EpisodeOfCare",
+        "EventDefinition",
+        "Evidence",
+        "EvidenceVariable",
+        "ExampleScenario",
+        "ExplanationOfBenefit",
+        "FamilyMemberHistory",
+        "Flag",
+        "Goal",
+        "GraphDefinition",
+        "Group",
+        "GuidanceResponse",
+        "HealthcareService",
+        "ImagingStudy",
+        "Immunization",
+        "ImmunizationEvaluation",
+        "ImmunizationRecommendation",
+        "ImplementationGuide",
+        "InsurancePlan",
+        "Invoice",
+        "Library",
+        "Linkage",
+        "List",
+        "Location",
+        "Measure",
+        "MeasureReport",
+        "Media",
+        "Medication",
+        "MedicationAdministration",
+        "MedicationDispense",
+        "MedicationKnowledge",
+        "MedicationRequest",
+        "MedicationStatement",
+        "MedicinalProduct",
+        "MedicinalProductAuthorization",
+        "MedicinalProductContraindication",
+        "MedicinalProductIndication",
+        "MedicinalProductIngredient",
+        "MedicinalProductInteraction",
+        "MedicinalProductManufactured",
+        "MedicinalProductPackaged",
+        "MedicinalProductPharmaceutical",
+        "MedicinalProductUndesirableEffect",
+        "MessageDefinition",
+        "MessageHeader",
+        "MolecularSequence",
+        "NamingSystem",
+        "NutritionOrder",
+        "Observation",
+        "ObservationDefinition",
+        "OperationDefinition",
+        "OperationOutcome",
+        "Organization",
+        "OrganizationAffiliation",
+        "Patient",
+        "PaymentNotice",
+        "PaymentReconciliation",
+        "Person",
+        "PlanDefinition",
+        "Practitioner",
+        "PractitionerRole",
+        "Procedure",
+        "Provenance",
+        "Questionnaire",
+        "QuestionnaireResponse",
+        "RelatedPerson",
+        "RequestGroup",
+        "ResearchDefinition",
+        "ResearchElementDefinition",
+        "ResearchStudy",
+        "ResearchSubject",
+        "RiskAssessment",
+        "RiskEvidenceSynthesis",
+        "Schedule",
+        "SearchParameter",
+        "ServiceRequest",
+        "Slot",
+        "Specimen",
+        "SpecimenDefinition",
+        "StructureDefinition",
+        "StructureMap",
+        "Subscription",
+        "Substance",
+        "SubstanceNucleicAcid",
+        "SubstancePolymer",
+        "SubstanceProtein",
+        "SubstanceReferenceInformation",
+        "SubstanceSourceMaterial",
+        "SubstanceSpecification",
+        "SupplyDelivery",
+        "SupplyRequest",
+        "Task",
+        "TerminologyCapabilities",
+        "TestReport",
+        "TestScript",
+        "ValueSet",
+        "VerificationResult",
+        "VisionPrescription"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Task"
+      ]
+    }
+  ]
+}

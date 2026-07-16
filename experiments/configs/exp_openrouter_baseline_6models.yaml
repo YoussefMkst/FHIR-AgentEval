@@ -1,0 +1,43 @@
+# Config-driven experiment definition.
+#
+# One file = one experiment. It runs every entry in `configs` over `runs` full
+# passes and writes results to base_dir/<tag>/run_<n>/.
+#
+# Top-level `variations_yaml` is the default; any config may override it.
+# `system_prompt` accepts a keyword (baseline | refs | mem) or a literal path.
+
+base_dir: results/exp_openrouter_baseline_6models
+runs: 3
+variations_yaml: environment/data/exp_1_task_variation_updated.yaml
+fhir_sse_url: http://localhost:8000/fhir_mcp   # primary FHIR MCP (shared by all configs)
+
+configs:
+  - tag: gpt_oss_120b_baseline
+    model: openai/gpt-oss-120b
+    system_prompt: baseline
+    mcp_endpoints: []
+
+  - tag: qwen3_32b_baseline
+    model: qwen/qwen3-32b
+    system_prompt: baseline
+    mcp_endpoints: []
+
+  - tag: gpt41mini_baseline
+    model: openai/gpt-4.1-mini
+    system_prompt: baseline
+    mcp_endpoints: []
+
+  - tag: deepseek_v4_flash_baseline
+    model: deepseek/deepseek-v4-flash
+    system_prompt: baseline
+    mcp_endpoints: []
+
+  - tag: claude_sonnet_46_baseline
+    model: anthropic/claude-sonnet-4.6
+    system_prompt: baseline
+    mcp_endpoints: []
+
+  - tag: glm_52_baseline
+    model: z-ai/glm-5.2
+    system_prompt: baseline
+    mcp_endpoints: []

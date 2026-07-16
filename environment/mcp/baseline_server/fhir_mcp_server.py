@@ -3,11 +3,17 @@
 #   pip install -U fastmcp httpx "pydantic>=2"
 
 import os, sys, argparse, asyncio, logging, json
+from pathlib import Path
 from typing import Any, Optional, Dict, List, Annotated
 
 import httpx
+from dotenv import load_dotenv
 from pydantic import Field, BaseModel, ConfigDict
 from fastmcp import FastMCP
+
+# Load environment/.env so the MCP server and the tasks/validators read the
+# same FHIR_SERVER_URL (they must point at the same FHIR server).
+load_dotenv(Path(__file__).resolve().parents[2] / ".env")
 
 # ── logging ──────────────────────────────────────────────────────────
 LOG_LEVEL = os.getenv("MCP_LOG_LEVEL", "INFO").upper()
@@ -20,7 +26,7 @@ log = logging.getLogger("fhir-mcp")
 
 # ── config ───────────────────────────────────────────────────────────
 # If HAPI is published as ports ["7070:8080"], use 7070 from the host.
-DEFAULT_FHIR_BASE = os.getenv("FHIR_BASE_URL", "http://localhost:7070/fhir")
+DEFAULT_FHIR_BASE = os.getenv("FHIR_SERVER_URL", "http://localhost:7070/fhir")
 mcp = FastMCP(name="fhir-basic")
 
 # ── helpers ──────────────────────────────────────────────────────────
@@ -397,7 +403,7 @@ async def selftest(b: str) -> None:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--selftest", action="store_true", help="Run a quick FHIR check and exit.")
-    parser.add_argument("--base-url", default=DEFAULT_FHIR_BASE, help="FHIR base URL for selftest and tools.")
+    parser.add_argument("--base-url", default=DEFAULT_FHIR_BASE, help="FHIR base URL; defaults to FHIR_SERVER_URL from .env.")
     parser.add_argument("--host", default="0.0.0.0", help="HTTP host for SSE.")
     parser.add_argument("--port", type=int, default=8000, help="HTTP port for SSE.")
     parser.add_argument("--path", default="/fhir_mcp", help="HTTP path for SSE endpoint.")
@@ -407,9 +413,10 @@ if __name__ == "__main__":
         asyncio.run(selftest(args.base_url))
         sys.exit(0)
 
-    # Make --base-url effective for ALL tools at runtime
+    # --base-url wins if passed; otherwise it already defaults to DEFAULT_FHIR_BASE
+    # (FHIR_SERVER_URL from .env). Make it effective for ALL tools at runtime.
     DEFAULT_FHIR_BASE = args.base_url
 
-    log.info("Starting MCP SSE server on http://%s:%d%s (FHIR=%s)",
-             args.host, args.port, args.path, DEFAULT_FHIR_BASE)
+    log.info("FHIR MCP server targeting FHIR server: %s", DEFAULT_FHIR_BASE)
+    log.info("Starting MCP SSE server on http://%s:%d%s", args.host, args.port, args.path)
     mcp.run(transport="sse", host=args.host, port=args.port, path=args.path)

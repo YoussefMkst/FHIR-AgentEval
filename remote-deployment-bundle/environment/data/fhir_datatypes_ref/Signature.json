@@ -1,0 +1,195 @@
+{
+  "dataType": "Signature",
+  "typeKind": "complex-type",
+  "fhir_version": "4.0.1",
+  "source_urls": {
+    "structureDefinition": "http://hl7.org/fhir/StructureDefinition/Signature"
+  },
+  "elements": [
+    {
+      "path": "Signature",
+      "min": 0,
+      "max": "*",
+      "type": [],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "A Signature - XML DigSig, JWS, Graphical image of signature, etc.",
+      "definition": "A signature along with supporting context. The signature may be a digital signature that is cryptographic in nature, or some other signature acceptable to the domain. This other signature may be as simple as a graphical image representing a hand-written signature, or a signature ceremony Different signature approaches have different utilities.",
+      "binding": null
+    },
+    {
+      "path": "Signature.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String",
+          "fhirType": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "Signature.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "Signature.type",
+      "min": 1,
+      "max": "*",
+      "type": [
+        {
+          "code": "Coding"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Indication of the reason the entity signed the object(s)",
+      "definition": "An indication of the reason that the entity signed this document. This may be explicitly included as part of the signature information and can be used when determining accountability for various actions concerning the document.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/signature-type",
+        "strength": "preferred",
+        "description": "An indication of the reason that an entity signed the object."
+      }
+    },
+    {
+      "path": "Signature.when",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "instant"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "When the signature was created",
+      "definition": "When the digital signature was signed.",
+      "binding": null
+    },
+    {
+      "path": "Signature.who",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Practitioner",
+            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+            "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+            "http://hl7.org/fhir/StructureDefinition/Patient",
+            "http://hl7.org/fhir/StructureDefinition/Device",
+            "http://hl7.org/fhir/StructureDefinition/Organization"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Who signed",
+      "definition": "A reference to an application-usable description of the identity that signed  (e.g. the signature used their private key).",
+      "binding": null
+    },
+    {
+      "path": "Signature.onBehalfOf",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Practitioner",
+            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+            "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+            "http://hl7.org/fhir/StructureDefinition/Patient",
+            "http://hl7.org/fhir/StructureDefinition/Device",
+            "http://hl7.org/fhir/StructureDefinition/Organization"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The party represented",
+      "definition": "A reference to an application-usable description of the identity that is represented by the signature.",
+      "binding": null
+    },
+    {
+      "path": "Signature.targetFormat",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The technical format of the signed resources",
+      "definition": "A mime type that indicates the technical format of the target resources signed by the signature.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/mimetypes|4.0.1",
+        "strength": "required",
+        "description": "The mime type of an attachment. Any valid mime type is allowed."
+      }
+    },
+    {
+      "path": "Signature.sigFormat",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The technical format of the signature",
+      "definition": "A mime type that indicates the technical format of the signature. Important mime types are application/signature+xml for X ML DigSig, application/jose for JWS, and image/* for a graphical image of a signature, etc.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/mimetypes|4.0.1",
+        "strength": "required",
+        "description": "The mime type of an attachment. Any valid mime type is allowed."
+      }
+    },
+    {
+      "path": "Signature.data",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "base64Binary"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The actual signature content (XML DigSig. JWS, picture, etc.)",
+      "definition": "The base64 encoding of the Signature content. When signature is not recorded electronically this element would be empty.",
+      "binding": null
+    }
+  ]
+}

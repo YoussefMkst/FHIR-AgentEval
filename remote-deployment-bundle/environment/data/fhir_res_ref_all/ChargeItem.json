@@ -1,0 +1,1190 @@
+{
+  "resourceType": "ChargeItem",
+  "fhir_version": "4.0.1",
+  "source_urls": {
+    "structureDefinition": "http://hl7.org/fhir/StructureDefinition/ChargeItem"
+  },
+  "elements": [
+    {
+      "path": "ChargeItem",
+      "min": 0,
+      "max": "*",
+      "type": [],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Item containing charge code(s) associated with the provision of healthcare provider products",
+      "definition": "The resource ChargeItem describes the provision of healthcare provider products for a certain patient, therefore referring not only to the product, but containing in addition details of the provision, like date, time, amounts and participating organizations and persons. Main Usage of the ChargeItem is to enable the billing process and internal cost allocation.",
+      "binding": null
+    },
+    {
+      "path": "ChargeItem.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Logical id of this artifact",
+      "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
+      "binding": null
+    },
+    {
+      "path": "ChargeItem.meta",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Meta"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Metadata about the resource",
+      "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.",
+      "binding": null
+    },
+    {
+      "path": "ChargeItem.implicitRules",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "uri"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "This element is labeled as a modifier because the implicit rules may provide additional knowledge about the resource that modifies it's meaning or interpretation",
+      "mustSupport": null,
+      "short": "A set of rules under which this content was created",
+      "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.",
+      "binding": null
+    },
+    {
+      "path": "ChargeItem.language",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Language of the resource content",
+      "definition": "The base language in which the resource is written.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/languages",
+        "strength": "preferred",
+        "description": "A human language."
+      }
+    },
+    {
+      "path": "ChargeItem.text",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Narrative"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Text summary of the resource, for human interpretation",
+      "definition": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
+      "binding": null
+    },
+    {
+      "path": "ChargeItem.contained",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Resource"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Contained, inline Resources",
+      "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
+      "binding": null
+    },
+    {
+      "path": "ChargeItem.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "ChargeItem.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the resource that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "ChargeItem.identifier",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Identifier"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Business Identifier for item",
+      "definition": "Identifiers assigned to this event performer or other systems.",
+      "binding": null
+    },
+    {
+      "path": "ChargeItem.definitionUri",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "uri"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Defining information about the code of this charge item",
+      "definition": "References the (external) source of pricing information, rules of application for the code this ChargeItem uses.",
+      "binding": null
+    },
+    {
+      "path": "ChargeItem.definitionCanonical",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "canonical",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/ChargeItemDefinition"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Resource defining the code of this ChargeItem",
+      "definition": "References the source of pricing information, rules of application for the code this ChargeItem uses.",
+      "binding": null
+    },
+    {
+      "path": "ChargeItem.status",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "This element is labelled as a modifier because it is a status element that contains status entered-in-error which means that the resource should not be treated as valid",
+      "mustSupport": null,
+      "short": "planned | billable | not-billable | aborted | billed | entered-in-error | unknown",
+      "definition": "The current state of the ChargeItem.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/chargeitem-status|4.0.1",
+        "strength": "required",
+        "description": "Codes identifying the lifecycle stage of a ChargeItem."
+      }
+    },
+    {
+      "path": "ChargeItem.partOf",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/ChargeItem"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Part of referenced ChargeItem",
+      "definition": "ChargeItems can be grouped to larger ChargeItems covering the whole set.",
+      "binding": null
+    },
+    {
+      "path": "ChargeItem.code",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "A code that identifies the charge, like a billing code",
+      "definition": "A code that identifies the charge, like a billing code.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/chargeitem-billingcodes",
+        "strength": "example",
+        "description": "Example set of codes that can be used for billing purposes."
+      }
+    },
+    {
+      "path": "ChargeItem.subject",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Patient",
+            "http://hl7.org/fhir/StructureDefinition/Group"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Individual service was done for/to",
+      "definition": "The individual or set of individuals the action is being or was performed on.",
+      "binding": null
+    },
+    {
+      "path": "ChargeItem.context",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Encounter",
+            "http://hl7.org/fhir/StructureDefinition/EpisodeOfCare"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Encounter / Episode associated with event",
+      "definition": "The encounter or episode of care that establishes the context for this event.",
+      "binding": null
+    },
+    {
+      "path": "ChargeItem.occurrence[x]",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "dateTime"
+        },
+        {
+          "code": "Period"
+        },
+        {
+          "code": "Timing"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "When the charged service was applied",
+      "definition": "Date/time(s) or duration when the charged service was applied.",
+      "binding": null
+    },
+    {
+      "path": "ChargeItem.performer",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Who performed charged service",
+      "definition": "Indicates who or what performed or participated in the charged service.",
+      "binding": null
+    },
+    {
+      "path": "ChargeItem.performer.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "ChargeItem.performer.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "ChargeItem.performer.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "ChargeItem.performer.function",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "What type of performance was done",
+      "definition": "Describes the type of performance or participation(e.g. primary surgeon, anesthesiologiest, etc.).",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/performer-role",
+        "strength": "example",
+        "description": "Codes describing the types of functional roles performers can take on when performing events."
+      }
+    },
+    {
+      "path": "ChargeItem.performer.actor",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Practitioner",
+            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+            "http://hl7.org/fhir/StructureDefinition/Organization",
+            "http://hl7.org/fhir/StructureDefinition/CareTeam",
+            "http://hl7.org/fhir/StructureDefinition/Patient",
+            "http://hl7.org/fhir/StructureDefinition/Device",
+            "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Individual who was performing",
+      "definition": "The device, practitioner, etc. who performed or participated in the service.",
+      "binding": null
+    },
+    {
+      "path": "ChargeItem.performingOrganization",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Organization"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Organization providing the charged service",
+      "definition": "The organization requesting the service.",
+      "binding": null
+    },
+    {
+      "path": "ChargeItem.requestingOrganization",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Organization"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Organization requesting the charged service",
+      "definition": "The organization performing the service.",
+      "binding": null
+    },
+    {
+      "path": "ChargeItem.costCenter",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Organization"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Organization that has ownership of the (potential, future) revenue",
+      "definition": "The financial cost center permits the tracking of charge attribution.",
+      "binding": null
+    },
+    {
+      "path": "ChargeItem.quantity",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Quantity"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Quantity of which the charge item has been serviced",
+      "definition": "Quantity of which the charge item has been serviced.",
+      "binding": null
+    },
+    {
+      "path": "ChargeItem.bodysite",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Anatomical location, if relevant",
+      "definition": "The anatomical location where the related service has been applied.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/body-site",
+        "strength": "example",
+        "description": "Codes describing anatomical locations. May include laterality."
+      }
+    },
+    {
+      "path": "ChargeItem.factorOverride",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "decimal"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Factor overriding the associated rules",
+      "definition": "Factor overriding the factor determined by the rules associated with the code.",
+      "binding": null
+    },
+    {
+      "path": "ChargeItem.priceOverride",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Money"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Price overriding the associated rules",
+      "definition": "Total price of the charge overriding the list price associated with the code.",
+      "binding": null
+    },
+    {
+      "path": "ChargeItem.overrideReason",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Reason for overriding the list price/factor",
+      "definition": "If the list price or the rule-based factor associated with the code is overridden, this attribute can capture a text to indicate the  reason for this action.",
+      "binding": null
+    },
+    {
+      "path": "ChargeItem.enterer",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Practitioner",
+            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+            "http://hl7.org/fhir/StructureDefinition/Organization",
+            "http://hl7.org/fhir/StructureDefinition/Patient",
+            "http://hl7.org/fhir/StructureDefinition/Device",
+            "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Individual who was entering",
+      "definition": "The device, practitioner, etc. who entered the charge item.",
+      "binding": null
+    },
+    {
+      "path": "ChargeItem.enteredDate",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "dateTime"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Date the charge item was entered",
+      "definition": "Date the charge item was entered.",
+      "binding": null
+    },
+    {
+      "path": "ChargeItem.reason",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Why was the charged  service rendered?",
+      "definition": "Describes why the event occurred in coded or textual form.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/icd-10",
+        "strength": "example",
+        "description": "Example binding for reason."
+      }
+    },
+    {
+      "path": "ChargeItem.service",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
+            "http://hl7.org/fhir/StructureDefinition/ImagingStudy",
+            "http://hl7.org/fhir/StructureDefinition/Immunization",
+            "http://hl7.org/fhir/StructureDefinition/MedicationAdministration",
+            "http://hl7.org/fhir/StructureDefinition/MedicationDispense",
+            "http://hl7.org/fhir/StructureDefinition/Observation",
+            "http://hl7.org/fhir/StructureDefinition/Procedure",
+            "http://hl7.org/fhir/StructureDefinition/SupplyDelivery"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Which rendered service is being charged?",
+      "definition": "Indicated the rendered service that caused this charge.",
+      "binding": null
+    },
+    {
+      "path": "ChargeItem.product[x]",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Device",
+            "http://hl7.org/fhir/StructureDefinition/Medication",
+            "http://hl7.org/fhir/StructureDefinition/Substance"
+          ]
+        },
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Product charged",
+      "definition": "Identifies the device, food, drug or other product being charged either by type code or reference to an instance.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/device-kind",
+        "strength": "example",
+        "description": "Example binding for product type."
+      }
+    },
+    {
+      "path": "ChargeItem.account",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Account"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Account to place this charge",
+      "definition": "Account into which this ChargeItems belongs.",
+      "binding": null
+    },
+    {
+      "path": "ChargeItem.note",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Annotation"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Comments made about the ChargeItem",
+      "definition": "Comments made about the event by the performer, subject or other participants.",
+      "binding": null
+    },
+    {
+      "path": "ChargeItem.supportingInformation",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Resource"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Further information supporting this charge",
+      "definition": "Further information supporting this charge.",
+      "binding": null
+    }
+  ],
+  "search": [
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ChargeItem-account",
+      "version": "4.0.1",
+      "name": "account",
+      "code": "account",
+      "type": "reference",
+      "description": "Account to place this charge",
+      "expression": "ChargeItem.account",
+      "xpath": "f:ChargeItem/f:account",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Account"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ChargeItem"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ChargeItem-code",
+      "version": "4.0.1",
+      "name": "code",
+      "code": "code",
+      "type": "token",
+      "description": "A code that identifies the charge, like a billing code",
+      "expression": "ChargeItem.code",
+      "xpath": "f:ChargeItem/f:code",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ChargeItem"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ChargeItem-context",
+      "version": "4.0.1",
+      "name": "context",
+      "code": "context",
+      "type": "reference",
+      "description": "Encounter / Episode associated with event",
+      "expression": "ChargeItem.context",
+      "xpath": "f:ChargeItem/f:context",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "EpisodeOfCare",
+        "Encounter"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ChargeItem"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ChargeItem-entered-date",
+      "version": "4.0.1",
+      "name": "entered-date",
+      "code": "entered-date",
+      "type": "date",
+      "description": "Date the charge item was entered",
+      "expression": "ChargeItem.enteredDate",
+      "xpath": "f:ChargeItem/f:enteredDate",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [
+        "eq",
+        "ne",
+        "gt",
+        "ge",
+        "lt",
+        "le",
+        "sa",
+        "eb",
+        "ap"
+      ],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ChargeItem"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ChargeItem-enterer",
+      "version": "4.0.1",
+      "name": "enterer",
+      "code": "enterer",
+      "type": "reference",
+      "description": "Individual who was entering",
+      "expression": "ChargeItem.enterer",
+      "xpath": "f:ChargeItem/f:enterer",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Practitioner",
+        "Organization",
+        "Device",
+        "Patient",
+        "PractitionerRole",
+        "RelatedPerson"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ChargeItem"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ChargeItem-factor-override",
+      "version": "4.0.1",
+      "name": "factor-override",
+      "code": "factor-override",
+      "type": "number",
+      "description": "Factor overriding the associated rules",
+      "expression": "ChargeItem.factorOverride",
+      "xpath": "f:ChargeItem/f:factorOverride",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [
+        "eq",
+        "ne",
+        "gt",
+        "ge",
+        "lt",
+        "le",
+        "sa",
+        "eb",
+        "ap"
+      ],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ChargeItem"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ChargeItem-identifier",
+      "version": "4.0.1",
+      "name": "identifier",
+      "code": "identifier",
+      "type": "token",
+      "description": "Business Identifier for item",
+      "expression": "ChargeItem.identifier",
+      "xpath": "f:ChargeItem/f:identifier",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ChargeItem"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ChargeItem-occurrence",
+      "version": "4.0.1",
+      "name": "occurrence",
+      "code": "occurrence",
+      "type": "date",
+      "description": "When the charged service was applied",
+      "expression": "ChargeItem.occurrence",
+      "xpath": "f:ChargeItem/f:occurrenceDateTime | f:ChargeItem/f:occurrencePeriod | f:ChargeItem/f:occurrenceTiming",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [
+        "eq",
+        "ne",
+        "gt",
+        "ge",
+        "lt",
+        "le",
+        "sa",
+        "eb",
+        "ap"
+      ],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ChargeItem"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ChargeItem-patient",
+      "version": "4.0.1",
+      "name": "patient",
+      "code": "patient",
+      "type": "reference",
+      "description": "Individual service was done for/to",
+      "expression": "ChargeItem.subject.where(resolve() is Patient)",
+      "xpath": "f:ChargeItem/f:subject",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Patient"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ChargeItem"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ChargeItem-performer-actor",
+      "version": "4.0.1",
+      "name": "performer-actor",
+      "code": "performer-actor",
+      "type": "reference",
+      "description": "Individual who was performing",
+      "expression": "ChargeItem.performer.actor",
+      "xpath": "f:ChargeItem/f:performer/f:actor",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Practitioner",
+        "Organization",
+        "CareTeam",
+        "Device",
+        "Patient",
+        "PractitionerRole",
+        "RelatedPerson"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ChargeItem"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ChargeItem-performer-function",
+      "version": "4.0.1",
+      "name": "performer-function",
+      "code": "performer-function",
+      "type": "token",
+      "description": "What type of performance was done",
+      "expression": "ChargeItem.performer.function",
+      "xpath": "f:ChargeItem/f:performer/f:function",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ChargeItem"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ChargeItem-performing-organization",
+      "version": "4.0.1",
+      "name": "performing-organization",
+      "code": "performing-organization",
+      "type": "reference",
+      "description": "Organization providing the charged service",
+      "expression": "ChargeItem.performingOrganization",
+      "xpath": "f:ChargeItem/f:performingOrganization",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Organization"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ChargeItem"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ChargeItem-price-override",
+      "version": "4.0.1",
+      "name": "price-override",
+      "code": "price-override",
+      "type": "quantity",
+      "description": "Price overriding the associated rules",
+      "expression": "ChargeItem.priceOverride",
+      "xpath": "f:ChargeItem/f:priceOverride",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [
+        "eq",
+        "ne",
+        "gt",
+        "ge",
+        "lt",
+        "le",
+        "sa",
+        "eb",
+        "ap"
+      ],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ChargeItem"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ChargeItem-quantity",
+      "version": "4.0.1",
+      "name": "quantity",
+      "code": "quantity",
+      "type": "quantity",
+      "description": "Quantity of which the charge item has been serviced",
+      "expression": "ChargeItem.quantity",
+      "xpath": "f:ChargeItem/f:quantity",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [
+        "eq",
+        "ne",
+        "gt",
+        "ge",
+        "lt",
+        "le",
+        "sa",
+        "eb",
+        "ap"
+      ],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ChargeItem"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ChargeItem-requesting-organization",
+      "version": "4.0.1",
+      "name": "requesting-organization",
+      "code": "requesting-organization",
+      "type": "reference",
+      "description": "Organization requesting the charged service",
+      "expression": "ChargeItem.requestingOrganization",
+      "xpath": "f:ChargeItem/f:requestingOrganization",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Organization"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ChargeItem"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ChargeItem-service",
+      "version": "4.0.1",
+      "name": "service",
+      "code": "service",
+      "type": "reference",
+      "description": "Which rendered service is being charged?",
+      "expression": "ChargeItem.service",
+      "xpath": "f:ChargeItem/f:service",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Immunization",
+        "MedicationDispense",
+        "SupplyDelivery",
+        "Observation",
+        "DiagnosticReport",
+        "ImagingStudy",
+        "MedicationAdministration",
+        "Procedure"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ChargeItem"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/ChargeItem-subject",
+      "version": "4.0.1",
+      "name": "subject",
+      "code": "subject",
+      "type": "reference",
+      "description": "Individual service was done for/to",
+      "expression": "ChargeItem.subject",
+      "xpath": "f:ChargeItem/f:subject",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Group",
+        "Patient"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "ChargeItem"
+      ]
+    }
+  ]
+}

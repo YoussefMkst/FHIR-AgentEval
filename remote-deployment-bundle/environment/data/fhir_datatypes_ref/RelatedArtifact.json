@@ -1,0 +1,174 @@
+{
+  "dataType": "RelatedArtifact",
+  "typeKind": "complex-type",
+  "fhir_version": "4.0.1",
+  "source_urls": {
+    "structureDefinition": "http://hl7.org/fhir/StructureDefinition/RelatedArtifact"
+  },
+  "elements": [
+    {
+      "path": "RelatedArtifact",
+      "min": 0,
+      "max": "*",
+      "type": [],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Related artifacts for a knowledge resource",
+      "definition": "Related artifacts such as additional documentation, justification, or bibliographic references.",
+      "binding": null
+    },
+    {
+      "path": "RelatedArtifact.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String",
+          "fhirType": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "RelatedArtifact.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "RelatedArtifact.type",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "documentation | justification | citation | predecessor | successor | derived-from | depends-on | composed-of",
+      "definition": "The type of relationship to the related artifact.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/related-artifact-type|4.0.1",
+        "strength": "required",
+        "description": "The type of relationship to the related artifact."
+      }
+    },
+    {
+      "path": "RelatedArtifact.label",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Short label",
+      "definition": "A short label that can be used to reference the citation from elsewhere in the containing artifact, such as a footnote index.",
+      "binding": null
+    },
+    {
+      "path": "RelatedArtifact.display",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Brief description of the related artifact",
+      "definition": "A brief description of the document or knowledge resource being referenced, suitable for display to a consumer.",
+      "binding": null
+    },
+    {
+      "path": "RelatedArtifact.citation",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "markdown"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Bibliographic citation for the artifact",
+      "definition": "A bibliographic citation for the related artifact. This text SHOULD be formatted according to an accepted citation format.",
+      "binding": null
+    },
+    {
+      "path": "RelatedArtifact.url",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "url"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Where the artifact can be accessed",
+      "definition": "A url for the artifact that can be followed to access the actual content.",
+      "binding": null
+    },
+    {
+      "path": "RelatedArtifact.document",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Attachment"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "What document is being referenced",
+      "definition": "The document being referenced, represented as an attachment. This is exclusive with the resource element.",
+      "binding": null
+    },
+    {
+      "path": "RelatedArtifact.resource",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "canonical",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Resource"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "What resource is being referenced",
+      "definition": "The related resource, such as a library, value set, profile, or other knowledge resource.",
+      "binding": null
+    }
+  ]
+}

@@ -1,0 +1,876 @@
+{
+  "resourceType": "Media",
+  "fhir_version": "4.0.1",
+  "source_urls": {
+    "structureDefinition": "http://hl7.org/fhir/StructureDefinition/Media"
+  },
+  "elements": [
+    {
+      "path": "Media",
+      "min": 0,
+      "max": "*",
+      "type": [],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "A photo, video, or audio recording acquired or used in healthcare. The actual content may be inline or provided by direct reference",
+      "definition": "A photo, video, or audio recording acquired or used in healthcare. The actual content may be inline or provided by direct reference.",
+      "binding": null
+    },
+    {
+      "path": "Media.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Logical id of this artifact",
+      "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
+      "binding": null
+    },
+    {
+      "path": "Media.meta",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Meta"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Metadata about the resource",
+      "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.",
+      "binding": null
+    },
+    {
+      "path": "Media.implicitRules",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "uri"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "This element is labeled as a modifier because the implicit rules may provide additional knowledge about the resource that modifies it's meaning or interpretation",
+      "mustSupport": null,
+      "short": "A set of rules under which this content was created",
+      "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.",
+      "binding": null
+    },
+    {
+      "path": "Media.language",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Language of the resource content",
+      "definition": "The base language in which the resource is written.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/languages",
+        "strength": "preferred",
+        "description": "A human language."
+      }
+    },
+    {
+      "path": "Media.text",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Narrative"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Text summary of the resource, for human interpretation",
+      "definition": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
+      "binding": null
+    },
+    {
+      "path": "Media.contained",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Resource"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Contained, inline Resources",
+      "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
+      "binding": null
+    },
+    {
+      "path": "Media.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "Media.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the resource that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "Media.identifier",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Identifier"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Identifier(s) for the image",
+      "definition": "Identifiers associated with the image - these may include identifiers for the image itself, identifiers for the context of its collection (e.g. series ids) and context ids such as accession numbers or other workflow identifiers.",
+      "binding": null
+    },
+    {
+      "path": "Media.basedOn",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
+            "http://hl7.org/fhir/StructureDefinition/CarePlan"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Procedure that caused this media to be created",
+      "definition": "A procedure that is fulfilled in whole or in part by the creation of this media.",
+      "binding": null
+    },
+    {
+      "path": "Media.partOf",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Resource"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Part of referenced event",
+      "definition": "A larger event of which this particular event is a component or step.",
+      "binding": null
+    },
+    {
+      "path": "Media.status",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "This element is labelled as a modifier because it is a status element that contains status entered-in-error which means that the resource should not be treated as valid",
+      "mustSupport": null,
+      "short": "preparation | in-progress | not-done | on-hold | stopped | completed | entered-in-error | unknown",
+      "definition": "The current state of the {{title}}.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/event-status|4.0.1",
+        "strength": "required",
+        "description": "Codes identifying the lifecycle stage of an event."
+      }
+    },
+    {
+      "path": "Media.type",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Classification of media as image, video, or audio",
+      "definition": "A code that classifies whether the media is an image, video or audio recording or some other media category.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/media-type",
+        "strength": "extensible",
+        "description": "Codes for high level media categories."
+      }
+    },
+    {
+      "path": "Media.modality",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The type of acquisition equipment/process",
+      "definition": "Details of the type of the media - usually, how it was acquired (what type of device). If images sourced from a DICOM system, are wrapped in a Media resource, then this is the modality.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/media-modality",
+        "strength": "example",
+        "description": "Detailed information about the type of the image - its kind, purpose, or the kind of equipment used to generate it."
+      }
+    },
+    {
+      "path": "Media.view",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Imaging view, e.g. Lateral or Antero-posterior",
+      "definition": "The name of the imaging view e.g. Lateral or Antero-posterior (AP).",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/media-view",
+        "strength": "example",
+        "description": "Imaging view (projection) used when collecting an image."
+      }
+    },
+    {
+      "path": "Media.subject",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Patient",
+            "http://hl7.org/fhir/StructureDefinition/Practitioner",
+            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+            "http://hl7.org/fhir/StructureDefinition/Group",
+            "http://hl7.org/fhir/StructureDefinition/Device",
+            "http://hl7.org/fhir/StructureDefinition/Specimen",
+            "http://hl7.org/fhir/StructureDefinition/Location"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Who/What this Media is a record of",
+      "definition": "Who/What this Media is a record of.",
+      "binding": null
+    },
+    {
+      "path": "Media.encounter",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Encounter"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Encounter associated with media",
+      "definition": "The encounter that establishes the context for this media.",
+      "binding": null
+    },
+    {
+      "path": "Media.created[x]",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "dateTime"
+        },
+        {
+          "code": "Period"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "When Media was collected",
+      "definition": "The date and time(s) at which the media was collected.",
+      "binding": null
+    },
+    {
+      "path": "Media.issued",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "instant"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Date/Time this version was made available",
+      "definition": "The date and time this version of the media was made available to providers, typically after having been reviewed.",
+      "binding": null
+    },
+    {
+      "path": "Media.operator",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Practitioner",
+            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+            "http://hl7.org/fhir/StructureDefinition/Organization",
+            "http://hl7.org/fhir/StructureDefinition/CareTeam",
+            "http://hl7.org/fhir/StructureDefinition/Patient",
+            "http://hl7.org/fhir/StructureDefinition/Device",
+            "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The person who generated the image",
+      "definition": "The person who administered the collection of the image.",
+      "binding": null
+    },
+    {
+      "path": "Media.reasonCode",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Why was event performed?",
+      "definition": "Describes why the event occurred in coded or textual form.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/procedure-reason",
+        "strength": "example",
+        "description": "The reason for the media."
+      }
+    },
+    {
+      "path": "Media.bodySite",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Observed body part",
+      "definition": "Indicates the site on the subject's body where the observation was made (i.e. the target site).",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/body-site",
+        "strength": "example",
+        "description": "Codes describing anatomical locations. May include laterality."
+      }
+    },
+    {
+      "path": "Media.deviceName",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Name of the device/manufacturer",
+      "definition": "The name of the device / manufacturer of the device  that was used to make the recording.",
+      "binding": null
+    },
+    {
+      "path": "Media.device",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Device",
+            "http://hl7.org/fhir/StructureDefinition/DeviceMetric",
+            "http://hl7.org/fhir/StructureDefinition/Device"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Observing Device",
+      "definition": "The device used to collect the media.",
+      "binding": null
+    },
+    {
+      "path": "Media.height",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "positiveInt"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Height of the image in pixels (photo/video)",
+      "definition": "Height of the image in pixels (photo/video).",
+      "binding": null
+    },
+    {
+      "path": "Media.width",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "positiveInt"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Width of the image in pixels (photo/video)",
+      "definition": "Width of the image in pixels (photo/video).",
+      "binding": null
+    },
+    {
+      "path": "Media.frames",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "positiveInt"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Number of frames if > 1 (photo)",
+      "definition": "The number of frames in a photo. This is used with a multi-page fax, or an imaging acquisition context that takes multiple slices in a single image, or an animated gif. If there is more than one frame, this SHALL have a value in order to alert interface software that a multi-frame capable rendering widget is required.",
+      "binding": null
+    },
+    {
+      "path": "Media.duration",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "decimal"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Length in seconds (audio / video)",
+      "definition": "The duration of the recording in seconds - for audio and video.",
+      "binding": null
+    },
+    {
+      "path": "Media.content",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "Attachment"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Actual Media - reference or data",
+      "definition": "The actual content of the media - inline or by direct reference to the media source file.",
+      "binding": null
+    },
+    {
+      "path": "Media.note",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Annotation"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Comments made about the media",
+      "definition": "Comments made about the media by the performer, subject or other participants.",
+      "binding": null
+    }
+  ],
+  "search": [
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Media-based-on",
+      "version": "4.0.1",
+      "name": "based-on",
+      "code": "based-on",
+      "type": "reference",
+      "description": "Procedure that caused this media to be created",
+      "expression": "Media.basedOn",
+      "xpath": "f:Media/f:basedOn",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "CarePlan",
+        "ServiceRequest"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Media"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Media-created",
+      "version": "4.0.1",
+      "name": "created",
+      "code": "created",
+      "type": "date",
+      "description": "When Media was collected",
+      "expression": "Media.created",
+      "xpath": "f:Media/f:createdDateTime | f:Media/f:createdPeriod",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [
+        "eq",
+        "ne",
+        "gt",
+        "ge",
+        "lt",
+        "le",
+        "sa",
+        "eb",
+        "ap"
+      ],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Media"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Media-device",
+      "version": "4.0.1",
+      "name": "device",
+      "code": "device",
+      "type": "reference",
+      "description": "Observing Device",
+      "expression": "Media.device",
+      "xpath": "f:Media/f:device",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Device",
+        "DeviceMetric"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Media"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Media-encounter",
+      "version": "4.0.1",
+      "name": "encounter",
+      "code": "encounter",
+      "type": "reference",
+      "description": "Encounter associated with media",
+      "expression": "Media.encounter",
+      "xpath": "f:Media/f:encounter",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Encounter"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Media"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Media-identifier",
+      "version": "4.0.1",
+      "name": "identifier",
+      "code": "identifier",
+      "type": "token",
+      "description": "Identifier(s) for the image",
+      "expression": "Media.identifier",
+      "xpath": "f:Media/f:identifier",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Media"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Media-modality",
+      "version": "4.0.1",
+      "name": "modality",
+      "code": "modality",
+      "type": "token",
+      "description": "The type of acquisition equipment/process",
+      "expression": "Media.modality",
+      "xpath": "f:Media/f:modality",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Media"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Media-operator",
+      "version": "4.0.1",
+      "name": "operator",
+      "code": "operator",
+      "type": "reference",
+      "description": "The person who generated the image",
+      "expression": "Media.operator",
+      "xpath": "f:Media/f:operator",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Practitioner",
+        "Organization",
+        "CareTeam",
+        "Device",
+        "Patient",
+        "PractitionerRole",
+        "RelatedPerson"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Media"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Media-patient",
+      "version": "4.0.1",
+      "name": "patient",
+      "code": "patient",
+      "type": "reference",
+      "description": "Who/What this Media is a record of",
+      "expression": "Media.subject.where(resolve() is Patient)",
+      "xpath": "f:Media/f:subject",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Patient"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Media"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Media-site",
+      "version": "4.0.1",
+      "name": "site",
+      "code": "site",
+      "type": "token",
+      "description": "Observed body part",
+      "expression": "Media.bodySite",
+      "xpath": "f:Media/f:bodySite",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Media"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Media-status",
+      "version": "4.0.1",
+      "name": "status",
+      "code": "status",
+      "type": "token",
+      "description": "preparation | in-progress | not-done | on-hold | stopped | completed | entered-in-error | unknown",
+      "expression": "Media.status",
+      "xpath": "f:Media/f:status",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Media"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Media-subject",
+      "version": "4.0.1",
+      "name": "subject",
+      "code": "subject",
+      "type": "reference",
+      "description": "Who/What this Media is a record of",
+      "expression": "Media.subject",
+      "xpath": "f:Media/f:subject",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Practitioner",
+        "Group",
+        "Specimen",
+        "Device",
+        "Patient",
+        "PractitionerRole",
+        "Location"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Media"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Media-type",
+      "version": "4.0.1",
+      "name": "type",
+      "code": "type",
+      "type": "token",
+      "description": "Classification of media as image, video, or audio",
+      "expression": "Media.type",
+      "xpath": "f:Media/f:type",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Media"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Media-view",
+      "version": "4.0.1",
+      "name": "view",
+      "code": "view",
+      "type": "token",
+      "description": "Imaging view, e.g. Lateral or Antero-posterior",
+      "expression": "Media.view",
+      "xpath": "f:Media/f:view",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Media"
+      ]
+    }
+  ]
+}

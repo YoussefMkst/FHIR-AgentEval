@@ -1,0 +1,1235 @@
+{
+  "resourceType": "Appointment",
+  "fhir_version": "4.0.1",
+  "source_urls": {
+    "structureDefinition": "http://hl7.org/fhir/StructureDefinition/Appointment"
+  },
+  "elements": [
+    {
+      "path": "Appointment",
+      "min": 0,
+      "max": "*",
+      "type": [],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "A booking of a healthcare event among patient(s), practitioner(s), related person(s) and/or device(s) for a specific date/time. This may result in one or more Encounter(s)",
+      "definition": "A booking of a healthcare event among patient(s), practitioner(s), related person(s) and/or device(s) for a specific date/time. This may result in one or more Encounter(s).",
+      "binding": null
+    },
+    {
+      "path": "Appointment.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Logical id of this artifact",
+      "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
+      "binding": null
+    },
+    {
+      "path": "Appointment.meta",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Meta"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Metadata about the resource",
+      "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.",
+      "binding": null
+    },
+    {
+      "path": "Appointment.implicitRules",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "uri"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "This element is labeled as a modifier because the implicit rules may provide additional knowledge about the resource that modifies it's meaning or interpretation",
+      "mustSupport": null,
+      "short": "A set of rules under which this content was created",
+      "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.",
+      "binding": null
+    },
+    {
+      "path": "Appointment.language",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Language of the resource content",
+      "definition": "The base language in which the resource is written.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/languages",
+        "strength": "preferred",
+        "description": "A human language."
+      }
+    },
+    {
+      "path": "Appointment.text",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Narrative"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Text summary of the resource, for human interpretation",
+      "definition": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
+      "binding": null
+    },
+    {
+      "path": "Appointment.contained",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Resource"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Contained, inline Resources",
+      "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
+      "binding": null
+    },
+    {
+      "path": "Appointment.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "Appointment.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the resource that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "Appointment.identifier",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Identifier"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "External Ids for this item",
+      "definition": "This records identifiers associated with this appointment concern that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate (e.g. in CDA documents, or in written / printed documentation).",
+      "binding": null
+    },
+    {
+      "path": "Appointment.status",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "This element is labelled as a modifier because it is a status element that contains status entered-in-error which means that the resource should not be treated as valid",
+      "mustSupport": null,
+      "short": "proposed | pending | booked | arrived | fulfilled | cancelled | noshow | entered-in-error | checked-in | waitlist",
+      "definition": "The overall status of the Appointment. Each of the participants has their own participation status which indicates their involvement in the process, however this status indicates the shared status.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/appointmentstatus|4.0.1",
+        "strength": "required",
+        "description": "The free/busy status of an appointment."
+      }
+    },
+    {
+      "path": "Appointment.cancelationReason",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The coded reason for the appointment being cancelled",
+      "definition": "The coded reason for the appointment being cancelled. This is often used in reporting/billing/futher processing to determine if further actions are required, or specific fees apply.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/appointment-cancellation-reason",
+        "strength": "example",
+        "description": null
+      }
+    },
+    {
+      "path": "Appointment.serviceCategory",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "A broad categorization of the service that is to be performed during this appointment",
+      "definition": "A broad categorization of the service that is to be performed during this appointment.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/service-category",
+        "strength": "example",
+        "description": null
+      }
+    },
+    {
+      "path": "Appointment.serviceType",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The specific service that is to be performed during this appointment",
+      "definition": "The specific service that is to be performed during this appointment.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/service-type",
+        "strength": "example",
+        "description": null
+      }
+    },
+    {
+      "path": "Appointment.specialty",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The specialty of a practitioner that would be required to perform the service requested in this appointment",
+      "definition": "The specialty of a practitioner that would be required to perform the service requested in this appointment.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/c80-practice-codes",
+        "strength": "preferred",
+        "description": null
+      }
+    },
+    {
+      "path": "Appointment.appointmentType",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The style of appointment or patient that has been booked in the slot (not service type)",
+      "definition": "The style of appointment or patient that has been booked in the slot (not service type).",
+      "binding": {
+        "valueSet": "http://terminology.hl7.org/ValueSet/v2-0276",
+        "strength": "preferred",
+        "description": null
+      }
+    },
+    {
+      "path": "Appointment.reasonCode",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Coded reason this appointment is scheduled",
+      "definition": "The coded reason that this appointment is being scheduled. This is more clinical than administrative.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/encounter-reason",
+        "strength": "preferred",
+        "description": "The Reason for the appointment to take place."
+      }
+    },
+    {
+      "path": "Appointment.reasonReference",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Condition",
+            "http://hl7.org/fhir/StructureDefinition/Procedure",
+            "http://hl7.org/fhir/StructureDefinition/Observation",
+            "http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Reason the appointment is to take place (resource)",
+      "definition": "Reason the appointment has been scheduled to take place, as specified using information from another resource. When the patient arrives and the encounter begins it may be used as the admission diagnosis. The indication will typically be a Condition (with other resources referenced in the evidence.detail), or a Procedure.",
+      "binding": null
+    },
+    {
+      "path": "Appointment.priority",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "unsignedInt"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Used to make informed decisions if needing to re-prioritize",
+      "definition": "The priority of the appointment. Can be used to make informed decisions if needing to re-prioritize appointments. (The iCal Standard specifies 0 as undefined, 1 as highest, 9 as lowest priority).",
+      "binding": null
+    },
+    {
+      "path": "Appointment.description",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Shown on a subject line in a meeting request, or appointment list",
+      "definition": "The brief description of the appointment as would be shown on a subject line in a meeting request, or appointment list. Detailed or expanded information should be put in the comment field.",
+      "binding": null
+    },
+    {
+      "path": "Appointment.supportingInformation",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Resource"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional information to support the appointment",
+      "definition": "Additional information to support the appointment provided when making the appointment.",
+      "binding": null
+    },
+    {
+      "path": "Appointment.start",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "instant"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "When appointment is to take place",
+      "definition": "Date/Time that the appointment is to take place.",
+      "binding": null
+    },
+    {
+      "path": "Appointment.end",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "instant"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "When appointment is to conclude",
+      "definition": "Date/Time that the appointment is to conclude.",
+      "binding": null
+    },
+    {
+      "path": "Appointment.minutesDuration",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "positiveInt"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Can be less than start/end (e.g. estimate)",
+      "definition": "Number of minutes that the appointment is to take. This can be less than the duration between the start and end times.  For example, where the actual time of appointment is only an estimate or if a 30 minute appointment is being requested, but any time would work.  Also, if there is, for example, a planned 15 minute break in the middle of a long appointment, the duration may be 15 minutes less than the difference between the start and end.",
+      "binding": null
+    },
+    {
+      "path": "Appointment.slot",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Slot"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The slots that this appointment is filling",
+      "definition": "The slots from the participants' schedules that will be filled by the appointment.",
+      "binding": null
+    },
+    {
+      "path": "Appointment.created",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "dateTime"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The date that this appointment was initially created",
+      "definition": "The date that this appointment was initially created. This could be different to the meta.lastModified value on the initial entry, as this could have been before the resource was created on the FHIR server, and should remain unchanged over the lifespan of the appointment.",
+      "binding": null
+    },
+    {
+      "path": "Appointment.comment",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional comments",
+      "definition": "Additional comments about the appointment.",
+      "binding": null
+    },
+    {
+      "path": "Appointment.patientInstruction",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Detailed information and instructions for the patient",
+      "definition": "While Appointment.comment contains information for internal use, Appointment.patientInstructions is used to capture patient facing information about the Appointment (e.g. please bring your referral or fast from 8pm night before).",
+      "binding": null
+    },
+    {
+      "path": "Appointment.basedOn",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/ServiceRequest"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "The service request this appointment is allocated to assess",
+      "definition": "The service request this appointment is allocated to assess (e.g. incoming referral or procedure request).",
+      "binding": null
+    },
+    {
+      "path": "Appointment.participant",
+      "min": 1,
+      "max": "*",
+      "type": [
+        {
+          "code": "BackboneElement"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Participants involved in appointment",
+      "definition": "List of participants involved in the appointment.",
+      "binding": null
+    },
+    {
+      "path": "Appointment.participant.id",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "http://hl7.org/fhirpath/System.String"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Unique id for inter-element referencing",
+      "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "binding": null
+    },
+    {
+      "path": "Appointment.participant.extension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Additional content defined by implementations",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "binding": null
+    },
+    {
+      "path": "Appointment.participant.modifierExtension",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Extension"
+        }
+      ],
+      "isModifier": true,
+      "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "mustSupport": null,
+      "short": "Extensions that cannot be ignored even if unrecognized",
+      "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "binding": null
+    },
+    {
+      "path": "Appointment.participant.type",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Role of participant in the appointment",
+      "definition": "Role of participant in the appointment.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/encounter-participant-type",
+        "strength": "extensible",
+        "description": "Role of participant in encounter."
+      }
+    },
+    {
+      "path": "Appointment.participant.actor",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "targetProfile": [
+            "http://hl7.org/fhir/StructureDefinition/Patient",
+            "http://hl7.org/fhir/StructureDefinition/Practitioner",
+            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+            "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+            "http://hl7.org/fhir/StructureDefinition/Device",
+            "http://hl7.org/fhir/StructureDefinition/HealthcareService",
+            "http://hl7.org/fhir/StructureDefinition/Location"
+          ]
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Person, Location/HealthcareService or Device",
+      "definition": "A Person, Location/HealthcareService or Device that is participating in the appointment.",
+      "binding": null
+    },
+    {
+      "path": "Appointment.participant.required",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "required | optional | information-only",
+      "definition": "Whether this participant is required to be present at the meeting. This covers a use-case where two doctors need to meet to discuss the results for a specific patient, and the patient is not required to be present.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/participantrequired|4.0.1",
+        "strength": "required",
+        "description": "Is the Participant required to attend the appointment."
+      }
+    },
+    {
+      "path": "Appointment.participant.status",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "accepted | declined | tentative | needs-action",
+      "definition": "Participation status of the actor.",
+      "binding": {
+        "valueSet": "http://hl7.org/fhir/ValueSet/participationstatus|4.0.1",
+        "strength": "required",
+        "description": "The Participation status of an appointment."
+      }
+    },
+    {
+      "path": "Appointment.participant.period",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Period"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Participation period of the actor",
+      "definition": "Participation period of the actor.",
+      "binding": null
+    },
+    {
+      "path": "Appointment.requestedPeriod",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Period"
+        }
+      ],
+      "isModifier": false,
+      "isModifierReason": null,
+      "mustSupport": null,
+      "short": "Potential date/time interval(s) requested to allocate the appointment within",
+      "definition": "A set of date ranges (potentially including times) that the appointment is preferred to be scheduled within.\n\nThe duration (usually in minutes) could also be provided to indicate the length of the appointment to fill and populate the start/end times for the actual allocated time. However, in other situations the duration may be calculated by the scheduling system.",
+      "binding": null
+    }
+  ],
+  "search": [
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Appointment-actor",
+      "version": "4.0.1",
+      "name": "actor",
+      "code": "actor",
+      "type": "reference",
+      "description": "Any one of the individuals participating in the appointment",
+      "expression": "Appointment.participant.actor",
+      "xpath": "f:Appointment/f:participant/f:actor",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Practitioner",
+        "Device",
+        "Patient",
+        "HealthcareService",
+        "PractitionerRole",
+        "RelatedPerson",
+        "Location"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Appointment"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Appointment-appointment-type",
+      "version": "4.0.1",
+      "name": "appointment-type",
+      "code": "appointment-type",
+      "type": "token",
+      "description": "The style of appointment or patient that has been booked in the slot (not service type)",
+      "expression": "Appointment.appointmentType",
+      "xpath": "f:Appointment/f:appointmentType",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Appointment"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Appointment-based-on",
+      "version": "4.0.1",
+      "name": "based-on",
+      "code": "based-on",
+      "type": "reference",
+      "description": "The service request this appointment is allocated to assess",
+      "expression": "Appointment.basedOn",
+      "xpath": "f:Appointment/f:basedOn",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "ServiceRequest"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Appointment"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Appointment-date",
+      "version": "4.0.1",
+      "name": "date",
+      "code": "date",
+      "type": "date",
+      "description": "Appointment date/time.",
+      "expression": "Appointment.start",
+      "xpath": "f:Appointment/f:start",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [
+        "eq",
+        "ne",
+        "gt",
+        "ge",
+        "lt",
+        "le",
+        "sa",
+        "eb",
+        "ap"
+      ],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Appointment"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Appointment-identifier",
+      "version": "4.0.1",
+      "name": "identifier",
+      "code": "identifier",
+      "type": "token",
+      "description": "An Identifier of the Appointment",
+      "expression": "Appointment.identifier",
+      "xpath": "f:Appointment/f:identifier",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Appointment"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Appointment-location",
+      "version": "4.0.1",
+      "name": "location",
+      "code": "location",
+      "type": "reference",
+      "description": "This location is listed in the participants of the appointment",
+      "expression": "Appointment.participant.actor.where(resolve() is Location)",
+      "xpath": "f:Appointment/f:participant/f:actor",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Location"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Appointment"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Appointment-part-status",
+      "version": "4.0.1",
+      "name": "part-status",
+      "code": "part-status",
+      "type": "token",
+      "description": "The Participation status of the subject, or other participant on the appointment. Can be used to locate participants that have not responded to meeting requests.",
+      "expression": "Appointment.participant.status",
+      "xpath": "f:Appointment/f:participant/f:status",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Appointment"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Appointment-patient",
+      "version": "4.0.1",
+      "name": "patient",
+      "code": "patient",
+      "type": "reference",
+      "description": "One of the individuals of the appointment is this patient",
+      "expression": "Appointment.participant.actor.where(resolve() is Patient)",
+      "xpath": "f:Appointment/f:participant/f:actor",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Patient"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Appointment"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Appointment-practitioner",
+      "version": "4.0.1",
+      "name": "practitioner",
+      "code": "practitioner",
+      "type": "reference",
+      "description": "One of the individuals of the appointment is this practitioner",
+      "expression": "Appointment.participant.actor.where(resolve() is Practitioner)",
+      "xpath": "f:Appointment/f:participant/f:actor",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Practitioner"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Appointment"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Appointment-reason-code",
+      "version": "4.0.1",
+      "name": "reason-code",
+      "code": "reason-code",
+      "type": "token",
+      "description": "Coded reason this appointment is scheduled",
+      "expression": "Appointment.reasonCode",
+      "xpath": "f:Appointment/f:reasonCode",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Appointment"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Appointment-reason-reference",
+      "version": "4.0.1",
+      "name": "reason-reference",
+      "code": "reason-reference",
+      "type": "reference",
+      "description": "Reason the appointment is to take place (resource)",
+      "expression": "Appointment.reasonReference",
+      "xpath": "f:Appointment/f:reasonReference",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Condition",
+        "Observation",
+        "Procedure",
+        "ImmunizationRecommendation"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Appointment"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Appointment-service-category",
+      "version": "4.0.1",
+      "name": "service-category",
+      "code": "service-category",
+      "type": "token",
+      "description": "A broad categorization of the service that is to be performed during this appointment",
+      "expression": "Appointment.serviceCategory",
+      "xpath": "f:Appointment/f:serviceCategory",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Appointment"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Appointment-service-type",
+      "version": "4.0.1",
+      "name": "service-type",
+      "code": "service-type",
+      "type": "token",
+      "description": "The specific service that is to be performed during this appointment",
+      "expression": "Appointment.serviceType",
+      "xpath": "f:Appointment/f:serviceType",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Appointment"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Appointment-slot",
+      "version": "4.0.1",
+      "name": "slot",
+      "code": "slot",
+      "type": "reference",
+      "description": "The slots that this appointment is filling",
+      "expression": "Appointment.slot",
+      "xpath": "f:Appointment/f:slot",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Slot"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Appointment"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Appointment-specialty",
+      "version": "4.0.1",
+      "name": "specialty",
+      "code": "specialty",
+      "type": "token",
+      "description": "The specialty of a practitioner that would be required to perform the service requested in this appointment",
+      "expression": "Appointment.specialty",
+      "xpath": "f:Appointment/f:specialty",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Appointment"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Appointment-status",
+      "version": "4.0.1",
+      "name": "status",
+      "code": "status",
+      "type": "token",
+      "description": "The overall status of the appointment",
+      "expression": "Appointment.status",
+      "xpath": "f:Appointment/f:status",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Appointment"
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/SearchParameter/Appointment-supporting-info",
+      "version": "4.0.1",
+      "name": "supporting-info",
+      "code": "supporting-info",
+      "type": "reference",
+      "description": "Additional information to support the appointment",
+      "expression": "Appointment.supportingInformation",
+      "xpath": "f:Appointment/f:supportingInformation",
+      "xpathUsage": "normal",
+      "multipleOr": null,
+      "multipleAnd": null,
+      "modifier": [],
+      "comparator": [],
+      "target": [
+        "Account",
+        "ActivityDefinition",
+        "AdverseEvent",
+        "AllergyIntolerance",
+        "Appointment",
+        "AppointmentResponse",
+        "AuditEvent",
+        "Basic",
+        "Binary",
+        "BiologicallyDerivedProduct",
+        "BodyStructure",
+        "Bundle",
+        "CapabilityStatement",
+        "CarePlan",
+        "CareTeam",
+        "CatalogEntry",
+        "ChargeItem",
+        "ChargeItemDefinition",
+        "Claim",
+        "ClaimResponse",
+        "ClinicalImpression",
+        "CodeSystem",
+        "Communication",
+        "CommunicationRequest",
+        "CompartmentDefinition",
+        "Composition",
+        "ConceptMap",
+        "Condition",
+        "Consent",
+        "Contract",
+        "Coverage",
+        "CoverageEligibilityRequest",
+        "CoverageEligibilityResponse",
+        "DetectedIssue",
+        "Device",
+        "DeviceDefinition",
+        "DeviceMetric",
+        "DeviceRequest",
+        "DeviceUseStatement",
+        "DiagnosticReport",
+        "DocumentManifest",
+        "DocumentReference",
+        "EffectEvidenceSynthesis",
+        "Encounter",
+        "Endpoint",
+        "EnrollmentRequest",
+        "EnrollmentResponse",
+        "EpisodeOfCare",
+        "EventDefinition",
+        "Evidence",
+        "EvidenceVariable",
+        "ExampleScenario",
+        "ExplanationOfBenefit",
+        "FamilyMemberHistory",
+        "Flag",
+        "Goal",
+        "GraphDefinition",
+        "Group",
+        "GuidanceResponse",
+        "HealthcareService",
+        "ImagingStudy",
+        "Immunization",
+        "ImmunizationEvaluation",
+        "ImmunizationRecommendation",
+        "ImplementationGuide",
+        "InsurancePlan",
+        "Invoice",
+        "Library",
+        "Linkage",
+        "List",
+        "Location",
+        "Measure",
+        "MeasureReport",
+        "Media",
+        "Medication",
+        "MedicationAdministration",
+        "MedicationDispense",
+        "MedicationKnowledge",
+        "MedicationRequest",
+        "MedicationStatement",
+        "MedicinalProduct",
+        "MedicinalProductAuthorization",
+        "MedicinalProductContraindication",
+        "MedicinalProductIndication",
+        "MedicinalProductIngredient",
+        "MedicinalProductInteraction",
+        "MedicinalProductManufactured",
+        "MedicinalProductPackaged",
+        "MedicinalProductPharmaceutical",
+        "MedicinalProductUndesirableEffect",
+        "MessageDefinition",
+        "MessageHeader",
+        "MolecularSequence",
+        "NamingSystem",
+        "NutritionOrder",
+        "Observation",
+        "ObservationDefinition",
+        "OperationDefinition",
+        "OperationOutcome",
+        "Organization",
+        "OrganizationAffiliation",
+        "Patient",
+        "PaymentNotice",
+        "PaymentReconciliation",
+        "Person",
+        "PlanDefinition",
+        "Practitioner",
+        "PractitionerRole",
+        "Procedure",
+        "Provenance",
+        "Questionnaire",
+        "QuestionnaireResponse",
+        "RelatedPerson",
+        "RequestGroup",
+        "ResearchDefinition",
+        "ResearchElementDefinition",
+        "ResearchStudy",
+        "ResearchSubject",
+        "RiskAssessment",
+        "RiskEvidenceSynthesis",
+        "Schedule",
+        "SearchParameter",
+        "ServiceRequest",
+        "Slot",
+        "Specimen",
+        "SpecimenDefinition",
+        "StructureDefinition",
+        "StructureMap",
+        "Subscription",
+        "Substance",
+        "SubstanceNucleicAcid",
+        "SubstancePolymer",
+        "SubstanceProtein",
+        "SubstanceReferenceInformation",
+        "SubstanceSourceMaterial",
+        "SubstanceSpecification",
+        "SupplyDelivery",
+        "SupplyRequest",
+        "Task",
+        "TerminologyCapabilities",
+        "TestReport",
+        "TestScript",
+        "ValueSet",
+        "VerificationResult",
+        "VisionPrescription"
+      ],
+      "chain": [],
+      "component": [],
+      "base": [
+        "Appointment"
+      ]
+    }
+  ]
+}
