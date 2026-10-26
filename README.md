@@ -200,3 +200,17 @@ is treated as a base name: results land in `<output-dir>_run_1`,
 > open the task source files in `tasks/`, the answer keys in the variation
 > YAMLs, and the validator code. Use local mode only for quick checks; never
 > use it for results you intend to report.
+
+
+## Publication & Citation
+
+FHIR-AgentEval is described in our paper published in **npj Digital Medicine** (2026).
+
+**Paper:** [FHIR-AgentEval: a modular sandbox for benchmarking clinical LLM agents with memory-augmented configurations](https://www.nature.com/articles/s41746-026-03348-0)
+
+### Cite this work
+
+If you use FHIR-AgentEval in your research, please cite:
+
+Mokssit, Y., Ravi, K., Nie, M. *et al.* FHIR-AgentEval: a modular sandbox for benchmarking clinical LLM agents with memory-augmented configurations. *npj Digit. Med.* (2026). [https://doi.org/10.1038/s41746-026-03348-0](https://doi.org/10.1038/s41746-026-03348-0)
+
